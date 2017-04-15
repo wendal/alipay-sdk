@@ -1,0 +1,11 @@
+sudo: false
+language: java
+script: mvn clean -Dmaven.test.skip=true package
+jdk:
+  - oraclejdk8
+notifications:
+  email: false
+before_install:
+  - export TZ=Asia/Shanghai
+after_success:
+  - python mvn_settings.py
