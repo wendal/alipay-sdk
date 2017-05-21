@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: zhima.credit.watchlist.brief.get response.
  * 
  * @author auto create
- * @since 1.0, 2017-01-03 14:47:49
+ * @since 1.0, 2017-05-09 16:11:51
  */
 public class ZhimaCreditWatchlistBriefGetResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4655155461286835931L;
+	private static final long serialVersionUID = 3739714186532345585L;
 
 	/** 
 	 * 唯一标示每一次接口调用

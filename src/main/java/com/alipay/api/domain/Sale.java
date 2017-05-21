@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 促销信息集合，JSON格式
  *
  * @author auto create
- * @since 1.0, 2017-03-09 16:31:53
+ * @since 1.0, 2017-04-12 11:46:36
  */
 public class Sale extends AlipayObject {
 
-	private static final long serialVersionUID = 8554838984683659924L;
+	private static final long serialVersionUID = 5143461122875471944L;
 
 	/**
 	 * 促销描述内容，有活动的情况下必填

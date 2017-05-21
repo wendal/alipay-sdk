@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class GraphNegInfoModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2437631469821153121L;
+	private static final long serialVersionUID = 6672385337523284979L;
 
 	/**
 	 * 案号

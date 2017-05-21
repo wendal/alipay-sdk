@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑广告系统账单查询结果(结算账单)
  *
  * @author auto create
- * @since 1.0, 2017-01-17 10:34:04
+ * @since 1.0, 2017-04-17 10:53:54
  */
 public class KbAdvertSettleBillResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 3369938461995351881L;
+	private static final long serialVersionUID = 3488313238381148989L;
 
 	/**
 	 * 账单下载地址(为空表示查无账单)

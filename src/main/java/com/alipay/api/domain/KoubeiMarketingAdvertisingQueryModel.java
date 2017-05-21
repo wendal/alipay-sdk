@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询广告接口
  *
  * @author auto create
- * @since 1.0, 2016-08-29 10:51:03
+ * @since 1.0, 2017-04-18 11:55:21
  */
 public class KoubeiMarketingAdvertisingQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4776828276145525477L;
+	private static final long serialVersionUID = 5569743569679978777L;
 
 	/**
 	 * 广告Id，唯一标识一条广告

@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 招商信息
  *
  * @author auto create
- * @since 1.0, 2016-12-27 16:58:19
+ * @since 1.0, 2017-04-20 16:40:53
  */
 public class RecruitInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3785394678633645829L;
+	private static final long serialVersionUID = 2341458451986782714L;
 
 	/**
 	 * 招商结束时间

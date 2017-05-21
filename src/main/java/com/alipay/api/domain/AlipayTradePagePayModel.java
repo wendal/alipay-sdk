@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 统一收单下单并支付页面接口
  *
  * @author auto create
- * @since 1.0, 2017-04-05 17:22:58
+ * @since 1.0, 2017-05-04 20:18:18
  */
 public class AlipayTradePagePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5821713667112294315L;
+	private static final long serialVersionUID = 2478775846857846257L;
 
 	/**
 	 * 订单描述
@@ -55,6 +55,12 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	 */
 	@ApiField("goods_type")
 	private String goodsType;
+
+	/**
+	 * 开票信息
+	 */
+	@ApiField("invoice_info")
+	private InvoiceInfo invoiceInfo;
 
 	/**
 	 * 商户订单号,64个字符以内、可包含字母、数字、下划线；需保证在商户端不重复
@@ -119,6 +125,12 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	 */
 	@ApiField("store_id")
 	private String storeId;
+
+	/**
+	 * 间连受理商户信息体，当前只对特殊银行机构特定场景下使用此字段
+	 */
+	@ApiField("sub_merchant")
+	private SubMerchant subMerchant;
 
 	/**
 	 * 订单标题
@@ -186,6 +198,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 		this.goodsType = goodsType;
 	}
 
+	public InvoiceInfo getInvoiceInfo() {
+		return this.invoiceInfo;
+	}
+	public void setInvoiceInfo(InvoiceInfo invoiceInfo) {
+		this.invoiceInfo = invoiceInfo;
+	}
+
 	public String getOutTradeNo() {
 		return this.outTradeNo;
 	}
@@ -240,6 +259,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	}
 	public void setStoreId(String storeId) {
 		this.storeId = storeId;
+	}
+
+	public SubMerchant getSubMerchant() {
+		return this.subMerchant;
+	}
+	public void setSubMerchant(SubMerchant subMerchant) {
+		this.subMerchant = subMerchant;
 	}
 
 	public String getSubject() {

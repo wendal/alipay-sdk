@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.data.smartactivity.config response.
  * 
  * @author auto create
- * @since 1.0, 2017-03-14 16:49:12
+ * @since 1.0, 2017-04-13 10:58:55
  */
 public class KoubeiMarketingDataSmartactivityConfigResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5767753913196933494L;
+	private static final long serialVersionUID = 4826421568756992994L;
 
 	/** 
 	 * 活动类型
@@ -40,6 +40,12 @@ GUESS_SEND 口令送
 	 */
 	@ApiField("crowd_group")
 	private String crowdGroup;
+
+	/** 
+	 * 扩展信息，对于拉新的会返回commission_rate(口碑客分佣比例)，对于方案组的会返回SMART_PROMO_GROUP_ID(方案组ID),SMART_PROMO_PLAN_ID方案ID，多个方案竖线分隔，consume_code表示消费送活动形式，包含RULES/USRLEVEL两个枚举值，分别表示按照用户规则和会员分层来创建活动组
+	 */
+	@ApiField("ext_info")
+	private String extInfo;
 
 	/** 
 	 * 商品ID，只有在诊断码为SUPER_ITEM表示菜品营销时此字段才可能有值，多个值之间使用竖线|分隔
@@ -122,6 +128,13 @@ RATE：折扣券
 	}
 	public String getCrowdGroup( ) {
 		return this.crowdGroup;
+	}
+
+	public void setExtInfo(String extInfo) {
+		this.extInfo = extInfo;
+	}
+	public String getExtInfo( ) {
+		return this.extInfo;
 	}
 
 	public void setItemId(String itemId) {

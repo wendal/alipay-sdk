@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 认证初始化
  *
  * @author auto create
- * @since 1.0, 2017-01-10 16:08:08
+ * @since 1.0, 2017-04-24 09:46:23
  */
 public class ZhimaCustomerCertificationInitializeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7723479634926993973L;
+	private static final long serialVersionUID = 1442155857118151428L;
 
 	/**
 	 * 认证场景码,常用的场景码有:

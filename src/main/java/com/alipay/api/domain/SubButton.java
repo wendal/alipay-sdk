@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 子菜单对象模型
  *
  * @author auto create
- * @since 1.0, 2016-08-10 17:27:04
+ * @since 1.0, 2017-05-02 12:01:34
  */
 public class SubButton extends AlipayObject {
 
-	private static final long serialVersionUID = 7511621593474882786L;
+	private static final long serialVersionUID = 8462887436747385948L;
 
 	/**
 	 * 当actionType为link时，该参数为详细链接； 当actionType为out时，该参数为用户自定义参数； 当actionType为tel时，该参数为电话号码。 该参数最长255个字符，不允许冒号等特殊字符

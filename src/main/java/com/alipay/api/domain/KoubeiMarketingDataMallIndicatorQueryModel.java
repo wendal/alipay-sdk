@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑商户经营数据查询接口
  *
  * @author auto create
- * @since 1.0, 2016-09-09 17:36:49
+ * @since 1.0, 2017-05-04 13:24:12
  */
 public class KoubeiMarketingDataMallIndicatorQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2532915387251495536L;
+	private static final long serialVersionUID = 2753242366371773689L;
 
 	/**
 	 * 开始日期,格式:yyyyMMdd

@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class MergeVerifyConfig extends AlipayObject {
 
-	private static final long serialVersionUID = 6316588797787755246L;
+	private static final long serialVersionUID = 5635842573449999425L;
 
 	/**
 	 * 可以与任意其他券叠加

@@ -12,11 +12,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.user.info.share response.
  * 
  * @author auto create
- * @since 1.0, 2017-01-13 10:25:02
+ * @since 1.0, 2017-04-14 20:17:09
  */
 public class AlipayUserInfoShareResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3762121794324846346L;
+	private static final long serialVersionUID = 4245249935969255267L;
 
 	/** 
 	 * 详细地址。
@@ -59,7 +59,9 @@ public class AlipayUserInfoShareResponse extends AlipayResponse {
 7:警官证
 8:台胞证
 9:营业执照
-10其它证件
+10:其它证件
+11:港澳居民来往内地通行证
+12:台湾居民来往大陆通行证
 	 */
 	@ApiField("cert_type")
 	private String certType;
@@ -259,6 +261,12 @@ T--被冻结；F--未冻结
 	 */
 	@ApiField("province")
 	private String province;
+
+	/** 
+	 * 淘宝id
+	 */
+	@ApiField("taobao_id")
+	private String taobaoId;
 
 	/** 
 	 * 支付宝用户的userId
@@ -552,6 +560,13 @@ W代表已注册，未激活的账户
 	}
 	public String getProvince( ) {
 		return this.province;
+	}
+
+	public void setTaobaoId(String taobaoId) {
+		this.taobaoId = taobaoId;
+	}
+	public String getTaobaoId( ) {
+		return this.taobaoId;
 	}
 
 	public void setUserId(String userId) {

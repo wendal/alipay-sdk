@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 洗车保养服务订单
  *
  * @author auto create
- * @since 1.0, 2017-03-15 17:51:59
+ * @since 1.0, 2017-04-12 11:48:53
  */
 public class MaintainBizOrderServer extends AlipayObject {
 
-	private static final long serialVersionUID = 8842529856296294413L;
+	private static final long serialVersionUID = 4129135229873552165L;
 
 	/**
 	 * 车主平台服务子订单id

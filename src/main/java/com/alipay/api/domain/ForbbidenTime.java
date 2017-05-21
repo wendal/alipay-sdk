@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 券不可用时间
  *
  * @author auto create
- * @since 1.0, 2017-04-01 21:21:04
+ * @since 1.0, 2017-04-21 13:37:21
  */
 public class ForbbidenTime extends AlipayObject {
 
-	private static final long serialVersionUID = 4434347927252597316L;
+	private static final long serialVersionUID = 3724583838515179149L;
 
 	/**
 	 * 不可用日期区间，仅支持到天

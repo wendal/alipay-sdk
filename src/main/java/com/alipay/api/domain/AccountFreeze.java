@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AccountFreeze extends AlipayObject {
 
-	private static final long serialVersionUID = 4644392779835412999L;
+	private static final long serialVersionUID = 1221239644958634628L;
 
 	/**
 	 * 冻结金额

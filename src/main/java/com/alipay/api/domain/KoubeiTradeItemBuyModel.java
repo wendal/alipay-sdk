@@ -7,11 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 获取购特车scheme
  *
  * @author auto create
- * @since 1.0, 2016-12-22 13:44:40
+ * @since 1.0, 2017-04-24 10:31:44
  */
 public class KoubeiTradeItemBuyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3669947595878252578L;
+	private static final long serialVersionUID = 4435971826779565789L;
+
+	/**
+	 * 预定用户的联系号码。要求合法的手机号码或者座机；该字段仅用于商品预定，商品预定场景为必填字段。如：0579-XXXXXXX；1526XXXXXXX
+	 */
+	@ApiField("buyer_phone_number")
+	private String buyerPhoneNumber;
+
+	/**
+	 * 预定的买家用户名称；该字段仅用于商品预定，商品预定场景下为必填字段
+	 */
+	@ApiField("buyer_user_name")
+	private String buyerUserName;
 
 	/**
 	 * 若无现价则此值传商品原价，交易创建将根据此价格进行售卖。
@@ -57,10 +69,38 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	private Long quantity;
 
 	/**
+	 * 预定结束时间；该字段仅用于商品预定，商品预定场景下为非必填字段。
+格式：yyyy-MM-dd HH:mm:ss
+	 */
+	@ApiField("reserve_end_time")
+	private String reserveEndTime;
+
+	/**
+	 * 预定开始时间；该字段仅用于商品预定，商品预定场景下为必填字段
+格式：yyyy-MM-dd HH:mm:ss
+	 */
+	@ApiField("reserve_start_time")
+	private String reserveStartTime;
+
+	/**
 	 * 店铺ID，用于后续统计商家各门店的售卖，需传入口碑店铺id，取值规则见FAQ常见问题。https://doc.open.alipay.com/docs/doc.htm?&docType=1&articleId=105746
 	 */
 	@ApiField("shop_id")
 	private String shopId;
+
+	public String getBuyerPhoneNumber() {
+		return this.buyerPhoneNumber;
+	}
+	public void setBuyerPhoneNumber(String buyerPhoneNumber) {
+		this.buyerPhoneNumber = buyerPhoneNumber;
+	}
+
+	public String getBuyerUserName() {
+		return this.buyerUserName;
+	}
+	public void setBuyerUserName(String buyerUserName) {
+		this.buyerUserName = buyerUserName;
+	}
 
 	public String getCurrentPrice() {
 		return this.currentPrice;
@@ -109,6 +149,20 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	}
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
+	}
+
+	public String getReserveEndTime() {
+		return this.reserveEndTime;
+	}
+	public void setReserveEndTime(String reserveEndTime) {
+		this.reserveEndTime = reserveEndTime;
+	}
+
+	public String getReserveStartTime() {
+		return this.reserveStartTime;
+	}
+	public void setReserveStartTime(String reserveStartTime) {
+		this.reserveStartTime = reserveStartTime;
 	}
 
 	public String getShopId() {

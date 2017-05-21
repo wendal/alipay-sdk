@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 洗车保养门店修改
  *
  * @author auto create
- * @since 1.0, 2017-03-08 21:40:39
+ * @since 1.0, 2017-04-12 11:48:40
  */
 public class AlipayEcoMycarMaintainShopModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1533661681315225643L;
+	private static final long serialVersionUID = 6676789411754546945L;
 
 	/**
 	 * 门店详细地址，地址字符长度在4-50个字符，注：不含省市区。门店详细地址按规范格式填写地址，以免影响门店搜索及活动报名：例1：道路+门牌号，“人民东路18号”；例2：道路+门牌号+标志性建筑+楼层，“四川北路1552号欢乐广场1楼”

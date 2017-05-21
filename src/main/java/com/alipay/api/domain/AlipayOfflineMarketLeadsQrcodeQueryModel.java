@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOfflineMarketLeadsQrcodeQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6627341489978739949L;
+	private static final long serialVersionUID = 1545813644778292365L;
 
 	/**
 	 * 支付宝leads ID，后续的增删改查接口都使用该ID作为主键

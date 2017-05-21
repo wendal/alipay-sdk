@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券的单品信息
  *
  * @author auto create
- * @since 1.0, 2017-04-01 21:21:04
+ * @since 1.0, 2017-04-21 13:37:21
  */
 public class ItemInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 5313343271159587274L;
+	private static final long serialVersionUID = 8479633749523572643L;
 
 	/**
 	 * 券适用的单品码列表

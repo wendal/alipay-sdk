@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.ebpp.pdeduct.bill.pay.status response.
  * 
  * @author auto create
- * @since 1.0, 2017-04-07 17:06:14
+ * @since 1.0, 2017-04-27 10:27:08
  */
 public class AlipayEbppPdeductBillPayStatusResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7228422345662145354L;
+	private static final long serialVersionUID = 5525632236561746314L;
 
 	/** 
 	 * 支付宝协议流水
@@ -25,6 +25,18 @@ public class AlipayEbppPdeductBillPayStatusResponse extends AlipayResponse {
 	 */
 	@ApiField("order_no")
 	private String orderNo;
+
+	/** 
+	 * 订单的结果码
+	 */
+	@ApiField("order_result_code")
+	private String orderResultCode;
+
+	/** 
+	 * 订单的结果描述
+	 */
+	@ApiField("order_result_msg")
+	private String orderResultMsg;
 
 	/** 
 	 * 外部订单流水
@@ -53,6 +65,20 @@ public class AlipayEbppPdeductBillPayStatusResponse extends AlipayResponse {
 	}
 	public String getOrderNo( ) {
 		return this.orderNo;
+	}
+
+	public void setOrderResultCode(String orderResultCode) {
+		this.orderResultCode = orderResultCode;
+	}
+	public String getOrderResultCode( ) {
+		return this.orderResultCode;
+	}
+
+	public void setOrderResultMsg(String orderResultMsg) {
+		this.orderResultMsg = orderResultMsg;
+	}
+	public String getOrderResultMsg( ) {
+		return this.orderResultMsg;
 	}
 
 	public void setOutOrderNo(String outOrderNo) {

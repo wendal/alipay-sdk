@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还订单查询
  *
  * @author auto create
- * @since 1.0, 2016-11-24 16:42:21
+ * @since 1.0, 2017-05-10 09:54:01
  */
 public class ZhimaMerchantOrderRentQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6192782421419859126L;
+	private static final long serialVersionUID = 7643831649978656165L;
 
 	/**
 	 * 外部订单号，需要唯一，由商户传入，芝麻内部会做幂等控制，格式为：yyyyMMddHHmmss+随机数

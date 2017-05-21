@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 行业代理收单接口使用的交易相关参数
  *
  * @author auto create
- * @since 1.0, 2017-04-05 20:16:41
+ * @since 1.0, 2017-05-10 11:09:03
  */
 public class TradeApplyParams extends AlipayObject {
 
-	private static final long serialVersionUID = 2785714881174886852L;
+	private static final long serialVersionUID = 2426275872777429478L;
 
 	/**
 	 * 系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID

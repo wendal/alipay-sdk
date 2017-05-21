@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 返回列表为json格式的列表（query_type参数的值为brands时返回品牌信息列表；query_type参数的值为series时返回车系信息列表；query_type参数的值为company时返厂商信息列表；query_type参数的值为models时返回车型信息列表）
  *
  * @author auto create
- * @since 1.0, 2017-03-15 17:52:07
+ * @since 1.0, 2017-04-12 11:47:37
  */
 public class QueryResult extends AlipayObject {
 
-	private static final long serialVersionUID = 5625442298879729682L;
+	private static final long serialVersionUID = 2876376342824338859L;
 
 	/**
 	 * 支付宝车型库品牌背景图片链接地址，

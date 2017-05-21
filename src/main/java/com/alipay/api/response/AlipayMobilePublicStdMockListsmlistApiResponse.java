@@ -11,11 +11,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.mobile.public.std.mock.listsmlist.api response.
  * 
  * @author auto create
- * @since 1.0, 2017-04-07 20:39:23
+ * @since 1.0, 2017-04-14 20:34:02
  */
 public class AlipayMobilePublicStdMockListsmlistApiResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6135713196525592145L;
+	private static final long serialVersionUID = 3541664219762454174L;
 
 	/** 
 	 * 简单对象嵌套List

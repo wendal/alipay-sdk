@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑业务授权令牌查询
  *
  * @author auto create
- * @since 1.0, 2017-04-10 10:45:22
+ * @since 1.0, 2017-05-10 16:11:45
  */
 public class KoubeiMemberDataOauthQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2791197125573884449L;
+	private static final long serialVersionUID = 6565835182388795548L;
 
 	/**
 	 * 授权业务类型，目前统一只有pay_member

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻信用评分普惠版
  *
  * @author auto create
- * @since 1.0, 2016-11-24 11:11:01
+ * @since 1.0, 2017-05-04 19:25:46
  */
 public class ZhimaCreditScoreBriefGetModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8612894773845386843L;
+	private static final long serialVersionUID = 8687426242485759563L;
 
 	/**
 	 * 350～950之间 业务判断的准入标准 建议业务确定一个稳定的判断标准 频繁的变更该标准可能导致接口被停用

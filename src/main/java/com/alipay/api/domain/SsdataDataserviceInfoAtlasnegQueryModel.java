@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class SsdataDataserviceInfoAtlasnegQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8543113687788228576L;
+	private static final long serialVersionUID = 7675915851732884826L;
 
 	/**
 	 * 填写法人,任职,投资,股权，如"法人,投资"就是以给定节点查找这两种关联关系的节点，以英文逗号作为分隔符

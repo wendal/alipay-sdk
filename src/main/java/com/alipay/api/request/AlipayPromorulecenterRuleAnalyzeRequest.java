@@ -11,7 +11,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.promorulecenter.rule.analyze request
  * 
  * @author auto create
- * @since 1.0, 2017-04-07 19:48:01
+ * @since 1.0, 2017-04-14 19:13:44
  */
 public class AlipayPromorulecenterRuleAnalyzeRequest implements AlipayRequest<AlipayPromorulecenterRuleAnalyzeResponse> {
 

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 券明细信息
  *
  * @author auto create
- * @since 1.0, 2017-04-10 14:29:41
+ * @since 1.0, 2017-05-08 11:36:06
  */
 public class VoucherDetail extends AlipayObject {
 
-	private static final long serialVersionUID = 1354734289678372552L;
+	private static final long serialVersionUID = 8243898571695728885L;
 
 	/**
 	 * 优惠券面额，它应该会等于商家出资加上其他出资方出资

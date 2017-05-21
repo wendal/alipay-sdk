@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 创建现金活动
  *
  * @author auto create
- * @since 1.0, 2017-02-23 23:08:11
+ * @since 1.0, 2017-04-24 17:55:18
  */
 public class AlipayMarketingCampaignCashCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2376545988846325754L;
+	private static final long serialVersionUID = 5563339248344313673L;
 
 	/**
 	 * 红包名称,商户在查询列表、详情看到的名字,同时也会显示在商户付款页面。
@@ -26,7 +26,7 @@ public class AlipayMarketingCampaignCashCreateModel extends AlipayObject {
 	private String endTime;
 
 	/**
-	 * 商户打款后的跳转链接，从支付宝收银台打款成功后的跳转链接。不填时，打款后停留在支付宝支付成功页。商户实际跳转会自动添加crowdNo作为跳转参数。示例: http://www.koubei.com?crowdNo=XXX
+	 * 商户打款后的跳转链接，从支付宝收银台打款成功后的跳转链接。不填时，打款后停留在支付宝支付成功页。商户实际跳转会自动添加crowdNo作为跳转参数。示例: http://www.yourhomepage.com?crowdNo=XXX
 	 */
 	@ApiField("merchant_link")
 	private String merchantLink;
@@ -64,9 +64,10 @@ public class AlipayMarketingCampaignCashCreateModel extends AlipayObject {
 	private String totalMoney;
 
 	/**
-	 * 红包发放个数，不同的发奖类型含义不同：
-(1) 固定金额：活动总共发放的现金红包个数,最小1个,最大10000000个。 实际的个数限制可能会根据业务进行动态调整。
-(2) 随机金额：用于计算每个随机红包的平均值，但最终发放个数不一定是total_num，可能大于也可能小于。
+	 * 红包发放个数，最小1个,最大10000000个。
+但不同的发放形式（即prize_type）会使得含义不同：
+(1) 若prize_type选择为固定金额，每个用户领取的红包金额为total_money除以total_num得到固定金额。
+(2) 若prize_type选择为随机金额，每个用户领取的红包金额为total_money除以total_num得到的平均金额值的0.5~1.5倍。由于金额是随机的，在红包金额全部被领取完时，有可能total_num有所剩余、或者大于设置值的情况。
 	 */
 	@ApiField("total_num")
 	private String totalNum;

@@ -7,11 +7,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.commerce.cityfacilitator.voucher.cancel response.
  * 
  * @author auto create
- * @since 1.0, 2016-04-28 14:25:54
+ * @since 1.0, 2017-04-21 12:01:06
  */
 public class AlipayCommerceCityfacilitatorVoucherCancelResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1838134972683838315L;
+	private static final long serialVersionUID = 6626624373135597435L;
 
 	
 

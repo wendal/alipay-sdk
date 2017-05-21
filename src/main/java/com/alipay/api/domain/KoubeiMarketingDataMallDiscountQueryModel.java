@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 用户已获得的优惠信息查询接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 21:53:37
+ * @since 1.0, 2017-04-17 10:53:57
  */
 public class KoubeiMarketingDataMallDiscountQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5664577752119894183L;
+	private static final long serialVersionUID = 7899371367398319947L;
 
 	/**
 	 * 商圈id

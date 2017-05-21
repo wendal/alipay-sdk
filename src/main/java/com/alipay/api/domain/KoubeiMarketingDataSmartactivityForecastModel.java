@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户智能活动效果预测接口
  *
  * @author auto create
- * @since 1.0, 2017-03-27 21:49:22
+ * @since 1.0, 2017-04-13 10:59:00
  */
 public class KoubeiMarketingDataSmartactivityForecastModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5353515526693365287L;
+	private static final long serialVersionUID = 8532412897574568238L;
 
 	/**
 	 * 活动配置CODE
@@ -20,10 +20,11 @@ public class KoubeiMarketingDataSmartactivityForecastModel extends AlipayObject 
 	private String configCode;
 
 	/**
-	 * 诊断结果CODE，目前有如下三个值
+	 * 诊断结果CODE，目前有如下四个值
 TRADE_RATE	流失会员占比高
 USER_COUNT	会员数量少
 REPAY_RATE	复购率低
+COMPOSED_ACTIVITY 方案组诊断
 当入参为TRADE_RATE和USER_COUNT时暂时不支持预测，会返回错误码UNSUPPORT_PARAMETER
 	 */
 	@ApiField("diagnose_code")
@@ -37,7 +38,10 @@ voucher_valid_days:券有效期天数
 activity_valid_days:活动有效期天数
 min_cost:领券门槛,可以阶梯送数据（示例：100|200|300）单位：分
 unconsume_days:会员流失天数
-注意：对于消费送数据，min_consume/min_cost/worth_value是必填的且必须成组出现
+crowd_group:人群对象
+consume_code:消费送活动形式包含
+commission_rate:口碑客分佣比例
+注意：对于消费送数据，min_consume/min_cost/worth_value是必填的且必须成组出现，对于诊断码为COMPOSED_ACTIVITY的预测，必须传入全量数据，并且各个参数使用竖线分隔多个值的场景
 	 */
 	@ApiField("ext_info")
 	private String extInfo;

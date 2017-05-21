@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 洗车保养服务商品
  *
  * @author auto create
- * @since 1.0, 2017-03-08 21:40:48
+ * @since 1.0, 2017-04-12 11:49:05
  */
 public class MaitainShopProduct extends AlipayObject {
 
-	private static final long serialVersionUID = 2673842134265564513L;
+	private static final long serialVersionUID = 4445722638596829166L;
 
 	/**
 	 * 销售价格（元），服务售卖价格，展示给用户。无优惠时的下单支付金额。

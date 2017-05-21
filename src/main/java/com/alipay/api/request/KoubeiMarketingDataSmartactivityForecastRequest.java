@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: koubei.marketing.data.smartactivity.forecast request
  * 
  * @author auto create
- * @since 1.0, 2017-03-15 17:09:47
+ * @since 1.0, 2017-04-13 10:59:00
  */
 public class KoubeiMarketingDataSmartactivityForecastRequest implements AlipayRequest<KoubeiMarketingDataSmartactivityForecastResponse> {
 

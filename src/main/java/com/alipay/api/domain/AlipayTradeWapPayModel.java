@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 手机网站支付接口2.0
  *
  * @author auto create
- * @since 1.0, 2017-01-13 19:11:47
+ * @since 1.0, 2017-05-04 20:18:39
  */
 public class AlipayTradeWapPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2888946829643398285L;
+	private static final long serialVersionUID = 4896885428416713844L;
 
 	/**
 	 * 针对用户授权接口，获取用户相关数据时，用于标识用户授权关系
@@ -52,6 +52,12 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	 */
 	@ApiField("goods_type")
 	private String goodsType;
+
+	/**
+	 * 开票信息
+	 */
+	@ApiField("invoice_info")
+	private InvoiceInfo invoiceInfo;
 
 	/**
 	 * 商户网站唯一订单号
@@ -101,6 +107,12 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	 */
 	@ApiField("store_id")
 	private String storeId;
+
+	/**
+	 * 间连受理商户信息体，当前只对特殊银行机构特定场景下使用此字段
+	 */
+	@ApiField("sub_merchant")
+	private SubMerchant subMerchant;
 
 	/**
 	 * 商品的标题/交易标题/订单标题/订单关键字等。
@@ -168,6 +180,13 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 		this.goodsType = goodsType;
 	}
 
+	public InvoiceInfo getInvoiceInfo() {
+		return this.invoiceInfo;
+	}
+	public void setInvoiceInfo(InvoiceInfo invoiceInfo) {
+		this.invoiceInfo = invoiceInfo;
+	}
+
 	public String getOutTradeNo() {
 		return this.outTradeNo;
 	}
@@ -222,6 +241,13 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	}
 	public void setStoreId(String storeId) {
 		this.storeId = storeId;
+	}
+
+	public SubMerchant getSubMerchant() {
+		return this.subMerchant;
+	}
+	public void setSubMerchant(SubMerchant subMerchant) {
+		this.subMerchant = subMerchant;
 	}
 
 	public String getSubject() {

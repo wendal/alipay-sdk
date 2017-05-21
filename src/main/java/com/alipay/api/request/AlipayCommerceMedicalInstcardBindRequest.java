@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.commerce.medical.instcard.bind request
  * 
  * @author auto create
- * @since 1.0, 2017-03-01 18:24:48
+ * @since 1.0, 2017-05-03 16:49:30
  */
 public class AlipayCommerceMedicalInstcardBindRequest implements AlipayRequest<AlipayCommerceMedicalInstcardBindResponse> {
 

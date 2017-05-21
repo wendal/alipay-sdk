@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.asset.point.budget.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-04-07 18:41:34
+ * @since 1.0, 2017-04-14 18:58:03
  */
 public class AlipayAssetPointBudgetQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7246198973531256793L;
+	private static final long serialVersionUID = 8559992579111385176L;
 
 	/** 
 	 * 还可以发放的集分宝个数

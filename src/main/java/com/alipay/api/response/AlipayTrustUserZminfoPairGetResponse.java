@@ -13,7 +13,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayTrustUserZminfoPairGetResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7116652828525593212L;
+	private static final long serialVersionUID = 4785656144338475989L;
 
 	/** 
 	 * 申请者芝麻信用信息JSON串

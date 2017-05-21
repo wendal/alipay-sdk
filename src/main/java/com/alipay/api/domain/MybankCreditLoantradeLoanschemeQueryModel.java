@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 外部商业平台合作-查询可贷款方案
  *
  * @author auto create
- * @since 1.0, 2017-03-10 17:05:09
+ * @since 1.0, 2017-05-05 10:12:07
  */
 public class MybankCreditLoantradeLoanschemeQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7152412414855762539L;
+	private static final long serialVersionUID = 4245757139757161784L;
 
 	/**
 	 * 授信编号

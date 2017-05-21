@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.operator.mobile.bind response.
  * 
  * @author auto create
- * @since 1.0, 2014-10-22 15:46:40
+ * @since 1.0, 2017-05-03 16:48:39
  */
 public class AlipayOperatorMobileBindResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8861761753631454194L;
+	private static final long serialVersionUID = 8428737834614415137L;
 
 	/** 
 	 * 用户签约的支付宝账号对应的支付宝唯一用户号。

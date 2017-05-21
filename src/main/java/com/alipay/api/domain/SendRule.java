@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 奖品发放规则
  *
  * @author auto create
- * @since 1.0, 2017-04-01 21:21:04
+ * @since 1.0, 2017-04-21 13:37:21
  */
 public class SendRule extends AlipayObject {
 
-	private static final long serialVersionUID = 3258658897763773359L;
+	private static final long serialVersionUID = 7224221834936295432L;
 
 	/**
 	 * 是否允许重复发奖：

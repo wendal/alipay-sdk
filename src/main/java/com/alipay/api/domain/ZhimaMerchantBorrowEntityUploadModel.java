@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还借用实体数据上传接口
  *
  * @author auto create
- * @since 1.0, 2017-01-13 10:07:23
+ * @since 1.0, 2017-05-10 09:54:13
  */
 public class ZhimaMerchantBorrowEntityUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6617792161165769174L;
+	private static final long serialVersionUID = 7649919235844525799L;
 
 	/**
 	 * 地址描述
@@ -83,6 +83,12 @@ public class ZhimaMerchantBorrowEntityUploadModel extends AlipayObject {
 	 */
 	@ApiField("office_hours_desc")
 	private String officeHoursDesc;
+
+	/**
+	 * 信用借还的签约产品码,传入固定值:w1010100000000002858
+	 */
+	@ApiField("product_code")
+	private String productCode;
 
 	/**
 	 * 租金描述，该借还点的租金描述，例如：5元/小时，5-10元／小时
@@ -177,6 +183,13 @@ public class ZhimaMerchantBorrowEntityUploadModel extends AlipayObject {
 	}
 	public void setOfficeHoursDesc(String officeHoursDesc) {
 		this.officeHoursDesc = officeHoursDesc;
+	}
+
+	public String getProductCode() {
+		return this.productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
 	}
 
 	public String getRentDesc() {

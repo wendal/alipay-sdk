@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2017-04-11 14:07:04
+ * @since 1.0, 2017-05-08 11:36:06
  */
 public class AlipayTradePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8215729498583613227L;
+	private static final long serialVersionUID = 2811846651484427711L;
 
 	/**
 	 * 支付宝的店铺编号
@@ -130,7 +130,7 @@ public class AlipayTradePayModel extends AlipayObject {
 	private String storeId;
 
 	/**
-	 * 二级商户信息,当前只对特殊银行机构特定场景下使用此字段
+	 * 间连受理商户信息体，当前只对特殊银行机构特定场景下使用此字段
 	 */
 	@ApiField("sub_merchant")
 	private SubMerchant subMerchant;

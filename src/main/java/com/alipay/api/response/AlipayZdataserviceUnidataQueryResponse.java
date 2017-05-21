@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.zdataservice.unidata.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-02-13 20:51:57
+ * @since 1.0, 2017-04-26 16:20:03
  */
 public class AlipayZdataserviceUnidataQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8419838114342975232L;
+	private static final long serialVersionUID = 1853775629247138139L;
 
 	/** 
 	 * 查询结果集，统一用string方式返回

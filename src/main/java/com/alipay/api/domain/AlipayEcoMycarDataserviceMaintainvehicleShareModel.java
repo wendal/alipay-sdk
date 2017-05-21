@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 同步评论接口
  *
  * @author auto create
- * @since 1.0, 2017-03-03 16:39:25
+ * @since 1.0, 2017-04-12 11:49:20
  */
 public class AlipayEcoMycarDataserviceMaintainvehicleShareModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7146946558684546567L;
+	private static final long serialVersionUID = 1641968914575912531L;
 
 	/**
 	 * 车辆ID

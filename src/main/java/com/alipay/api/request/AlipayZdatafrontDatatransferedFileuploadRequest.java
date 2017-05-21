@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.zdatafront.datatransfered.fileupload request
  * 
  * @author auto create
- * @since 1.0, 2017-02-17 14:13:34
+ * @since 1.0, 2017-05-02 14:41:11
  */
 public class AlipayZdatafrontDatatransferedFileuploadRequest implements AlipayUploadRequest<AlipayZdatafrontDatatransferedFileuploadResponse> {
 

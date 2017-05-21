@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 集点卡工具
  *
  * @author auto create
- * @since 1.0, 2017-04-01 21:21:04
+ * @since 1.0, 2017-04-21 13:37:21
  */
 public class PointCard extends AlipayObject {
 
-	private static final long serialVersionUID = 4649583225385658322L;
+	private static final long serialVersionUID = 8772627974143325122L;
 
 	/**
 	 * 工具的描述

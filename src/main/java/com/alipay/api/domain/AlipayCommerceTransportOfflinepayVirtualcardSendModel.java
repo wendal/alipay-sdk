@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 虚拟卡信息同步
  *
  * @author auto create
- * @since 1.0, 2017-03-09 18:02:10
+ * @since 1.0, 2017-05-02 14:37:23
  */
 public class AlipayCommerceTransportOfflinepayVirtualcardSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5756492563468723873L;
+	private static final long serialVersionUID = 5715768193731247582L;
 
 	/**
 	 * 虚拟卡信息同步动作
