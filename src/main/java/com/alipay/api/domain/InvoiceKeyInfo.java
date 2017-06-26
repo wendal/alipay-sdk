@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 电子发票开票关键信息
  *
  * @author auto create
- * @since 1.0, 2017-05-04 20:18:18
+ * @since 1.0, 2017-06-06 18:11:55
  */
 public class InvoiceKeyInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8473411481565221214L;
+	private static final long serialVersionUID = 7364749399157538421L;
 
 	/**
 	 * 开票商户名称：商户品牌简称|商户门店简称

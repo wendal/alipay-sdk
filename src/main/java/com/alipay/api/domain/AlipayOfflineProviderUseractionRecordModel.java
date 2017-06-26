@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * isv 回传的用户操作行为信息调用接口
  *
  * @author auto create
- * @since 1.0, 2017-03-31 13:28:43
+ * @since 1.0, 2017-06-09 16:06:53
  */
 public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7746788627719454261L;
+	private static final long serialVersionUID = 1423352763364136111L;
 
 	/**
-	 * 详情设置会更具action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如果设置，整体是json结构。
+	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如何设置，整体是json结构。订单数据回流详细说明见链接：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.msmB7o&treeId=193&articleId=106810&docType=1#s1
 	 */
 	@ApiField("action_detail")
 	private String actionDetail;
@@ -30,6 +30,7 @@ public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 1、order_dishes(上传用户菜单)
 2、order_num(餐厅排号)
 3、order_book_create(餐厅预定)
+4、order_pan(泛行业订单上传)
 	 */
 	@ApiField("action_type")
 	private String actionType;
@@ -53,7 +54,9 @@ public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 	private String entity;
 
 	/**
-	 * 上传类型为：order_dishes(上传用户菜单)、order_num(餐厅排号)、order_book_create(餐厅预定）设置的类型都是REPAST
+	 * 上传类型为：order_dishes(上传用户菜单)、order_num(餐厅排号)设置的类型都是REPAST；
+上传类型为：order_book_create(餐厅预定）时，设置的类型是book；
+上传类型为：order_pan(泛行业订单）设置的类型是PAN。
 	 */
 	@ApiField("industry")
 	private String industry;
@@ -63,6 +66,19 @@ public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 	 */
 	@ApiField("mobile")
 	private String mobile;
+
+	/**
+	 * 该字段建议填写。值定义：alipay、weixin、other、isv;
+值意义：alipay：支付宝；weixin：微信；isv：isv 自己的中端系统，other：其他;当前订单的创建来源，比如支付宝扫码创建或微信扫码创建或通过自己的系统用户点菜后创建，则传入对应英文。
+	 */
+	@ApiField("order_channel")
+	private String orderChannel;
+
+	/**
+	 * 目前只有当action_type=order_dishes才生效，用于识别当前上传的点餐订单数据属于在线买单还是扫码点菜。现有变量枚举：online_pay（在线买单）、order_dish（扫码点菜）
+	 */
+	@ApiField("order_type")
+	private String orderType;
 
 	/**
 	 * 传入店铺关联关系。标记当前接口涉及到的店铺信息，同时如果传入的数据在口碑不存在，口碑会建立一条shop_id+ outer_id+ type的关联数据
@@ -77,7 +93,7 @@ public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 	private String platformUserId;
 
 	/**
-	 * 废弃，不需要设置
+	 * 从第三方平台进入开发者应用后产生的数据，传入第三方平台域名。比如是支付宝扫码后产生的，传入支付宝域名alipay.com，是微信打开后产生的，传入微信域名weixin.qq.com，如果数据不是从第三方平台进入后产生的，设置自己的域名即可，该字段内容不做强制校验。
 	 */
 	@ApiField("source")
 	private String source;
@@ -142,6 +158,20 @@ public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 	}
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+
+	public String getOrderChannel() {
+		return this.orderChannel;
+	}
+	public void setOrderChannel(String orderChannel) {
+		this.orderChannel = orderChannel;
+	}
+
+	public String getOrderType() {
+		return this.orderType;
+	}
+	public void setOrderType(String orderType) {
+		this.orderType = orderType;
 	}
 
 	public OuterShopDO getOuterShopDo() {

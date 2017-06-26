@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 行业关注名单详情
  *
  * @author auto create
- * @since 1.0, 2017-05-03 14:30:48
+ * @since 1.0, 2017-06-08 18:05:14
  */
 public class ZmWatchListDetail extends AlipayObject {
 
-	private static final long serialVersionUID = 8618773653264136894L;
+	private static final long serialVersionUID = 2361529854448632359L;
 
 	/**
 	 * 行业编码，例如：

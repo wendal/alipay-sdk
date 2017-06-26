@@ -15,7 +15,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class KoubeiMarketingDataSmartmanagementDiagnoseResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4346462339149444111L;
+	private static final long serialVersionUID = 8623311878269792737L;
 
 	/** 
 	 * 诊断结果CODE，目前有如下四个值

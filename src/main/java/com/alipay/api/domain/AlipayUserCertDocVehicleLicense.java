@@ -7,11 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 电子证件产品行驶证
  *
  * @author auto create
- * @since 1.0, 2017-01-13 10:25:16
+ * @since 1.0, 2017-06-01 16:04:48
  */
 public class AlipayUserCertDocVehicleLicense extends AlipayObject {
 
-	private static final long serialVersionUID = 2192268812838412734L;
+	private static final long serialVersionUID = 8437815433585665138L;
+
+	/**
+	 * base64编码后的主页照片
+	 */
+	@ApiField("encoded_img_main")
+	private String encodedImgMain;
+
+	/**
+	 * base64编码后的副页照片
+	 */
+	@ApiField("encoded_img_vice")
+	private String encodedImgVice;
 
 	/**
 	 * 发动机号码
@@ -54,6 +66,20 @@ public class AlipayUserCertDocVehicleLicense extends AlipayObject {
 	 */
 	@ApiField("vin")
 	private String vin;
+
+	public String getEncodedImgMain() {
+		return this.encodedImgMain;
+	}
+	public void setEncodedImgMain(String encodedImgMain) {
+		this.encodedImgMain = encodedImgMain;
+	}
+
+	public String getEncodedImgVice() {
+		return this.encodedImgVice;
+	}
+	public void setEncodedImgVice(String encodedImgVice) {
+		this.encodedImgVice = encodedImgVice;
+	}
 
 	public String getEngineNo() {
 		return this.engineNo;

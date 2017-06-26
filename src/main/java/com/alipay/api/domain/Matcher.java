@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 生活号用户匹配器
  *
  * @author auto create
- * @since 1.0, 2017-04-27 10:54:37
+ * @since 1.0, 2017-06-01 11:25:22
  */
 public class Matcher extends AlipayObject {
 
-	private static final long serialVersionUID = 3155372556328542336L;
+	private static final long serialVersionUID = 4848213393292315512L;
 
 	/**
 	 * 身份证号码，与user_id、mobile_no不能同时为空

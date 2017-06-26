@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询用户的支付宝交易信息
  *
  * @author auto create
- * @since 1.0, 2017-02-22 17:16:32
+ * @since 1.0, 2017-06-07 16:38:09
  */
 public class AlipayEbppInvoiceUserTradeQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1388712437578779166L;
+	private static final long serialVersionUID = 7543117679825115959L;
 
 	/**
 	 * 发票管家交易id，来源于用户支付后开票申请跳转开票方的链接中带入参数einv_trade_id

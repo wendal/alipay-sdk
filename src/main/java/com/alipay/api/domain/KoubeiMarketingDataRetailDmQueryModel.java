@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 快消店铺DM浏览数据查询接口
  *
  * @author auto create
- * @since 1.0, 2017-03-21 15:59:30
+ * @since 1.0, 2017-05-16 17:02:42
  */
 public class KoubeiMarketingDataRetailDmQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8156376831113856816L;
+	private static final long serialVersionUID = 5258319494543363974L;
 
 	/**
 	 * 内容ID，调用koubei.marketing.campaign.retail.dm.create创建内容时返回的内容ID

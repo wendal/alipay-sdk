@@ -7,11 +7,17 @@ import com.alipay.api.internal.mapping.ApiField;
  * 教育缴费学校信息录入接口
  *
  * @author auto create
- * @since 1.0, 2016-12-28 17:54:50
+ * @since 1.0, 2017-06-13 10:29:12
  */
 public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6193175286788749382L;
+	private static final long serialVersionUID = 2887214467359113588L;
+
+	/**
+	 * 银行卡编号。适配集团到卡模式的学校接入
+	 */
+	@ApiField("bankcard_no")
+	private String bankcardNo;
 
 	/**
 	 * 市的国家编码
@@ -115,6 +121,13 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	 */
 	@ApiField("school_type")
 	private String schoolType;
+
+	public String getBankcardNo() {
+		return this.bankcardNo;
+	}
+	public void setBankcardNo(String bankcardNo) {
+		this.bankcardNo = bankcardNo;
+	}
 
 	public String getCityCode() {
 		return this.cityCode;

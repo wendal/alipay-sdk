@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOfflineMarketLeadsClaimModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7553747121239554187L;
+	private static final long serialVersionUID = 1113369114951936365L;
 
 	/**
 	 * leadsId

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 数据项的调查结果
  *
  * @author auto create
- * @since 1.0, 2016-12-01 12:02:21
+ * @since 1.0, 2017-05-31 13:44:00
  */
 public class InvestigCategoryResult extends AlipayObject {
 
-	private static final long serialVersionUID = 3367566221262285769L;
+	private static final long serialVersionUID = 1592955797969742932L;
 
 	/**
 	 * 数据项Category

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 舆情数据处理平台外部数据提交接口
  *
  * @author auto create
- * @since 1.0, 2017-03-01 19:04:03
+ * @since 1.0, 2017-06-02 13:56:58
  */
 public class AlipayBossCsDatacollectSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8686391238145448155L;
+	private static final long serialVersionUID = 1299253716346684694L;
 
 	/**
 	 * 上数提交数据内容

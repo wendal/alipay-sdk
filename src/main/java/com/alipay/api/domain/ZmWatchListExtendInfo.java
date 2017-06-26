@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻行业关注名单单条信息的扩展信息
  *
  * @author auto create
- * @since 1.0, 2017-05-03 14:30:48
+ * @since 1.0, 2017-06-08 18:05:14
  */
 public class ZmWatchListExtendInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 6359299633533947533L;
+	private static final long serialVersionUID = 2832136728987777232L;
 
 	/**
 	 * 对于这个key的描述

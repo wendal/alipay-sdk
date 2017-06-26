@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 通知消息
  *
  * @author auto create
- * @since 1.0, 2017-05-03 16:47:46
+ * @since 1.0, 2017-06-06 17:13:14
  */
 public class McardNotifyMessage extends AlipayObject {
 
-	private static final long serialVersionUID = 5855198262196538914L;
+	private static final long serialVersionUID = 7516739427689434568L;
 
 	/**
 	 * 用户提醒信息，按如下格式拼装，需要ISV提供change_reason。

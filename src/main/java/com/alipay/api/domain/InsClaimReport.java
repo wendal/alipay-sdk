@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 保险报案信息实体
  *
  * @author auto create
- * @since 1.0, 2017-03-13 17:30:37
+ * @since 1.0, 2017-05-12 17:44:58
  */
 public class InsClaimReport extends AlipayObject {
 
-	private static final long serialVersionUID = 2427874775843511472L;
+	private static final long serialVersionUID = 3533552694245955438L;
 
 	/**
 	 * 出险地点
@@ -67,6 +67,12 @@ public class InsClaimReport extends AlipayObject {
 	@ApiListField("progress")
 	@ApiField("ins_claim_report_progress")
 	private List<InsClaimReportProgress> progress;
+
+	/**
+	 * 当status 值为不予受理:REJECTED时候返回
+	 */
+	@ApiField("report_reject_reason")
+	private String reportRejectReason;
 
 	/**
 	 * 报案人
@@ -134,6 +140,13 @@ public class InsClaimReport extends AlipayObject {
 	}
 	public void setProgress(List<InsClaimReportProgress> progress) {
 		this.progress = progress;
+	}
+
+	public String getReportRejectReason() {
+		return this.reportRejectReason;
+	}
+	public void setReportRejectReason(String reportRejectReason) {
+		this.reportRejectReason = reportRejectReason;
 	}
 
 	public InsPerson getReporter() {

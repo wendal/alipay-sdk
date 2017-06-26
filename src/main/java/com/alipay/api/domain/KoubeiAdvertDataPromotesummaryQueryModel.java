@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑客推广数据汇总查询
  *
  * @author auto create
- * @since 1.0, 2017-02-16 20:40:32
+ * @since 1.0, 2017-06-09 15:51:19
  */
 public class KoubeiAdvertDataPromotesummaryQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4257139645589431598L;
+	private static final long serialVersionUID = 5811177519576922738L;
 
 	/**
 	 * 广告id

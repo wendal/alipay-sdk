@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保险机构
  *
  * @author auto create
- * @since 1.0, 2017-02-06 10:21:00
+ * @since 1.0, 2017-06-14 10:39:56
  */
 public class InsMerchant extends AlipayObject {
 
-	private static final long serialVersionUID = 2368616553369173388L;
+	private static final long serialVersionUID = 8373673159447936853L;
 
 	/**
 	 * 机构全称

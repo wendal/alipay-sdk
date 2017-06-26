@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * isv 回传的商户操作行为信息调用接口
  *
  * @author auto create
- * @since 1.0, 2017-03-31 13:28:32
+ * @since 1.0, 2017-06-08 10:03:38
  */
 public class AlipayOfflineProviderShopactionRecordModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8472125789812651388L;
+	private static final long serialVersionUID = 3484368888324339544L;
 
 	/**
-	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如果设置，整体是json结构。
+	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如果设置，整体是json结构。参考文档：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.u6pJ7Q&treeId=193&articleId=105281&docType=1#s1
 	 */
 	@ApiField("action_detail")
 	private String actionDetail;
@@ -41,7 +41,8 @@ public class AlipayOfflineProviderShopactionRecordModel extends AlipayObject {
 6. modify_dish(修改菜品)
 
 7. modify_shop_status(店铺状态变更)
-每一种操作行为对应的action_detail都不同，action_detail结构都是json串。
+每一种操作行为对应的action_detail都不同，action_detail结构都是json串。 
+8.insert_one_shop_all_table(批量覆盖单个店铺桌位)
 	 */
 	@ApiField("action_type")
 	private String actionType;
@@ -59,7 +60,7 @@ public class AlipayOfflineProviderShopactionRecordModel extends AlipayObject {
 	private String entity;
 
 	/**
-	 * 当action_type的参数值是 insert_table、update_table、insert_dish、delete_dish、soldout_dish、modify_dish、insert_dish时，此参数的值固定为：REPAST
+	 * 当action_type的参数值是 insert_table、update_table、insert_dish、delete_dish、soldout_dish、modify_dish、insert_dish、insert_one_shop_all_table时，此参数的值固定为：REPAST
 	 */
 	@ApiField("industry")
 	private String industry;

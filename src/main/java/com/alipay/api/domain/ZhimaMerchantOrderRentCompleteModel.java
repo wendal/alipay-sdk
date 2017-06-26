@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还订单归还
  *
  * @author auto create
- * @since 1.0, 2017-05-10 09:54:20
+ * @since 1.0, 2017-05-25 14:35:03
  */
 public class ZhimaMerchantOrderRentCompleteModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3829158341577459866L;
+	private static final long serialVersionUID = 2637369263934766926L;
 
 	/**
 	 * 信用借还订单号

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 电子证件产品-驾驶证
  *
  * @author auto create
- * @since 1.0, 2017-01-13 10:25:16
+ * @since 1.0, 2017-06-01 16:05:07
  */
 public class AlipayUserCertDocDrivingLicense extends AlipayObject {
 
-	private static final long serialVersionUID = 3228513737879778797L;
+	private static final long serialVersionUID = 8473259265719464875L;
 
 	/**
 	 * 准驾车型
@@ -24,6 +24,18 @@ public class AlipayUserCertDocDrivingLicense extends AlipayObject {
 	 */
 	@ApiField("driving_license_no")
 	private String drivingLicenseNo;
+
+	/**
+	 * base64后的主页照片
+	 */
+	@ApiField("encoded_img_main")
+	private String encodedImgMain;
+
+	/**
+	 * base64编码后的副页图片
+	 */
+	@ApiField("encoded_img_vice")
+	private String encodedImgVice;
 
 	/**
 	 * 失效日期
@@ -61,6 +73,20 @@ public class AlipayUserCertDocDrivingLicense extends AlipayObject {
 	}
 	public void setDrivingLicenseNo(String drivingLicenseNo) {
 		this.drivingLicenseNo = drivingLicenseNo;
+	}
+
+	public String getEncodedImgMain() {
+		return this.encodedImgMain;
+	}
+	public void setEncodedImgMain(String encodedImgMain) {
+		this.encodedImgMain = encodedImgMain;
+	}
+
+	public String getEncodedImgVice() {
+		return this.encodedImgVice;
+	}
+	public void setEncodedImgVice(String encodedImgVice) {
+		this.encodedImgVice = encodedImgVice;
 	}
 
 	public String getExpireDate() {

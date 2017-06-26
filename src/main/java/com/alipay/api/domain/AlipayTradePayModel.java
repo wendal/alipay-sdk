@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2017-05-08 11:36:06
+ * @since 1.0, 2017-06-14 17:03:26
  */
 public class AlipayTradePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2811846651484427711L;
+	private static final long serialVersionUID = 8432149877713435794L;
 
 	/**
 	 * 支付宝的店铺编号
@@ -24,7 +24,7 @@ public class AlipayTradePayModel extends AlipayObject {
 	private String alipayStoreId;
 
 	/**
-	 * 支付授权码
+	 * 支付授权码，25~30开头的长度为16~24位的数字，实际字符串长度以开发者获取的付款码长度为准
 	 */
 	@ApiField("auth_code")
 	private String authCode;

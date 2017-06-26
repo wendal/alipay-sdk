@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还订单修改接口
  *
  * @author auto create
- * @since 1.0, 2017-05-08 09:36:19
+ * @since 1.0, 2017-05-25 14:35:11
  */
 public class ZhimaMerchantOrderRentModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8618372535282829679L;
+	private static final long serialVersionUID = 5336644576392368246L;
 
 	/**
 	 * 芝麻借还订单的开始借用时间，格式：yyyy-mm-dd hh:MM:ss 

@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 店铺DM营销数据
  *
  * @author auto create
- * @since 1.0, 2017-03-21 15:59:30
+ * @since 1.0, 2017-05-16 17:02:42
  */
 public class DmActivityShopData extends AlipayObject {
 
-	private static final long serialVersionUID = 7782128324868178431L;
+	private static final long serialVersionUID = 1385992636498221867L;
 
 	/**
 	 * 数据创建时间戳

@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 审批通过后返回的授信信息
  *
  * @author auto create
- * @since 1.0, 2016-12-01 12:02:21
+ * @since 1.0, 2017-05-31 13:44:00
  */
 public class ApproveCreditResult extends AlipayObject {
 
-	private static final long serialVersionUID = 8161361323687694629L;
+	private static final long serialVersionUID = 6225248439283664518L;
 
 	/**
 	 * 费用列表，每个费用对象代码一个收费项； 若费用列表为空或空集合，表示不存在费用定价

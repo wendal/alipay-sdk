@@ -7,17 +7,17 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询个性化扩展区标签规则
  *
  * @author auto create
- * @since 1.0, 2017-04-27 10:54:49
+ * @since 1.0, 2017-06-14 11:09:10
  */
 public class QueryLabelRule extends AlipayObject {
 
-	private static final long serialVersionUID = 6282496887243122477L;
+	private static final long serialVersionUID = 3671253632174116234L;
 
 	/**
 	 * 标签id
 	 */
 	@ApiField("label_id")
-	private Long labelId;
+	private String labelId;
 
 	/**
 	 * 标签名
@@ -31,10 +31,10 @@ public class QueryLabelRule extends AlipayObject {
 	@ApiField("label_value")
 	private String labelValue;
 
-	public Long getLabelId() {
+	public String getLabelId() {
 		return this.labelId;
 	}
-	public void setLabelId(Long labelId) {
+	public void setLabelId(String labelId) {
 		this.labelId = labelId;
 	}
 

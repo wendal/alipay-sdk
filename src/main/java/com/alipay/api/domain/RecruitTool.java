@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 创建活动的招商信息
  *
  * @author auto create
- * @since 1.0, 2017-04-21 13:37:21
+ * @since 1.0, 2017-06-05 11:25:25
  */
 public class RecruitTool extends AlipayObject {
 
-	private static final long serialVersionUID = 7474321135871998644L;
+	private static final long serialVersionUID = 8293835158448638645L;
 
 	/**
 	 * 招商结束时间

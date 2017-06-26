@@ -15,7 +15,7 @@ import com.alipay.api.internal.mapping.ApiListField;
  */
 public class CommentOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3273717864699335761L;
+	private static final long serialVersionUID = 7623345462411113512L;
 
 	/**
 	 * 口碑评价id

@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * 外部合作机构数据推送
  *
  * @author auto create
- * @since 1.0, 2017-04-21 11:01:22
+ * @since 1.0, 2017-05-11 14:09:08
  */
 public class MybankCreditLoanapplyDataUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8462733385854358925L;
+	private static final long serialVersionUID = 2563645749536843592L;
 
 	/**
-	 * 业务单编号。在申请场景下，就是申请单编号，唯一标识一笔贷款授信申请，由网商银行的系统生成。客户每次在网商银行提交一笔授信申请，都会生成一个唯一的申请单编号，此值会在授信申请的消息或者授信申请接口中返回。这个值维护了推送的数据和授信申请之间的映射关系。必填项。在其他场景，比如订单交易场景下，就是订单号。
+	 * 业务单编号。在申请场景下，就是申请单编号，唯一标识一笔贷款授信申请，获取方式：前提，和网商对接业务消息，biz_no是申请成功消息applicationEvent中的applicationCode字段，必填项。在其他场景，比如订单交易场景下，就是订单号。
 	 */
 	@ApiField("biz_no")
 	private String bizNo;
@@ -26,19 +26,19 @@ public class MybankCreditLoanapplyDataUploadModel extends AlipayObject {
 	private String bizType;
 
 	/**
-	 * 数据类型，标识推送的数据属于哪一个类别。合作机构在签署合作协议时，能够获取推送的数据类型。命名规范：大写英文字母，多个单词以下划线分隔。比如，货运行业接入的数据，命名为PARTNER_TRANSPORT_DATA。
+	 * 数据类型。收单行业：PARTNER_SETTLE_BILL_DATA；货运行业：PARTNER_TRANSPORT_DATA。该值网商系统会校验，请按约定填写。必填项。
 	 */
 	@ApiField("category")
 	private String category;
 
 	/**
-	 * json格式的数据。根据合作协议约定的数据内容，把数据组装成json格式。必填项。
+	 * json格式的数据。根据合作协议约定的数据内容，把数据组装成json格式。参考isv数据接入文档，须保证数据通过校验。必填项。
 	 */
 	@ApiField("data")
 	private String data;
 
 	/**
-	 * 数据提供方的标识，一般取合作机构的英文名或中文拼音。例如，如果合作机构是滴滴，则该值就可以填didi。必填项。
+	 * 数据提供方的标识，一般取合作机构的英文名或中文拼音。例如，如果合作机构是滴滴，则该值就可以填didi。该值网商系统不校验。必填项。
 	 */
 	@ApiField("data_provider")
 	private String dataProvider;

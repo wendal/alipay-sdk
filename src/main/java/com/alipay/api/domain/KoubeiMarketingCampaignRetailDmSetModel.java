@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 快消店铺展位内容上下架接口
  *
  * @author auto create
- * @since 1.0, 2017-03-21 15:59:24
+ * @since 1.0, 2017-05-16 17:02:51
  */
 public class KoubeiMarketingCampaignRetailDmSetModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5577951525763833318L;
+	private static final long serialVersionUID = 7438839885235961146L;
 
 	/**
 	 * 下架时间，仅上架操作时使用，必须晚于当前时间

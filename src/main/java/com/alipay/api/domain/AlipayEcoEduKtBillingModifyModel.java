@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 教育缴费账单状态同步接口
  *
  * @author auto create
- * @since 1.0, 2016-12-28 17:54:27
+ * @since 1.0, 2017-06-13 10:29:23
  */
 public class AlipayEcoEduKtBillingModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7857325282262744884L;
+	private static final long serialVersionUID = 4325961223535847773L;
 
 	/**
 	 * 退款时，支付宝返回的用户的登录id

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 分段数值，用于存储分期费用和分段还款的分段值
  *
  * @author auto create
- * @since 1.0, 2017-05-05 10:12:07
+ * @since 1.0, 2017-05-19 11:45:39
  */
 public class InstallmentValue extends AlipayObject {
 
-	private static final long serialVersionUID = 3577439258949192412L;
+	private static final long serialVersionUID = 8124776663531627221L;
 
 	/**
 	 * 分段值

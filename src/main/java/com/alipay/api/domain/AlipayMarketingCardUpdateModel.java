@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 会员卡更新
  *
  * @author auto create
- * @since 1.0, 2017-04-28 11:31:03
+ * @since 1.0, 2017-06-06 17:13:14
  */
 public class AlipayMarketingCardUpdateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3145757363946667439L;
+	private static final long serialVersionUID = 4797797831384836494L;
 
 	/**
 	 * 需要修改的最新卡信息
@@ -28,6 +28,14 @@ public class AlipayMarketingCardUpdateModel extends AlipayObject {
 	 */
 	@ApiField("ext_info")
 	private String extInfo;
+
+	/**
+	 * 会员卡卡面展示样式
+参考：展示位置详情参考"商户会员卡->快速接入文档->第四步" 
+备注：mcard_style_info与card_info下的template_id不能同时更新
+	 */
+	@ApiField("mcard_style_info")
+	private McardStylInfo mcardStyleInfo;
 
 	/**
 	 * 卡信息变更通知消息
@@ -69,6 +77,13 @@ BIZ_CARD：支付宝业务卡号
 	}
 	public void setExtInfo(String extInfo) {
 		this.extInfo = extInfo;
+	}
+
+	public McardStylInfo getMcardStyleInfo() {
+		return this.mcardStyleInfo;
+	}
+	public void setMcardStyleInfo(McardStylInfo mcardStyleInfo) {
+		this.mcardStyleInfo = mcardStyleInfo;
 	}
 
 	public List<McardNotifyMessage> getNotifyMessages() {

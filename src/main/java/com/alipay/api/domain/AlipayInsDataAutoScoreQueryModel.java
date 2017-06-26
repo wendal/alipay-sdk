@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 车险分查询
  *
  * @author auto create
- * @since 1.0, 2017-04-01 17:49:45
+ * @since 1.0, 2017-06-07 11:41:40
  */
 public class AlipayInsDataAutoScoreQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2719176551786857982L;
+	private static final long serialVersionUID = 7757278849535171725L;
 
 	/**
 	 * 投保地区码，参考《城市列表（含区县）v0307.xlsx》
@@ -63,10 +63,7 @@ CUSTOMER_SERVICE：客服
 	/**
 	 * 投保支持证件类型参考：
 IDENTITY_CARD：身份证
-PASSPORT：护照
-OFFICER_CARD：军官证
-HK_MC_LICENSE：港澳居民大陆通行证
-TW_LICENSE：台湾居民大陆通行证
+备注：目前仅支持身份证类型
 	 */
 	@ApiField("cert_type")
 	private String certType;

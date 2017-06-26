@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还创建订单
  *
  * @author auto create
- * @since 1.0, 2017-05-10 09:54:25
+ * @since 1.0, 2017-05-25 14:34:55
  */
 public class ZhimaMerchantOrderRentCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8724656786223855888L;
+	private static final long serialVersionUID = 2387292787195362926L;
 
 	/**
 	 * 借用用户的收货地址，可选字段。推荐商户传入此值，会将此手机号码与用户身份信息进行匹配验证，防范欺诈风险。

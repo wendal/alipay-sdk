@@ -12,7 +12,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayAssetAccountUnbindResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4526942299527846436L;
+	private static final long serialVersionUID = 2673134273232297782L;
 
 	/** 
 	 * 用户的支付宝账号对应的支付宝唯一用户标识，不可变更。

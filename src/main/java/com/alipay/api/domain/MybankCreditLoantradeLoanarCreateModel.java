@@ -7,14 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 机构代客户签署合约并放款
  *
  * @author auto create
- * @since 1.0, 2017-03-10 17:05:38
+ * @since 1.0, 2017-05-27 13:37:02
  */
 public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2752468294951988647L;
+	private static final long serialVersionUID = 3484854452283621538L;
 
 	/**
-	 * 收款方参与机构码
+	 * 收款账号外标
+对于支付宝账户，支付宝loginId；
+对于网商银行账户，是虚拟卡号；
+对于外部银行卡，是银行卡号
+	 */
+	@ApiField("account_ext_no")
+	private String accountExtNo;
+
+	/**
+	 * 收款方参与机构码，当收款账户为网商银行或外部银行时填充，即银行联行号（总行）
 	 */
 	@ApiField("account_fin_code")
 	private String accountFinCode;
@@ -26,7 +35,9 @@ public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 	private String accountFinName;
 
 	/**
-	 * 对公对私
+	 * 帐户类别，对公/对私，枚举值如下：
+1：对私 
+2：对公
 	 */
 	@ApiField("account_fin_type")
 	private String accountFinType;
@@ -39,18 +50,24 @@ public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 
 	/**
 	 * 收款方账户号
+对于支付宝账户，是支付宝会员id；
+对于网商银行账户，是资金账号id；
+对于外部银行卡，是银行卡号
 	 */
 	@ApiField("account_no")
 	private String accountNo;
 
 	/**
-	 * 收款方账户类型
+	 * 收款方账户类型，枚举值有：
+ALIPAY（支付宝）
+MY_BANK（网商银行）
+OUT_BANK（外部银行）
 	 */
 	@ApiField("account_type")
 	private String accountType;
 
 	/**
-	 * 2088开头的支付宝数字ID
+	 * 本次发起支用的客户支付宝会员id，客户登录系统后由外部机构传入
 	 */
 	@ApiField("alipay_id")
 	private String alipayId;
@@ -62,49 +79,55 @@ public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 	private String applyAmt;
 
 	/**
-	 * 业务单据号
+	 * 外部业务单据号，在外部机构上发生的交易编号，如在菜鸟供销平台上发生的采购单的业务编号
 	 */
 	@ApiField("bsn_no")
 	private String bsnNo;
 
 	/**
-	 * 授信编号
+	 * 本次支用的授信编号，网商银行审批通过后回传给外部机构，然后由外部机构传入
 	 */
 	@ApiField("credit_no")
 	private String creditNo;
 
 	/**
-	 * 客群
+	 * 客户群体，由网商银行事先分配给客户机构
 	 */
 	@ApiField("cust_group")
 	private String custGroup;
 
 	/**
-	 * 放款账户渠道
+	 * 放款账户渠道，从贷款方案查询接口获取
+DEFAULT_ALIPAY 默认支付宝
+ASSIGNED_ACCOUNT 定向支付账户
+MYBANK_ACCOUNT 网商银行二类户
 	 */
 	@ApiField("grant_channel")
 	private String grantChannel;
 
 	/**
-	 * 经营行业
+	 * 经营行业，枚举值如下：
+F5199：零售
+H6190：餐饮住宿
+L7299：商业服务
 	 */
 	@ApiField("industry")
 	private String industry;
 
 	/**
-	 * 参与者
+	 * 网商银行参与者id，外部机构调用创建网商会员接口获取，参见接口：mybank.credit.user.role.create
 	 */
 	@ApiField("ip_id")
 	private String ipId;
 
 	/**
-	 * 参与者会员角色ID
+	 * 网商银行参与者会员角色ID，外部机构调用创建网商会员接口获取，参见接口：mybank.credit.user.role.create
 	 */
 	@ApiField("ip_role_id")
 	private String ipRoleId;
 
 	/**
-	 * BC政策码
+	 * 本次支用的授信对应的BC政策码，由网商银行事先分配给外部机构
 	 */
 	@ApiField("loan_policy_code")
 	private String loanPolicyCode;
@@ -116,31 +139,41 @@ public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 	private Long loanTerm;
 
 	/**
-	 * 贷款期限单位
+	 * 贷款期限单位，枚举值：
+Y：年
+M：月
+D：日
 	 */
 	@ApiField("loan_term_unit")
 	private String loanTermUnit;
 
 	/**
-	 * 销售产品编码
+	 * 客户签约的销售产品编码，由网商银行事先分配给外部机构
 	 */
 	@ApiField("pd_code")
 	private String pdCode;
 
 	/**
-	 * 销售产品版本号
+	 * 客户签约的销售产品版本号，通过调用完整贷款方案（mybank.credit.loantrade.loanscheme.full.query）查询接口获取
 	 */
 	@ApiField("pd_version")
 	private String pdVersion;
 
 	/**
-	 * 还款方式
+	 * 还款方式，枚举值如下：
+1：等额本息
+2：等额本金
+3：按期付息到期还本
+4：组合还款
+6：一次性到期还本付息
+7：固定利息等额分期
 	 */
 	@ApiField("repay_mode")
 	private String repayMode;
 
 	/**
-	 * 请求流水号，用于幂等控制.以"ipRoleId_"开头
+	 * 单次请求唯一流水号，用于幂等控制
+结构为：客户机构ipRoleId_时间（日期、时分秒）_外部系统流水号
 	 */
 	@ApiField("request_id")
 	private String requestId;
@@ -152,10 +185,17 @@ public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 	private String sign;
 
 	/**
-	 * 转账备注
+	 * 交易备注
 	 */
 	@ApiField("trans_memo")
 	private String transMemo;
+
+	public String getAccountExtNo() {
+		return this.accountExtNo;
+	}
+	public void setAccountExtNo(String accountExtNo) {
+		this.accountExtNo = accountExtNo;
+	}
 
 	public String getAccountFinCode() {
 		return this.accountFinCode;

@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayMarketingCardActivateformQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5785689456449417686L;
+	private static final long serialVersionUID = 2725896744861655128L;
 
 	/**
 	 * 开放表单信息查询业务类型，可选类型如下：

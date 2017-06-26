@@ -11,17 +11,23 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品修改
  *
  * @author auto create
- * @since 1.0, 2017-05-03 08:09:13
+ * @since 1.0, 2017-06-14 10:49:27
  */
 public class KoubeiItemModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5193655128133881729L;
+	private static final long serialVersionUID = 6376999398257636136L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，有效期24小时；
 	 */
 	@ApiField("auth_code")
 	private String authCode;
+
+	/**
+	 * 口碑商品所属的后台类目id，ISV可通过开放接口koubei.item.category.children.batchquery来获得后台类目树，并选择叶子类目，作为该值传入
+	 */
+	@ApiField("category_id")
+	private String categoryId;
 
 	/**
 	 * 商品首图。支持bmp,png,jpeg,jpg,gif格式的图片，建议宽高比16:9，建议宽高：1242*698px 图片大小≤5M。图片大小超过5M,接口会报错。若图片尺寸不对，口碑服务器自身不会做压缩，但是口碑把这些图片放到客户端上展现时，自己会做性能优化(等比缩放，以图片中心为基准裁剪)。
@@ -98,7 +104,7 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	private String shopIds;
 
 	/**
-	 * 商品名称，请勿超过20汉字，40个字符
+	 * 商品名称，请勿超过40汉字，80个字符
 	 */
 	@ApiField("subject")
 	private String subject;
@@ -120,6 +126,13 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	}
 	public void setAuthCode(String authCode) {
 		this.authCode = authCode;
+	}
+
+	public String getCategoryId() {
+		return this.categoryId;
+	}
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public String getCover() {

@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayDataDataserviceBillDownloadurlQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7233272679164792569L;
+	private static final long serialVersionUID = 1464766443345917921L;
 
 	/**
 	 * 账单时间：日账单格式为yyyy-MM-dd，月账单格式为yyyy-MM。

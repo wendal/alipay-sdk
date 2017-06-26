@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class KoubeiContentCommentDataBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3531261852718914651L;
+	private static final long serialVersionUID = 1825972417188761654L;
 
 	/**
 	 * 口碑评价id，如果传入评价id则会忽略其他参数。 （口碑评价id、口碑门店id、口碑手艺人id不能同时为空）

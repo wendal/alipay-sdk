@@ -12,7 +12,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayMarketingCardActivateformQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 2378234392486611298L;
+	private static final long serialVersionUID = 5836415439256798847L;
 
 	/** 
 	 * 表单提交信息各个字段的值JSON数组

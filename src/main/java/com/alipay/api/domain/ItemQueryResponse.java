@@ -7,14 +7,20 @@ import com.alipay.api.internal.mapping.ApiField;
 import com.alipay.api.internal.mapping.ApiListField;
 
 /**
- * 查询信息
+ * trade_voucher商品查询信息
  *
  * @author auto create
- * @since 1.0, 2016-12-12 15:41:11
+ * @since 1.0, 2017-05-31 21:37:14
  */
 public class ItemQueryResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 8611975824379348555L;
+	private static final long serialVersionUID = 5449353292671317955L;
+
+	/**
+	 * 口碑商品所属的后台类目id，后台类目数据来源：开放接口koubei.item.category.children.batchquery（查询后台类目树接口）
+	 */
+	@ApiField("category_id")
+	private String categoryId;
 
 	/**
 	 * 首图
@@ -115,6 +121,13 @@ public class ItemQueryResponse extends AlipayObject {
 	 */
 	@ApiField("weight")
 	private Long weight;
+
+	public String getCategoryId() {
+		return this.categoryId;
+	}
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
+	}
 
 	public String getCover() {
 		return this.cover;

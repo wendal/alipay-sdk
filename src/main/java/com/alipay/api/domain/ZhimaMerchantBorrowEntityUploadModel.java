@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还借用实体数据上传接口
  *
  * @author auto create
- * @since 1.0, 2017-05-10 09:54:13
+ * @since 1.0, 2017-05-25 14:33:46
  */
 public class ZhimaMerchantBorrowEntityUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7649919235844525799L;
+	private static final long serialVersionUID = 2714922272645944713L;
 
 	/**
 	 * 地址描述
@@ -35,8 +35,6 @@ public class ZhimaMerchantBorrowEntityUploadModel extends AlipayObject {
 	 * 类目Code，传入芝麻借还规定的类目Code，其他值会认为非法参数，参数值如下：
 雨伞：umbrella 
 充电宝：power_bank
-自行车：bicycle
-充电线：charge_line
 	 */
 	@ApiField("category_code")
 	private String categoryCode;

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 发票管家交易信息模型
  *
  * @author auto create
- * @since 1.0, 2017-03-15 15:24:57
+ * @since 1.0, 2017-05-26 13:47:41
  */
 public class InvoiceTradeInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8674247491466718827L;
+	private static final long serialVersionUID = 7462754887944255686L;
 
 	/**
 	 * 支付宝交易号（字段于2017-02-21废弃，请勿使用）

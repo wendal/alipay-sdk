@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑码创建接口
  *
  * @author auto create
- * @since 1.0, 2017-04-14 10:36:30
+ * @since 1.0, 2017-05-12 14:05:12
  */
 public class KoubeiCateringKbcodeCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8276546148286797951L;
+	private static final long serialVersionUID = 5344814928372669475L;
 
 	/**
 	 * 口碑码绑定的门店或者桌号信息列表
