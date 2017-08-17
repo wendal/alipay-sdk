@@ -11,11 +11,17 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2017-06-14 17:03:26
+ * @since 1.0, 2017-07-19 14:02:57
  */
 public class AlipayTradePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8432149877713435794L;
+	private static final long serialVersionUID = 1481791677918294894L;
+
+	/**
+	 * 代扣业务需要传入协议相关信息
+	 */
+	@ApiField("agreement_params")
+	private AgreementParams agreementParams;
 
 	/**
 	 * 支付宝的店铺编号
@@ -40,6 +46,12 @@ public class AlipayTradePayModel extends AlipayObject {
 	 */
 	@ApiField("body")
 	private String body;
+
+	/**
+	 * 商户传入业务信息，具体值需要与支付宝约定
+	 */
+	@ApiField("business_params")
+	private String businessParams;
 
 	/**
 	 * 买家的支付宝用户id，如果为空，会从传入了码值信息中获取买家ID
@@ -167,6 +179,13 @@ public class AlipayTradePayModel extends AlipayObject {
 	@ApiField("undiscountable_amount")
 	private String undiscountableAmount;
 
+	public AgreementParams getAgreementParams() {
+		return this.agreementParams;
+	}
+	public void setAgreementParams(AgreementParams agreementParams) {
+		this.agreementParams = agreementParams;
+	}
+
 	public String getAlipayStoreId() {
 		return this.alipayStoreId;
 	}
@@ -193,6 +212,13 @@ public class AlipayTradePayModel extends AlipayObject {
 	}
 	public void setBody(String body) {
 		this.body = body;
+	}
+
+	public String getBusinessParams() {
+		return this.businessParams;
+	}
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
 	}
 
 	public String getBuyerId() {

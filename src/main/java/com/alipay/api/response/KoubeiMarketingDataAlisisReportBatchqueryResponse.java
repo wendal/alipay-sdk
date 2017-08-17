@@ -11,11 +11,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.data.alisis.report.batchquery response.
  * 
  * @author auto create
- * @since 1.0, 2016-10-28 10:26:26
+ * @since 1.0, 2017-06-16 20:33:21
  */
 public class KoubeiMarketingDataAlisisReportBatchqueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3671796557959482485L;
+	private static final long serialVersionUID = 1645359545421163991L;
 
 	/** 
 	 * 报表列表信息

@@ -7,32 +7,36 @@ import com.alipay.api.internal.mapping.ApiField;
  * 缴费当面付账单状态查询接口
  *
  * @author auto create
- * @since 1.0, 2017-06-13 19:55:44
+ * @since 1.0, 2017-07-21 14:10:50
  */
 public class AlipayEbppFacepayBillQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8141469348893725796L;
+	private static final long serialVersionUID = 1259293822499164593L;
 
 	/**
-	 * 支付宝交易流水号(和user_id、user_identity_code三者至少传一个)
+	 * 支付宝交易流水号(和user_id、user_identity_code三者至少传一个) 
+（缴税业务：out_order_no/user_id/bill_no都可以不传）
 	 */
 	@ApiField("bill_no")
 	private String billNo;
 
 	/**
-	 * ISV交易流水号（要求全局唯一）
+	 * ISV流水号，用于控制幂等，须确保全局唯一。
+（缴税业务：可采用{征收机关代码}-{外部申报号}的形式）
 	 */
 	@ApiField("out_order_no")
 	private String outOrderNo;
 
 	/**
-	 * 支付宝用户ID(和user_identity_code、bill_no三者至少传一个)
+	 * 支付宝用户ID(和user_identity_code、bill_no三者至少传一个) 
+（缴税业务：out_order_no/user_id/bill_no都可以不传）
 	 */
 	@ApiField("user_id")
 	private String userId;
 
 	/**
 	 * 用户支付宝付款码 (需使用下单时用的码值，10分钟内有效）(和user_id、bill_no三者至少传一个)
+（缴税业务：out_order_no/user_id/bill_no都可以不传）
 	 */
 	@ApiField("user_identity_code")
 	private String userIdentityCode;

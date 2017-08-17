@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 资金明细模型
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:31:15
+ * @since 1.0, 2017-07-07 11:36:57
  */
 public class FundItemAOPModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7358564365789357232L;
+	private static final long serialVersionUID = 6513998955187527963L;
 
 	/**
 	 * 财务外部单据号
@@ -220,6 +220,12 @@ public class FundItemAOPModel extends AlipayObject {
 	private Date gmtBizCreate;
 
 	/**
+	 * 差错资金自服务入口开放类型，TAOBAO-对淘宝开放，ALIPAY-对支付宝站内开放
+	 */
+	@ApiField("open_self_slip_type")
+	private String openSelfSlipType;
+
+	/**
 	 * 导致该资金变动在业务上的另一方的卡别名
 	 */
 	@ApiField("opposite_biz_card_alias")
@@ -254,6 +260,24 @@ public class FundItemAOPModel extends AlipayObject {
 	 */
 	@ApiField("refund_bank_status")
 	private String refundBankStatus;
+
+	/**
+	 * 差错可提取金额，单位元
+	 */
+	@ApiField("slip_amount")
+	private String slipAmount;
+
+	/**
+	 * 差错挂账id
+	 */
+	@ApiField("slip_id")
+	private String slipId;
+
+	/**
+	 * 差错挂账资金申领状态，W-待申领，P-申领中，S-成功，F-失败
+	 */
+	@ApiField("slip_status")
+	private String slipStatus;
 
 	/**
 	 * 预付子卡类型
@@ -505,6 +529,13 @@ public class FundItemAOPModel extends AlipayObject {
 		this.gmtBizCreate = gmtBizCreate;
 	}
 
+	public String getOpenSelfSlipType() {
+		return this.openSelfSlipType;
+	}
+	public void setOpenSelfSlipType(String openSelfSlipType) {
+		this.openSelfSlipType = openSelfSlipType;
+	}
+
 	public String getOppositeBizCardAlias() {
 		return this.oppositeBizCardAlias;
 	}
@@ -545,6 +576,27 @@ public class FundItemAOPModel extends AlipayObject {
 	}
 	public void setRefundBankStatus(String refundBankStatus) {
 		this.refundBankStatus = refundBankStatus;
+	}
+
+	public String getSlipAmount() {
+		return this.slipAmount;
+	}
+	public void setSlipAmount(String slipAmount) {
+		this.slipAmount = slipAmount;
+	}
+
+	public String getSlipId() {
+		return this.slipId;
+	}
+	public void setSlipId(String slipId) {
+		this.slipId = slipId;
+	}
+
+	public String getSlipStatus() {
+		return this.slipStatus;
+	}
+	public void setSlipStatus(String slipStatus) {
+		this.slipStatus = slipStatus;
 	}
 
 	public String getSubPrepaidCardType() {

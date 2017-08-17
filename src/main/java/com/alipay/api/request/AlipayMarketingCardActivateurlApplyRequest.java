@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.marketing.card.activateurl.apply request
  * 
  * @author auto create
- * @since 1.0, 2017-04-18 12:10:12
+ * @since 1.0, 2017-07-21 20:48:40
  */
 public class AlipayMarketingCardActivateurlApplyRequest implements AlipayRequest<AlipayMarketingCardActivateurlApplyResponse> {
 

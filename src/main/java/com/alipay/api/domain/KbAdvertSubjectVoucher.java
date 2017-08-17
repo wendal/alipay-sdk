@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑广告系统标的(券)
  *
  * @author auto create
- * @since 1.0, 2017-01-17 10:33:12
+ * @since 1.0, 2017-07-11 13:44:17
  */
 public class KbAdvertSubjectVoucher extends AlipayObject {
 
-	private static final long serialVersionUID = 1552677575519223339L;
+	private static final long serialVersionUID = 6554277586117881662L;
 
 	/**
 	 * 品牌名称(支持模糊匹配)
@@ -34,6 +34,13 @@ public class KbAdvertSubjectVoucher extends AlipayObject {
 	 */
 	@ApiField("merchant_name")
 	private String merchantName;
+
+	/**
+	 * OBTAIN：认领（默认值）
+BUY：购买
+	 */
+	@ApiField("purchase_mode")
+	private String purchaseMode;
 
 	/**
 	 * 券ID
@@ -75,6 +82,13 @@ NO_LIMIT_CASH-全场代金券
 	}
 	public void setMerchantName(String merchantName) {
 		this.merchantName = merchantName;
+	}
+
+	public String getPurchaseMode() {
+		return this.purchaseMode;
+	}
+	public void setPurchaseMode(String purchaseMode) {
+		this.purchaseMode = purchaseMode;
 	}
 
 	public String getVoucherId() {

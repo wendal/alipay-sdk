@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 创建现金活动
  *
  * @author auto create
- * @since 1.0, 2017-04-24 17:55:18
+ * @since 1.0, 2017-07-14 11:53:08
  */
 public class AlipayMarketingCampaignCashCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1574718528692974887L;
+	private static final long serialVersionUID = 2857935526827334559L;
 
 	/**
 	 * 红包名称,商户在查询列表、详情看到的名字,同时也会显示在商户付款页面。

@@ -9,17 +9,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 创建资金券模板
  *
  * @author auto create
- * @since 1.0, 2017-03-28 22:18:35
+ * @since 1.0, 2017-07-20 19:56:22
  */
 public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4262473249247929397L;
+	private static final long serialVersionUID = 6112115787222496955L;
 
 	/**
 	 * 面额。每张代金券可以抵扣的金额。币种为人民币，单位为元。该数值不能小于0，小数点以后最多保留两位。
 	 */
 	@ApiField("amount")
 	private String amount;
+
+	/**
+	 * 创建券模板时录入的品牌信息，由商户自定义，在通用模板中展示在券LOGO下方
+	 */
+	@ApiField("brand_name")
+	private String brandName;
 
 	/**
 	 * 最低额度。设置券使用门槛，只有订单金额大于等于最低额度时券才能使用。币种为人民币，单位为元。该数值不能小于0，小数点以后最多保留两位。
@@ -32,6 +38,12 @@ public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject 
 	 */
 	@ApiField("fund_account")
 	private String fundAccount;
+
+	/**
+	 * 券变动异步通知地址
+	 */
+	@ApiField("notify_uri")
+	private String notifyUri;
 
 	/**
 	 * 外部业务单号。用作幂等控制。同一个pid下相同的外部业务单号作唯一键，参数不变的情况下，再次请求返回同样的模板id。请求成功后，修改参数再次提交，需要更换订单号。
@@ -58,7 +70,13 @@ public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject 
 	private String redirectUri;
 
 	/**
-	 * 券标语，用于拼接券名称，最多6个字符，券名称=券标语+券面额+’元代金券’
+	 * 规则配置，JSON字符串，{"PID": "2088512417841101,2088512417841102", "STORE": "123456,678901"}，其中PID表示可以核销该券的pid列表，多个值用英文逗号隔开，PID为必传且需与接口调用PID同属一个商家，STORE表示可以核销该券的内部门店ID，多个值用英文逗号隔开
+	 */
+	@ApiField("rule_conf")
+	private String ruleConf;
+
+	/**
+	 * 券标语，用于拼接券名称，最多6个字符，券名称=券标语+券面额+’元代金券’,此字段已弃用
 	 */
 	@ApiField("slogan")
 	private String slogan;
@@ -94,6 +112,13 @@ public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject 
 		this.amount = amount;
 	}
 
+	public String getBrandName() {
+		return this.brandName;
+	}
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
 	public String getFloorAmount() {
 		return this.floorAmount;
 	}
@@ -106,6 +131,13 @@ public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject 
 	}
 	public void setFundAccount(String fundAccount) {
 		this.fundAccount = fundAccount;
+	}
+
+	public String getNotifyUri() {
+		return this.notifyUri;
+	}
+	public void setNotifyUri(String notifyUri) {
+		this.notifyUri = notifyUri;
 	}
 
 	public String getOutBizNo() {
@@ -134,6 +166,13 @@ public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject 
 	}
 	public void setRedirectUri(String redirectUri) {
 		this.redirectUri = redirectUri;
+	}
+
+	public String getRuleConf() {
+		return this.ruleConf;
+	}
+	public void setRuleConf(String ruleConf) {
+		this.ruleConf = ruleConf;
 	}
 
 	public String getSlogan() {

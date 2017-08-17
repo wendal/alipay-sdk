@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 个性化扩展区标签规则
  *
  * @author auto create
- * @since 1.0, 2017-06-14 11:09:17
+ * @since 1.0, 2017-07-14 11:47:35
  */
 public class LabelRule extends AlipayObject {
 
-	private static final long serialVersionUID = 1313287736725311829L;
+	private static final long serialVersionUID = 3382627969686837221L;
 
 	/**
 	 * 标签id
@@ -20,10 +20,16 @@ public class LabelRule extends AlipayObject {
 	private String labelId;
 
 	/**
-	 * 标签值，当有多个取值时用英文","分隔，不允许传入下划线"_"、竖线"|"或者空格" "，多个取值时，用户符合其中一个值即可命中该套扩展区
+	 * 标签值，当有多个取值时用英文","分隔，不允许传入下划线"_"、竖线"|"或者空格" "和方括号"["、"]"
 	 */
 	@ApiField("label_value")
 	private String labelValue;
+
+	/**
+	 * 目前支持EQ（等于）、BETWEEN（范围）、IN（包含）三种操作符；每个标签支持的运算符可以通过查询接口获得。该字段允许为空，默认运算符为IN
+	 */
+	@ApiField("operator")
+	private String operator;
 
 	public String getLabelId() {
 		return this.labelId;
@@ -37,6 +43,13 @@ public class LabelRule extends AlipayObject {
 	}
 	public void setLabelValue(String labelValue) {
 		this.labelValue = labelValue;
+	}
+
+	public String getOperator() {
+		return this.operator;
+	}
+	public void setOperator(String operator) {
+		this.operator = operator;
 	}
 
 }

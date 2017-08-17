@@ -15,7 +15,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayOfflineMarketShopDiscountQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1139892722916818741L;
+	private static final long serialVersionUID = 2519598122193893614L;
 
 	/** 
 	 * 优惠信息列表，最大20条，按生效时间排序

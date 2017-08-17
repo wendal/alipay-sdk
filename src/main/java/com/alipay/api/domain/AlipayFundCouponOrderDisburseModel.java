@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 受托打款接口
  *
  * @author auto create
- * @since 1.0, 2017-03-01 16:30:59
+ * @since 1.0, 2017-06-22 14:25:08
  */
 public class AlipayFundCouponOrderDisburseModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7178591536518226624L;
+	private static final long serialVersionUID = 1654281782671451834L;
 
 	/**
 	 * 需要支付的金额，单位为：元（人民币），精确到小数点后两位
@@ -27,7 +27,7 @@ public class AlipayFundCouponOrderDisburseModel extends AlipayObject {
 	private String deductAuthNo;
 
 	/**
-	 * 发放红包时的商户授权资金订单号。发放红包时的产生的支付宝资金订单号。deduct_out_order_no与上面的deduct_auth_no不能同时为空，二者都存在时，以deduct_auth_no为准。为了保证支付的高效，建议商户传入deduct_auth_no。
+	 * 发放红包时的商户授权资金订单号。deduct_out_order_no与上面的deduct_auth_no不能同时为空，二者都存在时，以deduct_auth_no为准。为了保证支付的高效，建议商户传入deduct_auth_no。
 	 */
 	@ApiField("deduct_out_order_no")
 	private String deductOutOrderNo;

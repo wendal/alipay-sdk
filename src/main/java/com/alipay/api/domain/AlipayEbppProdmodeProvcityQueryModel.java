@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询省市地区接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 21:53:37
+ * @since 1.0, 2017-06-22 16:17:21
  */
 public class AlipayEbppProdmodeProvcityQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2697935514273226817L;
+	private static final long serialVersionUID = 7481968623591121669L;
 
 	/**
 	 * 省市编号

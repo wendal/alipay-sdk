@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 会员卡模板创建
  *
  * @author auto create
- * @since 1.0, 2017-06-06 17:13:25
+ * @since 1.0, 2017-06-21 14:30:10
  */
 public class AlipayMarketingCardTemplateCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4335944465178132878L;
+	private static final long serialVersionUID = 2192386252452489731L;
 
 	/**
 	 * 业务卡号前缀，由商户自定义
@@ -56,6 +56,14 @@ OUT_MEMBER_CARD：外部权益卡
 	@ApiListField("field_rule_list")
 	@ApiField("template_field_rule_d_t_o")
 	private List<TemplateFieldRuleDTO> fieldRuleList;
+
+	/**
+	 * 商户动态码通知参数配置：
+当write_off_type指定为商户动态码mdbarcode或mdqrcode时必填；
+在此字段配置用户打开会员卡时支付宝通知商户生成动态码（发码）的通知参数，如接收通知地址等。
+	 */
+	@ApiField("mdcode_notify_conf")
+	private TemplateMdcodeNotifyConfDTO mdcodeNotifyConf;
 
 	/**
 	 * 会员卡用户领卡配置，在门店等渠道露出领卡入口时，需要部署的商户领卡H5页面地址
@@ -112,7 +120,9 @@ qrcode: 二维码
 dqrcode: 动态二维码
 barcode: 条码
 dbarcode: 动态条码
-text: 文本
+text: 文本 
+mdbarcode: 商户动态条码
+mdqrcode: 商户动态二维码
 	 */
 	@ApiField("write_off_type")
 	private String writeOffType;
@@ -157,6 +167,13 @@ text: 文本
 	}
 	public void setFieldRuleList(List<TemplateFieldRuleDTO> fieldRuleList) {
 		this.fieldRuleList = fieldRuleList;
+	}
+
+	public TemplateMdcodeNotifyConfDTO getMdcodeNotifyConf() {
+		return this.mdcodeNotifyConf;
+	}
+	public void setMdcodeNotifyConf(TemplateMdcodeNotifyConfDTO mdcodeNotifyConf) {
+		this.mdcodeNotifyConf = mdcodeNotifyConf;
 	}
 
 	public TemplateOpenCardConfDTO getOpenCardConf() {

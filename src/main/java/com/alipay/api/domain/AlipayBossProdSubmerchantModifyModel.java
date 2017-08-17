@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户修改接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 10:54:17
+ * @since 1.0, 2017-07-01 10:56:17
  */
 public class AlipayBossProdSubmerchantModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4338159781137976272L;
+	private static final long serialVersionUID = 5895853531238258484L;
 
 	/**
 	 * 受理商户详细经营地址

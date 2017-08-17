@@ -1,5 +1,6 @@
 package com.alipay.api.domain;
 
+import java.util.Date;
 import java.util.List;
 
 import com.alipay.api.AlipayObject;
@@ -10,17 +11,37 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 快消店铺展位内容创建接口
  *
  * @author auto create
- * @since 1.0, 2017-03-21 15:59:12
+ * @since 1.0, 2017-07-19 22:12:29
  */
 public class KoubeiMarketingCampaignRetailDmCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8292442556351432664L;
+	private static final long serialVersionUID = 3846474273898489272L;
 
 	/**
 	 * 第三方详情页链接：该商品/活动的详细介绍，注意：该字段需要过风控校验，不得传入敏感链接
 	 */
 	@ApiField("action_url")
 	private String actionUrl;
+
+	/**
+	 * 促销结束时间，用于产品详情展示，格式为：2017-02-07 11:11:11。
+注意开始时间要求早于结束时间
+	 */
+	@ApiField("activity_end_time")
+	private Date activityEndTime;
+
+	/**
+	 * 促销开始时间，在产品详情中展示，格式为：2017-02-01 11:11:11。
+注意：开始时间要求早于结束时间
+	 */
+	@ApiField("activity_start_time")
+	private Date activityStartTime;
+
+	/**
+	 * 简要的促销说明，用于对促销的内容进行直接明了的说明（如会员价：10元）。注意：该字段需要过风控校验，不得传入敏感词。
+	 */
+	@ApiField("brief")
+	private String brief;
 
 	/**
 	 * 活动类型：该活动是属于单品优惠，还是全场活动，单品优惠 SINGLE,全场优惠UNIVERSAL
@@ -48,7 +69,7 @@ public class KoubeiMarketingCampaignRetailDmCreateModel extends AlipayObject {
 	private String extInfo;
 
 	/**
-	 * 图片url，该图片id只有一个，由Isv传入，（通过alipay.offline.material.image.upload 接口上传视频/图片获取的资源id）
+	 * 常规图片url，用于在展示图片的细节（通过alipay.offline.material.image.upload 接口上传视频/图片获取的资源id）
 	 */
 	@ApiField("image_id")
 	private String imageId;
@@ -90,11 +111,39 @@ public class KoubeiMarketingCampaignRetailDmCreateModel extends AlipayObject {
 	@ApiField("string")
 	private List<String> shopIds;
 
+	/**
+	 * 4:3缩略图url，用于产品在店铺页简单规范的展示。 （通过alipay.offline.material.image.upload 接口上传视频/图片获取的资源id） 
+注意：本图片会进行图片尺寸校验，不符合4:3尺寸则无法上传。
+	 */
+	@ApiField("thumbnail_image_id")
+	private String thumbnailImageId;
+
 	public String getActionUrl() {
 		return this.actionUrl;
 	}
 	public void setActionUrl(String actionUrl) {
 		this.actionUrl = actionUrl;
+	}
+
+	public Date getActivityEndTime() {
+		return this.activityEndTime;
+	}
+	public void setActivityEndTime(Date activityEndTime) {
+		this.activityEndTime = activityEndTime;
+	}
+
+	public Date getActivityStartTime() {
+		return this.activityStartTime;
+	}
+	public void setActivityStartTime(Date activityStartTime) {
+		this.activityStartTime = activityStartTime;
+	}
+
+	public String getBrief() {
+		return this.brief;
+	}
+	public void setBrief(String brief) {
+		this.brief = brief;
 	}
 
 	public String getCampaignType() {
@@ -172,6 +221,13 @@ public class KoubeiMarketingCampaignRetailDmCreateModel extends AlipayObject {
 	}
 	public void setShopIds(List<String> shopIds) {
 		this.shopIds = shopIds;
+	}
+
+	public String getThumbnailImageId() {
+		return this.thumbnailImageId;
+	}
+	public void setThumbnailImageId(String thumbnailImageId) {
+		this.thumbnailImageId = thumbnailImageId;
 	}
 
 }

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 当成付扣款接口
  *
  * @author auto create
- * @since 1.0, 2017-04-24 15:50:04
+ * @since 1.0, 2017-07-21 14:10:39
  */
 public class AlipayEbppFacepayBillPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3151487727364228568L;
+	private static final long serialVersionUID = 5197846468935853859L;
 
 	/**
 	 * 账期
@@ -20,25 +20,25 @@ public class AlipayEbppFacepayBillPayModel extends AlipayObject {
 	private String billDate;
 
 	/**
-	 * 户号
+	 * 户号（缴税业务：纳税人识别号，对于三证合一的企业来说，采用社会信用代码；对于个人来说，采用身份证号）
 	 */
 	@ApiField("bill_key")
 	private String billKey;
 
 	/**
-	 * 业务类型英文名称，固定传JF，表示缴费
+	 * 业务类型英文名称，JF-缴费、TAX-缴税
 	 */
 	@ApiField("biz_type")
 	private String bizType;
 
 	/**
-	 * 出账机构英文名称
+	 * 出账机构代码（缴税业务：指征收机关英文代码，例如南京玄武国税（NJXWGS））
 	 */
 	@ApiField("charge_inst")
 	private String chargeInst;
 
 	/**
-	 * 扩展字段
+	 * 扩展字段（缴税业务：taxpayerName -纳税人名称，taxOrgCode - 征收机关代码；缴费业务如需支付宝销账：billCacheKey -欠费单缓存Key，billUniqId - 欠费单唯一ID）
 	 */
 	@ApiField("extend_field")
 	private String extendField;
@@ -50,13 +50,13 @@ public class AlipayEbppFacepayBillPayModel extends AlipayObject {
 	private String fineAmount;
 
 	/**
-	 * 机构唯一ID（要求全局唯一）
+	 * 机构账单ID（缴税业务：用外部申报号）
 	 */
 	@ApiField("inst_no")
 	private String instNo;
 
 	/**
-	 * ISV交易流水号（要求全局唯一）
+	 * ISV流水号，用于控制幂等，须确保全局唯一（缴税业务：可采用{征收机关代码}-{外部申报号}的形式）
 	 */
 	@ApiField("out_order_no")
 	private String outOrderNo;
@@ -74,7 +74,7 @@ public class AlipayEbppFacepayBillPayModel extends AlipayObject {
 	private String pid;
 
 	/**
-	 * 子业务类型英文名称，ELECTRIC-电费，WATER-水费，GAS-燃气费
+	 * 子业务类型英文名称，ELECTRIC-电费，WATER-水费，GAS-燃气费，TAX-缴税
 	 */
 	@ApiField("sub_biz_type")
 	private String subBizType;

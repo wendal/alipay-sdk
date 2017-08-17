@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.voucher.templatedetail.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-03-29 11:07:30
+ * @since 1.0, 2017-06-19 11:27:10
  */
 public class AlipayMarketingVoucherTemplatedetailQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5312285538181895944L;
+	private static final long serialVersionUID = 1652514734818966416L;
 
 	/** 
 	 * 面额。每张代金券可以抵扣的金额。币种为人民币，单位为元。该数值不小于0，小数点以后最多两位。

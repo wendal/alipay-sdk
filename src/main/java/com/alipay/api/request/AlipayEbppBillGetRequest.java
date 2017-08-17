@@ -11,7 +11,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.ebpp.bill.get request
  * 
  * @author auto create
- * @since 1.0, 2017-04-07 17:08:31
+ * @since 1.0, 2017-06-30 10:54:34
  */
 public class AlipayEbppBillGetRequest implements AlipayRequest<AlipayEbppBillGetResponse> {
 

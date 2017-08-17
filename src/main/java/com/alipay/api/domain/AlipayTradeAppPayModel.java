@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * app支付接口2.0
  *
  * @author auto create
- * @since 1.0, 2017-05-04 20:18:29
+ * @since 1.0, 2017-06-19 11:12:46
  */
 public class AlipayTradeAppPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4421392732479122878L;
+	private static final long serialVersionUID = 7399163188359568576L;
 
 	/**
 	 * 对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。
@@ -89,6 +89,14 @@ public class AlipayTradeAppPayModel extends AlipayObject {
 	 */
 	@ApiField("seller_id")
 	private String sellerId;
+
+	/**
+	 * 指定渠道，目前仅支持传入pcredit
+若由于用户原因渠道不可用，用户可选择是否用其他渠道支付。
+注：该参数不可与花呗分期参数同时传入
+	 */
+	@ApiField("specified_channel")
+	private String specifiedChannel;
 
 	/**
 	 * 商户门店编号
@@ -208,6 +216,13 @@ public class AlipayTradeAppPayModel extends AlipayObject {
 	}
 	public void setSellerId(String sellerId) {
 		this.sellerId = sellerId;
+	}
+
+	public String getSpecifiedChannel() {
+		return this.specifiedChannel;
+	}
+	public void setSpecifiedChannel(String specifiedChannel) {
+		this.specifiedChannel = specifiedChannel;
 	}
 
 	public String getStoreId() {

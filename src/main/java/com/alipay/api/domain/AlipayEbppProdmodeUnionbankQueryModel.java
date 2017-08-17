@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 联行信息查询接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 21:53:37
+ * @since 1.0, 2017-06-22 16:17:15
  */
 public class AlipayEbppProdmodeUnionbankQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6687153323948674693L;
+	private static final long serialVersionUID = 7627939665768355534L;
 
 	/**
 	 * 银联编号

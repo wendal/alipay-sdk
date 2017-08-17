@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 地推小二认领了Leads后申请创建开店二维码，提供给商户扫描开店。
  *
  * @author auto create
- * @since 1.0, 2016-10-26 18:05:16
+ * @since 1.0, 2017-07-12 17:50:16
  */
 public class AlipayOfflineMarketLeadsQrcodeQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7347687575419197783L;
+	private static final long serialVersionUID = 5396776445874415484L;
 
 	/**
 	 * 支付宝leads ID，后续的增删改查接口都使用该ID作为主键

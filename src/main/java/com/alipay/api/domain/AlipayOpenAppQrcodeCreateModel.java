@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 小程序生成推广二维码接口
  *
  * @author auto create
- * @since 1.0, 2017-04-19 10:50:06
+ * @since 1.0, 2017-07-06 17:41:17
  */
 public class AlipayOpenAppQrcodeCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6662924177148443125L;
+	private static final long serialVersionUID = 2221723786355456931L;
 
 	/**
 	 * 对应的二维码描述
@@ -20,7 +20,13 @@ public class AlipayOpenAppQrcodeCreateModel extends AlipayObject {
 	private String describe;
 
 	/**
-	 * 示例："/index.html?name=ali&loc=hz"，/index.html为小程序中能访问到的路径，?name=ali&loc=hz 为自定义的query参数
+	 * 小程序的启动参数，打开小程序的query ，在小程序 onLaunch的方法中获取
+	 */
+	@ApiField("query_param")
+	private String queryParam;
+
+	/**
+	 * page/component/component-pages/view/view为小程序中能访问到的页面路径
 	 */
 	@ApiField("url_param")
 	private String urlParam;
@@ -30,6 +36,13 @@ public class AlipayOpenAppQrcodeCreateModel extends AlipayObject {
 	}
 	public void setDescribe(String describe) {
 		this.describe = describe;
+	}
+
+	public String getQueryParam() {
+		return this.queryParam;
+	}
+	public void setQueryParam(String queryParam) {
+		this.queryParam = queryParam;
 	}
 
 	public String getUrlParam() {

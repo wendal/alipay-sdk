@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询签约信息接口
  *
  * @author auto create
- * @since 1.0, 2016-12-27 10:52:19
+ * @since 1.0, 2017-06-22 16:16:45
  */
 public class AlipayEbppProdmodeSignQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4289587652713923661L;
+	private static final long serialVersionUID = 2363581786148677117L;
 
 	/**
 	 * 出账/销账机构支付宝账号

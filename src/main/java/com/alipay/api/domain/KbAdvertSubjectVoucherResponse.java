@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑广告系统标的（券）
  *
  * @author auto create
- * @since 1.0, 2017-02-23 19:50:57
+ * @since 1.0, 2017-07-11 13:44:23
  */
 public class KbAdvertSubjectVoucherResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 8162485618265999475L;
+	private static final long serialVersionUID = 6825528786628139111L;
 
 	/**
 	 * 品牌名称
@@ -79,6 +79,13 @@ public class KbAdvertSubjectVoucherResponse extends AlipayObject {
 	private String partnerId;
 
 	/**
+	 * BUY：购买模式
+OBTAIN：认领
+	 */
+	@ApiField("purchase_mode")
+	private String purchaseMode;
+
+	/**
 	 * 门店ID列表
 	 */
 	@ApiListField("shop_ids")
@@ -108,6 +115,12 @@ public class KbAdvertSubjectVoucherResponse extends AlipayObject {
 	 */
 	@ApiField("voucher_name")
 	private String voucherName;
+
+	/**
+	 * 以元为单位
+	 */
+	@ApiField("voucher_org_value")
+	private String voucherOrgValue;
 
 	/**
 	 * 券类型
@@ -194,6 +207,13 @@ NO_LIMIT_CASH-全场代金券
 		this.partnerId = partnerId;
 	}
 
+	public String getPurchaseMode() {
+		return this.purchaseMode;
+	}
+	public void setPurchaseMode(String purchaseMode) {
+		this.purchaseMode = purchaseMode;
+	}
+
 	public List<String> getShopIds() {
 		return this.shopIds;
 	}
@@ -227,6 +247,13 @@ NO_LIMIT_CASH-全场代金券
 	}
 	public void setVoucherName(String voucherName) {
 		this.voucherName = voucherName;
+	}
+
+	public String getVoucherOrgValue() {
+		return this.voucherOrgValue;
+	}
+	public void setVoucherOrgValue(String voucherOrgValue) {
+		this.voucherOrgValue = voucherOrgValue;
 	}
 
 	public String getVoucherType() {

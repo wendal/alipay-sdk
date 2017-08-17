@@ -4,14 +4,14 @@ import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
 
 /**
- * 查询个性化扩展区标签规则
+ * 个性化标签规则返回模型
  *
  * @author auto create
- * @since 1.0, 2017-06-14 11:09:10
+ * @since 1.0, 2017-07-14 11:47:28
  */
 public class QueryLabelRule extends AlipayObject {
 
-	private static final long serialVersionUID = 3671253632174116234L;
+	private static final long serialVersionUID = 7166464888613212796L;
 
 	/**
 	 * 标签id
@@ -26,10 +26,16 @@ public class QueryLabelRule extends AlipayObject {
 	private String labelName;
 
 	/**
-	 * 标签值，当有多个取值时用英文","分隔，不允许传入下划线"_"、竖线"|"或者空格" "，多个取值时，用户符合其中一个值即可命中该套扩展区
+	 * 标签值，多值会用英文逗号分隔
 	 */
 	@ApiField("label_value")
 	private String labelValue;
+
+	/**
+	 * 运算符
+	 */
+	@ApiField("operator")
+	private String operator;
 
 	public String getLabelId() {
 		return this.labelId;
@@ -50,6 +56,13 @@ public class QueryLabelRule extends AlipayObject {
 	}
 	public void setLabelValue(String labelValue) {
 		this.labelValue = labelValue;
+	}
+
+	public String getOperator() {
+		return this.operator;
+	}
+	public void setOperator(String operator) {
+		this.operator = operator;
 	}
 
 }

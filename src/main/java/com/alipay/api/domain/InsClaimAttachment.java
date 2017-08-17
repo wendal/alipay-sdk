@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 理赔案件附件材料
  *
  * @author auto create
- * @since 1.0, 2017-03-13 17:30:37
+ * @since 1.0, 2017-07-18 15:48:09
  */
 public class InsClaimAttachment extends AlipayObject {
 
-	private static final long serialVersionUID = 3148878418721763189L;
+	private static final long serialVersionUID = 2611878221444796658L;
 
 	/**
 	 * 材料描述

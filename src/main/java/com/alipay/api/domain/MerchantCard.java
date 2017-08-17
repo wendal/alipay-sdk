@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户卡信息
  *
  * @author auto create
- * @since 1.0, 2017-06-06 17:13:14
+ * @since 1.0, 2017-06-15 18:40:20
  */
 public class MerchantCard extends AlipayObject {
 
-	private static final long serialVersionUID = 8679589252163327376L;
+	private static final long serialVersionUID = 6396357456366594123L;
 
 	/**
 	 * 资金卡余额，单位：元，精确到小数点后两位。
@@ -44,6 +44,13 @@ public class MerchantCard extends AlipayObject {
 	 */
 	@ApiField("level")
 	private String level;
+
+	/**
+	 * 商户动态码回传信息：
+只用于当write_off_type核销类型为mdbarcode或mdqrcode时，商户调用卡更新接口回传动态码。
+	 */
+	@ApiField("mdcode_info")
+	private MdCodeInfoDTO mdcodeInfo;
 
 	/**
 	 * 会员卡开卡时间，格式为yyyy-MM-dd HH:mm:ss
@@ -95,6 +102,13 @@ public class MerchantCard extends AlipayObject {
 	}
 	public void setLevel(String level) {
 		this.level = level;
+	}
+
+	public MdCodeInfoDTO getMdcodeInfo() {
+		return this.mdcodeInfo;
+	}
+	public void setMdcodeInfo(MdCodeInfoDTO mdcodeInfo) {
+		this.mdcodeInfo = mdcodeInfo;
 	}
 
 	public Date getOpenDate() {

@@ -7,14 +7,20 @@ import com.alipay.api.internal.mapping.ApiField;
 import com.alipay.api.internal.mapping.ApiListField;
 
 /**
- * 查询标签数据
+ * 标签信息模型
  *
  * @author auto create
- * @since 1.0, 2017-06-14 11:09:13
+ * @since 1.0, 2017-07-14 11:47:33
  */
 public class LifeLabel extends AlipayObject {
 
-	private static final long serialVersionUID = 4315765772869294638L;
+	private static final long serialVersionUID = 3376578775848492759L;
+
+	/**
+	 * 该标签支持的业务列表，menu表示个性化菜单，extension表示个性化扩展区，message表示消息触达
+	 */
+	@ApiField("biz")
+	private String biz;
 
 	/**
 	 * 标签类目
@@ -23,7 +29,7 @@ public class LifeLabel extends AlipayObject {
 	private String category;
 
 	/**
-	 * 标签值类型
+	 * 标签值数据类型
 	 */
 	@ApiField("data_type")
 	private String dataType;
@@ -35,7 +41,7 @@ public class LifeLabel extends AlipayObject {
 	private String labelCode;
 
 	/**
-	 * 标签id
+	 * 标签id，唯一标识一个标签
 	 */
 	@ApiField("label_id")
 	private String labelId;
@@ -47,13 +53,13 @@ public class LifeLabel extends AlipayObject {
 	private String labelName;
 
 	/**
-	 * 操作符代码
+	 * 该标签支持的运算符
 	 */
 	@ApiField("operator")
 	private String operator;
 
 	/**
-	 * 文本与取值的映射关系
+	 * 每个取值的业务含义
 	 */
 	@ApiListField("options")
 	@ApiField("option")
@@ -64,6 +70,13 @@ public class LifeLabel extends AlipayObject {
 	 */
 	@ApiField("type")
 	private String type;
+
+	public String getBiz() {
+		return this.biz;
+	}
+	public void setBiz(String biz) {
+		this.biz = biz;
+	}
 
 	public String getCategory() {
 		return this.category;

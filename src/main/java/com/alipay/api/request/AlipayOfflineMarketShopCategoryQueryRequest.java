@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.offline.market.shop.category.query request
  * 
  * @author auto create
- * @since 1.0, 2017-02-07 16:47:06
+ * @since 1.0, 2017-07-19 16:56:09
  */
 public class AlipayOfflineMarketShopCategoryQueryRequest implements AlipayRequest<AlipayOfflineMarketShopCategoryQueryResponse> {
 

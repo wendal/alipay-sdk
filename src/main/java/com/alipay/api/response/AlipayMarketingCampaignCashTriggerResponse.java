@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.campaign.cash.trigger response.
  * 
  * @author auto create
- * @since 1.0, 2017-02-23 23:07:59
+ * @since 1.0, 2017-07-14 11:53:19
  */
 public class AlipayMarketingCampaignCashTriggerResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5563387855756444881L;
+	private static final long serialVersionUID = 8333247145449138817L;
 
 	/** 
 	 * 支付宝业务号,发奖成功时返回,调用者可提供此字符串进行问题排查与核对等

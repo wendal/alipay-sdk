@@ -7,11 +7,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.campaign.crowd.modify response.
  * 
  * @author auto create
- * @since 1.0, 2016-08-29 14:52:17
+ * @since 1.0, 2017-06-21 17:30:03
  */
 public class KoubeiMarketingCampaignCrowdModifyResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7881882464932945473L;
+	private static final long serialVersionUID = 1156248192182777256L;
 
 	
 

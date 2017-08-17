@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 卡券模板创建
  *
  * @author auto create
- * @since 1.0, 2017-03-31 15:33:01
+ * @since 1.0, 2017-07-24 12:07:58
  */
 public class AlipayPassTemplateAddModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5849463935685675367L;
+	private static final long serialVersionUID = 2789879141143959755L;
 
 	/**
 	 * 模板内容信息，遵循JSON规范，详情参见tpl_content参数说明：https://doc.open.alipay.com/doc2/detail.htm?treeId=193&articleId=105249&docType=1#tpl_content

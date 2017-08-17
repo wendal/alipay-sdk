@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.offline.market.leads.qrcode.query response.
  * 
  * @author auto create
- * @since 1.0, 2016-07-26 17:42:58
+ * @since 1.0, 2017-07-12 17:50:16
  */
 public class AlipayOfflineMarketLeadsQrcodeQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6668316886198182155L;
+	private static final long serialVersionUID = 5157251649644749442L;
 
 	/** 
 	 * 开店二维码URL地址

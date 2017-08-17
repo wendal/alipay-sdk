@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询券模板列表
  *
  * @author auto create
- * @since 1.0, 2017-03-28 22:18:14
+ * @since 1.0, 2017-06-19 11:27:56
  */
 public class AlipayMarketingVoucherTemplatelistQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1523977899687532879L;
+	private static final long serialVersionUID = 7626746961818538139L;
 
 	/**
 	 * 模板创建结束时间，格式为：yyyy-MM-dd HH:mm:ss

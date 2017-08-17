@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保险营销权益基础信息
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:38
+ * @since 1.0, 2017-07-19 16:56:59
  */
 public class InsMktCouponBaseDTO extends AlipayObject {
 
-	private static final long serialVersionUID = 2831229672221443851L;
+	private static final long serialVersionUID = 2239443794787431463L;
 
 	/**
 	 * 权益Id

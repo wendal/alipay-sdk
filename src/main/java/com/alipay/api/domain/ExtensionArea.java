@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 扩展区
  *
  * @author auto create
- * @since 1.0, 2017-06-01 11:26:41
+ * @since 1.0, 2017-07-04 11:08:57
  */
 public class ExtensionArea extends AlipayObject {
 
-	private static final long serialVersionUID = 7779696586392659683L;
+	private static final long serialVersionUID = 2469543192748223568L;
 
 	/**
 	 * 跳转链接，当content_type为"image"时必传，必须是https或alipays开头的url链接
@@ -38,7 +38,7 @@ public class ExtensionArea extends AlipayObject {
 	private String type;
 
 	/**
-	 * 扩展区url，传入图片url或者h5页面url，必须是https开头的链接
+	 * 扩展区url，传入图片url或者h5页面url，必须是https开头的链接，如果要传入图片链接，请先调用<a href="https://docs.open.alipay.com/api_3/alipay.offline.material.image.upload"> 图片上传接口</a>获得图片url
 	 */
 	@ApiField("url")
 	private String url;

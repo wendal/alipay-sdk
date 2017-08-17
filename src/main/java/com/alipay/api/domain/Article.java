@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 图文消息子消息
  *
  * @author auto create
- * @since 1.0, 2016-12-02 15:56:25
+ * @since 1.0, 2017-07-04 11:09:05
  */
 public class Article extends AlipayObject {
 
-	private static final long serialVersionUID = 4355857474982886745L;
+	private static final long serialVersionUID = 8212473615121134237L;
 
 	/**
 	 * 链接文字
@@ -26,7 +26,7 @@ public class Article extends AlipayObject {
 	private String desc;
 
 	/**
-	 * 图片链接，对于多条图文消息的第一条消息，该字段不能为空
+	 * 图片链接，对于多条图文消息的第一条消息，该字段不能为空; 请先调用<a href="https://docs.open.alipay.com/api_3/alipay.offline.material.image.upload"> 图片上传接口</a>获得图片url
 	 */
 	@ApiField("image_url")
 	private String imageUrl;

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 外部指定买家
  *
  * @author auto create
- * @since 1.0, 2017-06-14 16:04:50
+ * @since 1.0, 2017-07-19 14:02:57
  */
 public class ExtUserInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8559462974198556222L;
+	private static final long serialVersionUID = 7546548624477496667L;
 
 	/**
 	 * 证件号

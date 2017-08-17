@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询用户常缴机构与城市接口
  *
  * @author auto create
- * @since 1.0, 2017-05-22 17:13:48
+ * @since 1.0, 2017-06-22 16:16:20
  */
 public class AlipayEbppUserChargeinstQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4358923753167628233L;
+	private static final long serialVersionUID = 4859485731373696167L;
 
 	/**
 	 * 用户ID

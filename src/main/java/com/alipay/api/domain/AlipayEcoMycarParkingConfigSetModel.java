@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 停车ISV系统配置接口
  *
  * @author auto create
- * @since 1.0, 2017-06-13 15:26:36
+ * @since 1.0, 2017-07-20 09:54:35
  */
 public class AlipayEcoMycarParkingConfigSetModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6292363796355648111L;
+	private static final long serialVersionUID = 5632551688183113917L;
 
 	/**
 	 * 签约支付宝账号
@@ -28,6 +28,12 @@ public class AlipayEcoMycarParkingConfigSetModel extends AlipayObject {
 	@ApiListField("interface_info_list")
 	@ApiField("interface_info_list")
 	private List<InterfaceInfoList> interfaceInfoList;
+
+	/**
+	 * 商户在停车平台首页露出的LOGO；注意：该图片为PNG格式内容为BASE64的字符串，若为空则停车平台首页将不露出商户LOGO。建议图片尺寸27px*27px，大小不要超过60K
+	 */
+	@ApiField("merchant_logo")
+	private String merchantLogo;
 
 	/**
 	 * 商户简称，由开发者提供
@@ -53,6 +59,13 @@ public class AlipayEcoMycarParkingConfigSetModel extends AlipayObject {
 	}
 	public void setInterfaceInfoList(List<InterfaceInfoList> interfaceInfoList) {
 		this.interfaceInfoList = interfaceInfoList;
+	}
+
+	public String getMerchantLogo() {
+		return this.merchantLogo;
+	}
+	public void setMerchantLogo(String merchantLogo) {
+		this.merchantLogo = merchantLogo;
 	}
 
 	public String getMerchantName() {

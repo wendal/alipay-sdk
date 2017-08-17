@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 红包协议支付接口
  *
  * @author auto create
- * @since 1.0, 2017-04-25 17:05:29
+ * @since 1.0, 2017-06-22 14:06:08
  */
 public class AlipayFundCouponOrderAgreementPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5839645614656671322L;
+	private static final long serialVersionUID = 2112934331454736283L;
 
 	/**
 	 * 需要支付的金额，单位为：元（人民币），精确到小数点后两位

@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.marketing.voucher.confirm request
  * 
  * @author auto create
- * @since 1.0, 2017-03-28 22:17:49
+ * @since 1.0, 2017-06-19 11:28:25
  */
 public class AlipayMarketingVoucherConfirmRequest implements AlipayRequest<AlipayMarketingVoucherConfirmResponse> {
 

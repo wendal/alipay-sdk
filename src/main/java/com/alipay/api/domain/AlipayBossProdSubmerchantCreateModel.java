@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 银行二清商户入驻接口
  *
  * @author auto create
- * @since 1.0, 2017-05-10 16:26:43
+ * @since 1.0, 2017-07-01 10:56:35
  */
 public class AlipayBossProdSubmerchantCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5597296834111652411L;
+	private static final long serialVersionUID = 8437462645549584311L;
 
 	/**
 	 * 受理商户详细经营地址

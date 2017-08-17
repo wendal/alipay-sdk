@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class DiagnoseResult extends AlipayObject {
 
-	private static final long serialVersionUID = 7722233858471617969L;
+	private static final long serialVersionUID = 5211964552187981941L;
 
 	/**
 	 * 提示文案业务参数,JSON对象形式返回，JSON的KEY包含tradeCycle，userRate，industryRate，repayRate调用方根据诊断CODE分别给出不同的诊断文案，例如：

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 对账配置查询接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 21:53:37
+ * @since 1.0, 2017-06-22 16:17:25
  */
 public class AlipayEbppProdmodeReconconfQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6296557274726726854L;
+	private static final long serialVersionUID = 4249369985668871523L;
 
 	/**
 	 * 缴费业务类型

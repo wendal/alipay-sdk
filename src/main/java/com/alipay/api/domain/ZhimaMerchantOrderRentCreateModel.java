@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还创建订单
  *
  * @author auto create
- * @since 1.0, 2017-05-25 14:34:55
+ * @since 1.0, 2017-07-17 19:04:51
  */
 public class ZhimaMerchantOrderRentCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2387292787195362926L;
+	private static final long serialVersionUID = 2691575198858341623L;
 
 	/**
 	 * 借用用户的收货地址，可选字段。推荐商户传入此值，会将此手机号码与用户身份信息进行匹配验证，防范欺诈风险。
@@ -141,7 +141,7 @@ WINDOWS：支付宝服务窗。
 	private String rentAmount;
 
 	/**
-	 * 租金信息描述 ,长度20个汉字，只用于页面展示给C端用户，除此之外无其他意义。
+	 * 租金信息描述 ,长度不超过14个汉字，只用于页面展示给C端用户，除此之外无其他意义。
 	 */
 	@ApiField("rent_info")
 	private String rentInfo;

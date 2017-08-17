@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 蚁盾设备指纹
  *
  * @author auto create
- * @since 1.0, 2017-05-02 14:35:52
+ * @since 1.0, 2017-06-26 11:43:28
  */
 public class SsdataDataserviceRiskDigitalidentityQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5178438353593942115L;
+	private static final long serialVersionUID = 7785665816627191197L;
 
 	/**
 	 * 服务端生成的设备码（由我方提供的sdk生成）

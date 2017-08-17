@@ -10,11 +10,17 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 统一收单下单并支付页面接口
  *
  * @author auto create
- * @since 1.0, 2017-05-04 20:18:18
+ * @since 1.0, 2017-07-19 13:32:10
  */
 public class AlipayTradePagePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2563437358169424957L;
+	private static final long serialVersionUID = 8795415881381493245L;
+
+	/**
+	 * 签约参数，支付后签约场景使用
+	 */
+	@ApiField("agreement_sign_params")
+	private AgreementSignParams agreementSignParams;
 
 	/**
 	 * 订单描述
@@ -55,6 +61,16 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	 */
 	@ApiField("goods_type")
 	private String goodsType;
+
+	/**
+	 * 请求后页面的集成方式。
+取值范围：
+1. ALIAPP：支付宝钱包内
+2. PCWEB：PC端访问
+默认值为PCWEB。
+	 */
+	@ApiField("integration_type")
+	private String integrationType;
 
 	/**
 	 * 开票信息
@@ -115,6 +131,12 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	private Long qrcodeWidth;
 
 	/**
+	 * 请求来源地址。如果使用ALIAPP的集成方式，用户中途取消支付会返回该地址。
+	 */
+	@ApiField("request_from_url")
+	private String requestFromUrl;
+
+	/**
 	 * 描述分账信息，Json格式，详见分账参数说明
 	 */
 	@ApiField("royalty_info")
@@ -156,6 +178,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	@ApiField("total_amount")
 	private String totalAmount;
 
+	public AgreementSignParams getAgreementSignParams() {
+		return this.agreementSignParams;
+	}
+	public void setAgreementSignParams(AgreementSignParams agreementSignParams) {
+		this.agreementSignParams = agreementSignParams;
+	}
+
 	public String getBody() {
 		return this.body;
 	}
@@ -196,6 +225,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	}
 	public void setGoodsType(String goodsType) {
 		this.goodsType = goodsType;
+	}
+
+	public String getIntegrationType() {
+		return this.integrationType;
+	}
+	public void setIntegrationType(String integrationType) {
+		this.integrationType = integrationType;
 	}
 
 	public InvoiceInfo getInvoiceInfo() {
@@ -245,6 +281,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	}
 	public void setQrcodeWidth(Long qrcodeWidth) {
 		this.qrcodeWidth = qrcodeWidth;
+	}
+
+	public String getRequestFromUrl() {
+		return this.requestFromUrl;
+	}
+	public void setRequestFromUrl(String requestFromUrl) {
+		this.requestFromUrl = requestFromUrl;
 	}
 
 	public RoyaltyInfo getRoyaltyInfo() {

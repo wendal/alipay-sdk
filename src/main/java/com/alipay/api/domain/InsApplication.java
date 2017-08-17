@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 投保申请信息
  *
  * @author auto create
- * @since 1.0, 2017-01-09 13:56:45
+ * @since 1.0, 2017-07-18 15:36:51
  */
 public class InsApplication extends AlipayObject {
 
-	private static final long serialVersionUID = 4557266661534682915L;
+	private static final long serialVersionUID = 1499984515212379158L;
 
 	/**
 	 * 投保参数 ,每个产品特有的投保参数,如航空险的航班信息;标准json格式

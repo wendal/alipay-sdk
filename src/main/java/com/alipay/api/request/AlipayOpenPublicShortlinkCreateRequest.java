@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.shortlink.create request
  * 
  * @author auto create
- * @since 1.0, 2016-12-08 12:00:56
+ * @since 1.0, 2017-07-04 10:40:37
  */
 public class AlipayOpenPublicShortlinkCreateRequest implements AlipayRequest<AlipayOpenPublicShortlinkCreateResponse> {
 

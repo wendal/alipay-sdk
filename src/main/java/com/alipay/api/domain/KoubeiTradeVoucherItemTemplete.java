@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑商品交易凭证模板
  *
  * @author auto create
- * @since 1.0, 2017-06-14 10:31:34
+ * @since 1.0, 2017-07-13 16:06:09
  */
 public class KoubeiTradeVoucherItemTemplete extends AlipayObject {
 
-	private static final long serialVersionUID = 3267224696848522483L;
+	private static final long serialVersionUID = 8256887521238631311L;
 
 	/**
 	 * 购买须知，列表类型，最多10项

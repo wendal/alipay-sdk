@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 线下场景虹膜信息注册
  *
  * @author auto create
- * @since 1.0, 2016-12-30 15:58:08
+ * @since 1.0, 2017-07-17 10:14:45
  */
 public class AlipaySecurityProdIrisVerifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8858653366445533552L;
+	private static final long serialVersionUID = 8252215231982218779L;
 
 	/**
 	 * 虹膜校验的关联token，用于二次校验

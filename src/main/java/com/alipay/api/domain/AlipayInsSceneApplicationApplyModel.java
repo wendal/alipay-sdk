@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 投保受理
  *
  * @author auto create
- * @since 1.0, 2017-03-30 15:13:19
+ * @since 1.0, 2017-07-20 21:54:59
  */
 public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5227382978733381212L;
+	private static final long serialVersionUID = 5598142816433852426L;
 
 	/**
 	 * 投保人
@@ -59,6 +59,12 @@ public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 	 */
 	@ApiField("period")
 	private String period;
+
+	/**
+	 * 实际保费，询价接口获取的保费通过投保接口传递进来。投保接口会对传入的保费进行验证。传入的保费和核价的值不一样投保失败
+	 */
+	@ApiField("premium")
+	private Long premium;
 
 	/**
 	 * 产品编码;由蚂蚁保险平台分配,商户通过该产品编码投保特定的保险产品（如饿了么外卖延误险）
@@ -125,6 +131,13 @@ public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 	}
 	public void setPeriod(String period) {
 		this.period = period;
+	}
+
+	public Long getPremium() {
+		return this.premium;
+	}
+	public void setPremium(Long premium) {
+		this.premium = premium;
 	}
 
 	public String getProdCode() {

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 洗车保养门店创建
  *
  * @author auto create
- * @since 1.0, 2017-04-12 11:49:09
+ * @since 1.0, 2017-07-13 14:23:36
  */
 public class AlipayEcoMycarMaintainShopCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4588687442659387145L;
+	private static final long serialVersionUID = 5868675634949634376L;
 
 	/**
 	 * 门店详细地址，地址字符长度在4-50个字符，注：不含省市区。门店详细地址按规范格式填写地址，以免影响门店搜索及活动报名：例1：道路+门牌号，“人民东路18号”；例2：道路+门牌号+标志性建筑+楼层，“四川北路1552号欢乐广场1楼”。
@@ -70,6 +70,12 @@ public class AlipayEcoMycarMaintainShopCreateModel extends AlipayObject {
 	 */
 	@ApiField("district_code")
 	private String districtCode;
+
+	/**
+	 * 扩展参数，json格式，可以存放营销信息，以及主营描述等扩展信息
+	 */
+	@ApiField("ext_param")
+	private String extParam;
 
 	/**
 	 * 行业应用类目编号
@@ -232,6 +238,13 @@ public class AlipayEcoMycarMaintainShopCreateModel extends AlipayObject {
 	}
 	public void setDistrictCode(String districtCode) {
 		this.districtCode = districtCode;
+	}
+
+	public String getExtParam() {
+		return this.extParam;
+	}
+	public void setExtParam(String extParam) {
+		this.extParam = extParam;
 	}
 
 	public List<Long> getIndustryAppCategoryId() {

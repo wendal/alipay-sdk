@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 会员卡开卡接口
  *
  * @author auto create
- * @since 1.0, 2017-06-07 13:29:46
+ * @since 1.0, 2017-07-20 10:21:56
  */
 public class AlipayMarketingCardOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2337571838432239185L;
+	private static final long serialVersionUID = 4428517531971244667L;
 
 	/**
 	 * 外部卡信息(biz_card_no无需填写)
@@ -36,6 +36,16 @@ public class AlipayMarketingCardOpenModel extends AlipayObject {
 	 */
 	@ApiField("member_ext_info")
 	private MerchantMenber memberExtInfo;
+
+	/**
+	 * 外部商户的领卡渠道，用于记录外部商户端领卡来源的渠道信息，渠道值可自行定义（仅限数字、字母、下划线） 
+例如：
+线下门店领取:20161534000000000008863（可填门店shopId）
+线下扫二维码领取:QR;
+线下活动领取:20170522000000000003609（可填商户活动ID）
+	 */
+	@ApiField("open_card_channel")
+	private String openCardChannel;
 
 	/**
 	 * 外部商户流水号（商户需要确保唯一性控制，类似request_id唯一请求标识）
@@ -69,6 +79,13 @@ public class AlipayMarketingCardOpenModel extends AlipayObject {
 	}
 	public void setMemberExtInfo(MerchantMenber memberExtInfo) {
 		this.memberExtInfo = memberExtInfo;
+	}
+
+	public String getOpenCardChannel() {
+		return this.openCardChannel;
+	}
+	public void setOpenCardChannel(String openCardChannel) {
+		this.openCardChannel = openCardChannel;
 	}
 
 	public String getOutSerialNo() {

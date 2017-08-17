@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 触发现金红包活动
  *
  * @author auto create
- * @since 1.0, 2017-02-23 23:07:59
+ * @since 1.0, 2017-07-14 11:53:19
  */
 public class AlipayMarketingCampaignCashTriggerModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5241576589467249477L;
+	private static final long serialVersionUID = 2867289215574358614L;
 
 	/**
 	 * 现金活动号

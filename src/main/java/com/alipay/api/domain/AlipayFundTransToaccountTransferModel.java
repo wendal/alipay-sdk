@@ -7,15 +7,16 @@ import com.alipay.api.internal.mapping.ApiField;
  * 单笔转账到支付宝账户接口
  *
  * @author auto create
- * @since 1.0, 2017-05-26 18:50:57
+ * @since 1.0, 2017-07-13 10:44:03
  */
 public class AlipayFundTransToaccountTransferModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8449995919125432748L;
+	private static final long serialVersionUID = 1212168353633765482L;
 
 	/**
 	 * 转账金额，单位：元。
-只支持2位小数，小数点前最大支持13位，金额必须大于等于0.1元。
+只支持2位小数，小数点前最大支持13位，金额必须大于等于0.1元。 
+最大转账金额以实际签约的限额为准。
 	 */
 	@ApiField("amount")
 	private String amount;

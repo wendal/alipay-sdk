@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 门店类目配置查询接口
  *
  * @author auto create
- * @since 1.0, 2017-02-07 16:47:06
+ * @since 1.0, 2017-07-19 16:56:09
  */
 public class AlipayOfflineMarketShopCategoryQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8268218517496792293L;
+	private static final long serialVersionUID = 6221475843529384322L;
 
 	/**
 	 * 类目ID，如果为空则查询全部类目。

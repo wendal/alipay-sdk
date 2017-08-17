@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 子菜单对象模型
  *
  * @author auto create
- * @since 1.0, 2017-06-08 15:12:21
+ * @since 1.0, 2017-07-04 11:09:02
  */
 public class SubButton extends AlipayObject {
 
-	private static final long serialVersionUID = 3364298799753812439L;
+	private static final long serialVersionUID = 7499275226321449415L;
 
 	/**
 	 * 当actionType为link时，该参数为url链接； 
@@ -36,7 +36,7 @@ consumption——点击查看用户与生活号管理员账号之间的消费记
 	private String actionType;
 
 	/**
-	 * icon图片url，必须是http协议的url，尺寸为60X60，最大不超过5M
+	 * icon图片url，必须是http协议的url，尺寸为60X60，最大不超过5M，请先调用<a href="https://docs.open.alipay.com/api_3/alipay.offline.material.image.upload"> 图片上传接口</a>获得图片url
 	 */
 	@ApiField("icon")
 	private String icon;

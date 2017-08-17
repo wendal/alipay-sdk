@@ -1,17 +1,28 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 报表概述信息
  *
  * @author auto create
- * @since 1.0, 2016-10-28 10:26:26
+ * @since 1.0, 2017-06-16 20:33:21
  */
 public class AlisisReport extends AlipayObject {
 
-	private static final long serialVersionUID = 1117331944678534939L;
+	private static final long serialVersionUID = 6748876724425641534L;
+
+	/**
+	 * ：	
+报表可过滤字段条件
+	 */
+	@ApiListField("conditions")
+	@ApiField("report_condition")
+	private List<ReportCondition> conditions;
 
 	/**
 	 * 报表描述
@@ -30,6 +41,13 @@ public class AlisisReport extends AlipayObject {
 	 */
 	@ApiField("report_uk")
 	private String reportUk;
+
+	public List<ReportCondition> getConditions() {
+		return this.conditions;
+	}
+	public void setConditions(List<ReportCondition> conditions) {
+		this.conditions = conditions;
+	}
 
 	public String getReportDesc() {
 		return this.reportDesc;

@@ -13,11 +13,20 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.pay response.
  * 
  * @author auto create
- * @since 1.0, 2017-06-14 17:03:26
+ * @since 1.0, 2017-07-19 14:02:56
  */
 public class AlipayTradePayResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4182683743435639527L;
+	private static final long serialVersionUID = 1875165765435935336L;
+
+	/** 
+	 * 异步支付模式，先享后付业务会返回该参数，目前有三种值：
+ASYNC_DELAY_PAY(异步延时付款);
+ASYNC_REALTIME_PAY(异步准实时付款);
+SYNC_DIRECT_PAY(同步直接扣款);
+	 */
+	@ApiField("async_payment_mode")
+	private String asyncPaymentMode;
 
 	/** 
 	 * 买家支付宝账号
@@ -116,6 +125,13 @@ public class AlipayTradePayResponse extends AlipayResponse {
 	@ApiListField("voucher_detail_list")
 	@ApiField("voucher_detail")
 	private List<VoucherDetail> voucherDetailList;
+
+	public void setAsyncPaymentMode(String asyncPaymentMode) {
+		this.asyncPaymentMode = asyncPaymentMode;
+	}
+	public String getAsyncPaymentMode( ) {
+		return this.asyncPaymentMode;
+	}
 
 	public void setBuyerLogonId(String buyerLogonId) {
 		this.buyerLogonId = buyerLogonId;

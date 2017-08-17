@@ -7,17 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 蚂蚁会员合作专区权益状态变更接口
  *
  * @author auto create
- * @since 1.0, 2016-09-28 17:51:43
+ * @since 1.0, 2017-06-15 15:43:50
  */
 public class AlipayUserBenefitStatusUpdateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4264125639118348395L;
+	private static final long serialVersionUID = 2365947735321922219L;
 
 	/**
 	 * 权益的ID
 	 */
 	@ApiField("benefit_id")
 	private String benefitId;
+
+	/**
+	 * YES表示当前操作的是会员3.0权益，NO表示当前操作的是改版之前的权益
+	 */
+	@ApiField("benefit_new_flag")
+	private String benefitNewFlag;
 
 	/**
 	 * 1:上线， 0:下线,  2:失效；
@@ -33,6 +39,13 @@ public class AlipayUserBenefitStatusUpdateModel extends AlipayObject {
 	}
 	public void setBenefitId(String benefitId) {
 		this.benefitId = benefitId;
+	}
+
+	public String getBenefitNewFlag() {
+		return this.benefitNewFlag;
+	}
+	public void setBenefitNewFlag(String benefitNewFlag) {
+		this.benefitNewFlag = benefitNewFlag;
 	}
 
 	public String getBenefitStatus() {

@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保险干系人
  *
  * @author auto create
- * @since 1.0, 2017-03-22 18:31:17
+ * @since 1.0, 2017-07-18 15:48:09
  */
 public class InsPerson extends AlipayObject {
 
-	private static final long serialVersionUID = 8123338231344179654L;
+	private static final long serialVersionUID = 3479377964968816885L;
 
 	/**
 	 * 地址

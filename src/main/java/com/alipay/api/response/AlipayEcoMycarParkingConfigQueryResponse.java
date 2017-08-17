@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.eco.mycar.parking.config.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-06-13 15:26:13
+ * @since 1.0, 2017-07-20 09:54:53
  */
 public class AlipayEcoMycarParkingConfigQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8235647292267988144L;
+	private static final long serialVersionUID = 4258659529397299926L;
 
 	/** 
 	 * 签约支付宝账号，开发者通过ISV系统配置信息注册接口(alipay.eco.mycar.parking.config.set)传入的参数值
@@ -27,6 +27,12 @@ Json格式数据
 	 */
 	@ApiField("interface_info_list")
 	private InterfaceInfoList interfaceInfoList;
+
+	/** 
+	 * 商户在停车平台首页露出的LOGO链接地址，开发者通过ISV系统配置信息注册接口(alipay.eco.mycar.parking.config.set)调用自动生成该链接
+	 */
+	@ApiField("merchant_logo")
+	private String merchantLogo;
 
 	/** 
 	 * 商户简称，开发者通过ISV系统配置信息注册接口(alipay.eco.mycar.parking.config.set)传入的参数值
@@ -52,6 +58,13 @@ Json格式数据
 	}
 	public InterfaceInfoList getInterfaceInfoList( ) {
 		return this.interfaceInfoList;
+	}
+
+	public void setMerchantLogo(String merchantLogo) {
+		this.merchantLogo = merchantLogo;
+	}
+	public String getMerchantLogo( ) {
+		return this.merchantLogo;
 	}
 
 	public void setMerchantName(String merchantName) {

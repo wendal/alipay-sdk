@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 错误上报的特征字段
  *
  * @author auto create
- * @since 1.0, 2017-03-24 18:26:38
+ * @since 1.0, 2017-07-03 14:41:37
  */
 public class ReportErrorFeature extends AlipayObject {
 
-	private static final long serialVersionUID = 1349888145171756737L;
+	private static final long serialVersionUID = 3429693652778231781L;
 
 	/**
 	 * 桌号
