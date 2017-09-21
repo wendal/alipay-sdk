@@ -1,5 +1,6 @@
 package com.alipay.api.request;
 
+import com.alipay.api.domain.KoubeiMarketingToolIsvMerchantQueryModel;
 import java.util.Map;
 
 import com.alipay.api.AlipayRequest;
@@ -11,12 +12,24 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: koubei.marketing.tool.isv.merchant.query request
  * 
  * @author auto create
- * @since 1.0, 2017-07-25 10:42:12
+ * @since 1.0, 2017-08-04 15:15:46
  */
 public class KoubeiMarketingToolIsvMerchantQueryRequest implements AlipayRequest<KoubeiMarketingToolIsvMerchantQueryResponse> {
 
 	private AlipayHashMap udfParams; // add user-defined text parameters
 	private String apiVersion="1.0";
+
+	/** 
+	* ISV查询商户列表接口
+	 */
+	private String bizContent;
+
+	public void setBizContent(String bizContent) {
+		this.bizContent = bizContent;
+	}
+	public String getBizContent() {
+		return this.bizContent;
+	}
 	private String terminalType;
 	private String terminalInfo;	
 	private String prodCode;
@@ -79,6 +92,7 @@ public class KoubeiMarketingToolIsvMerchantQueryRequest implements AlipayRequest
 
 	public Map<String, String> getTextParams() {		
 		AlipayHashMap txtParams = new AlipayHashMap();
+		txtParams.put("biz_content", this.bizContent);
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);
 		}

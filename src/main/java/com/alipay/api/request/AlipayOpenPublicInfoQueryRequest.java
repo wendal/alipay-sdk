@@ -11,7 +11,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.info.query request
  * 
  * @author auto create
- * @since 1.0, 2016-12-08 00:52:57
+ * @since 1.0, 2017-08-10 10:39:21
  */
 public class AlipayOpenPublicInfoQueryRequest implements AlipayRequest<AlipayOpenPublicInfoQueryResponse> {
 

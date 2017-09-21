@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 同步定损/核损结果到蚂蚁
  *
  * @author auto create
- * @since 1.0, 2017-03-16 09:53:30
+ * @since 1.0, 2017-07-28 15:30:22
  */
 public class AlipayInsDataAutodamageEstimateConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4679323555145352174L;
+	private static final long serialVersionUID = 5545561474534385279L;
 
 	/**
 	 * 业务类型，2表示机构核损，3表示机构定损

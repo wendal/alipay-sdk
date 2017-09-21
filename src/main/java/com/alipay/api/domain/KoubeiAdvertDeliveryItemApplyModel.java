@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑外部投放授权领券接口
  *
  * @author auto create
- * @since 1.0, 2017-06-16 14:14:58
+ * @since 1.0, 2017-08-01 13:56:35
  */
 public class KoubeiAdvertDeliveryItemApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4372527988758782338L;
+	private static final long serialVersionUID = 6237921199598387646L;
 
 	/**
 	 * 领券时触发的id，在外投场景下，用的是广告id

@@ -11,11 +11,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.data.smartmanagement.diagnose response.
  * 
  * @author auto create
- * @since 1.0, 2017-03-14 16:50:04
+ * @since 1.0, 2017-07-26 11:31:56
  */
 public class KoubeiMarketingDataSmartmanagementDiagnoseResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3579256319465767461L;
+	private static final long serialVersionUID = 8386948794139142699L;
 
 	/** 
 	 * 诊断结果CODE，目前有如下四个值

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 机构代客户签署合约并放款
  *
  * @author auto create
- * @since 1.0, 2017-05-27 13:37:02
+ * @since 1.0, 2017-08-09 09:26:29
  */
 public class MybankCreditLoantradeLoanarCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2684133525463215756L;
+	private static final long serialVersionUID = 4761922329869376125L;
 
 	/**
 	 * 收款账号外标

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 获取好友列表信息
  *
  * @author auto create
- * @since 1.0, 2016-10-26 18:05:12
+ * @since 1.0, 2017-08-07 00:10:37
  */
 public class AlipaySocialBaseRelationFriendsQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6739564924261834318L;
+	private static final long serialVersionUID = 7863464259781299229L;
 
 	/**
 	 * 获取类型。1=获取双向好友   2=获取双向+单向好友

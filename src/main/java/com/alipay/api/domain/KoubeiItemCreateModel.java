@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑商品创建接口
  *
  * @author auto create
- * @since 1.0, 2017-05-31 21:37:29
+ * @since 1.0, 2017-08-04 12:33:11
  */
 public class KoubeiItemCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8746752915545237813L;
+	private static final long serialVersionUID = 4543192254972158721L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，默认有效期24小时；isv自身角色操作的时候，无需传该参数
@@ -68,6 +68,12 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	private String itemType;
 
 	/**
+	 * 备注
+	 */
+	@ApiField("memo")
+	private String memo;
+
+	/**
 	 * 操作上下文 isv角色操作时必填。其他角色不需填写，不填时以auth_code为准。
 	 */
 	@ApiField("operation_context")
@@ -111,7 +117,7 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	private String shopIds;
 
 	/**
-	 * 商品名称，请勿超过20汉字，40个字符
+	 * 商品名称，请勿超过40汉字，80个字符
 	 */
 	@ApiField("subject")
 	private String subject;
@@ -182,6 +188,13 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	}
 	public void setItemType(String itemType) {
 		this.itemType = itemType;
+	}
+
+	public String getMemo() {
+		return this.memo;
+	}
+	public void setMemo(String memo) {
+		this.memo = memo;
 	}
 
 	public KoubeiOperationContext getOperationContext() {

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 流程任务
  *
  * @author auto create
- * @since 1.0, 2017-03-03 11:29:15
+ * @since 1.0, 2017-08-15 22:00:33
  */
 public class BPOpenApiTask extends AlipayObject {
 
-	private static final long serialVersionUID = 5325258191611476259L;
+	private static final long serialVersionUID = 6655171348783444428L;
 
 	/**
 	 * 处理地址
@@ -32,10 +32,28 @@ public class BPOpenApiTask extends AlipayObject {
 	private String displayName;
 
 	/**
+	 * 操作时间
+	 */
+	@ApiField("gmt_operate")
+	private String gmtOperate;
+
+	/**
+	 * 处理备注信息
+	 */
+	@ApiField("memo")
+	private String memo;
+
+	/**
 	 * 审批节点code
 	 */
 	@ApiField("name")
 	private String name;
+
+	/**
+	 * 点击的操作按钮
+	 */
+	@ApiField("operate")
+	private String operate;
 
 	/**
 	 * 可点击的操作
@@ -94,11 +112,32 @@ public class BPOpenApiTask extends AlipayObject {
 		this.displayName = displayName;
 	}
 
+	public String getGmtOperate() {
+		return this.gmtOperate;
+	}
+	public void setGmtOperate(String gmtOperate) {
+		this.gmtOperate = gmtOperate;
+	}
+
+	public String getMemo() {
+		return this.memo;
+	}
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
+
 	public String getName() {
 		return this.name;
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getOperate() {
+		return this.operate;
+	}
+	public void setOperate(String operate) {
+		this.operate = operate;
 	}
 
 	public String getOperateTransition() {

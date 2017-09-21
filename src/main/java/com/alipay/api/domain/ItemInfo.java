@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券的单品信息
  *
  * @author auto create
- * @since 1.0, 2017-06-05 11:25:25
+ * @since 1.0, 2017-08-24 12:01:53
  */
 public class ItemInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8818397684186455512L;
+	private static final long serialVersionUID = 1266593967695721544L;
 
 	/**
 	 * 券适用的单品码列表
@@ -70,6 +70,13 @@ public class ItemInfo extends AlipayObject {
 	@ApiField("original_price")
 	private String originalPrice;
 
+	/**
+	 * 券适用SKU的最低消费金额门槛
+如券适用A,B两个SKU，该字段设置的值为100，则订单中购买A,B两个SKU的合计金额需大于100元才可用券
+	 */
+	@ApiField("sku_min_consume")
+	private String skuMinConsume;
+
 	public List<String> getItemIds() {
 		return this.itemIds;
 	}
@@ -124,6 +131,13 @@ public class ItemInfo extends AlipayObject {
 	}
 	public void setOriginalPrice(String originalPrice) {
 		this.originalPrice = originalPrice;
+	}
+
+	public String getSkuMinConsume() {
+		return this.skuMinConsume;
+	}
+	public void setSkuMinConsume(String skuMinConsume) {
+		this.skuMinConsume = skuMinConsume;
 	}
 
 }

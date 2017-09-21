@@ -15,7 +15,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayMobilePublicMockListsmlistApiResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6551294191764911993L;
+	private static final long serialVersionUID = 1693923729696539657L;
 
 	/** 
 	 * 简单模型嵌套list

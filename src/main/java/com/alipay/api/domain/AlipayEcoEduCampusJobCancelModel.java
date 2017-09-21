@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 实习生职位下线接口
  *
  * @author auto create
- * @since 1.0, 2017-06-01 14:56:12
+ * @since 1.0, 2017-08-07 18:02:53
  */
 public class AlipayEcoEduCampusJobCancelModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1583337137776129725L;
+	private static final long serialVersionUID = 2526585813511432955L;
 
 	/**
 	 * 职位来源方编码

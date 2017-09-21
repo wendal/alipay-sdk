@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 代收付-申请接口
  *
  * @author auto create
- * @since 1.0, 2017-06-14 15:31:40
+ * @since 1.0, 2017-08-25 10:18:52
  */
 public class MybankCreditLoantradePartnerPaymentApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5185174752662637894L;
+	private static final long serialVersionUID = 2467274388689731127L;
 
 	/**
 	 * 业务金额，单位分

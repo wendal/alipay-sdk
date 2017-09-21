@@ -3,6 +3,7 @@ package com.alipay.api.response;
 import java.util.List;
 import com.alipay.api.internal.mapping.ApiField;
 import com.alipay.api.internal.mapping.ApiListField;
+import com.alipay.api.domain.TemplateActionInfoDTO;
 import com.alipay.api.domain.TemplateCardLevelConfDTO;
 import com.alipay.api.domain.TemplateColumnInfoDTO;
 import com.alipay.api.domain.TemplateFieldRuleDTO;
@@ -18,23 +19,34 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.card.template.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-06-16 13:31:45
+ * @since 1.0, 2017-08-24 15:51:59
  */
 public class AlipayMarketingCardTemplateQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 2144424165949925688L;
+	private static final long serialVersionUID = 2746947699767348291L;
 
 	/** 
-	 * 业务卡号前缀，由商户自定义
+	 * 业务卡号前缀，由商户指定
+支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
 	 */
 	@ApiField("biz_no_prefix")
 	private String bizNoPrefix;
 
 	/** 
-	 * 卡号长度
+	 * 业务卡号后缀的长度
+支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
 	 */
 	@ApiField("biz_no_suffix_len")
 	private String bizNoSuffixLen;
+
+	/** 
+	 * 卡行动点配置；
+行动点，即用户可点击跳转的区块，类似按钮控件的交互；
+单张卡最多4个行动点。
+	 */
+	@ApiListField("card_action_list")
+	@ApiField("template_action_info_d_t_o")
+	private List<TemplateActionInfoDTO> cardActionList;
 
 	/** 
 	 * 卡等级配置
@@ -127,6 +139,13 @@ OUT_MEMBER_CARD：外部权益卡
 	}
 	public String getBizNoSuffixLen( ) {
 		return this.bizNoSuffixLen;
+	}
+
+	public void setCardActionList(List<TemplateActionInfoDTO> cardActionList) {
+		this.cardActionList = cardActionList;
+	}
+	public List<TemplateActionInfoDTO> getCardActionList( ) {
+		return this.cardActionList;
 	}
 
 	public void setCardLevelConfs(List<TemplateCardLevelConfDTO> cardLevelConfs) {

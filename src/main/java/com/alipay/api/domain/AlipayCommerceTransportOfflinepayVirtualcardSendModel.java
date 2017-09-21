@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 虚拟卡信息同步
  *
  * @author auto create
- * @since 1.0, 2017-05-15 20:58:52
+ * @since 1.0, 2017-08-28 12:51:22
  */
 public class AlipayCommerceTransportOfflinepayVirtualcardSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6859891447925467764L;
+	private static final long serialVersionUID = 4872461948626999234L;
 
 	/**
 	 * 虚拟卡信息同步动作
@@ -50,13 +50,20 @@ public class AlipayCommerceTransportOfflinepayVirtualcardSendModel extends Alipa
 	private String disabled;
 
 	/**
+	 * 卡状态不可用时，标示卡的具体不可用状态。
+CARD_OVERDUE ---- 欠费，CARD_REVOKING ---- 退卡中
+	 */
+	@ApiField("disabled_code")
+	private String disabledCode;
+
+	/**
 	 * 当虚拟卡不可用时，提示用户不可用原因。
 	 */
 	@ApiField("disabled_tips")
 	private String disabledTips;
 
 	/**
-	 * json格式字符串，存放扩展信息。
+	 * json格式字符串，存放扩展信息。discount_type ---- 优惠标识
 	 */
 	@ApiField("ext_info")
 	private String extInfo;
@@ -113,6 +120,13 @@ public class AlipayCommerceTransportOfflinepayVirtualcardSendModel extends Alipa
 	}
 	public void setDisabled(String disabled) {
 		this.disabled = disabled;
+	}
+
+	public String getDisabledCode() {
+		return this.disabledCode;
+	}
+	public void setDisabledCode(String disabledCode) {
+		this.disabledCode = disabledCode;
 	}
 
 	public String getDisabledTips() {

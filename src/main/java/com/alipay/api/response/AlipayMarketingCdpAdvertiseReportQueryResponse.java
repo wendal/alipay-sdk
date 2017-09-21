@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.cdp.advertise.report.query response.
  * 
  * @author auto create
- * @since 1.0, 2016-07-29 19:56:42
+ * @since 1.0, 2017-08-18 15:36:32
  */
 public class AlipayMarketingCdpAdvertiseReportQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4499424418788948925L;
+	private static final long serialVersionUID = 2292349394516826634L;
 
 	/** 
 	 * 日点击量

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 蚁盾垃圾注册测试
  *
  * @author auto create
- * @since 1.0, 2017-06-29 21:12:20
+ * @since 1.0, 2017-07-26 14:35:23
  */
 public class SsdataDataserviceRiskAntijunkregisterQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3542644782591648493L;
+	private static final long serialVersionUID = 1494951567318568268L;
 
 	/**
 	 * 行为发生时的Apdid值

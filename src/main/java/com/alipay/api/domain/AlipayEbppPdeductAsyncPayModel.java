@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 公共事业缴费直连代扣异步扣款支付接口
  *
  * @author auto create
- * @since 1.0, 2016-10-26 18:05:19
+ * @since 1.0, 2017-08-04 11:19:56
  */
 public class AlipayEbppPdeductAsyncPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6232494958737265396L;
+	private static final long serialVersionUID = 4573293721838936354L;
 
 	/**
 	 * 分配给外部机构发起扣款时的渠道码。朗新为LANGXIN

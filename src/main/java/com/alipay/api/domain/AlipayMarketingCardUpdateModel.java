@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 会员卡更新
  *
  * @author auto create
- * @since 1.0, 2017-06-21 14:30:36
+ * @since 1.0, 2017-08-24 15:51:39
  */
 public class AlipayMarketingCardUpdateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8876546421539117179L;
+	private static final long serialVersionUID = 7164326595643385284L;
 
 	/**
 	 * 需要修改的最新卡信息
@@ -30,7 +30,8 @@ public class AlipayMarketingCardUpdateModel extends AlipayObject {
 	private String extInfo;
 
 	/**
-	 * 会员卡卡面展示样式
+	 * 注意：此字段已废弃，卡面样式以模板中的定义为准。
+会员卡卡面展示样式
 参考：展示位置详情参考"商户会员卡->快速接入文档->第四步" 
 备注：mcard_style_info与card_info下的template_id不能同时更新
 	 */

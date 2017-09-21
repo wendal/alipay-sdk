@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 测试接口
  *
  * @author auto create
- * @since 1.0, 2017-07-06 15:27:01
+ * @since 1.0, 2017-08-01 16:05:50
  */
 public class AlipayOpenWangyanTestDeleteModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2834778651699748671L;
+	private static final long serialVersionUID = 6299437925787359789L;
 
 	/**
 	 * 1

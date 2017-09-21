@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 指纹注册初始化
  *
  * @author auto create
- * @since 1.0, 2017-01-12 17:27:31
+ * @since 1.0, 2017-08-02 14:25:02
  */
 public class AlipaySecurityProdFingerprintApplyInitializeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1264196762351528554L;
+	private static final long serialVersionUID = 8694513289639381674L;
 
 	/**
 	 * IFAA标准中的校验类型，目前1为指纹
@@ -25,6 +25,12 @@ public class AlipaySecurityProdFingerprintApplyInitializeModel extends AlipayObj
 	@ApiField("ifaa_version")
 	private String ifaaVersion;
 
+	/**
+	 * IFAA协议客户端静态信息，调用IFAA客户端SDK接口获取secData，透传至本参数
+	 */
+	@ApiField("sec_data")
+	private String secData;
+
 	public String getAuthType() {
 		return this.authType;
 	}
@@ -37,6 +43,13 @@ public class AlipaySecurityProdFingerprintApplyInitializeModel extends AlipayObj
 	}
 	public void setIfaaVersion(String ifaaVersion) {
 		this.ifaaVersion = ifaaVersion;
+	}
+
+	public String getSecData() {
+		return this.secData;
+	}
+	public void setSecData(String secData) {
+		this.secData = secData;
 	}
 
 }

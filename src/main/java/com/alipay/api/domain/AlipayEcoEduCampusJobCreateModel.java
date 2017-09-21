@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 实习生职位推送（新增/修改）接口
  *
  * @author auto create
- * @since 1.0, 2017-06-01 14:56:04
+ * @since 1.0, 2017-08-03 10:59:00
  */
 public class AlipayEcoEduCampusJobCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7527816362949491468L;
+	private static final long serialVersionUID = 1586311228633486479L;
 
 	/**
 	 * 城市编码
@@ -86,6 +86,12 @@ public class AlipayEcoEduCampusJobCreateModel extends AlipayObject {
 	private String companySource;
 
 	/**
+	 * 备注json 数据
+	 */
+	@ApiField("content_var")
+	private String contentVar;
+
+	/**
 	 * 过期时间(毫秒数)
 	 */
 	@ApiField("gmt_expired")
@@ -96,6 +102,12 @@ public class AlipayEcoEduCampusJobCreateModel extends AlipayObject {
 	 */
 	@ApiField("gmt_refresh")
 	private String gmtRefresh;
+
+	/**
+	 * 职位开始时间(毫秒数)
+	 */
+	@ApiField("gmt_start")
+	private String gmtStart;
 
 	/**
 	 * 职位描述
@@ -307,6 +319,13 @@ public class AlipayEcoEduCampusJobCreateModel extends AlipayObject {
 		this.companySource = companySource;
 	}
 
+	public String getContentVar() {
+		return this.contentVar;
+	}
+	public void setContentVar(String contentVar) {
+		this.contentVar = contentVar;
+	}
+
 	public String getGmtExpired() {
 		return this.gmtExpired;
 	}
@@ -319,6 +338,13 @@ public class AlipayEcoEduCampusJobCreateModel extends AlipayObject {
 	}
 	public void setGmtRefresh(String gmtRefresh) {
 		this.gmtRefresh = gmtRefresh;
+	}
+
+	public String getGmtStart() {
+		return this.gmtStart;
+	}
+	public void setGmtStart(String gmtStart) {
+		this.gmtStart = gmtStart;
 	}
 
 	public String getJobDesc() {

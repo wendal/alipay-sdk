@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品修改
  *
  * @author auto create
- * @since 1.0, 2017-07-13 15:53:40
+ * @since 1.0, 2017-08-04 12:32:41
  */
 public class KoubeiItemModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1597911931468739956L;
+	private static final long serialVersionUID = 5121118129493457453L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，有效期24小时；
@@ -66,6 +66,12 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	 */
 	@ApiField("item_id")
 	private String itemId;
+
+	/**
+	 * 备注
+	 */
+	@ApiField("memo")
+	private String memo;
 
 	/**
 	 * 操作上下文。isv角色操作时必填。其他角色不需填写。
@@ -175,6 +181,13 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	}
 	public void setItemId(String itemId) {
 		this.itemId = itemId;
+	}
+
+	public String getMemo() {
+		return this.memo;
+	}
+	public void setMemo(String memo) {
+		this.memo = memo;
 	}
 
 	public KoubeiOperationContext getOperationContext() {

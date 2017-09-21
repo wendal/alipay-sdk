@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 医疗行业挂号报备接口
  *
  * @author auto create
- * @since 1.0, 2017-05-19 18:17:21
+ * @since 1.0, 2017-08-11 19:29:11
  */
 public class AlipayCommerceMedicalInformationUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6699543545437875919L;
+	private static final long serialVersionUID = 1898573325233795427L;
 
 	/**
 	 * 支付授权码

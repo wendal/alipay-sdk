@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * ceshi moxing
  *
  * @author auto create
- * @since 1.0, 2017-07-20 15:39:52
+ * @since 1.0, 2017-08-01 16:05:41
  */
 public class AlipayKeyanClass extends AlipayObject {
 
-	private static final long serialVersionUID = 3697261419347352713L;
+	private static final long serialVersionUID = 3216995243184443443L;
 
 	/**
 	 * 1

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 物料生产指令对象, 包括物料生产的相关信息: 订单明细ID, 申请单号, 模板ID, 物料名称, 物料图片Url, 数量,  申请日期,收货人姓名,联系人电话,收货人地址等.
  *
  * @author auto create
- * @since 1.0, 2017-06-30 10:14:49
+ * @since 1.0, 2017-08-07 18:13:24
  */
 public class AssetProduceItem extends AlipayObject {
 
-	private static final long serialVersionUID = 5883995927938241658L;
+	private static final long serialVersionUID = 3826573135625833885L;
 
 	/**
 	 * 申请日期，格式yyyy-MM-dd HH：mm:ss
@@ -55,6 +55,12 @@ public class AssetProduceItem extends AlipayObject {
 	 */
 	@ApiField("create_date")
 	private String createDate;
+
+	/**
+	 * 1 - 旧模式, 需要在生产完成后反馈运单号 ; 2 - 新模式, 不需要在生产完成后反馈运单号
+	 */
+	@ApiField("data_version")
+	private String dataVersion;
 
 	/**
 	 * 区
@@ -169,6 +175,13 @@ public class AssetProduceItem extends AlipayObject {
 	}
 	public void setCreateDate(String createDate) {
 		this.createDate = createDate;
+	}
+
+	public String getDataVersion() {
+		return this.dataVersion;
+	}
+	public void setDataVersion(String dataVersion) {
+		this.dataVersion = dataVersion;
 	}
 
 	public String getDistrict() {

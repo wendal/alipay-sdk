@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 支付宝用户联通开卡订单信息同步接口
  *
  * @author auto create
- * @since 1.0, 2016-12-22 21:53:37
+ * @since 1.0, 2017-08-03 10:23:33
  */
 public class AlipayUserUnicomOrderInfoSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5297541569713222699L;
+	private static final long serialVersionUID = 3282852948229263811L;
 
 	/**
 	 * 订单变更时间，返回自January 1, 1970, 00:00:00 GMT至订单变更时刻的毫秒数, java代码获取示例：new Date().getTime()

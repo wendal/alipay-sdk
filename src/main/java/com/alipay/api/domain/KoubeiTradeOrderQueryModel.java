@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑订单详情
  *
  * @author auto create
- * @since 1.0, 2016-11-21 14:07:02
+ * @since 1.0, 2017-08-25 13:05:36
  */
 public class KoubeiTradeOrderQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4465634379593717786L;
+	private static final long serialVersionUID = 5799322323181649419L;
 
 	/**
 	 * 口碑订单号

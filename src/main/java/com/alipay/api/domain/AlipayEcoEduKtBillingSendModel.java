@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 教育缴费账单发送接口
  *
  * @author auto create
- * @since 1.0, 2017-06-13 10:29:31
+ * @since 1.0, 2017-08-03 10:58:34
  */
 public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1367411745231747742L;
+	private static final long serialVersionUID = 6442674395593947461L;
 
 	/**
 	 * 总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]

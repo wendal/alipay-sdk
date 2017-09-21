@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 全息信用2.0中提供给上数业务用于查询支付宝用户的人脉因子和多头因子接口
  *
  * @author auto create
- * @since 1.0, 2017-07-21 16:40:25
+ * @since 1.0, 2017-08-02 17:40:48
  */
 public class AlipayDataDataserviceHolographicFactorQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7114121275734416673L;
+	private static final long serialVersionUID = 5551586674961889146L;
 
 	/**
 	 * 参数中文名称:业务id

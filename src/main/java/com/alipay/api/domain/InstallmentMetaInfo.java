@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 分期对象的元数据信息
  *
  * @author auto create
- * @since 1.0, 2017-05-19 11:45:39
+ * @since 1.0, 2017-08-07 10:17:15
  */
 public class InstallmentMetaInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 1559176172794662315L;
+	private static final long serialVersionUID = 8518375181867645146L;
 
 	/**
 	 * 结束期数，包含此值
@@ -26,7 +26,7 @@ public class InstallmentMetaInfo extends AlipayObject {
 	private Long startTerm;
 
 	/**
-	 * 数值
+	 * 分期值（如还款方式、利率等）
 	 */
 	@ApiField("value")
 	private String value;

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 广告推广用于参与接口
  *
  * @author auto create
- * @since 1.0, 2017-01-17 21:29:21
+ * @since 1.0, 2017-08-25 14:54:44
  */
 public class KoubeiAdvertCommissionAdvertPurchaseModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2853799552312438491L;
+	private static final long serialVersionUID = 6821488242394898518L;
 
 	/**
 	 * 渠道ID
@@ -67,14 +67,22 @@ trigger_identify_type=advert所有值都必须是广告ID
 	/**
 	 * 参与主键类型
 advert-广告ID
+delivery_id-外投ID（通过koubei.advert.delivery.discount.batchquery接口获取的外投ID）
 	 */
 	@ApiField("trigger_identify_type")
 	private String triggerIdentifyType;
 
 	/**
+	 * 用户领取券策略
+FIRST_CAN_PURCHASE：第一个可领
+ALL_PURCHASE：领取所有（默认）
+	 */
+	@ApiField("trigger_strategy")
+	private String triggerStrategy;
+
+	/**
 	 * 用户身份主键
 user_identify_type=phone-值必须是用户手机号
-user_identify_type=logon_id-值必须是用户支付宝登录账号
 	 */
 	@ApiField("user_identify")
 	private String userIdentify;
@@ -82,7 +90,6 @@ user_identify_type=logon_id-值必须是用户支付宝登录账号
 	/**
 	 * 用户身份主键类型
 phone-手机号
-logon_id-支付宝登录账号
 user_id - 支付宝账户ID
 	 */
 	@ApiField("user_identify_type")
@@ -128,6 +135,13 @@ user_id - 支付宝账户ID
 	}
 	public void setTriggerIdentifyType(String triggerIdentifyType) {
 		this.triggerIdentifyType = triggerIdentifyType;
+	}
+
+	public String getTriggerStrategy() {
+		return this.triggerStrategy;
+	}
+	public void setTriggerStrategy(String triggerStrategy) {
+		this.triggerStrategy = triggerStrategy;
 	}
 
 	public String getUserIdentify() {

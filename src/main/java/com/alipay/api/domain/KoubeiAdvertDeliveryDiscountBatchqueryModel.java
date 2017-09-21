@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑广告投放券商品输出接口
  *
  * @author auto create
- * @since 1.0, 2017-06-28 14:40:52
+ * @since 1.0, 2017-08-25 10:07:07
  */
 public class KoubeiAdvertDeliveryDiscountBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8316186416779729361L;
+	private static final long serialVersionUID = 3618122934998381449L;
 
 	/**
 	 * 媒体编号，使用前需要找业务申请 ，不申请直接调用会失败
@@ -38,13 +38,40 @@ public class KoubeiAdvertDeliveryDiscountBatchqueryModel extends AlipayObject {
 	private String longitude;
 
 	/**
+	 * 手机号码，不能和user_id同时存在
+	 */
+	@ApiField("mobile")
+	private String mobile;
+
+	/**
+	 * 当strategy为QUERY_AND_PURCHASE时，循环发送券列表中的券，直到发券量达到purchase_num。
+	 */
+	@ApiField("purchase_num")
+	private String purchaseNum;
+
+	/**
+	 * 门店ID
+如果提供门店ID，则优先查询门店下发的券。
+	 */
+	@ApiField("shop_id")
+	private String shopId;
+
+	/**
 	 * 输出的券列表大小
 	 */
 	@ApiField("size")
 	private String size;
 
 	/**
-	 * 支付宝用户ID
+	 * 查询策略，查询并发送策略，只有白名单内ISV才有权限使用，如果不在白名单内，则忽略该字段并默认查询
+QUERY：查券（默认值）
+QUERY_AND_PURCHASE：查并领，为了优化体验，在查询时进行发券处理，顺序发送券列表的券，直达发券量达到purchase_num。
+	 */
+	@ApiField("strategy")
+	private String strategy;
+
+	/**
+	 * 支付宝账户ID
 	 */
 	@ApiField("user_id")
 	private String userId;
@@ -77,11 +104,39 @@ public class KoubeiAdvertDeliveryDiscountBatchqueryModel extends AlipayObject {
 		this.longitude = longitude;
 	}
 
+	public String getMobile() {
+		return this.mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getPurchaseNum() {
+		return this.purchaseNum;
+	}
+	public void setPurchaseNum(String purchaseNum) {
+		this.purchaseNum = purchaseNum;
+	}
+
+	public String getShopId() {
+		return this.shopId;
+	}
+	public void setShopId(String shopId) {
+		this.shopId = shopId;
+	}
+
 	public String getSize() {
 		return this.size;
 	}
 	public void setSize(String size) {
 		this.size = size;
+	}
+
+	public String getStrategy() {
+		return this.strategy;
+	}
+	public void setStrategy(String strategy) {
+		this.strategy = strategy;
 	}
 
 	public String getUserId() {

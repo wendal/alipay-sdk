@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 字段
  *
  * @author auto create
- * @since 1.0, 2017-06-08 15:02:24
+ * @since 1.0, 2017-08-01 16:07:02
  */
 public class KeyanColumn extends AlipayObject {
 
-	private static final long serialVersionUID = 3714993799279781192L;
+	private static final long serialVersionUID = 3817812187239426955L;
 
 	/**
 	 * 密码

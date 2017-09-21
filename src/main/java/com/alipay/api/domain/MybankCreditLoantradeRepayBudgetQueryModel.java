@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 客户主动还款试算
  *
  * @author auto create
- * @since 1.0, 2017-07-05 20:49:20
+ * @since 1.0, 2017-08-02 16:11:25
  */
 public class MybankCreditLoantradeRepayBudgetQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3881785855776593186L;
+	private static final long serialVersionUID = 1837375279189773615L;
 
 	/**
 	 * 申请还款本金

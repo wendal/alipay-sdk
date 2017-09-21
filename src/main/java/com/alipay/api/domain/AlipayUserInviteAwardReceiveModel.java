@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayUserInviteAwardReceiveModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2496457988149793497L;
+	private static final long serialVersionUID = 1335169861953117139L;
 
 	/**
 	 * 用户扫码抽奖输入的手机号

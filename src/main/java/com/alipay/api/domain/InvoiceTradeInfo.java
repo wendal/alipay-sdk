@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 发票管家交易信息模型
  *
  * @author auto create
- * @since 1.0, 2017-05-26 13:47:41
+ * @since 1.0, 2017-07-25 14:09:19
  */
 public class InvoiceTradeInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8525342656181238497L;
+	private static final long serialVersionUID = 8788312766184191794L;
 
 	/**
 	 * 支付宝交易号（字段于2017-02-21废弃，请勿使用）
@@ -39,6 +39,12 @@ public class InvoiceTradeInfo extends AlipayObject {
 	 */
 	@ApiField("goods_name")
 	private String goodsName;
+
+	/**
+	 * 发票内容项明细
+	 */
+	@ApiField("invoice_content")
+	private InvoiceItemQueryOpenModel invoiceContent;
 
 	/**
 	 * 品牌全称，由商户在发票管家配置
@@ -147,6 +153,13 @@ public class InvoiceTradeInfo extends AlipayObject {
 	}
 	public void setGoodsName(String goodsName) {
 		this.goodsName = goodsName;
+	}
+
+	public InvoiceItemQueryOpenModel getInvoiceContent() {
+		return this.invoiceContent;
+	}
+	public void setInvoiceContent(InvoiceItemQueryOpenModel invoiceContent) {
+		this.invoiceContent = invoiceContent;
 	}
 
 	public String getmName() {

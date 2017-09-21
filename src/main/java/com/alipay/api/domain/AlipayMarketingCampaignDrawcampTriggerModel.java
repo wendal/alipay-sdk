@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 营销抽奖活动触发
  *
  * @author auto create
- * @since 1.0, 2017-07-19 08:37:11
+ * @since 1.0, 2017-07-31 14:54:41
  */
 public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7136822335235869996L;
+	private static final long serialVersionUID = 4819251491645631536L;
 
 	/**
 	 * 用户参与活动的手机号（如果是用户直接输入手机号的活动形式，该项必填，作为识别用户的依据）
@@ -30,6 +30,24 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	 */
 	@ApiField("camp_source")
 	private Long campSource;
+
+	/**
+	 * 渠道来源参数
+	 */
+	@ApiField("channel_info")
+	private String channelInfo;
+
+	/**
+	 * 客户端ip
+	 */
+	@ApiField("client_ip")
+	private String clientIp;
+
+	/**
+	 * rds嵌入页面的js收集的用户行为数据
+	 */
+	@ApiField("json_ua")
+	private String jsonUa;
 
 	/**
 	 * 用户登录号/用户uid，非脱敏账号
@@ -56,6 +74,27 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	}
 	public void setCampSource(Long campSource) {
 		this.campSource = campSource;
+	}
+
+	public String getChannelInfo() {
+		return this.channelInfo;
+	}
+	public void setChannelInfo(String channelInfo) {
+		this.channelInfo = channelInfo;
+	}
+
+	public String getClientIp() {
+		return this.clientIp;
+	}
+	public void setClientIp(String clientIp) {
+		this.clientIp = clientIp;
+	}
+
+	public String getJsonUa() {
+		return this.jsonUa;
+	}
+	public void setJsonUa(String jsonUa) {
+		this.jsonUa = jsonUa;
 	}
 
 	public String getUserId() {

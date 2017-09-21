@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 生活号消息撤回接口
  *
  * @author auto create
- * @since 1.0, 2016-12-19 20:51:25
+ * @since 1.0, 2017-08-28 17:30:50
  */
 public class AlipayOpenPublicLifeMsgRecallModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6858139885913537885L;
+	private static final long serialVersionUID = 1143144962985493459L;
 
 	/**
 	 * 消息id

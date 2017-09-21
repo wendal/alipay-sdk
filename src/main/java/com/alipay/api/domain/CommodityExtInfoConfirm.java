@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 服务插件扩展信息BD审核结果
  *
  * @author auto create
- * @since 1.0, 2016-12-22 23:46:22
+ * @since 1.0, 2017-07-31 17:30:09
  */
 public class CommodityExtInfoConfirm extends AlipayObject {
 
-	private static final long serialVersionUID = 2846951438533349694L;
+	private static final long serialVersionUID = 5645892198132817527L;
 
 	/**
 	 * 城市上架结果 【 0：表示失败，  1：表示成功】

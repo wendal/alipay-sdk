@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.offline.provider.shopaction.record request
  * 
  * @author auto create
- * @since 1.0, 2017-06-08 10:03:38
+ * @since 1.0, 2017-08-23 11:59:20
  */
 public class AlipayOfflineProviderShopactionRecordRequest implements AlipayRequest<AlipayOfflineProviderShopactionRecordResponse> {
 

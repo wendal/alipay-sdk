@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 蚁盾营销反作弊服务
  *
  * @author auto create
- * @since 1.0, 2017-06-29 21:11:08
+ * @since 1.0, 2017-07-26 14:36:53
  */
 public class SsdataDataserviceRiskAntimarketcheatQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7372393856739641486L;
+	private static final long serialVersionUID = 5134641354489981146L;
 
 	/**
 	 * 行为发生时的身份证号

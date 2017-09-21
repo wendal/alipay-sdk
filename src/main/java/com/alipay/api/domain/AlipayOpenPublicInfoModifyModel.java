@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 服务窗基础信息修改接口
  *
  * @author auto create
- * @since 1.0, 2016-08-10 17:27:20
+ * @since 1.0, 2017-08-10 10:43:54
  */
 public class AlipayOpenPublicInfoModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8218431118684728196L;
+	private static final long serialVersionUID = 3715262381315538122L;
 
 	/**
 	 * 服务窗名称，2-20个字之间；不得含有违反法律法规和公序良俗的相关信息；不得侵害他人名誉权、知识产权、商业秘密等合法权利；不得以太过广泛的、或产品、行业词组来命名，如：女装、皮革批发；不得以实名认证的媒体资质账号创建服务窗，或媒体相关名称命名服务窗，如：XX电视台、XX杂志等

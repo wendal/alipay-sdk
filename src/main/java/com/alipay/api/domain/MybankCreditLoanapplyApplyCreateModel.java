@@ -1,17 +1,20 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 机构代客户申贷
  *
  * @author auto create
- * @since 1.0, 2017-05-17 14:53:02
+ * @since 1.0, 2017-08-09 09:27:34
  */
 public class MybankCreditLoanapplyApplyCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5639335428729298698L;
+	private static final long serialVersionUID = 2546792659142337294L;
 
 	/**
 	 * 客户的支付宝ID
@@ -24,6 +27,13 @@ public class MybankCreditLoanapplyApplyCreateModel extends AlipayObject {
 	 */
 	@ApiField("apply_lmt")
 	private String applyLmt;
+
+	/**
+	 * 关联实体，申贷主体可以关联一些其他实体比方说一个企业，一个会员账号用来作为申贷材料辅助申贷
+	 */
+	@ApiListField("associate_entitys")
+	@ApiField("involved_entity")
+	private List<InvolvedEntity> associateEntitys;
 
 	/**
 	 * 业务编号，比如当使用一笔订单创建授信申请时，业务编号就是订单号
@@ -60,6 +70,24 @@ public class MybankCreditLoanapplyApplyCreateModel extends AlipayObject {
 	 */
 	@ApiField("email")
 	private String email;
+
+	/**
+	 * 扩展数据（map转换为json字符串）
+	 */
+	@ApiField("ext_par")
+	private String extPar;
+
+	/**
+	 * 银行参与者id，是在网商银行创建会员后生成的id，网商银行会员的唯一标识
+	 */
+	@ApiField("ip_id")
+	private String ipId;
+
+	/**
+	 * 银行参与者角色id，是在网商银行创建会员后生成的角色id，网商银行会员角色的唯一标识
+	 */
+	@ApiField("ip_role_id")
+	private String ipRoleId;
 
 	/**
 	 * 会员的登录账号，比如支付宝登录账号，一般为手机号或邮箱
@@ -106,6 +134,12 @@ TAOBAO：淘宝
 	@ApiField("site")
 	private String site;
 
+	/**
+	 * 外部站点用户ID，跟SITE对应，若SITE是ALIPAY则为支付宝ID，若SITE是ICBU则为ICBU 用户ID
+	 */
+	@ApiField("site_user_id")
+	private String siteUserId;
+
 	public String getAlipayId() {
 		return this.alipayId;
 	}
@@ -118,6 +152,13 @@ TAOBAO：淘宝
 	}
 	public void setApplyLmt(String applyLmt) {
 		this.applyLmt = applyLmt;
+	}
+
+	public List<InvolvedEntity> getAssociateEntitys() {
+		return this.associateEntitys;
+	}
+	public void setAssociateEntitys(List<InvolvedEntity> associateEntitys) {
+		this.associateEntitys = associateEntitys;
 	}
 
 	public String getBizNo() {
@@ -160,6 +201,27 @@ TAOBAO：淘宝
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getExtPar() {
+		return this.extPar;
+	}
+	public void setExtPar(String extPar) {
+		this.extPar = extPar;
+	}
+
+	public String getIpId() {
+		return this.ipId;
+	}
+	public void setIpId(String ipId) {
+		this.ipId = ipId;
+	}
+
+	public String getIpRoleId() {
+		return this.ipRoleId;
+	}
+	public void setIpRoleId(String ipRoleId) {
+		this.ipRoleId = ipRoleId;
 	}
 
 	public String getLoginId() {
@@ -209,6 +271,13 @@ TAOBAO：淘宝
 	}
 	public void setSite(String site) {
 		this.site = site;
+	}
+
+	public String getSiteUserId() {
+		return this.siteUserId;
+	}
+	public void setSiteUserId(String siteUserId) {
+		this.siteUserId = siteUserId;
 	}
 
 }
