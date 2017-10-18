@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询阿里通信小号信息
  *
  * @author auto create
- * @since 1.0, 2017-06-26 11:43:59
+ * @since 1.0, 2017-07-26 14:38:27
  */
 public class SsdataDataserviceRiskAlixiaohaoQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5329375844725163756L;
+	private static final long serialVersionUID = 5552778966217212958L;
 
 	/**
 	 * 电话号码

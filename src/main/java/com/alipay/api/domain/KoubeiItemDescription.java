@@ -10,21 +10,21 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品描述
  *
  * @author auto create
- * @since 1.0, 2016-11-15 15:35:12
+ * @since 1.0, 2017-09-22 18:18:37
  */
 public class KoubeiItemDescription extends AlipayObject {
 
-	private static final long serialVersionUID = 6672617538452589112L;
+	private static final long serialVersionUID = 2876865397123737269L;
 
 	/**
-	 * 标题下的描述列表，列表类型，每项不得超过100个中文字符,最多10项
+	 * 标题下的描述列表，列表类型，每项不得为空,最多10项，总长度不能超过2600个中文字符
 	 */
 	@ApiListField("details")
 	@ApiField("string")
 	private List<String> details;
 
 	/**
-	 * 描述标题，不得超过15个中文字符
+	 * 描述标题，不得超过40个中文字符
 	 */
 	@ApiField("title")
 	private String title;

@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑订单商品凭证模型
  *
  * @author auto create
- * @since 1.0, 2016-11-18 13:11:04
+ * @since 1.0, 2017-09-27 10:57:48
  */
 public class KbOrderVoucherModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7132637211478137714L;
+	private static final long serialVersionUID = 1292632788156347739L;
 
 	/**
 	 * 商品凭证过期时间

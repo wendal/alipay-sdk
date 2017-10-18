@@ -8,20 +8,20 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.open.public.info.modify response.
  * 
  * @author auto create
- * @since 1.0, 2016-12-08 11:57:17
+ * @since 1.0, 2017-10-10 11:17:00
  */
 public class AlipayOpenPublicInfoModifyResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4396521875546882569L;
+	private static final long serialVersionUID = 5527865363554566377L;
 
 	/** 
-	 * 服务窗审核状态描述，如果审核驳回则有相关的驳回理由
+	 * 服务窗审核状态描述
 	 */
 	@ApiField("audit_desc")
 	private String auditDesc;
 
 	/** 
-	 * 服务窗审核状态，对于系统商而言，只有三个状态，AUDITING：审核中，AUDIT_FAILED：审核驳回，AUDIT_SUCCESS：审核通过。
+	 * 服务窗审核状态，申请成功后返回AUDITING，等待风控审核
 	 */
 	@ApiField("audit_status")
 	private String auditStatus;

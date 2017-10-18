@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 订单明细
  *
  * @author auto create
- * @since 1.0, 2017-03-01 16:20:58
+ * @since 1.0, 2017-09-27 19:44:40
  */
 public class OrderItem extends AlipayObject {
 
-	private static final long serialVersionUID = 6212325386844494138L;
+	private static final long serialVersionUID = 8733957499261977119L;
 
 	/**
 	 * 店铺所在具体位置
@@ -36,6 +36,12 @@ public class OrderItem extends AlipayObject {
 	 */
 	@ApiField("city")
 	private String city;
+
+	/**
+	 * 城市编码
+	 */
+	@ApiField("city_code")
+	private String cityCode;
 
 	/**
 	 * 订购的服务商品ID
@@ -147,6 +153,13 @@ public class OrderItem extends AlipayObject {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public String getCityCode() {
+		return this.cityCode;
+	}
+	public void setCityCode(String cityCode) {
+		this.cityCode = cityCode;
 	}
 
 	public String getCommodityId() {

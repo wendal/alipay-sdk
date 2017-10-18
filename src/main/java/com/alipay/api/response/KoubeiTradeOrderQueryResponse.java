@@ -15,11 +15,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.trade.order.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-03-17 15:14:16
+ * @since 1.0, 2017-09-22 14:49:14
  */
 public class KoubeiTradeOrderQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8573419959314958564L;
+	private static final long serialVersionUID = 6226319223387495125L;
 
 	/** 
 	 * 订单对应活动信息，多个商品情况下可能对应多个活动，故为列表;可根据此活动号查询活动名，以标注该购买的商品隶属于哪个活动。
@@ -124,7 +124,8 @@ shop_name:门店名称;
 	private String transNo;
 
 	/** 
-	 * 凭证列表，每笔订单会根据购买商品种类数量生成凭证信息，具体字段如下：
+	 * 凭证列表，每笔订单会根据购买商品种类数量生成凭证信息；如果交易未成功（比如交易超时关闭等），则不会返回该字段。
+具体字段如下：
 voucher_id：商品凭证ID;
 item_id:商品ID;
 shop_id:门店ID;

@@ -13,11 +13,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.pay response.
  * 
  * @author auto create
- * @since 1.0, 2017-07-19 14:02:56
+ * @since 1.0, 2017-09-29 10:50:10
  */
 public class AlipayTradePayResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1875165765435935336L;
+	private static final long serialVersionUID = 3346397886988961644L;
 
 	/** 
 	 * 异步支付模式，先享后付业务会返回该参数，目前有三种值：
@@ -27,6 +27,14 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	 */
 	@ApiField("async_payment_mode")
 	private String asyncPaymentMode;
+
+	/** 
+	 * 商户传入业务信息，具体值要和支付宝约定
+将商户传入信息分发给相应系统，应用于安全，营销等参数直传场景
+格式为json格式
+	 */
+	@ApiField("business_params")
+	private String businessParams;
 
 	/** 
 	 * 买家支付宝账号
@@ -131,6 +139,13 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	}
 	public String getAsyncPaymentMode( ) {
 		return this.asyncPaymentMode;
+	}
+
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
+	}
+	public String getBusinessParams( ) {
+		return this.businessParams;
 	}
 
 	public void setBuyerLogonId(String buyerLogonId) {

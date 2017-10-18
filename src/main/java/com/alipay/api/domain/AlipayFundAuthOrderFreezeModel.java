@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 资金预授权冻结接口
  *
  * @author auto create
- * @since 1.0, 2017-06-01 16:10:21
+ * @since 1.0, 2017-09-19 10:28:07
  */
 public class AlipayFundAuthOrderFreezeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3523936392476868519L;
+	private static final long serialVersionUID = 2567122678655466274L;
 
 	/**
 	 * 需要冻结的金额，单位为：元（人民币），精确到小数点后两位
@@ -77,6 +77,12 @@ public class AlipayFundAuthOrderFreezeModel extends AlipayObject {
 	 */
 	@ApiField("payee_user_id")
 	private String payeeUserId;
+
+	/**
+	 * 销售产品码，后续新接入预授权当面付的业务，本字段取值固定为PRE_AUTH。
+	 */
+	@ApiField("product_code")
+	private String productCode;
 
 	public String getAmount() {
 		return this.amount;
@@ -146,6 +152,13 @@ public class AlipayFundAuthOrderFreezeModel extends AlipayObject {
 	}
 	public void setPayeeUserId(String payeeUserId) {
 		this.payeeUserId = payeeUserId;
+	}
+
+	public String getProductCode() {
+		return this.productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
 	}
 
 }

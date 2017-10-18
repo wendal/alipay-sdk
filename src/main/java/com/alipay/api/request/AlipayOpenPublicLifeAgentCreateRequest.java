@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.life.agent.create request
  * 
  * @author auto create
- * @since 1.0, 2017-07-17 12:23:29
+ * @since 1.0, 2017-09-22 17:53:27
  */
 public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadRequest<AlipayOpenPublicLifeAgentCreateResponse> {
 
@@ -36,12 +36,12 @@ public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadReque
 	private FileItem businessLicenseAuthPic;
 
 	/** 
-	* 营业执照号码
+	* 营业执照号码。该字段目前已无效
 	 */
 	private String businessLicenseNo;
 
 	/** 
-	* 营业执照图片
+	* 营业执照图片。被代创建商户运营主体为个人账户必填，企业账户无需填写
 	 */
 	private FileItem businessLicensePic;
 
@@ -67,8 +67,7 @@ public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadReque
 
 	/** 
 	* 所属MCCCode，详情可参考
-<a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.INIZWb&articleId=105364&docType=1
-">商家经营类目</a> 中的“经营类目编码”
+<a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.INIZWb&articleId=105364&docType=1">商家经营类目</a> 中的“经营类目编码”
 	 */
 	private String mccCode;
 
@@ -93,12 +92,12 @@ public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadReque
 	private String publicName;
 
 	/** 
-	* 店铺内景图片，个人账户必填 ，企业账户选填
+	* 店铺内景图片，被代创建商户运营主体为个人账户必填，企业账户选填
 	 */
 	private FileItem shopScenePic;
 
 	/** 
-	* 店铺门头照图片，个人账户必填，企业账户选填
+	* 店铺门头照图片，被代创建商户运营主体为个人账户必填，企业账户选填
 	 */
 	private FileItem shopSignBoardPic;
 

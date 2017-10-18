@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保养订单状态更新
  *
  * @author auto create
- * @since 1.0, 2016-10-26 18:05:19
+ * @since 1.0, 2017-09-15 16:29:02
  */
 public class AlipayEcoMycarMaintainOrderstatusUpdateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5799665635485858392L;
+	private static final long serialVersionUID = 7274734647962582821L;
 
 	/**
 	 * 扩展参数

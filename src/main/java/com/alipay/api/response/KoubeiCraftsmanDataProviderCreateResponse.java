@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.craftsman.data.provider.create response.
  * 
  * @author auto create
- * @since 1.0, 2017-01-13 16:26:55
+ * @since 1.0, 2017-10-11 20:36:24
  */
 public class KoubeiCraftsmanDataProviderCreateResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1499132248378279334L;
+	private static final long serialVersionUID = 7867313869544488996L;
 
 	/** 
 	 * 手艺人id

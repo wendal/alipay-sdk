@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * ISV有新的卡券信息同步到车主服务平台
  *
  * @author auto create
- * @since 1.0, 2016-05-12 09:57:58
+ * @since 1.0, 2017-09-15 16:29:40
  */
 public class AlipayEcoMycarPromoTicketSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3846524676113452181L;
+	private static final long serialVersionUID = 6825239215878361975L;
 
 	/**
 	 * 营销活动ID

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 获取购特车scheme
  *
  * @author auto create
- * @since 1.0, 2017-04-24 10:31:44
+ * @since 1.0, 2017-09-11 16:39:57
  */
 public class KoubeiTradeItemBuyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5168932762123652339L;
+	private static final long serialVersionUID = 1899756997862595582L;
 
 	/**
 	 * 预定用户的联系号码。要求合法的手机号码或者座机；该字段仅用于商品预定，商品预定场景为必填字段。如：0579-XXXXXXX；1526XXXXXXX
@@ -24,6 +24,12 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	 */
 	@ApiField("buyer_user_name")
 	private String buyerUserName;
+
+	/**
+	 * 手艺人ID，为非必填字段。
+	 */
+	@ApiField("craftsman_id")
+	private String craftsmanId;
 
 	/**
 	 * 若无现价则此值传商品原价，交易创建将根据此价格进行售卖。
@@ -100,6 +106,13 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	}
 	public void setBuyerUserName(String buyerUserName) {
 		this.buyerUserName = buyerUserName;
+	}
+
+	public String getCraftsmanId() {
+		return this.craftsmanId;
+	}
+	public void setCraftsmanId(String craftsmanId) {
+		this.craftsmanId = craftsmanId;
 	}
 
 	public String getCurrentPrice() {

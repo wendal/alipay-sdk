@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 活动详情
  *
  * @author auto create
- * @since 1.0, 2017-04-20 16:40:53
+ * @since 1.0, 2017-09-30 11:20:37
  */
 public class CampDetail extends AlipayObject {
 
-	private static final long serialVersionUID = 4736373397284886575L;
+	private static final long serialVersionUID = 4894789399214477149L;
 
 	/**
 	 * 活动工单列表

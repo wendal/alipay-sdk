@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券的单品信息
  *
  * @author auto create
- * @since 1.0, 2017-06-05 11:25:25
+ * @since 1.0, 2017-09-28 10:50:16
  */
 public class ItemInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8818397684186455512L;
+	private static final long serialVersionUID = 3727227949899619748L;
 
 	/**
 	 * 券适用的单品码列表
@@ -52,13 +52,15 @@ public class ItemInfo extends AlipayObject {
 	private String itemText;
 
 	/**
-	 * 最高优惠商品件数
+	 * 单品券适用的商品列表中，每一个商品最高可享受优惠的件数；  
+如：券适用于A,B两种商品，该字段设置为1，则用券A,B两种商品每种最多只有一件可享受优惠；
 	 */
 	@ApiField("max_discount_num")
 	private String maxDiscountNum;
 
 	/**
-	 * 最低购买商品件数
+	 * 单品券适用商品列表中，每种商品享受优惠最低购买件数的门槛；
+如：券适用于A,B两种商品，该字段设置为3，则A,B两种商品每种最少需要购买3件才可享受优惠；
 	 */
 	@ApiField("min_consume_num")
 	private String minConsumeNum;
@@ -69,6 +71,13 @@ public class ItemInfo extends AlipayObject {
 	 */
 	@ApiField("original_price")
 	private String originalPrice;
+
+	/**
+	 * 券适用SKU的最低消费金额门槛
+如券适用A,B两个SKU，该字段设置的值为100，则订单中购买A,B两个SKU的合计金额需大于100元才可用券
+	 */
+	@ApiField("sku_min_consume")
+	private String skuMinConsume;
 
 	public List<String> getItemIds() {
 		return this.itemIds;
@@ -124,6 +133,13 @@ public class ItemInfo extends AlipayObject {
 	}
 	public void setOriginalPrice(String originalPrice) {
 		this.originalPrice = originalPrice;
+	}
+
+	public String getSkuMinConsume() {
+		return this.skuMinConsume;
+	}
+	public void setSkuMinConsume(String skuMinConsume) {
+		this.skuMinConsume = skuMinConsume;
 	}
 
 }

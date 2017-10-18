@@ -10,11 +10,18 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 活动限制信息
  *
  * @author auto create
- * @since 1.0, 2017-06-05 11:25:25
+ * @since 1.0, 2017-09-28 10:51:01
  */
 public class ConstraintInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 1413386783869539676L;
+	private static final long serialVersionUID = 2792876185455474383L;
+
+	/**
+	 * 资金池ID
+（数据来源：需要ISV自己去口碑销售中台创建资金池，拿到对应的资金池ID，此参数仅适用ISV接入口福业务场景时使用，其他场景不需要传递此参数）
+	 */
+	@ApiField("cash_pool_id")
+	private String cashPoolId;
 
 	/**
 	 * 人群规则组ID
@@ -45,6 +52,13 @@ public class ConstraintInfo extends AlipayObject {
 	private String minCost;
 
 	/**
+	 * 补贴百分比,95表示 95%，支持两位小数
+（参数说明：补贴比例95%，表示ISV出资95%，商户出资5%，此参数仅适用ISV接入口福业务场景时使用，其他场景不需要传递此参数）
+	 */
+	@ApiField("subsidy_percent")
+	private String subsidyPercent;
+
+	/**
 	 * 活动适用的门店列表
 仅品牌商发起的招商活动可为空
 最多支持10w家门店
@@ -69,6 +83,13 @@ public class ConstraintInfo extends AlipayObject {
 	 */
 	@ApiField("user_win_frequency")
 	private String userWinFrequency;
+
+	public String getCashPoolId() {
+		return this.cashPoolId;
+	}
+	public void setCashPoolId(String cashPoolId) {
+		this.cashPoolId = cashPoolId;
+	}
 
 	public String getCrowdGroupId() {
 		return this.crowdGroupId;
@@ -96,6 +117,13 @@ public class ConstraintInfo extends AlipayObject {
 	}
 	public void setMinCost(String minCost) {
 		this.minCost = minCost;
+	}
+
+	public String getSubsidyPercent() {
+		return this.subsidyPercent;
+	}
+	public void setSubsidyPercent(String subsidyPercent) {
+		this.subsidyPercent = subsidyPercent;
 	}
 
 	public List<String> getSuitShops() {

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 统一收单下单并支付页面接口
  *
  * @author auto create
- * @since 1.0, 2017-07-19 13:32:10
+ * @since 1.0, 2017-09-05 11:49:37
  */
 public class AlipayTradePagePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8795415881381493245L;
+	private static final long serialVersionUID = 8646317372716261726L;
 
 	/**
 	 * 签约参数，支付后签约场景使用
@@ -27,6 +27,12 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	 */
 	@ApiField("body")
 	private String body;
+
+	/**
+	 * 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式
+	 */
+	@ApiField("business_params")
+	private String businessParams;
 
 	/**
 	 * 禁用渠道,用户不可用指定渠道支付
@@ -190,6 +196,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	}
 	public void setBody(String body) {
 		this.body = body;
+	}
+
+	public String getBusinessParams() {
+		return this.businessParams;
+	}
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
 	}
 
 	public String getDisablePayChannels() {

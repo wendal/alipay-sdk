@@ -7,11 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 门店评分信息模型
  *
  * @author auto create
- * @since 1.0, 2017-02-15 10:04:25
+ * @since 1.0, 2017-09-14 18:45:53
  */
 public class ShopCommentInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 6342236815943714935L;
+	private static final long serialVersionUID = 1287763955179725413L;
+
+	/**
+	 * 店铺30天平均人气值
+	 */
+	@ApiField("avg_popularity")
+	private String avgPopularity;
+
+	/**
+	 * avg_popularity字段展示文案
+	 */
+	@ApiField("avg_popularity_name")
+	private String avgPopularityName;
 
 	/**
 	 * 门店评分，评分越高，门店质量越高
@@ -24,6 +36,20 @@ public class ShopCommentInfo extends AlipayObject {
 	 */
 	@ApiField("star")
 	private String star;
+
+	public String getAvgPopularity() {
+		return this.avgPopularity;
+	}
+	public void setAvgPopularity(String avgPopularity) {
+		this.avgPopularity = avgPopularity;
+	}
+
+	public String getAvgPopularityName() {
+		return this.avgPopularityName;
+	}
+	public void setAvgPopularityName(String avgPopularityName) {
+		this.avgPopularityName = avgPopularityName;
+	}
 
 	public String getScore() {
 		return this.score;

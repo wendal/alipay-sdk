@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 汽车超人，QRcode二元组类型
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:38
+ * @since 1.0, 2017-09-15 16:22:31
  */
 public class QRcode extends AlipayObject {
 
-	private static final long serialVersionUID = 6424986416776332661L;
+	private static final long serialVersionUID = 1857736222592889451L;
 
 	/**
 	 * 用户ID

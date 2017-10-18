@@ -7,11 +7,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.eco.mycar.promo.voucher.verify response.
  * 
  * @author auto create
- * @since 1.0, 2016-05-24 22:03:31
+ * @since 1.0, 2017-09-15 16:29:31
  */
 public class AlipayEcoMycarPromoVoucherVerifyResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8382932977452625523L;
+	private static final long serialVersionUID = 1188489677993456717L;
 
 	
 

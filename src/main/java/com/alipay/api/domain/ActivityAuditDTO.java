@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 活动审核模型
  *
  * @author auto create
- * @since 1.0, 2016-12-27 16:58:19
+ * @since 1.0, 2017-09-30 11:20:49
  */
 public class ActivityAuditDTO extends AlipayObject {
 
-	private static final long serialVersionUID = 7112172416545651952L;
+	private static final long serialVersionUID = 4517682415845479627L;
 
 	/**
 	 * 审核id

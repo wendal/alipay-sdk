@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 订单状态扩展参数
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:39
+ * @since 1.0, 2017-09-15 16:29:02
  */
 public class MaintainOrderStatusExtParams extends AlipayObject {
 
-	private static final long serialVersionUID = 7823837817521524257L;
+	private static final long serialVersionUID = 4885125437514897966L;
 
 	/**
 	 * 编码

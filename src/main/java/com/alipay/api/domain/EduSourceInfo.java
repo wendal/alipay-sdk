@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 贴子发布接口职位供应商信息
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:38
+ * @since 1.0, 2017-09-15 16:22:20
  */
 public class EduSourceInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3378867855291383497L;
+	private static final long serialVersionUID = 4642444122668881822L;
 
 	/**
 	 * 供应商的LOGO

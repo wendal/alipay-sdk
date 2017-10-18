@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户附件信息
  *
  * @author auto create
- * @since 1.0, 2017-03-22 10:09:01
+ * @since 1.0, 2017-09-23 20:47:16
  */
 public class AttachmentInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 5517724527461965254L;
+	private static final long serialVersionUID = 1883582565484275748L;
 
 	/**
 	 * 支付宝返回的图片在文件存储平台的标识

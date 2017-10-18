@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 订单参加活动信息
  *
  * @author auto create
- * @since 1.0, 2016-11-18 13:11:04
+ * @since 1.0, 2017-09-27 10:58:52
  */
 public class KbOrderActivityModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4445888183228356515L;
+	private static final long serialVersionUID = 6239453322635899997L;
 
 	/**
 	 * 活动ID

@@ -7,20 +7,38 @@ import com.alipay.api.internal.mapping.ApiField;
  * 教育缴费学校信息录入接口
  *
  * @author auto create
- * @since 1.0, 2017-06-13 10:29:12
+ * @since 1.0, 2017-08-18 12:27:03
  */
 public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1154744342286347473L;
+	private static final long serialVersionUID = 2592213581195695369L;
 
 	/**
-	 * 银行卡编号。适配集团到卡模式的学校接入
+	 * 与浙江网商交易见证平台有交互ISV输入网商交易异步通知回调URL，教育缴费同步账单信息给网商，网商会回调此url，ISV即可获取网商相关的参数，根据教育缴费平台账单发送接口返回的 order_no和网商返回的outer_trade_no来对应账单信息。
+	 */
+	@ApiField("bank_notify_url")
+	private String bankNotifyUrl;
+
+	/**
+	 * 与浙江网商交易见证平台有交互的ISV,由交易见证平台分配给合作方业务平台 签约唯一ID ，由网商分配给ISV的渠道参数
+	 */
+	@ApiField("bank_partner_id")
+	private String bankPartnerId;
+
+	/**
+	 * 与浙江网商交易见证平台有交互的ISV在创建账户获得的member_id，由网商分配
+	 */
+	@ApiField("bank_uid")
+	private String bankUid;
+
+	/**
+	 * 对应集团到卡模式的银行编号.学校与支付宝后台签约时，由学校提交给支付宝的编号
 	 */
 	@ApiField("bankcard_no")
 	private String bankcardNo;
 
 	/**
-	 * 市的国家编码
+	 * 城市的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
 	 */
 	@ApiField("city_code")
 	private String cityCode;
@@ -32,7 +50,7 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	private String cityName;
 
 	/**
-	 * 区县的国家编码
+	 * 区县的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
 	 */
 	@ApiField("district_code")
 	private String districtCode;
@@ -44,38 +62,39 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	private String districtName;
 
 	/**
-	 * 商家名称
+	 * 商家名称，每个接入教育缴费的ISV商家名称，由ISV自己提供
 	 */
 	@ApiField("isv_name")
 	private String isvName;
 
 	/**
-	 * 商家编码，ISV_NO
+	 * 注意：本参数从1.3版本开始已经废弃，不再需要传递。
+
+由支付宝提供的给已经签约的isv的编码，业务上一般直接采用isv的支付宝PID。
 	 */
 	@ApiField("isv_no")
 	private String isvNo;
 
 	/**
-	 * 此链接是为了保持教育缴费平台与ISV
-商户支付状态一致性。用户支付成功后，会异步回调此链接，回调时，会带入支付的相关参数，ISV商户可以根据返回的参数更新账单状态。支付宝异步通知说明
+	 * 此通知地址是为了保持教育缴费平台与ISV商户支付状态一致性。用户支付成功后，支付宝会根据本isv_notify_url，通过POST请求的形式将支付结果作为参数通知到商户系统，ISV商户可以根据返回的参数更新账单状态。
 	 */
 	@ApiField("isv_notify_url")
 	private String isvNotifyUrl;
 
 	/**
-	 * Isv支付宝pid，商家在支付宝的唯一标识
+	 * ISV联系电话,用于账单详情页面显示
 	 */
 	@ApiField("isv_phone")
 	private String isvPhone;
 
 	/**
-	 * Isv支付宝pid，用于支付返佣
+	 * 填写已经签约教育缴费的isv的支付宝PID
 	 */
 	@ApiField("isv_pid")
 	private String isvPid;
 
 	/**
-	 * 省的国家编码
+	 * 省份的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
 	 */
 	@ApiField("province_code")
 	private String provinceCode;
@@ -87,13 +106,14 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	private String provinceName;
 
 	/**
-	 * 学校的图像，一般为学校的标识，该字段为图片的链接地址，只支持png或jpg图片格式，图片高度为108，宽度为108 ，不大于20k
+	 * 学校的校徽或logo，在学校展示页面作为学校的标识。该字段为图片的链接地址，只支持png或jpg图片格式，图片高度为108，宽度为108 ，不大于20k。
+注意：此链接要求公网可以访问，否则无法正常展示。
 	 */
 	@ApiField("school_icon")
 	private String schoolIcon;
 
 	/**
-	 * 如果学校图像数据填写，则此字段不能为空。目前只支持png和jpg两种格式
+	 * 如果填写了school_icon参数，则此字段不能为空。目前只支持png和jpg两种格式
 	 */
 	@ApiField("school_icon_type")
 	private String schoolIconType;
@@ -105,22 +125,52 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	private String schoolName;
 
 	/**
-	 * 学校支付宝pid，用于授权
+	 * 学校用来签约支付宝教育缴费的支付宝PID
 	 */
 	@ApiField("school_pid")
 	private String schoolPid;
 
 	/**
-	 * 学校的国家标准编码
+	 * 学校(机构)标识码（由教育部按照国家标准及编码规则编制，可以在教育局官网查询）
 	 */
 	@ApiField("school_stdcode")
 	private String schoolStdcode;
 
 	/**
-	 * 学校的类型：托幼小初高。1、托, 2、幼,  3、小,  4、初,  5、高。如果学校兼有多种属性，可以写为：初高中为45 ， 小初为34
+	 * 学校的类型：
+1：代表托儿所； 2：代表幼儿园；3：代表小学；4：代表初中；5：代表高中。
+如果学校兼有多种属性，可以连写，比如：
+45：代表兼有初中部高中部；34：代表兼有小学部初中部
 	 */
 	@ApiField("school_type")
 	private String schoolType;
+
+	/**
+	 * 与浙江网商交易见证平台有交互的ISV,由网商分配给ISV的渠道参数
+	 */
+	@ApiField("white_channel_code")
+	private String whiteChannelCode;
+
+	public String getBankNotifyUrl() {
+		return this.bankNotifyUrl;
+	}
+	public void setBankNotifyUrl(String bankNotifyUrl) {
+		this.bankNotifyUrl = bankNotifyUrl;
+	}
+
+	public String getBankPartnerId() {
+		return this.bankPartnerId;
+	}
+	public void setBankPartnerId(String bankPartnerId) {
+		this.bankPartnerId = bankPartnerId;
+	}
+
+	public String getBankUid() {
+		return this.bankUid;
+	}
+	public void setBankUid(String bankUid) {
+		this.bankUid = bankUid;
+	}
 
 	public String getBankcardNo() {
 		return this.bankcardNo;
@@ -246,6 +296,13 @@ public class AlipayEcoEduKtSchoolinfoModifyModel extends AlipayObject {
 	}
 	public void setSchoolType(String schoolType) {
 		this.schoolType = schoolType;
+	}
+
+	public String getWhiteChannelCode() {
+		return this.whiteChannelCode;
+	}
+	public void setWhiteChannelCode(String whiteChannelCode) {
+		this.whiteChannelCode = whiteChannelCode;
 	}
 
 }

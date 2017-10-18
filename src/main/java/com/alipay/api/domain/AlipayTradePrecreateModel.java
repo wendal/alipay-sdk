@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2016-11-08 10:49:27
+ * @since 1.0, 2017-09-05 11:49:17
  */
 public class AlipayTradePrecreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5393749938937664662L;
+	private static final long serialVersionUID = 1564411722647349889L;
 
 	/**
 	 * 支付宝店铺的门店ID
@@ -30,16 +30,44 @@ public class AlipayTradePrecreateModel extends AlipayObject {
 	private String body;
 
 	/**
+	 * 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式
+	 */
+	@ApiField("business_params")
+	private String businessParams;
+
+	/**
 	 * 买家支付宝账号
 	 */
 	@ApiField("buyer_logon_id")
 	private String buyerLogonId;
 
 	/**
+	 * 禁用渠道，用户不可用指定渠道支付
+当有多个渠道时用“,”分隔
+注，与enable_pay_channels互斥
+	 */
+	@ApiField("disable_pay_channels")
+	private String disablePayChannels;
+
+	/**
 	 * 可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】，【不可打折金额】则该值默认为【订单总金额】-【不可打折金额】
 	 */
 	@ApiField("discountable_amount")
 	private String discountableAmount;
+
+	/**
+	 * 可用渠道，用户只能在指定渠道范围内支付
+当有多个渠道时用“,”分隔
+注，与disable_pay_channels互斥
+	 */
+	@ApiField("enable_pay_channels")
+	private String enablePayChannels;
+
+	/**
+	 * 外部指定买家
+	 */
+	@ApiField("ext_user_info")
+	private ExtUserInfo extUserInfo;
 
 	/**
 	 * 业务扩展参数
@@ -134,6 +162,13 @@ public class AlipayTradePrecreateModel extends AlipayObject {
 		this.body = body;
 	}
 
+	public String getBusinessParams() {
+		return this.businessParams;
+	}
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
+	}
+
 	public String getBuyerLogonId() {
 		return this.buyerLogonId;
 	}
@@ -141,11 +176,32 @@ public class AlipayTradePrecreateModel extends AlipayObject {
 		this.buyerLogonId = buyerLogonId;
 	}
 
+	public String getDisablePayChannels() {
+		return this.disablePayChannels;
+	}
+	public void setDisablePayChannels(String disablePayChannels) {
+		this.disablePayChannels = disablePayChannels;
+	}
+
 	public String getDiscountableAmount() {
 		return this.discountableAmount;
 	}
 	public void setDiscountableAmount(String discountableAmount) {
 		this.discountableAmount = discountableAmount;
+	}
+
+	public String getEnablePayChannels() {
+		return this.enablePayChannels;
+	}
+	public void setEnablePayChannels(String enablePayChannels) {
+		this.enablePayChannels = enablePayChannels;
+	}
+
+	public ExtUserInfo getExtUserInfo() {
+		return this.extUserInfo;
+	}
+	public void setExtUserInfo(ExtUserInfo extUserInfo) {
+		this.extUserInfo = extUserInfo;
 	}
 
 	public ExtendParams getExtendParams() {

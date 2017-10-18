@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 卡模板样式信息
  *
  * @author auto create
- * @since 1.0, 2016-12-28 15:26:45
+ * @since 1.0, 2017-08-24 12:03:48
  */
 public class TemplateStyleInfoDTO extends AlipayObject {
 
-	private static final long serialVersionUID = 4364676526187121647L;
+	private static final long serialVersionUID = 8597248281687242815L;
 
 	/**
 	 * 背景图片Id，通过接口（alipay.offline.material.image.upload）上传图片
@@ -45,7 +45,8 @@ public class TemplateStyleInfoDTO extends AlipayObject {
 	private String cardShowName;
 
 	/**
-	 * 卡片颜色
+	 * 注意：此字段已废弃。
+卡片颜色
 	 */
 	@ApiField("color")
 	private String color;
@@ -56,6 +57,24 @@ public class TemplateStyleInfoDTO extends AlipayObject {
 	@ApiListField("feature_descriptions")
 	@ApiField("string")
 	private List<String> featureDescriptions;
+
+	/**
+	 * 设置是否在卡面展示（个人头像）图片信息，默认不展示；
+当前仅用于身份验证信息类型的个人头像图片；
+图片id随创建卡/更新卡时传入；
+详见会员卡产品文档。
+	 */
+	@ApiField("front_image_enable")
+	private Boolean frontImageEnable;
+
+	/**
+	 * 设置是否在卡面展示文案信息，默认不展示；
+文案信息分行展示，最多展示3行文案，每行文案分为label和value两部分；
+文案实际内容随创建卡/更新卡时传入；
+详见会员卡产品说明文档。
+	 */
+	@ApiField("front_text_list_enable")
+	private Boolean frontTextListEnable;
 
 	/**
 	 * logo的图片ID，通过接口（alipay.offline.material.image.upload）上传图片
@@ -119,6 +138,20 @@ public class TemplateStyleInfoDTO extends AlipayObject {
 	}
 	public void setFeatureDescriptions(List<String> featureDescriptions) {
 		this.featureDescriptions = featureDescriptions;
+	}
+
+	public Boolean getFrontImageEnable() {
+		return this.frontImageEnable;
+	}
+	public void setFrontImageEnable(Boolean frontImageEnable) {
+		this.frontImageEnable = frontImageEnable;
+	}
+
+	public Boolean getFrontTextListEnable() {
+		return this.frontTextListEnable;
+	}
+	public void setFrontTextListEnable(Boolean frontTextListEnable) {
+		this.frontTextListEnable = frontTextListEnable;
 	}
 
 	public String getLogoId() {

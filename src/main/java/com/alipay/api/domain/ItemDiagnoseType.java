@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 菜品诊断类型列表对象
  *
  * @author auto create
- * @since 1.0, 2017-02-12 21:51:42
+ * @since 1.0, 2017-10-11 09:56:07
  */
 public class ItemDiagnoseType extends AlipayObject {
 
-	private static final long serialVersionUID = 7576252352137263257L;
+	private static final long serialVersionUID = 4466166829282729771L;
 
 	/**
 	 * 类型

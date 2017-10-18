@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 自定义报表过滤标签
  *
  * @author auto create
- * @since 1.0, 2016-12-05 17:13:15
+ * @since 1.0, 2017-07-26 11:32:05
  */
 public class FilterTag extends AlipayObject {
 
-	private static final long serialVersionUID = 2813529333733451343L;
+	private static final long serialVersionUID = 4588965361786577271L;
 
 	/**
 	 * 过滤条件的标签code

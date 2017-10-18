@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 支付宝脱机交易
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:39
+ * @since 1.0, 2017-09-20 18:07:59
  */
 public class AlipayOfflineTrade extends AlipayObject {
 
-	private static final long serialVersionUID = 4459493244813461832L;
+	private static final long serialVersionUID = 4577663394349171325L;
 
 	/**
 	 * 交易实际发生时间

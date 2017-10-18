@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.system.oauth.token response.
  * 
  * @author auto create
- * @since 1.0, 2017-03-31 15:36:51
+ * @since 1.0, 2017-09-25 16:00:34
  */
 public class AlipaySystemOauthTokenResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3435749172175636252L;
+	private static final long serialVersionUID = 2531889386262738788L;
 
 	/** 
 	 * 访问令牌。通过该令牌调用需要授权类接口
@@ -25,6 +25,12 @@ public class AlipaySystemOauthTokenResponse extends AlipayResponse {
 	 */
 	@ApiField("alipay_user_id")
 	private String alipayUserId;
+
+	/** 
+	 * 令牌类型，permanent表示返回的access_token和refresh_token永久有效，非永久令牌不返回该字段
+	 */
+	@ApiField("auth_token_type")
+	private String authTokenType;
 
 	/** 
 	 * 访问令牌的有效时间，单位是秒。
@@ -62,6 +68,13 @@ public class AlipaySystemOauthTokenResponse extends AlipayResponse {
 	}
 	public String getAlipayUserId( ) {
 		return this.alipayUserId;
+	}
+
+	public void setAuthTokenType(String authTokenType) {
+		this.authTokenType = authTokenType;
+	}
+	public String getAuthTokenType( ) {
+		return this.authTokenType;
 	}
 
 	public void setExpiresIn(String expiresIn) {

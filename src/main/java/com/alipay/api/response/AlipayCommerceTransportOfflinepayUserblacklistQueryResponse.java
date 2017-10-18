@@ -10,11 +10,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.commerce.transport.offlinepay.userblacklist.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-05-20 21:41:42
+ * @since 1.0, 2017-09-04 17:13:07
  */
 public class AlipayCommerceTransportOfflinepayUserblacklistQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6283439689119468555L;
+	private static final long serialVersionUID = 5886736368443576918L;
 
 	/** 
 	 * 黑名单用户ID

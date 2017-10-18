@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 车牌查询接口
  *
  * @author auto create
- * @since 1.0, 2017-02-08 20:36:14
+ * @since 1.0, 2017-08-25 17:09:28
  */
 public class AlipayEcoMycarParkingVehicleQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4687981295774163635L;
+	private static final long serialVersionUID = 8173648218751399996L;
 
 	/**
 	 * 支付宝用户车辆ID，系统唯一。（该参数会在停车平台用户点击查询缴费，跳转到ISV停车缴费查询页面时，从请求中传递）

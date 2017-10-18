@@ -7,17 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 调查的数据项详情
  *
  * @author auto create
- * @since 1.0, 2016-12-01 12:02:21
+ * @since 1.0, 2017-08-07 10:17:08
  */
 public class InvestigCategoryData extends AlipayObject {
 
-	private static final long serialVersionUID = 2391778928371474562L;
+	private static final long serialVersionUID = 3372361685722747429L;
 
 	/**
 	 * 数据项
 	 */
 	@ApiField("category")
 	private String category;
+
+	/**
+	 * 采集的数据的版本号。
+	 */
+	@ApiField("data_version")
+	private String dataVersion;
 
 	/**
 	 * 实体code
@@ -38,7 +44,7 @@ public class InvestigCategoryData extends AlipayObject {
 	private String entityType;
 
 	/**
-	 * 模型结果,不同数据项,对应的模型结果对象不同,以JSON格式输出
+	 * 征信模型结果,以JSON格式输出，包括征信评分creditScore、不准入原因refuseReasons、模型标识码modelIdCode三个字段
 	 */
 	@ApiField("model_result_object")
 	private String modelResultObject;
@@ -54,6 +60,13 @@ public class InvestigCategoryData extends AlipayObject {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public String getDataVersion() {
+		return this.dataVersion;
+	}
+	public void setDataVersion(String dataVersion) {
+		this.dataVersion = dataVersion;
 	}
 
 	public String getEntityCode() {

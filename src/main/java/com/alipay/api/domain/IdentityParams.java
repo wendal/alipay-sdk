@@ -7,17 +7,29 @@ import com.alipay.api.internal.mapping.ApiField;
  * 用户实名信息参数
  *
  * @author auto create
- * @since 1.0, 2017-07-11 14:33:18
+ * @since 1.0, 2017-09-27 23:39:54
  */
 public class IdentityParams extends AlipayObject {
 
-	private static final long serialVersionUID = 4744229557219586136L;
+	private static final long serialVersionUID = 6597678731381576249L;
 
 	/**
 	 * 用户身份证号
 	 */
 	@ApiField("cert_no")
 	private String certNo;
+
+	/**
+	 * 用户实名信息hash值
+	 */
+	@ApiField("identity_hash")
+	private String identityHash;
+
+	/**
+	 * 签约指定用户的uid，如用户登录的uid和指定的用户uid不一致则报错
+	 */
+	@ApiField("sign_user_id")
+	private String signUserId;
 
 	/**
 	 * 用户姓名
@@ -30,6 +42,20 @@ public class IdentityParams extends AlipayObject {
 	}
 	public void setCertNo(String certNo) {
 		this.certNo = certNo;
+	}
+
+	public String getIdentityHash() {
+		return this.identityHash;
+	}
+	public void setIdentityHash(String identityHash) {
+		this.identityHash = identityHash;
+	}
+
+	public String getSignUserId() {
+		return this.signUserId;
+	}
+	public void setSignUserId(String signUserId) {
+		this.signUserId = signUserId;
 	}
 
 	public String getUserName() {

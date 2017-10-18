@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.wangyan.test.delete request
  * 
  * @author auto create
- * @since 1.0, 2017-07-06 15:27:01
+ * @since 1.0, 2017-09-25 09:09:01
  */
 public class AlipayOpenWangyanTestDeleteRequest implements AlipayRequest<AlipayOpenWangyanTestDeleteResponse> {
 

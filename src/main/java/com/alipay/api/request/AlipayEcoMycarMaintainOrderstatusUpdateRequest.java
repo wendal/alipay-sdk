@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.eco.mycar.maintain.orderstatus.update request
  * 
  * @author auto create
- * @since 1.0, 2016-07-21 12:12:48
+ * @since 1.0, 2017-09-15 16:29:02
  */
 public class AlipayEcoMycarMaintainOrderstatusUpdateRequest implements AlipayRequest<AlipayEcoMycarMaintainOrderstatusUpdateResponse> {
 

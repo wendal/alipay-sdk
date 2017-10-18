@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑码绑定的门店和桌号信息
  *
  * @author auto create
- * @since 1.0, 2017-05-08 17:03:25
+ * @since 1.0, 2017-09-05 16:47:43
  */
 public class KbCodeBindInfoVO extends AlipayObject {
 
-	private static final long serialVersionUID = 4336523577839137333L;
+	private static final long serialVersionUID = 1429124511446396751L;
 
 	/**
 	 * 商家餐桌摆放的区域名称（预留字段，暂不使用）

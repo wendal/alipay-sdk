@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 券的集合信息
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:37
+ * @since 1.0, 2017-09-15 16:29:40
  */
 public class CodeNOList extends AlipayObject {
 
-	private static final long serialVersionUID = 6396431933693992251L;
+	private static final long serialVersionUID = 7376639534862224741L;
 
 	/**
 	 * 金额

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 停车卡查询收费信息
  *
  * @author auto create
- * @since 1.0, 2016-07-05 15:57:26
+ * @since 1.0, 2017-09-15 16:29:09
  */
 public class AlipayEcoMycarParkingCardidQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2387318395362356878L;
+	private static final long serialVersionUID = 2122422724879467746L;
 
 	/**
 	 * 如果商户订单号为空，停车场id和车牌号不能为空，商户订单号优先查询

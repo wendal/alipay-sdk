@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 描述支付宝脱机交易主秘钥
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:41
+ * @since 1.0, 2017-09-20 18:07:50
  */
 public class AlipayOfflinePayMasterKey extends AlipayObject {
 
-	private static final long serialVersionUID = 4685742225275428638L;
+	private static final long serialVersionUID = 7861543656218885525L;
 
 	/**
 	 * 秘钥id

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保险公司核损确认对象
  *
  * @author auto create
- * @since 1.0, 2017-03-16 09:53:30
+ * @since 1.0, 2017-07-28 15:30:22
  */
 public class InsDataAutodamageEstimateConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8226188493784521245L;
+	private static final long serialVersionUID = 1413495787521741842L;
 
 	/**
 	 * 受损程度

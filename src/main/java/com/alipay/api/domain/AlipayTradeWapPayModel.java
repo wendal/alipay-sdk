@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 手机网站支付接口2.0
  *
  * @author auto create
- * @since 1.0, 2017-06-19 11:01:56
+ * @since 1.0, 2017-09-05 11:49:31
  */
 public class AlipayTradeWapPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4121182324472153476L;
+	private static final long serialVersionUID = 2185314677273937966L;
 
 	/**
 	 * 针对用户授权接口，获取用户相关数据时，用于标识用户授权关系
@@ -24,6 +24,12 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	 */
 	@ApiField("body")
 	private String body;
+
+	/**
+	 * 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式
+	 */
+	@ApiField("business_params")
+	private String businessParams;
 
 	/**
 	 * 禁用渠道，用户不可用指定渠道支付
@@ -158,6 +164,13 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	}
 	public void setBody(String body) {
 		this.body = body;
+	}
+
+	public String getBusinessParams() {
+		return this.businessParams;
+	}
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
 	}
 
 	public String getDisablePayChannels() {

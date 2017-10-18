@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券的使用规则信息
  *
  * @author auto create
- * @since 1.0, 2017-06-05 11:25:25
+ * @since 1.0, 2017-09-28 10:50:32
  */
 public class UseRule extends AlipayObject {
 
-	private static final long serialVersionUID = 7569253139772825823L;
+	private static final long serialVersionUID = 4387835535911786352L;
 
 	/**
 	 * 扩展属性，无需设置
@@ -29,12 +29,16 @@ public class UseRule extends AlipayObject {
 	private ForbbidenTime forbiddenTime;
 
 	/**
-	 * 优惠券的使用支付渠道限制规则，
-不受支付渠道限制:USE_NO_LIMIT;
-仅限储值卡支付时可用:USE_ON_CURRENT_PAY_CHANNEL;
-储值卡支付时不可用:NOT_ALLOWED_USE;
-【备注】
-支付渠道限制不允许修改
+	 * 优惠券的使用支付渠道限制规
+则，
+不受支付渠道限制
+:USE_NO_LIMIT;
+仅限口碑储值卡支付时可用
+:USE_ON_CURRENT_PAY_C
+HANNEL;
+口碑储值卡支付时不可用
+:NOT_ALLOWED_USE;
+【备注】支付渠道限制不允许修改
 	 */
 	@ApiField("limit_rule")
 	private String limitRule;

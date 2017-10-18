@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 资金授权发码接口
  *
  * @author auto create
- * @since 1.0, 2017-06-07 21:50:22
+ * @since 1.0, 2017-09-07 13:48:40
  */
 public class AlipayFundAuthOrderVoucherCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8897586316926827263L;
+	private static final long serialVersionUID = 1817673181578675231L;
 
 	/**
 	 * 需要冻结的金额，单位为：元（人民币），精确到小数点后两位
@@ -64,6 +64,12 @@ public class AlipayFundAuthOrderVoucherCreateModel extends AlipayObject {
 	 */
 	@ApiField("payee_user_id")
 	private String payeeUserId;
+
+	/**
+	 * 销售产品码，后续新接入预授权当面付的业务，本字段取值固定为PRE_AUTH。
+	 */
+	@ApiField("product_code")
+	private String productCode;
 
 	public String getAmount() {
 		return this.amount;
@@ -119,6 +125,13 @@ public class AlipayFundAuthOrderVoucherCreateModel extends AlipayObject {
 	}
 	public void setPayeeUserId(String payeeUserId) {
 		this.payeeUserId = payeeUserId;
+	}
+
+	public String getProductCode() {
+		return this.productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
 	}
 
 }

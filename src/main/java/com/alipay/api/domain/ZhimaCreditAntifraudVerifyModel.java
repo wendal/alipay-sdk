@@ -7,20 +7,20 @@ import com.alipay.api.internal.mapping.ApiField;
  * 欺诈信息验证
  *
  * @author auto create
- * @since 1.0, 2017-07-14 17:17:49
+ * @since 1.0, 2017-09-12 13:51:52
  */
 public class ZhimaCreditAntifraudVerifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7519143975371581472L;
+	private static final long serialVersionUID = 8453537716418127766L;
 
 	/**
-	 * 地址信息。省+市+区/县+详细地址，其中 省+市+区/县可以为空，长度不超过256，不含",","/u0001"，"|","&","^","\\"
+	 * 地址信息。省+市+区/县+详细地址，长度不超过256，不要包含特殊字符，如","，"\"，"|"，"&"，"^"
 	 */
 	@ApiField("address")
 	private String address;
 
 	/**
-	 * 银行卡号。中国大陆银行发布的银行卡:借记卡长度19位；信用卡长度16位；各位的取值位[0,9]的整数；不含虚拟卡
+	 * 仅支持大陆银行卡验证，包括信用卡、借记卡等实体卡。
 	 */
 	@ApiField("bank_card")
 	private String bankCard;

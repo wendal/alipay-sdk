@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 兼职平台贴子年龄
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:38
+ * @since 1.0, 2017-09-15 16:22:14
  */
 public class EduAgeDemand extends AlipayObject {
 
-	private static final long serialVersionUID = 1449322135545879658L;
+	private static final long serialVersionUID = 2176656125457159873L;
 
 	/**
 	 * 结束年龄

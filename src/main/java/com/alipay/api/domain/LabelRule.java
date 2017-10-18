@@ -4,14 +4,14 @@ import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
 
 /**
- * 个性化扩展区标签规则
+ * 个性化标签规则
  *
  * @author auto create
- * @since 1.0, 2017-07-14 11:47:35
+ * @since 1.0, 2017-09-13 17:51:30
  */
 public class LabelRule extends AlipayObject {
 
-	private static final long serialVersionUID = 3382627969686837221L;
+	private static final long serialVersionUID = 8597878688158132124L;
 
 	/**
 	 * 标签id
@@ -26,7 +26,7 @@ public class LabelRule extends AlipayObject {
 	private String labelValue;
 
 	/**
-	 * 目前支持EQ（等于）、BETWEEN（范围）、IN（包含）三种操作符；每个标签支持的运算符可以通过查询接口获得。该字段允许为空，默认运算符为IN
+	 * 目前支持EQ（等于）、BETWEEN（范围）、IN（包含）三种操作符；每个标签支持的运算符可以通过<a href="https://docs.open.alipay.com/api_6/alipay.open.public.life.label.batchquery#sintq">标签列表查询接口</a>获得。该字段允许为空，默认运算符为IN
 	 */
 	@ApiField("operator")
 	private String operator;

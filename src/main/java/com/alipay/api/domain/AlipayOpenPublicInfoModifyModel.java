@@ -10,44 +10,56 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 服务窗基础信息修改接口
  *
  * @author auto create
- * @since 1.0, 2016-08-10 17:27:20
+ * @since 1.0, 2017-10-10 11:17:00
  */
 public class AlipayOpenPublicInfoModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8218431118684728196L;
+	private static final long serialVersionUID = 7715122666635647911L;
 
 	/**
-	 * 服务窗名称，2-20个字之间；不得含有违反法律法规和公序良俗的相关信息；不得侵害他人名誉权、知识产权、商业秘密等合法权利；不得以太过广泛的、或产品、行业词组来命名，如：女装、皮革批发；不得以实名认证的媒体资质账号创建服务窗，或媒体相关名称命名服务窗，如：XX电视台、XX杂志等
+	 * 生活号名称，2-20个字之间；不得含有违反法律法规和公序良俗的相关信息；不得侵害他人名誉权、知识产权、商业秘密等合法权利；不得以太过广泛的、或产品、行业词组来命名，如：女装、皮革批发；不得以实名认证的媒体资质账号创建服务窗，或媒体相关名称命名服务窗，如：XX电视台、XX杂志等
 	 */
 	@ApiField("app_name")
 	private String appName;
 
 	/**
-	 * 授权运营书，企业商户若为被经营方授权，需上传加盖公章的扫描件，请使用照片上传接口上传图片获得image_url
+	 * 授权运营书图片地址，企业商户若为被经营方授权，需上传加盖公章的扫描件，支持.jpg .jpeg .png格式，小于1M。使用alipay.offline.material.image.upload上传，将得到的image_url回填与此处。
 	 */
 	@ApiField("auth_pic")
 	private String authPic;
 
 	/**
-	 * 营业执照地址，建议尺寸 320 x 320px，支持.jpg .jpeg .png 格式，小于3M
+	 * 背景图片地址，建议尺寸 1600 x 1000px，支持.jpg .jpeg .png格式，小于1M。使用alipay.offline.material.image.upload上传，将得到的image_url回填与此处
+	 */
+	@ApiField("background_url")
+	private String backgroundUrl;
+
+	/**
+	 * 简介
+	 */
+	@ApiField("introduction")
+	private String introduction;
+
+	/**
+	 * 营业执照地址，建议尺寸 320 x 320px，支持.jpg .jpeg .png 格式，小于1M。使用alipay.offline.material.image.upload上传，将得到的image_url回填与此处。
 	 */
 	@ApiField("license_url")
 	private String licenseUrl;
 
 	/**
-	 * 服务窗头像地址，建议尺寸 320 x 320px，支持.jpg .jpeg .png 格式，小于3M
+	 * 生活号头像地址，建议尺寸 320 x 320px，支持.jpg .jpeg .png 格式，小于1M。使用alipay.offline.material.image.upload上传，将得到的image_url回填与此处
 	 */
 	@ApiField("logo_url")
 	private String logoUrl;
 
 	/**
-	 * 服务窗欢迎语，200字以内，首次使用服务窗必须
+	 * 欢迎语
 	 */
 	@ApiField("public_greeting")
 	private String publicGreeting;
 
 	/**
-	 * 门店照片Url
+	 * 门店照片地址，支持.jpg .jpeg .png格式，小于1M。使用alipay.offline.material.image.upload上传，将得到的image_url回填与此处。
 	 */
 	@ApiListField("shop_pics")
 	@ApiField("string")
@@ -65,6 +77,20 @@ public class AlipayOpenPublicInfoModifyModel extends AlipayObject {
 	}
 	public void setAuthPic(String authPic) {
 		this.authPic = authPic;
+	}
+
+	public String getBackgroundUrl() {
+		return this.backgroundUrl;
+	}
+	public void setBackgroundUrl(String backgroundUrl) {
+		this.backgroundUrl = backgroundUrl;
+	}
+
+	public String getIntroduction() {
+		return this.introduction;
+	}
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
 	}
 
 	public String getLicenseUrl() {

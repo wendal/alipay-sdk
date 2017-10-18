@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class ExtendParams extends AlipayObject {
 
-	private static final long serialVersionUID = 3298626623726347391L;
+	private static final long serialVersionUID = 1653982218834348743L;
 
 	/**
 	 * 使用花呗分期要进行的分期数
