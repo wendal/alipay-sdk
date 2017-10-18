@@ -12,6 +12,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayTradeFastpayRefundQueryResponse extends AlipayResponse {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 5285536751258362141L;
 
 	/** 
@@ -19,6 +20,9 @@ public class AlipayTradeFastpayRefundQueryResponse extends AlipayResponse {
 	 */
 	@ApiField("industry_sepc_detail")
 	private String industrySepcDetail;
+=======
+	private static final long serialVersionUID = 6332385715448571297L;
+>>>>>>> master
 
 	/** 
 	 * 本笔退款对应的退款请求号

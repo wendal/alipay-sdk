@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class Picture extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 6417617699353974983L;
+=======
+	private static final long serialVersionUID = 4791859785129572641L;
+>>>>>>> master
 
 	/**
 	 * 调用alipay.offline.material.image.upload接口将图片上传到素材中心后，生成的ID

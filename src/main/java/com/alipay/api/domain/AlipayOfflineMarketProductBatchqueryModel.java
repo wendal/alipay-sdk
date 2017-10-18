@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOfflineMarketProductBatchqueryModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 4487492427399391151L;
+=======
+	private static final long serialVersionUID = 3469442289454367813L;
+>>>>>>> master
 
 	/**
 	 * 操作人角色，默认商户操作:MERCHANT；服务商操作：PROVIDER。支付宝内部使用，外部商户不需填写此字段。

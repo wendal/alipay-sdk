@@ -10,11 +10,19 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品套餐内容数据结构
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-21 12:59:25
  */
 public class ItemPackageInfo extends AlipayObject {
 
 	private static final long serialVersionUID = 1864575143624156246L;
+=======
+ * @since 1.0, 2017-08-24 13:56:10
+ */
+public class ItemPackageInfo extends AlipayObject {
+
+	private static final long serialVersionUID = 4424486711729555685L;
+>>>>>>> master
 
 	/**
 	 * 商品详情-套餐内菜品信息列表

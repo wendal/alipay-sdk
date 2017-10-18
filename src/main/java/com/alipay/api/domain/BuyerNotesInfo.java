@@ -10,11 +10,19 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品购买须知数据结构。
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-21 12:59:25
  */
 public class BuyerNotesInfo extends AlipayObject {
 
 	private static final long serialVersionUID = 4638859364912983364L;
+=======
+ * @since 1.0, 2017-08-24 13:56:10
+ */
+public class BuyerNotesInfo extends AlipayObject {
+
+	private static final long serialVersionUID = 5753437962556226442L;
+>>>>>>> master
 
 	/**
 	 * 标题下的描述列表，列表类型，每项不得为空,最多10项，总长度不能超过2600个中文字符

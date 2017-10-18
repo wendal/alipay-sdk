@@ -12,7 +12,11 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayMarketingCampaignCashCreateResponse extends AlipayResponse {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 1459897552977186484L;
+=======
+	private static final long serialVersionUID = 7368395175811486773L;
+>>>>>>> master
 
 	/** 
 	 * 生成的现金红包活动号

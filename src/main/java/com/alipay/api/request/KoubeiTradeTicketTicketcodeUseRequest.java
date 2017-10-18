@@ -12,7 +12,11 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: koubei.trade.ticket.ticketcode.use request
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-26 20:04:43
+=======
+ * @since 1.0, 2017-08-29 14:16:26
+>>>>>>> master
  */
 public class KoubeiTradeTicketTicketcodeUseRequest implements AlipayRequest<KoubeiTradeTicketTicketcodeUseResponse> {
 

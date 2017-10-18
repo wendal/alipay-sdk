@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class ZhimaCreditScoreBriefGetModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 1416417618364949634L;
+=======
+	private static final long serialVersionUID = 2574578182294922798L;
+>>>>>>> master
 
 	/**
 	 * 350～950之间 业务判断的准入标准 建议业务确定一个稳定的判断标准 频繁的变更该标准可能导致接口被停用

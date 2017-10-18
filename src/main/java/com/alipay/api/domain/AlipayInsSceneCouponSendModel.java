@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayInsSceneCouponSendModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 6472261727858211354L;
+=======
+	private static final long serialVersionUID = 8617853761592495835L;
+>>>>>>> master
 
 	/**
 	 * 渠道账号对应的uid;如果证件类型字段没填则必填

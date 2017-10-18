@@ -8,11 +8,19 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.item.create response.
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-08-31 21:06:27
  */
 public class KoubeiItemCreateResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 8688611664535213942L;
+=======
+ * @since 1.0, 2017-08-04 12:33:11
+ */
+public class KoubeiItemCreateResponse extends AlipayResponse {
+
+	private static final long serialVersionUID = 6333442177271572294L;
+>>>>>>> master
 
 	/** 
 	 * 口碑体系内部商品的唯一标识，后续的增删改查接口都使用该ID作为主键

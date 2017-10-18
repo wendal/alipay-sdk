@@ -7,11 +7,19 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商品不可用时段数据结构
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-21 12:59:25
  */
 public class UnavailablePeriodInfo extends AlipayObject {
 
 	private static final long serialVersionUID = 7528721435194183899L;
+=======
+ * @since 1.0, 2017-08-24 13:56:10
+ */
+public class UnavailablePeriodInfo extends AlipayObject {
+
+	private static final long serialVersionUID = 5641135392399939636L;
+>>>>>>> master
 
 	/**
 	 * 商品不可用时段结束日期。格式为YYYY-MM-DD，如2017-05-03

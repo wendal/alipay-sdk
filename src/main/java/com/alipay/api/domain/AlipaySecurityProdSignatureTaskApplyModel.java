@@ -10,11 +10,19 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 支付宝可信电子签名申请
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-20 10:18:47
  */
 public class AlipaySecurityProdSignatureTaskApplyModel extends AlipayObject {
 
 	private static final long serialVersionUID = 5671783785645621675L;
+=======
+ * @since 1.0, 2017-08-04 11:14:29
+ */
+public class AlipaySecurityProdSignatureTaskApplyModel extends AlipayObject {
+
+	private static final long serialVersionUID = 2261174219888828712L;
+>>>>>>> master
 
 	/**
 	 * 外部应用名称，由支付宝统一分配，无法自助获取。

@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOfflineMarketShopSummaryBatchqueryModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 5222885333632274568L;
+=======
+	private static final long serialVersionUID = 8445936335278578685L;
+>>>>>>> master
 
 	/**
 	 * 表示接口业务的调用方身份：ISV、 服务商身份标识。传入ISV代表系统集成商身份。传入PROVIDER代表服务商。

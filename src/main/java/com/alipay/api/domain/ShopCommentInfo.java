@@ -11,6 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class ShopCommentInfo extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 1287763955179725413L;
 
 	/**
@@ -24,6 +25,9 @@ public class ShopCommentInfo extends AlipayObject {
 	 */
 	@ApiField("avg_popularity_name")
 	private String avgPopularityName;
+=======
+	private static final long serialVersionUID = 5521288757147643556L;
+>>>>>>> master
 
 	/**
 	 * 门店评分，评分越高，门店质量越高

@@ -12,7 +12,11 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: koubei.item.create request
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-08-31 21:06:27
+=======
+ * @since 1.0, 2017-08-04 12:33:11
+>>>>>>> master
  */
 public class KoubeiItemCreateRequest implements AlipayRequest<KoubeiItemCreateResponse> {
 

@@ -8,11 +8,19 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.commerce.data.monitordata.sync response.
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-08-31 17:34:13
  */
 public class AlipayCommerceDataMonitordataSyncResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 5838926169656764541L;
+=======
+ * @since 1.0, 2017-08-23 17:12:46
+ */
+public class AlipayCommerceDataMonitordataSyncResponse extends AlipayResponse {
+
+	private static final long serialVersionUID = 5368869414273361382L;
+>>>>>>> master
 
 	/** 
 	 * dimTypeCheck: 维度类型校验

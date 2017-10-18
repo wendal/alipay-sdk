@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class CommodityExtInfoConfirm extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 8667721561199415192L;
+=======
+	private static final long serialVersionUID = 5645892198132817527L;
+>>>>>>> master
 
 	/**
 	 * 城市上架结果 【 0：表示失败，  1：表示成功】

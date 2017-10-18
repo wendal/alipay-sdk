@@ -7,11 +7,19 @@ import com.alipay.api.internal.mapping.ApiField;
  * 流程任务
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-19 20:54:27
  */
 public class BPOpenApiTask extends AlipayObject {
 
 	private static final long serialVersionUID = 4572823776928617145L;
+=======
+ * @since 1.0, 2017-08-15 22:00:33
+ */
+public class BPOpenApiTask extends AlipayObject {
+
+	private static final long serialVersionUID = 6655171348783444428L;
+>>>>>>> master
 
 	/**
 	 * 处理地址

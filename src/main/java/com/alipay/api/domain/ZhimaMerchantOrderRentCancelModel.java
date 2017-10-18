@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class ZhimaMerchantOrderRentCancelModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 4352243546257826682L;
+=======
+	private static final long serialVersionUID = 2533111816219118169L;
+>>>>>>> master
 
 	/**
 	 * 信用借还订单号

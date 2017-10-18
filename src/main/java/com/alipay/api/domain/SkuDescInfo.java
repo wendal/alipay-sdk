@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class SkuDescInfo extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 3893642926558545962L;
+=======
+	private static final long serialVersionUID = 2376287694397663968L;
+>>>>>>> master
 
 	/**
 	 * 城市行政代码，用于不同城市定价时使用，默认价格使用-1

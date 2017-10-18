@@ -7,11 +7,19 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑凭证码核销
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-26 20:04:43
  */
 public class KoubeiTradeTicketTicketcodeUseModel extends AlipayObject {
 
 	private static final long serialVersionUID = 5212225556235147935L;
+=======
+ * @since 1.0, 2017-08-29 14:16:26
+ */
+public class KoubeiTradeTicketTicketcodeUseModel extends AlipayObject {
+
+	private static final long serialVersionUID = 6537263796827447734L;
+>>>>>>> master
 
 	/**
 	 * 外部请求号，支持英文字母和数字，由开发者自行定义（不允许重复）

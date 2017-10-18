@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOpenPublicMessageSingleSendModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 1832524846953881896L;
+=======
+	private static final long serialVersionUID = 4292517481543527754L;
+>>>>>>> master
 
 	/**
 	 * 消息模板相关参数，其中包括templateId模板ID和context模板上下文

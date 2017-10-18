@@ -7,11 +7,19 @@ import com.alipay.api.internal.mapping.ApiField;
  * 签章位置描述信息
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-20 10:18:47
  */
 public class SealPosition extends AlipayObject {
 
 	private static final long serialVersionUID = 2511697444497557764L;
+=======
+ * @since 1.0, 2017-08-04 11:14:29
+ */
+public class SealPosition extends AlipayObject {
+
+	private static final long serialVersionUID = 4792486949887936432L;
+>>>>>>> master
 
 	/**
 	 * 关键字

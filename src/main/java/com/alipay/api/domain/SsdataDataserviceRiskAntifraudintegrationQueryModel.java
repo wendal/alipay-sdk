@@ -7,11 +7,19 @@ import com.alipay.api.internal.mapping.ApiField;
  * 蚁盾欺诈评分综合版
  *
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-27 11:42:25
  */
 public class SsdataDataserviceRiskAntifraudintegrationQueryModel extends AlipayObject {
 
 	private static final long serialVersionUID = 2324992543886193757L;
+=======
+ * @since 1.0, 2017-08-24 13:54:12
+ */
+public class SsdataDataserviceRiskAntifraudintegrationQueryModel extends AlipayObject {
+
+	private static final long serialVersionUID = 2471458387195137144L;
+>>>>>>> master
 
 	/**
 	 * 地址信息。省+市+区/县+详细地址，其中 省+市+区/县可以为空，长度不超过256，不要包含特殊字符，如","，"\"，"|"，"&"，"^"

@@ -8,11 +8,19 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.data.bizadviser.myreport.query response.
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-10-02 18:20:49
  */
 public class KoubeiMarketingDataBizadviserMyreportQueryResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 7347855418675634318L;
+=======
+ * @since 1.0, 2017-08-25 10:59:27
+ */
+public class KoubeiMarketingDataBizadviserMyreportQueryResponse extends AlipayResponse {
+
+	private static final long serialVersionUID = 8191226994131487326L;
+>>>>>>> master
 
 	/** 
 	 * 不同uniq_key 返回不同参数，详细请看：https://doc.open.alipay.com/docs/doc.htm?spm=0.0.0.0.1Zq3by&docType=1&articleId=107061&previewCode=F30AA2D06B7CC0817AC7221A8CE288A4

@@ -11,7 +11,11 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayOpenPublicMessageLabelSendResponse extends AlipayResponse {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 3295687217885959246L;
+=======
+	private static final long serialVersionUID = 1844618893226992538L;
+>>>>>>> master
 
 	
 

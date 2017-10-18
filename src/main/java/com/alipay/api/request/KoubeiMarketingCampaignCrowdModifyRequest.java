@@ -12,7 +12,11 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: koubei.marketing.campaign.crowd.modify request
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-08-30 14:58:44
+=======
+ * @since 1.0, 2017-08-01 16:00:48
+>>>>>>> master
  */
 public class KoubeiMarketingCampaignCrowdModifyRequest implements AlipayRequest<KoubeiMarketingCampaignCrowdModifyResponse> {
 

@@ -8,11 +8,19 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.trade.ticket.ticketcode.use response.
  * 
  * @author auto create
+<<<<<<< HEAD
  * @since 1.0, 2017-09-26 20:04:43
  */
 public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 4522197871457861244L;
+=======
+ * @since 1.0, 2017-08-29 14:16:26
+ */
+public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
+
+	private static final long serialVersionUID = 6666859741996396463L;
+>>>>>>> master
 
 	/** 
 	 * 用户购买券的时候实际支付的金额

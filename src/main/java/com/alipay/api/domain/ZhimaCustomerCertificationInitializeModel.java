@@ -11,7 +11,11 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class ZhimaCustomerCertificationInitializeModel extends AlipayObject {
 
+<<<<<<< HEAD
 	private static final long serialVersionUID = 2829574368414323336L;
+=======
+	private static final long serialVersionUID = 5315138729413962486L;
+>>>>>>> master
 
 	/**
 	 * 认证场景码,常用的场景码有:
