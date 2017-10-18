@@ -10,19 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品详情-商家介绍数据结构
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-21 12:59:25
  */
 public class IntroductionInfo extends AlipayObject {
 
 	private static final long serialVersionUID = 1236862182979565773L;
-=======
- * @since 1.0, 2017-08-24 13:56:10
- */
-public class IntroductionInfo extends AlipayObject {
-
-	private static final long serialVersionUID = 4128834463699854496L;
->>>>>>> master
 
 	/**
 	 * 商品详情-商家介绍图片地址列表

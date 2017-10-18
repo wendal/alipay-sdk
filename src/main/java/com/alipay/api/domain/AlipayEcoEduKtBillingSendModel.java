@@ -14,11 +14,7 @@ import com.alipay.api.internal.mapping.ApiListField;
  */
 public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 2767467696592155752L;
-=======
-	private static final long serialVersionUID = 6442674395593947461L;
->>>>>>> master
 
 	/**
 	 * 总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]

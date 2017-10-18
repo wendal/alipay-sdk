@@ -10,7 +10,6 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑订单预咨询
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-01 11:24:28
  */
 public class KoubeiTradeOrderConsultModel extends AlipayObject {
@@ -22,13 +21,6 @@ public class KoubeiTradeOrderConsultModel extends AlipayObject {
 	 */
 	@ApiField("apdid_token")
 	private String apdidToken;
-=======
- * @since 1.0, 2017-08-21 14:20:20
- */
-public class KoubeiTradeOrderConsultModel extends AlipayObject {
-
-	private static final long serialVersionUID = 1223438198114494891L;
->>>>>>> master
 
 	/**
 	 * 商品明细列表。注意：单品总金额不能大于订单金额
@@ -69,7 +61,6 @@ public class KoubeiTradeOrderConsultModel extends AlipayObject {
 	@ApiField("user_id")
 	private String userId;
 
-<<<<<<< HEAD
 	public String getApdidToken() {
 		return this.apdidToken;
 	}
@@ -77,8 +68,6 @@ public class KoubeiTradeOrderConsultModel extends AlipayObject {
 		this.apdidToken = apdidToken;
 	}
 
-=======
->>>>>>> master
 	public List<GoodsInfo> getGoodsInfo() {
 		return this.goodsInfo;
 	}

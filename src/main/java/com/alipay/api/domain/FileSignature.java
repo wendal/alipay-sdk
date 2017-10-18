@@ -7,19 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 签约文件签章描述信息
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-20 10:18:47
  */
 public class FileSignature extends AlipayObject {
 
 	private static final long serialVersionUID = 6467656694926961857L;
-=======
- * @since 1.0, 2017-08-04 11:14:29
- */
-public class FileSignature extends AlipayObject {
-
-	private static final long serialVersionUID = 8785516969641628457L;
->>>>>>> master
 
 	/**
 	 * 签约主体证件号，关联principal对象

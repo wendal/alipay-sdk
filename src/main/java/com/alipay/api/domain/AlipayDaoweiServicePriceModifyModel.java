@@ -11,11 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayDaoweiServicePriceModifyModel extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 5595457689512595481L;
-=======
-	private static final long serialVersionUID = 1296717527873386568L;
->>>>>>> master
 
 	/**
 	 * 外部服务id,商家自己维护的唯一标识,用于确定商家的某个服务.仅支持数字,字母和下划线

@@ -15,19 +15,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.trade.order.query response.
  * 
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-22 14:49:14
  */
 public class KoubeiTradeOrderQueryResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 6226319223387495125L;
-=======
- * @since 1.0, 2017-08-25 13:05:36
- */
-public class KoubeiTradeOrderQueryResponse extends AlipayResponse {
-
-	private static final long serialVersionUID = 2753548722241398398L;
->>>>>>> master
 
 	/** 
 	 * 订单对应活动信息，多个商品情况下可能对应多个活动，故为列表;可根据此活动号查询活动名，以标注该购买的商品隶属于哪个活动。

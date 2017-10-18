@@ -11,11 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOpenPublicAccountResetModel extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 5478168163449879921L;
-=======
-	private static final long serialVersionUID = 3482141922823826248L;
->>>>>>> master
 
 	/**
 	 * 需要重置的协议号，商户会员在支付宝服务窗账号中的唯一标识

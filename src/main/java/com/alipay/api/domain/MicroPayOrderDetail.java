@@ -13,11 +13,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class MicroPayOrderDetail extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 8492734863649957372L;
-=======
-	private static final long serialVersionUID = 3197877275387787314L;
->>>>>>> master
 
 	/**
 	 * 支付宝订单号，此订单号作为后续支付冻结金以及转账的订单标识

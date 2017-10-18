@@ -7,19 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 修改停车场信息
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-26 15:51:34
  */
 public class AlipayEcoMycarParkingParkinglotinfoUpdateModel extends AlipayObject {
 
 	private static final long serialVersionUID = 2263368617855489317L;
-=======
- * @since 1.0, 2017-08-25 17:10:06
- */
-public class AlipayEcoMycarParkingParkinglotinfoUpdateModel extends AlipayObject {
-
-	private static final long serialVersionUID = 3736758227859878272L;
->>>>>>> master
 
 	/**
 	 * 城市编号（国家统一标准编码），请务必填写正确，详见 <a href="http://park-cityid.oss-cn-hangzhou.aliyuncs.com/%E5%9F%8E%E5%B8%82%E7%BC%96%E7%A0%81%28%E5%9B%BD%E6%A0%87%E7%A0%81%29.xls">点此下载</a>

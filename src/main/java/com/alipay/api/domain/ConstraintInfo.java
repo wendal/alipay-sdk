@@ -10,19 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 活动限制信息
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-28 10:51:01
  */
 public class ConstraintInfo extends AlipayObject {
 
 	private static final long serialVersionUID = 2792876185455474383L;
-=======
- * @since 1.0, 2017-07-31 16:21:58
- */
-public class ConstraintInfo extends AlipayObject {
-
-	private static final long serialVersionUID = 2264698427354565758L;
->>>>>>> master
 
 	/**
 	 * 资金池ID

@@ -7,19 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * RAIN （Risk of Activity, Identity and Network）是蚁盾旗下产品，专业提供风险评分服务，是一套能够对手机号进行风险预测、风险解释的评分体系。
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-14 11:56:09
  */
 public class AlipaySecurityRiskRainscoreQueryModel extends AlipayObject {
 
 	private static final long serialVersionUID = 2633952727761457533L;
-=======
- * @since 1.0, 2017-07-26 14:38:13
- */
-public class AlipaySecurityRiskRainscoreQueryModel extends AlipayObject {
-
-	private static final long serialVersionUID = 2577472246189184713L;
->>>>>>> master
 
 	/**
 	 * 帐号内容，目前为中国大陆手机号（11位阿拉伯数字，不包含特殊符号或空格）

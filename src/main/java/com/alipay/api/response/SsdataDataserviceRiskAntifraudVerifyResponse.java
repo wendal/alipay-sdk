@@ -8,19 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: ssdata.dataservice.risk.antifraud.verify response.
  * 
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-27 11:42:12
  */
 public class SsdataDataserviceRiskAntifraudVerifyResponse extends AlipayResponse {
 
 	private static final long serialVersionUID = 6892736589578222131L;
-=======
- * @since 1.0, 2017-08-24 13:54:33
- */
-public class SsdataDataserviceRiskAntifraudVerifyResponse extends AlipayResponse {
-
-	private static final long serialVersionUID = 5819675655286982229L;
->>>>>>> master
 
 	/** 
 	 * 蚁盾对于每一次请求返回的业务号。后续可以通过此业务号进行对账

@@ -7,19 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * app支付接口2.0
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-05 11:49:05
  */
 public class AlipayTradeAppPayModel extends AlipayObject {
 
 	private static final long serialVersionUID = 8672158379443468892L;
-=======
- * @since 1.0, 2017-08-16 17:01:35
- */
-public class AlipayTradeAppPayModel extends AlipayObject {
-
-	private static final long serialVersionUID = 3627728587126719999L;
->>>>>>> master
 
 	/**
 	 * 对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。

@@ -14,11 +14,7 @@ import com.alipay.api.internal.mapping.ApiListField;
  */
 public class SkuPropertyInfo extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 3429648893288882573L;
-=======
-	private static final long serialVersionUID = 8862374547114938188L;
->>>>>>> master
 
 	/**
 	 * sku属性key值,可发邮件到lei.mao@antfin.com,联系支付宝获取已支持的key.支付宝在收到邮件后三个工作日内回复

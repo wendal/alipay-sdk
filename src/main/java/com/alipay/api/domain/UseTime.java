@@ -7,19 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 券可用时间
  *
  * @author auto create
-<<<<<<< HEAD
  * @since 1.0, 2017-09-25 22:50:25
  */
 public class UseTime extends AlipayObject {
 
 	private static final long serialVersionUID = 4365361531996537597L;
-=======
- * @since 1.0, 2017-08-03 17:32:57
- */
-public class UseTime extends AlipayObject {
-
-	private static final long serialVersionUID = 3171662731766116965L;
->>>>>>> master
 
 	/**
 	 * 券可用时段时间维度，目前支持周(W)

@@ -11,11 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 
-<<<<<<< HEAD
 	private static final long serialVersionUID = 1845212117491636421L;
-=======
-	private static final long serialVersionUID = 1532255625353446661L;
->>>>>>> master
 
 	/**
 	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如何设置，整体是json结构。订单数据回流详细说明见链接：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.msmB7o&treeId=193&articleId=106810&docType=1#s1
