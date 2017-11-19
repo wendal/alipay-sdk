@@ -7,14 +7,15 @@ import com.alipay.api.internal.mapping.ApiField;
  * isv 回传的用户操作行为信息调用接口
  *
  * @author auto create
- * @since 1.0, 2017-10-10 10:59:49
+ * @since 1.0, 2017-10-12 19:19:31
  */
 public class AlipayOfflineProviderUseractionRecordModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1845212117491636421L;
+	private static final long serialVersionUID = 6828881637718432228L;
 
 	/**
-	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如何设置，整体是json结构。订单数据回流详细说明见链接：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.msmB7o&treeId=193&articleId=106810&docType=1#s1
+	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如何设置，整体是json结构。订单数据回流详细说明见链接：https://docs.open.alipay.com/206/106810/#s0
+（注：action_type为order_dishes时，action_detail有source字段，是必填字段）
 	 */
 	@ApiField("action_detail")
 	private String actionDetail;

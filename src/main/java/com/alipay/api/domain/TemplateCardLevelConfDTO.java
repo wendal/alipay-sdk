@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class TemplateCardLevelConfDTO extends AlipayObject {
 
-	private static final long serialVersionUID = 4686929555141357342L;
+	private static final long serialVersionUID = 5388818126149468947L;
 
 	/**
 	 * 会员级别 该级别和开卡接口中的levle要一致

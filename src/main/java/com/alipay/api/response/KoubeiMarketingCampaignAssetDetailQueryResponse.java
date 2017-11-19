@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.marketing.campaign.asset.detail.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-08-08 19:56:05
+ * @since 1.0, 2017-10-26 15:04:58
  */
 public class KoubeiMarketingCampaignAssetDetailQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4768363654285778513L;
+	private static final long serialVersionUID = 5543396259672641759L;
 
 	/** 
 	 * 适用门店:门店与门店之间用“,”隔开，适用门店的意思：就是该资产只能在返回的门店中核销该资产。

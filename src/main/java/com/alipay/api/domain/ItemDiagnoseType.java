@@ -7,14 +7,15 @@ import com.alipay.api.internal.mapping.ApiField;
  * 菜品诊断类型列表对象
  *
  * @author auto create
- * @since 1.0, 2017-10-11 09:56:07
+ * @since 1.0, 2017-10-13 17:49:22
  */
 public class ItemDiagnoseType extends AlipayObject {
 
-	private static final long serialVersionUID = 4466166829282729771L;
+	private static final long serialVersionUID = 2672484635216656999L;
 
 	/**
-	 * 类型
+	 * 001是明星菜品，002是潜力菜品，003是其他菜品（除明星菜品和潜力菜品之外的其他一律作为其他菜品 编号为003）。
+2-	如果要查询所有的则传入999。具体的值可以通过koubei.marketing.data.dishdiagnosetype.batchquery来查询，同时会返回类型与说明
 	 */
 	@ApiField("item_diagnose")
 	private String itemDiagnose;
