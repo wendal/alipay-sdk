@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询用户授权的开放表单信息
  *
  * @author auto create
- * @since 1.0, 2017-03-13 15:28:02
+ * @since 1.0, 2017-10-13 16:55:38
  */
 public class AlipayMarketingCardActivateformQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6418576621195436181L;
+	private static final long serialVersionUID = 7218865224566587223L;
 
 	/**
 	 * 开放表单信息查询业务类型，可选类型如下：

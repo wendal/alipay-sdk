@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 手机网站支付接口2.0
  *
  * @author auto create
- * @since 1.0, 2017-09-05 11:49:31
+ * @since 1.0, 2017-10-20 10:55:26
  */
 public class AlipayTradeWapPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2185314677273937966L;
+	private static final long serialVersionUID = 6594168159218491643L;
 
 	/**
 	 * 针对用户授权接口，获取用户相关数据时，用于标识用户授权关系
@@ -46,6 +46,12 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	 */
 	@ApiField("enable_pay_channels")
 	private String enablePayChannels;
+
+	/**
+	 * 外部指定买家
+	 */
+	@ApiField("ext_user_info")
+	private ExtUserInfo extUserInfo;
 
 	/**
 	 * 业务扩展参数
@@ -185,6 +191,13 @@ public class AlipayTradeWapPayModel extends AlipayObject {
 	}
 	public void setEnablePayChannels(String enablePayChannels) {
 		this.enablePayChannels = enablePayChannels;
+	}
+
+	public ExtUserInfo getExtUserInfo() {
+		return this.extUserInfo;
+	}
+	public void setExtUserInfo(ExtUserInfo extUserInfo) {
+		this.extUserInfo = extUserInfo;
 	}
 
 	public ExtendParams getExtendParams() {

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询是否授权的接口
  *
  * @author auto create
- * @since 1.0, 2016-09-21 19:49:58
+ * @since 1.0, 2017-10-19 18:38:54
  */
 public class ZhimaAuthInfoAuthqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1532219792841749557L;
+	private static final long serialVersionUID = 8614971585623283741L;
 
 	/**
 	 * json格式的内容,包含userId,userId为支付宝用户id,用户授权后商户可以拿到这个支付宝userId

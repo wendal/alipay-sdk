@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: zhima.credit.antifraud.verify request
  * 
  * @author auto create
- * @since 1.0, 2017-09-12 13:51:52
+ * @since 1.0, 2017-10-13 19:33:16
  */
 public class ZhimaCreditAntifraudVerifyRequest implements AlipayRequest<ZhimaCreditAntifraudVerifyResponse> {
 

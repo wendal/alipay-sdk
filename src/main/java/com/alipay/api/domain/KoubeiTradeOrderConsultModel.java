@@ -10,14 +10,26 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑订单预咨询
  *
  * @author auto create
- * @since 1.0, 2017-09-01 11:24:28
+ * @since 1.0, 2017-10-26 15:01:58
  */
 public class KoubeiTradeOrderConsultModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4527373234447327897L;
+	private static final long serialVersionUID = 8698797822387985689L;
 
 	/**
-	 * 用户设备信息,通过钱包容器提供的JSAPI接口获取。
+	 * 用户设备信息,通过钱包容器提供的JSAPI接口获取，
+一、接口使用方法：
+AlipayJSBridge.call('getO2ODeviceToken', {
+                appName: 'kb_isv_110229',
+                appKey:'98y6VvdaDLpoqWZw'
+            },
+            function (result) {
+                 }
+        );
+    });
+二、result数据结构：
+ 1、调用失败： {"error":xxx,"errorMessage":"xxx"}  
+ 2、调用成功： {'appToken':'xxxssajkjkjkxdkwqkqwb'}
 	 */
 	@ApiField("apdid_token")
 	private String apdidToken;
@@ -49,7 +61,7 @@ public class KoubeiTradeOrderConsultModel extends AlipayObject {
 	private String totalAmount;
 
 	/**
-	 * 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0,999999999]
+	 * 不可打折金额，单位为元，精确到小数点后两位，取值范围[0,999999999]
 如果同时传入了【不可打折金额】、【订单总金额】，则必须满足【不可打折金额】<=【订单总金额】
 	 */
 	@ApiField("undiscountable_amount")

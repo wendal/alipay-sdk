@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻企业征信基于身份的协议授权
  *
  * @author auto create
- * @since 1.0, 2017-10-09 11:23:33
+ * @since 1.0, 2017-10-16 14:17:46
  */
 public class AlipayUserAuthZhimaorgIdentityApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5321458752492267338L;
+	private static final long serialVersionUID = 6573191565778312397L;
 
 	/**
 	 * 营业执照号码

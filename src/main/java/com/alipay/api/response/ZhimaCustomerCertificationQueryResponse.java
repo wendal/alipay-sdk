@@ -8,29 +8,48 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: zhima.customer.certification.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-06-07 14:25:49
+ * @since 1.0, 2017-10-26 17:39:18
  */
 public class ZhimaCustomerCertificationQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1342786375499824185L;
+	private static final long serialVersionUID = 8156313166572261898L;
 
 	/** 
-	 * 认证过程成认证过的各渠道的状态,中间材料等数据
+	 * 认证的主体属性信息，一般的认证场景都是返回空
+	 */
+	@ApiField("attribute_info")
+	private String attributeInfo;
+
+	/** 
+	 * 包含了认证过程中的认证材料和过程记录
 	 */
 	@ApiField("channel_statuses")
 	private String channelStatuses;
 
 	/** 
-	 * 如果认证没有通过会显示失败原因,更详细的情况在channel_statuses参数里面
+	 * 认证不通过的原因
 	 */
 	@ApiField("failed_reason")
 	private String failedReason;
 
 	/** 
-	 * 认证是否通过,通过为true,不通过为false
+	 * 认证的主体信息，一般的认证场景返回为空
+	 */
+	@ApiField("identity_info")
+	private String identityInfo;
+
+	/** 
+	 * 认证是否通过,通过为true，不通过为false
 	 */
 	@ApiField("passed")
 	private String passed;
+
+	public void setAttributeInfo(String attributeInfo) {
+		this.attributeInfo = attributeInfo;
+	}
+	public String getAttributeInfo( ) {
+		return this.attributeInfo;
+	}
 
 	public void setChannelStatuses(String channelStatuses) {
 		this.channelStatuses = channelStatuses;
@@ -44,6 +63,13 @@ public class ZhimaCustomerCertificationQueryResponse extends AlipayResponse {
 	}
 	public String getFailedReason( ) {
 		return this.failedReason;
+	}
+
+	public void setIdentityInfo(String identityInfo) {
+		this.identityInfo = identityInfo;
+	}
+	public String getIdentityInfo( ) {
+		return this.identityInfo;
 	}
 
 	public void setPassed(String passed) {

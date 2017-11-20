@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 统一收单下单并支付页面接口
  *
  * @author auto create
- * @since 1.0, 2017-09-05 11:49:37
+ * @since 1.0, 2017-10-20 10:55:46
  */
 public class AlipayTradePagePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8646317372716261726L;
+	private static final long serialVersionUID = 3859489382439376524L;
 
 	/**
 	 * 签约参数，支付后签约场景使用
@@ -47,6 +47,12 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	 */
 	@ApiField("enable_pay_channels")
 	private String enablePayChannels;
+
+	/**
+	 * 外部指定买家
+	 */
+	@ApiField("ext_user_info")
+	private ExtUserInfo extUserInfo;
 
 	/**
 	 * 业务扩展参数
@@ -217,6 +223,13 @@ public class AlipayTradePagePayModel extends AlipayObject {
 	}
 	public void setEnablePayChannels(String enablePayChannels) {
 		this.enablePayChannels = enablePayChannels;
+	}
+
+	public ExtUserInfo getExtUserInfo() {
+		return this.extUserInfo;
+	}
+	public void setExtUserInfo(ExtUserInfo extUserInfo) {
+		this.extUserInfo = extUserInfo;
 	}
 
 	public ExtendParams getExtendParams() {

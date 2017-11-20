@@ -8,32 +8,32 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: koubei.trade.ticket.ticketcode.use response.
  * 
  * @author auto create
- * @since 1.0, 2017-09-26 20:04:43
+ * @since 1.0, 2017-10-13 16:00:05
  */
 public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 4522197871457861244L;
+	private static final long serialVersionUID = 5683534181786347899L;
 
 	/** 
-	 * 用户购买券的时候实际支付的金额
+	 * 用户购买券的时候实际支付的金额，单位为元，精确到小数点后两位
 	 */
 	@ApiField("buyer_pay_amount")
 	private String buyerPayAmount;
 
 	/** 
-	 * 用户购买时商品的现价
+	 * 用户购买时商品的现价，单位为元，精确到小数点后两位
 	 */
 	@ApiField("current_price")
 	private String currentPrice;
 
 	/** 
-	 * 优惠金额，含商家补贴金额和口碑补贴金额
+	 * 优惠金额，含商家补贴金额和口碑补贴金额，单位为元，精确到小数点后两位
 	 */
 	@ApiField("discount_amount")
 	private String discountAmount;
 
 	/** 
-	 * 交易中可给用户开具发票的金额
+	 * 交易中可给用户开具发票的金额，单位为元，精确到小数点后两位
 	 */
 	@ApiField("invoice_amount")
 	private String invoiceAmount;
@@ -51,7 +51,7 @@ public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
 	private String itemName;
 
 	/** 
-	 * 口碑补贴金额
+	 * 口碑补贴金额，单位为元，精确到小数点后两位
 	 */
 	@ApiField("koubei_subsidy_amount")
 	private String koubeiSubsidyAmount;
@@ -63,13 +63,13 @@ public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
 	private String orderNo;
 
 	/** 
-	 * 用户购买时商品的原价
+	 * 用户购买时商品的原价，单位为元，精确到小数点后两位
 	 */
 	@ApiField("original_price")
 	private String originalPrice;
 
 	/** 
-	 * 商家实收金额
+	 * 商家实收金额，单位为元，精确到小数点后两位
 	 */
 	@ApiField("receipt_amount")
 	private String receiptAmount;

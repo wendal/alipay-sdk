@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 支付宝脱机交易
  *
  * @author auto create
- * @since 1.0, 2017-09-20 18:07:59
+ * @since 1.0, 2017-10-17 19:47:11
  */
 public class AlipayOfflineTrade extends AlipayObject {
 
-	private static final long serialVersionUID = 4577663394349171325L;
+	private static final long serialVersionUID = 1545473663593475142L;
 
 	/**
 	 * 交易实际发生时间
@@ -28,6 +28,12 @@ public class AlipayOfflineTrade extends AlipayObject {
 	 */
 	@ApiField("amount")
 	private String amount;
+
+	/**
+	 * 交易对应的卡类型。
+	 */
+	@ApiField("card_type")
+	private String cardType;
 
 	/**
 	 * 交易扩展信息,json格式字符串。
@@ -78,6 +84,13 @@ public class AlipayOfflineTrade extends AlipayObject {
 	}
 	public void setAmount(String amount) {
 		this.amount = amount;
+	}
+
+	public String getCardType() {
+		return this.cardType;
+	}
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
 	}
 
 	public String getOrderBizContext() {

@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOpenWangyanTestDeleteModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1218658143978195539L;
+	private static final long serialVersionUID = 3645994526657183238L;
 
 	/**
 	 * 1

@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * xwbtest单纯测试
  *
  * @author auto create
- * @since 1.0, 2017-08-25 13:03:36
+ * @since 1.0, 2017-10-12 20:28:12
  */
 public class AlipayOpenAppXwbtestBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1679666375534516191L;
+	private static final long serialVersionUID = 5862623411797123653L;
 
 	/**
-	 * 1
+	 * 1sd
 	 */
 	@ApiField("xwb")
 	private String xwb;

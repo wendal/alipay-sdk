@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商户通过该接口进行交易的创建下单
  *
  * @author auto create
- * @since 1.0, 2017-06-14 15:07:45
+ * @since 1.0, 2017-10-23 17:10:39
  */
 public class AlipayTradeCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2681561922637978567L;
+	private static final long serialVersionUID = 8379271271336167289L;
 
 	/**
 	 * 支付宝的店铺编号
@@ -27,6 +27,12 @@ public class AlipayTradeCreateModel extends AlipayObject {
 	 */
 	@ApiField("body")
 	private String body;
+
+	/**
+	 * 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式
+	 */
+	@ApiField("business_params")
+	private String businessParams;
 
 	/**
 	 * 买家的支付宝唯一用户号（2088开头的16位纯数字）,和buyer_logon_id不能同时为空
@@ -61,6 +67,12 @@ public class AlipayTradeCreateModel extends AlipayObject {
 	 */
 	@ApiField("enable_pay_channels")
 	private String enablePayChannels;
+
+	/**
+	 * 外部指定买家
+	 */
+	@ApiField("ext_user_info")
+	private ExtUserInfo extUserInfo;
 
 	/**
 	 * 业务扩展参数
@@ -166,6 +178,13 @@ public class AlipayTradeCreateModel extends AlipayObject {
 		this.body = body;
 	}
 
+	public String getBusinessParams() {
+		return this.businessParams;
+	}
+	public void setBusinessParams(String businessParams) {
+		this.businessParams = businessParams;
+	}
+
 	public String getBuyerId() {
 		return this.buyerId;
 	}
@@ -199,6 +218,13 @@ public class AlipayTradeCreateModel extends AlipayObject {
 	}
 	public void setEnablePayChannels(String enablePayChannels) {
 		this.enablePayChannels = enablePayChannels;
+	}
+
+	public ExtUserInfo getExtUserInfo() {
+		return this.extUserInfo;
+	}
+	public void setExtUserInfo(ExtUserInfo extUserInfo) {
+		this.extUserInfo = extUserInfo;
 	}
 
 	public ExtendParams getExtendParams() {
