@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻认证材料认证
  *
  * @author auto create
- * @since 1.0, 2017-10-26 17:39:02
+ * @since 1.0, 2017-12-19 19:10:07
  */
 public class ZhimaCustomerCertificationMaterialCertifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5753174733195121754L;
+	private static final long serialVersionUID = 6746345292169946927L;
 
 	/**
 	 * 认证场景码，常用的场景码有：FACE_API，入参支持的认证场景码和商户签约的认证场景相关，详见芝麻认证快速接入文档
@@ -30,6 +30,12 @@ public class ZhimaCustomerCertificationMaterialCertifyModel extends AlipayObject
 	 */
 	@ApiField("identity_param")
 	private String identityParam;
+
+	/**
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
 
 	/**
 	 * 认证过程中需要的认证材料，不同认证场景需要的材料不同，biz_code值为FACE_API时需要材料FACIAL_PICTURE_FRONT
@@ -74,6 +80,13 @@ public class ZhimaCustomerCertificationMaterialCertifyModel extends AlipayObject
 	}
 	public void setIdentityParam(String identityParam) {
 		this.identityParam = identityParam;
+	}
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
 	}
 
 	public String getMaterials() {

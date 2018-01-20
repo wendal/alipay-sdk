@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还创建订单
  *
  * @author auto create
- * @since 1.0, 2017-09-26 12:58:09
+ * @since 1.0, 2017-10-31 16:00:37
  */
 public class ZhimaMerchantOrderRentCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5135971296224226571L;
+	private static final long serialVersionUID = 2668132756866793695L;
 
 	/**
 	 * 借用用户的收货地址，可选字段。推荐商户传入此值，会将此手机号码与用户身份信息进行匹配验证，防范欺诈风险。
@@ -52,6 +52,12 @@ DAY:天
 	 */
 	@ApiField("cert_no")
 	private String certNo;
+
+	/**
+	 * 信用业务服务，默认为空，商户入驻信用借还时，特定场景下由芝麻信用借还分配后传入即可，商户自助接入流程里不需要传入该字段，否则会对该字段进行合法性校验
+	 */
+	@ApiField("credit_biz")
+	private String creditBiz;
 
 	/**
 	 * 押金，金额单位：元。
@@ -205,6 +211,13 @@ YUAN_ONCE: 元/次
 	}
 	public void setCertNo(String certNo) {
 		this.certNo = certNo;
+	}
+
+	public String getCreditBiz() {
+		return this.creditBiz;
+	}
+	public void setCreditBiz(String creditBiz) {
+		this.creditBiz = creditBiz;
 	}
 
 	public String getDepositAmount() {

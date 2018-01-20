@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券的单品信息
  *
  * @author auto create
- * @since 1.0, 2017-09-28 10:50:16
+ * @since 1.0, 2017-11-23 10:24:01
  */
 public class ItemInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 6799456785396598457L;
+	private static final long serialVersionUID = 5839352421132246473L;
 
 	/**
 	 * 券适用的单品码列表
@@ -79,6 +79,12 @@ public class ItemInfo extends AlipayObject {
 	@ApiField("sku_min_consume")
 	private String skuMinConsume;
 
+	/**
+	 * 如果一个单品券适用A，B，C三个单品，若设置了该字段为2，则在一笔交易中，A，B，C三个单品加起来最多只有俩件能够享受优惠
+	 */
+	@ApiField("total_max_discount_num")
+	private String totalMaxDiscountNum;
+
 	public List<String> getItemIds() {
 		return this.itemIds;
 	}
@@ -140,6 +146,13 @@ public class ItemInfo extends AlipayObject {
 	}
 	public void setSkuMinConsume(String skuMinConsume) {
 		this.skuMinConsume = skuMinConsume;
+	}
+
+	public String getTotalMaxDiscountNum() {
+		return this.totalMaxDiscountNum;
+	}
+	public void setTotalMaxDiscountNum(String totalMaxDiscountNum) {
+		this.totalMaxDiscountNum = totalMaxDiscountNum;
 	}
 
 }

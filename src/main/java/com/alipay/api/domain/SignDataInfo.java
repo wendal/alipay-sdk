@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 签约文件列表
  *
  * @author auto create
- * @since 1.0, 2017-09-20 10:18:47
+ * @since 1.0, 2017-12-20 15:24:35
  */
 public class SignDataInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 2864222624326239126L;
+	private static final long serialVersionUID = 8768479371269922477L;
 
 	/**
 	 * 待签约数据编号，由外部系统定义，用于数据关联

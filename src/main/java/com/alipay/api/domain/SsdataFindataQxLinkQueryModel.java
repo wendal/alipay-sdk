@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 获取全息链接
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:20
+ * @since 1.0, 2017-10-30 20:09:26
  */
 public class SsdataFindataQxLinkQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4689474858868432973L;
+	private static final long serialVersionUID = 8329977145271889421L;
 
 	/**
 	 * 预留扩展

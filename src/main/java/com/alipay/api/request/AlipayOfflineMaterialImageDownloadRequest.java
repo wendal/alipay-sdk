@@ -92,7 +92,7 @@ public class AlipayOfflineMaterialImageDownloadRequest implements AlipayRequest<
 
 	public Map<String, String> getTextParams() {		
 		AlipayHashMap txtParams = new AlipayHashMap();
-		txtParams.put("image_ids", this.imageIds);
+		txtParams.put("image_ids", new com.alipay.api.internal.util.json.JSONWriter().write(this.imageIds, true));
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);
 		}

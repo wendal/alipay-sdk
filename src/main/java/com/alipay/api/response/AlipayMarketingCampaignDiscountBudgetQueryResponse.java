@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.campaign.discount.budget.query response.
  * 
  * @author auto create
- * @since 1.0, 2016-06-08 12:53:45
+ * @since 1.0, 2017-12-21 23:42:43
  */
 public class AlipayMarketingCampaignDiscountBudgetQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5693566355862427231L;
+	private static final long serialVersionUID = 6628314129291567445L;
 
 	/** 
 	 * 预算ID
@@ -21,13 +21,31 @@ public class AlipayMarketingCampaignDiscountBudgetQueryResponse extends AlipayRe
 	private String budgetId;
 
 	/** 
-	 * 预算总金额，单位：元
+	 * 预算剩余冻结金额(元)
+	 */
+	@ApiField("freeze_amount")
+	private String freezeAmount;
+
+	/** 
+	 * 预算已回收退回保证金账户金额(元)
+	 */
+	@ApiField("recycle_amount")
+	private String recycleAmount;
+
+	/** 
+	 * 交易已退款金额(元)
+	 */
+	@ApiField("refund_amount")
+	private String refundAmount;
+
+	/** 
+	 * 预算总金额(元)
 	 */
 	@ApiField("total_amount")
 	private String totalAmount;
 
 	/** 
-	 * 已使用金额
+	 * 交易已使用金额(元)
 	 */
 	@ApiField("used_amount")
 	private String usedAmount;
@@ -37,6 +55,27 @@ public class AlipayMarketingCampaignDiscountBudgetQueryResponse extends AlipayRe
 	}
 	public String getBudgetId( ) {
 		return this.budgetId;
+	}
+
+	public void setFreezeAmount(String freezeAmount) {
+		this.freezeAmount = freezeAmount;
+	}
+	public String getFreezeAmount( ) {
+		return this.freezeAmount;
+	}
+
+	public void setRecycleAmount(String recycleAmount) {
+		this.recycleAmount = recycleAmount;
+	}
+	public String getRecycleAmount( ) {
+		return this.recycleAmount;
+	}
+
+	public void setRefundAmount(String refundAmount) {
+		this.refundAmount = refundAmount;
+	}
+	public String getRefundAmount( ) {
+		return this.refundAmount;
 	}
 
 	public void setTotalAmount(String totalAmount) {

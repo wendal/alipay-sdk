@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * “蚁盾”风险评分定向接口服务
  *
  * @author auto create
- * @since 1.0, 2017-09-14 11:56:02
+ * @since 1.0, 2017-12-12 10:00:27
  */
 public class AlipaySecurityRiskDirectionalRainscoreQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6784335944249978678L;
+	private static final long serialVersionUID = 7216782427797365523L;
 
 	/**
 	 * 帐号内容，目前为中国大陆手机号（11位阿拉伯数字，不包含特殊符号或空格）

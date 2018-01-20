@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 账单同步
  *
  * @author auto create
- * @since 1.0, 2017-08-04 14:14:22
+ * @since 1.0, 2017-11-08 10:54:24
  */
 public class AlipayEcoRenthouseBillOrderSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5157285491478624977L;
+	private static final long serialVersionUID = 1237713627923947428L;
 
 	/**
 	 * 账单条数1-50范围内，账单条数和账单明细数量必须一致

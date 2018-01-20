@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 账单明细信息，可以同步多笔账单，json数组
  *
  * @author auto create
- * @since 1.0, 2017-08-04 14:14:22
+ * @since 1.0, 2017-11-08 10:54:24
  */
 public class AlipayEcoRenthouseBill extends AlipayObject {
 
-	private static final long serialVersionUID = 1477794381811514963L;
+	private static final long serialVersionUID = 1383351218314921953L;
 
 	/**
 	 * 账单金额
@@ -64,6 +64,12 @@ public class AlipayEcoRenthouseBill extends AlipayObject {
 	private String deadlineDate;
 
 	/**
+	 * 定金抵扣金额
+	 */
+	@ApiField("deduction_amount")
+	private String deductionAmount;
+
+	/**
 	 * 优惠金额
 	 */
 	@ApiField("discount_amount")
@@ -87,6 +93,12 @@ public class AlipayEcoRenthouseBill extends AlipayObject {
 	 */
 	@ApiField("memo")
 	private String memo;
+
+	/**
+	 * 最低支付金额
+	 */
+	@ApiField("min_pay_amount")
+	private String minPayAmount;
 
 	/**
 	 * 已支付金额
@@ -176,6 +188,13 @@ public class AlipayEcoRenthouseBill extends AlipayObject {
 		this.deadlineDate = deadlineDate;
 	}
 
+	public String getDeductionAmount() {
+		return this.deductionAmount;
+	}
+	public void setDeductionAmount(String deductionAmount) {
+		this.deductionAmount = deductionAmount;
+	}
+
 	public String getDiscountAmount() {
 		return this.discountAmount;
 	}
@@ -202,6 +221,13 @@ public class AlipayEcoRenthouseBill extends AlipayObject {
 	}
 	public void setMemo(String memo) {
 		this.memo = memo;
+	}
+
+	public String getMinPayAmount() {
+		return this.minPayAmount;
+	}
+	public void setMinPayAmount(String minPayAmount) {
+		this.minPayAmount = minPayAmount;
 	}
 
 	public String getPaidAmount() {

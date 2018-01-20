@@ -1,17 +1,20 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 联系人信息
  *
  * @author auto create
- * @since 1.0, 2017-06-14 19:53:52
+ * @since 1.0, 2017-11-28 17:51:21
  */
 public class ContactInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 6781827919836462224L;
+	private static final long serialVersionUID = 1638118919649978774L;
 
 	/**
 	 * 电子邮箱
@@ -42,6 +45,13 @@ public class ContactInfo extends AlipayObject {
 	 */
 	@ApiField("phone")
 	private String phone;
+
+	/**
+	 * 商户联系人业务标识枚举，表示商户联系人的职责。异议处理接口人:02;商户关键联系人:06;数据反馈接口人:11;服务联动接口人:08
+	 */
+	@ApiListField("tag")
+	@ApiField("string")
+	private List<String> tag;
 
 	/**
 	 * 联系人类型，取值范围：LEGAL_PERSON：法人；CONTROLLER：实际控制人；AGENT：代理人；OTHER：其他
@@ -82,6 +92,13 @@ public class ContactInfo extends AlipayObject {
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public List<String> getTag() {
+		return this.tag;
+	}
+	public void setTag(List<String> tag) {
+		this.tag = tag;
 	}
 
 	public String getType() {

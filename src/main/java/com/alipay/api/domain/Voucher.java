@@ -11,11 +11,24 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券对象
  *
  * @author auto create
- * @since 1.0, 2017-10-16 16:27:29
+ * @since 1.0, 2017-10-31 12:10:09
  */
 public class Voucher extends AlipayObject {
 
-	private static final long serialVersionUID = 7215893872777198557L;
+	private static final long serialVersionUID = 4594767323952782361L;
+
+	/**
+	 * 是否允许拆分，券在核销的时候是否允许券的面额拆分使用。(仅限渠道类型为ISV企业福利：ISV_ENTERPRISE_BENIFIT的场景使用)
+	 */
+	@ApiField("allow_split")
+	private Boolean allowSplit;
+
+	/**
+	 * 券剩余面额，单位元
+券详情查询接口返回，可拆分券中的券详情展示用
+	 */
+	@ApiField("available_amount")
+	private String availableAmount;
 
 	/**
 	 * 券副标题
@@ -147,7 +160,7 @@ RS:该全场优惠和其他所有优惠都可以叠加
 	 * 券核销时，抹零方式，目前支持：
 NOT_AUTO_ROUNDING:不自动抹零
 AUTO_ROUNDING_YUAN:自动抹零到元
-AUTO_ROUNDING_JIAO: "自动抹零到角
+AUTO_ROUNDING_JIAO:自动抹零到角
 ROUNDING_UP_YUAN:四舍五入到元
 ROUNDING_UP_JIAO:四舍五入到角
 	 */
@@ -226,6 +239,20 @@ MERCHANT_SCAN：商户通过APP扫码核销
 	 */
 	@ApiField("worth_value")
 	private String worthValue;
+
+	public Boolean getAllowSplit() {
+		return this.allowSplit;
+	}
+	public void setAllowSplit(Boolean allowSplit) {
+		this.allowSplit = allowSplit;
+	}
+
+	public String getAvailableAmount() {
+		return this.availableAmount;
+	}
+	public void setAvailableAmount(String availableAmount) {
+		this.availableAmount = availableAmount;
+	}
 
 	public String getBrandName() {
 		return this.brandName;

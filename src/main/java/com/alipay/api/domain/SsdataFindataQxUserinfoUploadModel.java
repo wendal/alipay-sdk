@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 上传用户信息
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:30
+ * @since 1.0, 2017-11-02 20:44:13
  */
 public class SsdataFindataQxUserinfoUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2443627737766929631L;
+	private static final long serialVersionUID = 8681845565494931319L;
 
 	/**
 	 * 扩展信息

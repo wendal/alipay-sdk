@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.campaign.cash.detail.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-07-14 11:53:26
+ * @since 1.0, 2017-11-17 12:15:33
  */
 public class AlipayMarketingCampaignCashDetailQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7295182336382497341L;
+	private static final long serialVersionUID = 2786714622247878343L;
 
 	/** 
 	 * 活动状态，CREATED: 已创建未打款
@@ -82,6 +82,12 @@ SETTLE:活动已清算
 
 	/** 
 	 * 红包总个数
+	 */
+	@ApiField("total_count")
+	private Long totalCount;
+
+	/** 
+	 * 红包总个数(废弃)
 	 */
 	@ApiField("total_num")
 	private Long totalNum;
@@ -154,6 +160,13 @@ SETTLE:活动已清算
 	}
 	public String getTotalAmount( ) {
 		return this.totalAmount;
+	}
+
+	public void setTotalCount(Long totalCount) {
+		this.totalCount = totalCount;
+	}
+	public Long getTotalCount( ) {
+		return this.totalCount;
 	}
 
 	public void setTotalNum(Long totalNum) {

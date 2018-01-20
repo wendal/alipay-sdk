@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 获取指定抬头的发票要素列表
  *
  * @author auto create
- * @since 1.0, 2017-09-22 17:40:46
+ * @since 1.0, 2017-11-10 11:43:52
  */
 public class AlipayEbppInvoiceTitleBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4844699872365928645L;
+	private static final long serialVersionUID = 8845218345262764411L;
 
 	/**
 	 * 查询起始时间，精确到天（按开票日期查询）
@@ -47,6 +47,12 @@ SALSE_INVOICE:机动车销售统一发票
 	 */
 	@ApiField("limit_size")
 	private Long limitSize;
+
+	/**
+	 * 为空时默认第一页
+	 */
+	@ApiField("page_num")
+	private Long pageNum;
 
 	/**
 	 * 查询起始时间，精确到天（按开票日期查询）
@@ -84,6 +90,13 @@ start_invoice_date和end_invoice_date传值要求
 	}
 	public void setLimitSize(Long limitSize) {
 		this.limitSize = limitSize;
+	}
+
+	public Long getPageNum() {
+		return this.pageNum;
+	}
+	public void setPageNum(Long pageNum) {
+		this.pageNum = pageNum;
 	}
 
 	public String getStartInvoiceDate() {

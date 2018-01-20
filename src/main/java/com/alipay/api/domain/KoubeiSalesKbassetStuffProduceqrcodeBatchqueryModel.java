@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 分页获取口碑码数据
  *
  * @author auto create
- * @since 1.0, 2017-07-28 14:37:32
+ * @since 1.0, 2017-11-21 17:39:18
  */
 public class KoubeiSalesKbassetStuffProduceqrcodeBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5421397919853877186L;
+	private static final long serialVersionUID = 2644765613361589158L;
 
 	/**
 	 * 口碑批次号

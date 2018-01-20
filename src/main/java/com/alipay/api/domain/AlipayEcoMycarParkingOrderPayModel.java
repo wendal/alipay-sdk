@@ -7,17 +7,30 @@ import com.alipay.api.internal.mapping.ApiField;
  * 停车缴费代扣接口API
  *
  * @author auto create
- * @since 1.0, 2017-08-28 10:32:37
+ * @since 1.0, 2017-11-22 13:38:51
  */
 public class AlipayEcoMycarParkingOrderPayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8659561639291248194L;
+	private static final long serialVersionUID = 6246621675859229867L;
+
+	/**
+	 * 代扣返佣的支付宝用户号。
+以2088开头的纯16位数。
+	 */
+	@ApiField("agent_id")
+	private String agentId;
 
 	/**
 	 * 车牌，需要进行停车缴费代扣的车辆牌照
 	 */
 	@ApiField("car_number")
 	private String carNumber;
+
+	/**
+	 * 车牌颜色
+	 */
+	@ApiField("car_number_color")
+	private String carNumberColor;
 
 	/**
 	 * ISV停车场ID，由ISV定义的停车场标识，系统唯一，parking_id和out_parking_id不能同时为空
@@ -64,11 +77,25 @@ public class AlipayEcoMycarParkingOrderPayModel extends AlipayObject {
 	@ApiField("total_fee")
 	private String totalFee;
 
+	public String getAgentId() {
+		return this.agentId;
+	}
+	public void setAgentId(String agentId) {
+		this.agentId = agentId;
+	}
+
 	public String getCarNumber() {
 		return this.carNumber;
 	}
 	public void setCarNumber(String carNumber) {
 		this.carNumber = carNumber;
+	}
+
+	public String getCarNumberColor() {
+		return this.carNumberColor;
+	}
+	public void setCarNumberColor(String carNumberColor) {
+		this.carNumberColor = carNumberColor;
 	}
 
 	public String getOutParkingId() {

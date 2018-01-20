@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 物料单据反馈
  *
  * @author auto create
- * @since 1.0, 2017-07-27 19:41:21
+ * @since 1.0, 2017-11-21 17:41:15
  */
 public class AccessOrdersFeedBack extends AlipayObject {
 
-	private static final long serialVersionUID = 1693842115192533542L;
+	private static final long serialVersionUID = 2177638474267467294L;
 
 	/**
 	 * 错误码

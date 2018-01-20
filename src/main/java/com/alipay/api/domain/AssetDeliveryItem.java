@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 物料配送指令对象, 包括物料配送的相关信息: 订单明细ID, 申请单号, 模板ID, 物料名称, 数量, 收货人姓名,联系人电话,收货人地址等.
  *
  * @author auto create
- * @since 1.0, 2017-09-15 11:24:36
+ * @since 1.0, 2017-12-18 17:51:51
  */
 public class AssetDeliveryItem extends AlipayObject {
 
-	private static final long serialVersionUID = 2829888895737543989L;
+	private static final long serialVersionUID = 1697626387598964156L;
 
 	/**
 	 * 配送数量
@@ -36,6 +36,12 @@ public class AssetDeliveryItem extends AlipayObject {
 	 */
 	@ApiField("assign_out_order_id")
 	private String assignOutOrderId;
+
+	/**
+	 * 物料渠道标识
+	 */
+	@ApiField("biz_tag")
+	private String bizTag;
 
 	/**
 	 * 发送地址
@@ -74,10 +80,22 @@ public class AssetDeliveryItem extends AlipayObject {
 	private String memo;
 
 	/**
-	 * 物料供应商id
+	 * 面单信息
+	 */
+	@ApiField("print_data")
+	private String printData;
+
+	/**
+	 * 对应供应商pid
 	 */
 	@ApiField("supplier_id")
 	private String supplierId;
+
+	/**
+	 * 对应供应商名称
+	 */
+	@ApiField("supplier_name")
+	private String supplierName;
 
 	/**
 	 * 接收地址(目的地址)
@@ -111,6 +129,13 @@ public class AssetDeliveryItem extends AlipayObject {
 	}
 	public void setAssignOutOrderId(String assignOutOrderId) {
 		this.assignOutOrderId = assignOutOrderId;
+	}
+
+	public String getBizTag() {
+		return this.bizTag;
+	}
+	public void setBizTag(String bizTag) {
+		this.bizTag = bizTag;
 	}
 
 	public AssetDeliveryAddress getFromAddress() {
@@ -155,11 +180,25 @@ public class AssetDeliveryItem extends AlipayObject {
 		this.memo = memo;
 	}
 
+	public String getPrintData() {
+		return this.printData;
+	}
+	public void setPrintData(String printData) {
+		this.printData = printData;
+	}
+
 	public String getSupplierId() {
 		return this.supplierId;
 	}
 	public void setSupplierId(String supplierId) {
 		this.supplierId = supplierId;
+	}
+
+	public String getSupplierName() {
+		return this.supplierName;
+	}
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
 	}
 
 	public AssetDeliveryAddress getToAddress() {

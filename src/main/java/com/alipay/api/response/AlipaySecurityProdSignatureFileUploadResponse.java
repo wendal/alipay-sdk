@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.security.prod.signature.file.upload response.
  * 
  * @author auto create
- * @since 1.0, 2017-09-20 10:18:26
+ * @since 1.0, 2017-12-20 15:24:53
  */
 public class AlipaySecurityProdSignatureFileUploadResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8561528881543234214L;
+	private static final long serialVersionUID = 2126797846843831877L;
 
 	/** 
 	 * 文件唯一标识，用于apply接口传入

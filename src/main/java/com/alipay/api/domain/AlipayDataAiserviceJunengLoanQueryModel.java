@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询用户的贷款资质
  *
  * @author auto create
- * @since 1.0, 2017-08-16 15:27:53
+ * @since 1.0, 2017-11-17 11:57:56
  */
 public class AlipayDataAiserviceJunengLoanQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3113119414493661271L;
+	private static final long serialVersionUID = 5577775469175494844L;
 
 	/**
 	 * 额外的信息，以 json 字符串的方式组织

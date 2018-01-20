@@ -1,17 +1,28 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 统一收单交易退款接口
  *
  * @author auto create
- * @since 1.0, 2017-01-13 19:12:23
+ * @since 1.0, 2017-12-12 18:09:26
  */
 public class AlipayTradeRefundModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1541749453918227189L;
+	private static final long serialVersionUID = 7168124859941461839L;
+
+	/**
+	 * 退款包含的商品列表信息，Json格式。
+其它说明详见：“商品明细说明”
+	 */
+	@ApiListField("goods_detail")
+	@ApiField("goods_detail")
+	private List<GoodsDetail> goodsDetail;
 
 	/**
 	 * 商户的操作员编号
@@ -60,6 +71,13 @@ public class AlipayTradeRefundModel extends AlipayObject {
 	 */
 	@ApiField("trade_no")
 	private String tradeNo;
+
+	public List<GoodsDetail> getGoodsDetail() {
+		return this.goodsDetail;
+	}
+	public void setGoodsDetail(List<GoodsDetail> goodsDetail) {
+		this.goodsDetail = goodsDetail;
+	}
 
 	public String getOperatorId() {
 		return this.operatorId;

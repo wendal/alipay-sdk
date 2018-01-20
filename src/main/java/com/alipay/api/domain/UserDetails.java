@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 家庭成员信息
  *
  * @author auto create
- * @since 1.0, 2016-12-28 17:54:37
+ * @since 1.0, 2017-12-20 15:50:54
  */
 public class UserDetails extends AlipayObject {
 
-	private static final long serialVersionUID = 8296527613168768326L;
+	private static final long serialVersionUID = 1116125562925117663L;
 
 	/**
 	 * 用户变更手机号，替换旧的手机号

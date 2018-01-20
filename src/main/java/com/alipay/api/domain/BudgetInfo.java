@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 预算信息
  *
  * @author auto create
- * @since 1.0, 2017-06-05 11:25:25
+ * @since 1.0, 2017-11-15 19:55:36
  */
 public class BudgetInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 7816162288759241932L;
+	private static final long serialVersionUID = 8476526662152578356L;
 
 	/**
 	 * 预算数量
@@ -25,6 +25,18 @@ public class BudgetInfo extends AlipayObject {
 	@ApiField("budget_type")
 	private String budgetType;
 
+	/**
+	 * 设置每天的预算，如每天的预算设置为100，即该活动一天最多发放100次
+	 */
+	@ApiField("sub_budget_dimension")
+	private String subBudgetDimension;
+
+	/**
+	 * 用于控制子纬度的预算数量
+	 */
+	@ApiField("sub_value")
+	private String subValue;
+
 	public String getBudgetTotal() {
 		return this.budgetTotal;
 	}
@@ -37,6 +49,20 @@ public class BudgetInfo extends AlipayObject {
 	}
 	public void setBudgetType(String budgetType) {
 		this.budgetType = budgetType;
+	}
+
+	public String getSubBudgetDimension() {
+		return this.subBudgetDimension;
+	}
+	public void setSubBudgetDimension(String subBudgetDimension) {
+		this.subBudgetDimension = subBudgetDimension;
+	}
+
+	public String getSubValue() {
+		return this.subValue;
+	}
+	public void setSubValue(String subValue) {
+		this.subValue = subValue;
 	}
 
 }

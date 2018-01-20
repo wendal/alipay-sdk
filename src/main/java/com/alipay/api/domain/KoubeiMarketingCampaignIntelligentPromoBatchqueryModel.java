@@ -7,17 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 智能营销方案批量查询
  *
  * @author auto create
- * @since 1.0, 2017-10-12 10:54:23
+ * @since 1.0, 2017-11-17 06:02:33
  */
 public class KoubeiMarketingCampaignIntelligentPromoBatchqueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3684823256245976391L;
+	private static final long serialVersionUID = 6847998971748218145L;
 
 	/**
 	 * 操作员上下文信息
 	 */
 	@ApiField("operator_context")
 	private PromoOperatorInfo operatorContext;
+
+	/**
+	 * 外部业务id，请保持足够的复杂，方便定位数据来源
+	 */
+	@ApiField("out_request_no")
+	private String outRequestNo;
 
 	/**
 	 * 活动拥有者信息
@@ -36,6 +42,13 @@ public class KoubeiMarketingCampaignIntelligentPromoBatchqueryModel extends Alip
 	}
 	public void setOperatorContext(PromoOperatorInfo operatorContext) {
 		this.operatorContext = operatorContext;
+	}
+
+	public String getOutRequestNo() {
+		return this.outRequestNo;
+	}
+	public void setOutRequestNo(String outRequestNo) {
+		this.outRequestNo = outRequestNo;
 	}
 
 	public PromoOperatorInfo getOwnerInfo() {

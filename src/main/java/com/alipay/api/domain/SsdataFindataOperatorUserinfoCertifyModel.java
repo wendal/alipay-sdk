@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * 校验用户信息
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:34
+ * @since 1.0, 2017-11-02 20:44:05
  */
 public class SsdataFindataOperatorUserinfoCertifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3555223679581319949L;
+	private static final long serialVersionUID = 5624455313427969539L;
 
 	/**
-	 * 系统业务流水号
+	 * 业务流水号，提交用户信息时系统返回
 	 */
 	@ApiField("biz_no")
 	private String bizNo;

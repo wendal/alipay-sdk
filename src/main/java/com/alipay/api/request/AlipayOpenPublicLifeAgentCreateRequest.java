@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.life.agent.create request
  * 
  * @author auto create
- * @since 1.0, 2017-09-22 17:53:27
+ * @since 1.0, 2017-11-02 20:21:32
  */
 public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadRequest<AlipayOpenPublicLifeAgentCreateResponse> {
 
@@ -36,7 +36,7 @@ public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadReque
 	private FileItem businessLicenseAuthPic;
 
 	/** 
-	* 营业执照号码。该字段目前已无效
+	* 营业执照号码。被代创建商户运营主体为个人账户必填，企业账户无需填写
 	 */
 	private String businessLicenseNo;
 
@@ -56,7 +56,7 @@ public class AlipayOpenPublicLifeAgentCreateRequest implements AlipayUploadReque
 	private String contactMobile;
 
 	/** 
-	* 企业联系人名称
+	* 联系人名称
 	 */
 	private String contactName;
 

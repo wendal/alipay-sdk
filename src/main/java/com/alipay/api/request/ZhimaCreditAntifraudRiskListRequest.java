@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: zhima.credit.antifraud.risk.list request
  * 
  * @author auto create
- * @since 1.0, 2017-10-13 14:18:41
+ * @since 1.0, 2017-10-30 10:56:24
  */
 public class ZhimaCreditAntifraudRiskListRequest implements AlipayRequest<ZhimaCreditAntifraudRiskListResponse> {
 

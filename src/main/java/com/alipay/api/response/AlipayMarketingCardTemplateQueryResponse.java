@@ -19,11 +19,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.card.template.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-08-24 15:51:59
+ * @since 1.0, 2017-10-27 18:39:34
  */
 public class AlipayMarketingCardTemplateQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 2635788578992866834L;
+	private static final long serialVersionUID = 1436471332211533892L;
 
 	/** 
 	 * 业务卡号前缀，由商户指定
@@ -54,6 +54,12 @@ public class AlipayMarketingCardTemplateQueryResponse extends AlipayResponse {
 	@ApiListField("card_level_confs")
 	@ApiField("template_card_level_conf_d_t_o")
 	private List<TemplateCardLevelConfDTO> cardLevelConfs;
+
+	/** 
+	 * 卡特定标签，只供特定业务使用，通常接入无需关注
+	 */
+	@ApiField("card_spec_tag")
+	private String cardSpecTag;
 
 	/** 
 	 * 会员卡类型：
@@ -153,6 +159,13 @@ OUT_MEMBER_CARD：外部权益卡
 	}
 	public List<TemplateCardLevelConfDTO> getCardLevelConfs( ) {
 		return this.cardLevelConfs;
+	}
+
+	public void setCardSpecTag(String cardSpecTag) {
+		this.cardSpecTag = cardSpecTag;
+	}
+	public String getCardSpecTag( ) {
+		return this.cardSpecTag;
 	}
 
 	public void setCardType(String cardType) {

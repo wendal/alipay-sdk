@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 营销活动详情信息
  *
  * @author auto create
- * @since 1.0, 2017-08-07 20:34:11
+ * @since 1.0, 2017-12-20 11:44:43
  */
 public class CampDetailInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 1791422393339613624L;
+	private static final long serialVersionUID = 3278453721525967293L;
 
 	/**
 	 * 活动开始时间

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 自助监控服务接口
  *
  * @author auto create
- * @since 1.0, 2017-08-31 17:34:13
+ * @since 1.0, 2018-01-04 10:34:06
  */
 public class AlipayCommerceDataMonitordataSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7184227299593291419L;
+	private static final long serialVersionUID = 3556678838184889587L;
 
 	/**
 	 * 传入的批量打包数据，dataEntry和dataDim的组合数据，详见dataEntry和dataDim的说明

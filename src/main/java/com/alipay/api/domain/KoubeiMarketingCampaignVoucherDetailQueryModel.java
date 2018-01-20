@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑券详情查询接口
  *
  * @author auto create
- * @since 1.0, 2017-10-17 19:36:33
+ * @since 1.0, 2017-11-03 14:54:26
  */
 public class KoubeiMarketingCampaignVoucherDetailQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4544927733189374584L;
+	private static final long serialVersionUID = 3342731399312171838L;
 
 	/**
 	 * 支付宝用户id

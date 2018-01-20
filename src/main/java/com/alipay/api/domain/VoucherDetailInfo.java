@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 券资产详情信息对象
  *
  * @author auto create
- * @since 1.0, 2017-08-08 19:56:13
+ * @since 1.0, 2017-10-31 19:29:37
  */
 public class VoucherDetailInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 4361167763893875324L;
+	private static final long serialVersionUID = 6666181292759575929L;
 
 	/**
 	 * 资产id
@@ -23,7 +23,7 @@ public class VoucherDetailInfo extends AlipayObject {
 	private String assetId;
 
 	/**
-	 * 有效期起
+	 * 资产生效时间
 	 */
 	@ApiField("effect_time")
 	private String effectTime;
@@ -41,7 +41,7 @@ public class VoucherDetailInfo extends AlipayObject {
 	private ForbbidenTime forbbidenTime;
 
 	/**
-	 * 券过期时间
+	 * 资产过期时间
 	 */
 	@ApiField("invalid_time")
 	private String invalidTime;

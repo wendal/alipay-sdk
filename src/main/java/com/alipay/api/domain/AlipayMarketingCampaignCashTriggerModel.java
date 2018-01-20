@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 触发现金红包活动
  *
  * @author auto create
- * @since 1.0, 2017-07-14 11:53:19
+ * @since 1.0, 2017-11-17 12:12:37
  */
 public class AlipayMarketingCampaignCashTriggerModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4469732398446492452L;
+	private static final long serialVersionUID = 5431678597671128281L;
 
 	/**
 	 * 现金活动号
@@ -24,6 +24,12 @@ public class AlipayMarketingCampaignCashTriggerModel extends AlipayObject {
 	 */
 	@ApiField("login_id")
 	private String loginId;
+
+	/**
+	 * 发奖金额
+	 */
+	@ApiField("order_price")
+	private String orderPrice;
 
 	/**
 	 * 领取红包的外部业务号，只由可由字母、数字、下划线组成。同一个活动中不可重复，相同的外部业务号会被幂等并返回之前的结果。不填时，系统会生成一个默认固定的外部业务号。
@@ -49,6 +55,13 @@ public class AlipayMarketingCampaignCashTriggerModel extends AlipayObject {
 	}
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
+	}
+
+	public String getOrderPrice() {
+		return this.orderPrice;
+	}
+	public void setOrderPrice(String orderPrice) {
+		this.orderPrice = orderPrice;
 	}
 
 	public String getOutBizNo() {

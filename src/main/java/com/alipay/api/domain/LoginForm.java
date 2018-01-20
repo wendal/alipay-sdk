@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 登陆表单元素kv
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:34
+ * @since 1.0, 2017-11-02 20:44:05
  */
 public class LoginForm extends AlipayObject {
 
-	private static final long serialVersionUID = 6557385376887453312L;
+	private static final long serialVersionUID = 7516939275731272885L;
 
 	/**
 	 * 图片验证码

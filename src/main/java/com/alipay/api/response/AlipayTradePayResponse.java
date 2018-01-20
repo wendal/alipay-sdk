@@ -13,11 +13,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.pay response.
  * 
  * @author auto create
- * @since 1.0, 2017-10-23 17:10:58
+ * @since 1.0, 2018-01-03 18:35:24
  */
 public class AlipayTradePayResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 2688115466175516835L;
+	private static final long serialVersionUID = 6167181141768282922L;
 
 	/** 
 	 * 异步支付模式，先享后付业务会返回该参数，目前有三种值：
@@ -55,10 +55,22 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	private String buyerUserId;
 
 	/** 
+	 * 买家用户类型。CORPORATE:企业用户；PRIVATE:个人用户。
+	 */
+	@ApiField("buyer_user_type")
+	private String buyerUserType;
+
+	/** 
 	 * 支付宝卡余额
 	 */
 	@ApiField("card_balance")
 	private String cardBalance;
+
+	/** 
+	 * 平台优惠金额
+	 */
+	@ApiField("discount_amount")
+	private String discountAmount;
 
 	/** 
 	 * 本次交易支付所使用的单品券优惠的商品优惠信息
@@ -86,6 +98,12 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	private String invoiceAmount;
 
 	/** 
+	 * 商家优惠金额
+	 */
+	@ApiField("mdiscount_amount")
+	private String mdiscountAmount;
+
+	/** 
 	 * 买家支付宝用户号,该参数已废弃，请不要使用
 	 */
 	@ApiField("open_id")
@@ -98,7 +116,7 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	private String outTradeNo;
 
 	/** 
-	 * 使用积分宝付款的金额
+	 * 使用集分宝付款的金额
 	 */
 	@ApiField("point_amount")
 	private String pointAmount;
@@ -169,11 +187,25 @@ SYNC_DIRECT_PAY(同步直接扣款);
 		return this.buyerUserId;
 	}
 
+	public void setBuyerUserType(String buyerUserType) {
+		this.buyerUserType = buyerUserType;
+	}
+	public String getBuyerUserType( ) {
+		return this.buyerUserType;
+	}
+
 	public void setCardBalance(String cardBalance) {
 		this.cardBalance = cardBalance;
 	}
 	public String getCardBalance( ) {
 		return this.cardBalance;
+	}
+
+	public void setDiscountAmount(String discountAmount) {
+		this.discountAmount = discountAmount;
+	}
+	public String getDiscountAmount( ) {
+		return this.discountAmount;
 	}
 
 	public void setDiscountGoodsDetail(String discountGoodsDetail) {
@@ -202,6 +234,13 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	}
 	public String getInvoiceAmount( ) {
 		return this.invoiceAmount;
+	}
+
+	public void setMdiscountAmount(String mdiscountAmount) {
+		this.mdiscountAmount = mdiscountAmount;
+	}
+	public String getMdiscountAmount( ) {
+		return this.mdiscountAmount;
 	}
 
 	public void setOpenId(String openId) {

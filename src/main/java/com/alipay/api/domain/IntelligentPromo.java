@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 智能营销活动模型
  *
  * @author auto create
- * @since 1.0, 2017-10-10 18:45:21
+ * @since 1.0, 2017-11-17 06:01:58
  */
 public class IntelligentPromo extends AlipayObject {
 
-	private static final long serialVersionUID = 5272347533779865326L;
+	private static final long serialVersionUID = 1349713893376827425L;
 
 	/**
 	 * 是否允许自动续期
@@ -24,7 +24,7 @@ public class IntelligentPromo extends AlipayObject {
 	private Boolean allowAutoDelay;
 
 	/**
-	 * 审批状态。APPROVING：审批中；REJECTED：已驳回；PASS：已通过；（注意：修改接口不能传递该值）
+	 * 审批状态。APPROVING：审批中；REJECTED：已驳回；PASS：已通过；（注意：修改接口无需传递审批状态）
 	 */
 	@ApiField("audit_status")
 	private String auditStatus;
@@ -48,7 +48,7 @@ public class IntelligentPromo extends AlipayObject {
 	private String desc;
 
 	/**
-	 * 活动扩展信息。活动推荐会返回扩展信息，推荐完以后，这里的信息要在活动效果预测，创建接口中带回来,  如果原方案已结束，需要将该方案进行续签，则需要传递该方案的promoId到扩展字段，key：parentSmartPromoId
+	 * 活动扩展信息。活动推荐会返回扩展信息，推荐完以后，这里的信息要在活动效果预测，创建接口中也需要原样带回来；
 	 */
 	@ApiField("ext_info")
 	private String extInfo;
@@ -60,7 +60,7 @@ public class IntelligentPromo extends AlipayObject {
 	private IntelligentPromoEffect forecastEffect;
 
 	/**
-	 * 活动关闭的时间
+	 * 智能营销活动下架的时间
 	 */
 	@ApiField("gmt_closed")
 	private Date gmtClosed;
@@ -121,7 +121,7 @@ public class IntelligentPromo extends AlipayObject {
 	private List<IntelligentPromoDetail> promos;
 
 	/**
-	 * 智能营销活动状态。CREATED：已创建；ENABLED：已生效；CLOSED：已关闭；FINISHED：已完结（注意：修改接口不能传递该值）
+	 * 智能营销活动状态。CREATED：已创建；ENABLED：已生效；CLOSED：已关闭；FINISHED：已完结；DISABLED:已失效（有两种情况会是失效状态，一种是服务商创建方案，商户驳回，一种是服务商创建方案，商户未确认，活动到期。）（注意：修改方案的动作不需要传递方案状态）
 	 */
 	@ApiField("status")
 	private String status;
@@ -135,7 +135,8 @@ public class IntelligentPromo extends AlipayObject {
 
 	/**
 	 * 活动展示状态。已创建：CREATED；
-REJECTED：创建被驳回；ENABLING：生效中；ONLINE_WAIT_CONFIRM：上架待确认；PUBLISHED：已发布（活动未到开始时间）；ENABLED：已发布已开始；OFFLINE_WAIT_CONFIRM：下架待确认；CLOSING：下架中；CLOSED：已下架（人为干预下架）；FINISHED：已结束（活动到期自然结束）；MODIFYING：修改中；MODIFY_WAIT_CONFIRM：修改待确认；（注意：修改接口不能传递该值）
+REJECTED：创建被驳回；ENABLING：生效中；ONLINE_WAIT_CONFIRM：上架待确认；PUBLISHED：已发布（活动未到开始时间）；ENABLED：已发布已开始；OFFLINE_WAIT_CONFIRM：下架待确认；CLOSING：下架中；CLOSED：已下架（人为干预下架）；FINISHED：已结束（活动到期自然结束）；MODIFYING：修改中；MODIFY_WAIT_CONFIRM：修改待确认；DISABLED：已失效
+（注意：修改接口子状态参数不能传递）
 	 */
 	@ApiField("sub_status")
 	private String subStatus;
@@ -147,7 +148,7 @@ REJECTED：创建被驳回；ENABLING：生效中；ONLINE_WAIT_CONFIRM：上架
 	private String templateId;
 
 	/**
-	 * 智能活动类型，值如下：RECOMMENDATION：系统推荐；REGISTRATION：报名。在创建时，这个字段需要ISV自己进行决策，在推荐接口会返回优惠力度，比如代金券面额等信息，ISV判断如果优惠力度比这个大或者相同，就用RECOMMENDATION，其他情况用REGISTRATION
+	 * 智能活动类型，值如下：RECOMMENDATION：系统推荐；REGISTRATION：报名。在创建时，这个字段需要ISV自己进行决策，在推荐接口会返回优惠力度，比如代金券面额等信息，ISV判断如果优惠力度比这个大或者相同，就用RECOMMENDATION，其他情况用REGISTRATION，如推荐力度大于实际创建传过来的优惠力度，则创建的时候系统会自动将RECOMMENDATION改为REGISTRATION
 	 */
 	@ApiField("type")
 	private String type;

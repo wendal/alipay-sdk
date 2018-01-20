@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.security.prod.signature.file.upload request
  * 
  * @author auto create
- * @since 1.0, 2017-09-20 10:18:26
+ * @since 1.0, 2017-12-20 15:24:53
  */
 public class AlipaySecurityProdSignatureFileUploadRequest implements AlipayUploadRequest<AlipaySecurityProdSignatureFileUploadResponse> {
 

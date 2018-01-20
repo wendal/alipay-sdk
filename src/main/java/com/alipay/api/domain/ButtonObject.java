@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 菜单对象模型
  *
  * @author auto create
- * @since 1.0, 2017-07-04 11:09:00
+ * @since 1.0, 2017-10-31 19:50:53
  */
 public class ButtonObject extends AlipayObject {
 
-	private static final long serialVersionUID = 2472121921986872686L;
+	private static final long serialVersionUID = 4339159885673446427L;
 
 	/**
 	 * 当actionType为link时，该参数为url链接；

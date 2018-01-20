@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 租约同步
  *
  * @author auto create
- * @since 1.0, 2017-08-04 14:14:07
+ * @since 1.0, 2017-11-15 14:36:58
  */
 public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2589142299153992634L;
+	private static final long serialVersionUID = 1741998636189895276L;
 
 	/**
 	 * 预览合同二进制流	预览合同html的Base64字符串
@@ -27,6 +27,12 @@ public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 	 */
 	@ApiField("begin_date")
 	private String beginDate;
+
+	/**
+	 * 定金信息
+	 */
+	@ApiField("book_info")
+	private AlipayEcoRenthouseBookInfo bookInfo;
 
 	/**
 	 * 证件编号
@@ -104,6 +110,12 @@ public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 	private String furnitureItems;
 
 	/**
+	 * 通过"文件上传"接口返回的租约相关图片url路径。租约照片可录入0~10张,目前仅支持jpg、png、jpeg格式
+	 */
+	@ApiField("images")
+	private String images;
+
+	/**
 	 * KA租约业务号
 	 */
 	@ApiField("lease_code")
@@ -125,6 +137,18 @@ public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 	 */
 	@ApiField("lease_status")
 	private Long leaseStatus;
+
+	/**
+	 * 1-电子合约(默认)  2-纸质合约
+	 */
+	@ApiField("lease_type")
+	private Long leaseType;
+
+	/**
+	 * 续租原KA租约业务号（也就是第一期的lease_code）
+	 */
+	@ApiField("original_lease_code")
+	private String originalLeaseCode;
 
 	/**
 	 * 其他费用描述
@@ -151,10 +175,28 @@ public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 	private Long payType;
 
 	/**
+	 * 信用减免金额
+	 */
+	@ApiField("rebate_amount")
+	private String rebateAmount;
+
+	/**
 	 * 描述
 	 */
 	@ApiField("remark")
 	private String remark;
+
+	/**
+	 * 0-不是续租(默认值)  1-是续租
+	 */
+	@ApiField("renew_lease")
+	private Long renewLease;
+
+	/**
+	 * 第几期续租
+	 */
+	@ApiField("renew_num")
+	private Long renewNum;
 
 	/**
 	 * 收租日描述
@@ -176,6 +218,12 @@ public class AlipayEcoRenthouseLeaseOrderSyncModel extends AlipayObject {
 	@ApiListField("rent_include_fee_desc")
 	@ApiField("string")
 	private List<String> rentIncludeFeeDesc;
+
+	/**
+	 * 1-男   2-女
+	 */
+	@ApiField("renter_gender")
+	private String renterGender;
 
 	/**
 	 * 用户姓名
@@ -221,6 +269,13 @@ flatsTag为1,则代表单编号 2,代表房型编号
 	}
 	public void setBeginDate(String beginDate) {
 		this.beginDate = beginDate;
+	}
+
+	public AlipayEcoRenthouseBookInfo getBookInfo() {
+		return this.bookInfo;
+	}
+	public void setBookInfo(AlipayEcoRenthouseBookInfo bookInfo) {
+		this.bookInfo = bookInfo;
 	}
 
 	public String getCardNo() {
@@ -272,6 +327,13 @@ flatsTag为1,则代表单编号 2,代表房型编号
 		this.furnitureItems = furnitureItems;
 	}
 
+	public String getImages() {
+		return this.images;
+	}
+	public void setImages(String images) {
+		this.images = images;
+	}
+
 	public String getLeaseCode() {
 		return this.leaseCode;
 	}
@@ -293,6 +355,20 @@ flatsTag为1,则代表单编号 2,代表房型编号
 		this.leaseStatus = leaseStatus;
 	}
 
+	public Long getLeaseType() {
+		return this.leaseType;
+	}
+	public void setLeaseType(Long leaseType) {
+		this.leaseType = leaseType;
+	}
+
+	public String getOriginalLeaseCode() {
+		return this.originalLeaseCode;
+	}
+	public void setOriginalLeaseCode(String originalLeaseCode) {
+		this.originalLeaseCode = originalLeaseCode;
+	}
+
 	public String getOtherFeeDesc() {
 		return this.otherFeeDesc;
 	}
@@ -307,11 +383,32 @@ flatsTag为1,则代表单编号 2,代表房型编号
 		this.payType = payType;
 	}
 
+	public String getRebateAmount() {
+		return this.rebateAmount;
+	}
+	public void setRebateAmount(String rebateAmount) {
+		this.rebateAmount = rebateAmount;
+	}
+
 	public String getRemark() {
 		return this.remark;
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public Long getRenewLease() {
+		return this.renewLease;
+	}
+	public void setRenewLease(Long renewLease) {
+		this.renewLease = renewLease;
+	}
+
+	public Long getRenewNum() {
+		return this.renewNum;
+	}
+	public void setRenewNum(Long renewNum) {
+		this.renewNum = renewNum;
 	}
 
 	public String getRentDayDesc() {
@@ -326,6 +423,13 @@ flatsTag为1,则代表单编号 2,代表房型编号
 	}
 	public void setRentIncludeFeeDesc(List<String> rentIncludeFeeDesc) {
 		this.rentIncludeFeeDesc = rentIncludeFeeDesc;
+	}
+
+	public String getRenterGender() {
+		return this.renterGender;
+	}
+	public void setRenterGender(String renterGender) {
+		this.renterGender = renterGender;
 	}
 
 	public String getRenterName() {

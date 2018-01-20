@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 学生信息更新
  *
  * @author auto create
- * @since 1.0, 2017-08-18 12:27:08
+ * @since 1.0, 2017-11-06 11:46:27
  */
 public class AlipayEcoEduKtStudentModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1267295117196917124L;
+	private static final long serialVersionUID = 7295311849525451183L;
 
 	/**
 	 * 修改后的学生姓名

@@ -135,7 +135,7 @@ public class AlipayPassCodeAddRequest implements AlipayRequest<AlipayPassCodeAdd
 		txtParams.put("file_content", this.fileContent);
 		txtParams.put("recognition_info", this.recognitionInfo);
 		txtParams.put("recognition_type", this.recognitionType);
-		txtParams.put("verify_type", this.verifyType);
+		txtParams.put("verify_type", new com.alipay.api.internal.util.json.JSONWriter().write(this.verifyType, true));
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);
 		}

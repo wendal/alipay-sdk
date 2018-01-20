@@ -11,11 +11,17 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 集中式房源同步
  *
  * @author auto create
- * @since 1.0, 2017-08-02 14:51:23
+ * @since 1.0, 2017-12-22 17:38:22
  */
 public class AlipayEcoRenthouseRoomConcentrationSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6815625162178615626L;
+	private static final long serialVersionUID = 5511391697893796399L;
+
+	/**
+	 * 阿里短号
+	 */
+	@ApiField("ali_short_num")
+	private String aliShortNum;
 
 	/**
 	 * 户型-房
@@ -31,7 +37,14 @@ public class AlipayEcoRenthouseRoomConcentrationSyncModel extends AlipayObject {
 	private Date checkinTime;
 
 	/**
-	 * 小区Code，详见文档
+	 * 小区同步请求号
+	 */
+	@ApiField("comm_req_id")
+	private String commReqId;
+
+	/**
+	 * 小区Code和小区请求号必输入其一
+小区Code，详见文档
 http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/CommunityInfos.xls
 	 */
 	@ApiField("community_code")
@@ -83,6 +96,12 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	 */
 	@ApiField("max_amount")
 	private String maxAmount;
+
+	/**
+	 * 集中式房源最大押金
+	 */
+	@ApiField("max_deposit_amount")
+	private String maxDepositAmount;
 
 	/**
 	 * 公寓别名
@@ -166,6 +185,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	private List<String> roomConfigs;
 
 	/**
+	 * 集中式房间列表
+	 */
+	@ApiListField("room_info_list")
+	@ApiField("eco_renthouse_room_info_list")
+	private List<EcoRenthouseRoomInfoList> roomInfoList;
+
+	/**
 	 * 房源初始上下架状态
 上架状态租房平台会展示该房间信息，下架状态反之
 	 */
@@ -186,6 +212,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	@ApiField("total_floor_count")
 	private Long totalFloorCount;
 
+	public String getAliShortNum() {
+		return this.aliShortNum;
+	}
+	public void setAliShortNum(String aliShortNum) {
+		this.aliShortNum = aliShortNum;
+	}
+
 	public Long getBedroomCount() {
 		return this.bedroomCount;
 	}
@@ -198,6 +231,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	}
 	public void setCheckinTime(Date checkinTime) {
 		this.checkinTime = checkinTime;
+	}
+
+	public String getCommReqId() {
+		return this.commReqId;
+	}
+	public void setCommReqId(String commReqId) {
+		this.commReqId = commReqId;
 	}
 
 	public String getCommunityCode() {
@@ -254,6 +294,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	}
 	public void setMaxAmount(String maxAmount) {
 		this.maxAmount = maxAmount;
+	}
+
+	public String getMaxDepositAmount() {
+		return this.maxDepositAmount;
+	}
+	public void setMaxDepositAmount(String maxDepositAmount) {
+		this.maxDepositAmount = maxDepositAmount;
 	}
 
 	public String getNickname() {
@@ -338,6 +385,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	}
 	public void setRoomConfigs(List<String> roomConfigs) {
 		this.roomConfigs = roomConfigs;
+	}
+
+	public List<EcoRenthouseRoomInfoList> getRoomInfoList() {
+		return this.roomInfoList;
+	}
+	public void setRoomInfoList(List<EcoRenthouseRoomInfoList> roomInfoList) {
+		this.roomInfoList = roomInfoList;
 	}
 
 	public Long getRoomStatus() {

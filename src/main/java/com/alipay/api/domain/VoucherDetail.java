@@ -1,17 +1,20 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 券明细信息
  *
  * @author auto create
- * @since 1.0, 2017-07-24 16:15:18
+ * @since 1.0, 2017-11-01 20:01:02
  */
 public class VoucherDetail extends AlipayObject {
 
-	private static final long serialVersionUID = 7525734762338381994L;
+	private static final long serialVersionUID = 1413244427985572691L;
 
 	/**
 	 * 优惠券面额，它应该会等于商家出资加上其他出资方出资
@@ -50,6 +53,13 @@ public class VoucherDetail extends AlipayObject {
 	private String otherContribute;
 
 	/**
+	 * 优惠券的其他出资方明细
+	 */
+	@ApiListField("other_contribute_detail")
+	@ApiField("contribute_detail")
+	private List<ContributeDetail> otherContributeDetail;
+
+	/**
 	 * 如果使用的这张券是用户购买的，则该字段代表用户在购买这张券时平台优惠的金额
 	 */
 	@ApiField("purchase_ant_contribute")
@@ -66,6 +76,12 @@ public class VoucherDetail extends AlipayObject {
 	 */
 	@ApiField("purchase_merchant_contribute")
 	private String purchaseMerchantContribute;
+
+	/**
+	 * 券模板id
+	 */
+	@ApiField("template_id")
+	private String templateId;
 
 	/**
 	 * 当前有三种类型：
@@ -119,6 +135,13 @@ ALIPAY_ITEM_VOUCHER - 单品优惠
 		this.otherContribute = otherContribute;
 	}
 
+	public List<ContributeDetail> getOtherContributeDetail() {
+		return this.otherContributeDetail;
+	}
+	public void setOtherContributeDetail(List<ContributeDetail> otherContributeDetail) {
+		this.otherContributeDetail = otherContributeDetail;
+	}
+
 	public String getPurchaseAntContribute() {
 		return this.purchaseAntContribute;
 	}
@@ -138,6 +161,13 @@ ALIPAY_ITEM_VOUCHER - 单品优惠
 	}
 	public void setPurchaseMerchantContribute(String purchaseMerchantContribute) {
 		this.purchaseMerchantContribute = purchaseMerchantContribute;
+	}
+
+	public String getTemplateId() {
+		return this.templateId;
+	}
+	public void setTemplateId(String templateId) {
+		this.templateId = templateId;
 	}
 
 	public String getType() {

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 核身可用性查询接口
  *
  * @author auto create
- * @since 1.0, 2017-09-28 15:13:13
+ * @since 1.0, 2017-12-13 16:35:44
  */
 public class AlipaySecurityRiskVerifyidentityApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4199487466164659325L;
+	private static final long serialVersionUID = 3727245813221652365L;
 
 	/**
 	 * 用户帐号

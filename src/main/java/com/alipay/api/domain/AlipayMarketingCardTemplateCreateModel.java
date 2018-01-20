@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 会员卡模板创建
  *
  * @author auto create
- * @since 1.0, 2017-08-24 15:51:46
+ * @since 1.0, 2017-11-15 17:04:06
  */
 public class AlipayMarketingCardTemplateCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7216469519269249468L;
+	private static final long serialVersionUID = 4898361836549339286L;
 
 	/**
 	 * 业务卡号前缀，由商户指定
@@ -24,7 +24,7 @@ public class AlipayMarketingCardTemplateCreateModel extends AlipayObject {
 	private String bizNoPrefix;
 
 	/**
-	 * 业务卡号后缀的长度
+	 * 业务卡号后缀的长度，取值范围为[8,32]
 支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
 由于业务卡号最长不超过32位，所以biz_no_suffix_len <= 32 - biz_no_prefix的位数
 	 */
@@ -46,6 +46,12 @@ public class AlipayMarketingCardTemplateCreateModel extends AlipayObject {
 	@ApiListField("card_level_conf")
 	@ApiField("template_card_level_conf_d_t_o")
 	private List<TemplateCardLevelConfDTO> cardLevelConf;
+
+	/**
+	 * 卡特定标签，只供特定业务使用，通常接入无需关注
+	 */
+	@ApiField("card_spec_tag")
+	private String cardSpecTag;
 
 	/**
 	 * 卡类型为固定枚举类型，可选类型如下：
@@ -171,6 +177,13 @@ mdbarcode: 商户动态条码，扫码得商户自主传入的码值
 	}
 	public void setCardLevelConf(List<TemplateCardLevelConfDTO> cardLevelConf) {
 		this.cardLevelConf = cardLevelConf;
+	}
+
+	public String getCardSpecTag() {
+		return this.cardSpecTag;
+	}
+	public void setCardSpecTag(String cardSpecTag) {
+		this.cardSpecTag = cardSpecTag;
 	}
 
 	public String getCardType() {

@@ -11,11 +11,17 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 投保受理
  *
  * @author auto create
- * @since 1.0, 2017-09-27 17:01:18
+ * @since 1.0, 2017-10-27 18:11:45
  */
 public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8565931711162447242L;
+	private static final long serialVersionUID = 3397216388414117731L;
+
+	/**
+	 * 用户参与的活动ID
+	 */
+	@ApiField("activity_id")
+	private String activityId;
 
 	/**
 	 * 投保人
@@ -40,6 +46,13 @@ public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 	 */
 	@ApiField("effect_start_time")
 	private Date effectStartTime;
+
+	/**
+	 * 标的信息， 保险标的物，产品责任信息
+	 */
+	@ApiListField("ins_objects")
+	@ApiField("ins_object")
+	private List<InsObject> insObjects;
 
 	/**
 	 * 被保险人
@@ -84,6 +97,13 @@ public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 	@ApiField("sum_insured")
 	private Long sumInsured;
 
+	public String getActivityId() {
+		return this.activityId;
+	}
+	public void setActivityId(String activityId) {
+		this.activityId = activityId;
+	}
+
 	public InsPerson getApplicant() {
 		return this.applicant;
 	}
@@ -110,6 +130,13 @@ public class AlipayInsSceneApplicationApplyModel extends AlipayObject {
 	}
 	public void setEffectStartTime(Date effectStartTime) {
 		this.effectStartTime = effectStartTime;
+	}
+
+	public List<InsObject> getInsObjects() {
+		return this.insObjects;
+	}
+	public void setInsObjects(List<InsObject> insObjects) {
+		this.insObjects = insObjects;
 	}
 
 	public List<InsPerson> getInsureds() {

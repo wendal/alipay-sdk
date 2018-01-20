@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 代理人实名认证接口
  *
  * @author auto create
- * @since 1.0, 2017-10-24 17:04:43
+ * @since 1.0, 2017-12-13 11:31:13
  */
 public class AlipayInsAutoAutoinsprodUserCertifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3284827842218877495L;
+	private static final long serialVersionUID = 4812794657774661674L;
 
 	/**
 	 * 代理人姓名
@@ -26,7 +26,7 @@ public class AlipayInsAutoAutoinsprodUserCertifyModel extends AlipayObject {
 	private String agentIdCardNo;
 
 	/**
-	 * 代理人保险师用户唯一标识
+	 * 代理人用户唯一标识
 	 */
 	@ApiField("agent_user_id")
 	private String agentUserId;

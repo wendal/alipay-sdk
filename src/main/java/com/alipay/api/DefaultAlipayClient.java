@@ -37,7 +37,7 @@ public class DefaultAlipayClient implements AlipayClient {
     private String privateKey;
     private String prodCode;
     private String format         = AlipayConstants.FORMAT_JSON;
-    private String sign_type      = AlipayConstants.SIGN_TYPE_RSA;
+    private String signType       = AlipayConstants.SIGN_TYPE_RSA;
 
     private String encryptType    = AlipayConstants.ENCRYPT_TYPE_AES;
 
@@ -50,6 +50,9 @@ public class DefaultAlipayClient implements AlipayClient {
     private int    connectTimeout = 3000;
     private int    readTimeout    = 15000;
 
+    private String proxyHost;
+    private int    proxyPort;
+
     static {
         //清除安全设置
         Security.setProperty("jdk.certpath.disabledAlgorithms", "");
@@ -59,7 +62,6 @@ public class DefaultAlipayClient implements AlipayClient {
         this.serverUrl = serverUrl;
         this.appId = appId;
         this.privateKey = privateKey;
-        this.alipayPublicKey = null;
     }
 
     public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format) {
@@ -69,35 +71,40 @@ public class DefaultAlipayClient implements AlipayClient {
 
     public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format,
                                String charset) {
-        this(serverUrl, appId, privateKey);
-        this.format = format;
+        this(serverUrl, appId, privateKey, format);
         this.charset = charset;
     }
 
     public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format,
-                               String charset, String alipayPulicKey) {
-        this(serverUrl, appId, privateKey);
-        this.format = format;
-        this.charset = charset;
-        this.alipayPublicKey = alipayPulicKey;
+                               String charset, String alipayPublicKey) {
+        this(serverUrl, appId, privateKey, format, charset);
+        this.alipayPublicKey = alipayPublicKey;
     }
 
     public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format,
-                               String charset, String alipayPulicKey, String signType) {
-
-        this(serverUrl, appId, privateKey, format, charset, alipayPulicKey);
-
-        this.sign_type = signType;
+                               String charset, String alipayPublicKey, String signType) {
+        this(serverUrl, appId, privateKey, format, charset, alipayPublicKey);
+        this.signType = signType;
     }
 
     public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format,
-                               String charset, String alipayPulicKey, String signType,
+                               String charset, String alipayPublicKey, String signType,
+                               String proxyHost, int proxyPort) {
+        this(serverUrl, appId, privateKey, format, charset, alipayPublicKey, signType);
+        this.proxyHost = proxyHost;
+        this.proxyPort = proxyPort;
+    }
+
+    public DefaultAlipayClient(String serverUrl, String appId, String privateKey, String format,
+                               String charset, String alipayPublicKey, String signType,
                                String encryptKey, String encryptType) {
-
-        this(serverUrl, appId, privateKey, format, charset, alipayPulicKey, signType);
-
-        this.encryptType = encryptType;
+        this(serverUrl, appId, privateKey, format, charset, alipayPublicKey, signType);
         this.encryptKey = encryptKey;
+        this.encryptType = encryptType;
+    }
+
+    public static Builder builder(String serverUrl, String appId, String privateKey) {
+        return new Builder(serverUrl, appId, privateKey);
     }
 
     public <T extends AlipayResponse> T execute(AlipayRequest<T> request) throws AlipayApiException {
@@ -285,7 +292,7 @@ public class DefaultAlipayClient implements AlipayClient {
         protocalMustParams.put(AlipayConstants.METHOD, request.getApiMethodName());
         protocalMustParams.put(AlipayConstants.VERSION, request.getApiVersion());
         protocalMustParams.put(AlipayConstants.APP_ID, this.appId);
-        protocalMustParams.put(AlipayConstants.SIGN_TYPE, this.sign_type);
+        protocalMustParams.put(AlipayConstants.SIGN_TYPE, this.signType);
         protocalMustParams.put(AlipayConstants.TERMINAL_TYPE, request.getTerminalType());
         protocalMustParams.put(AlipayConstants.TERMINAL_INFO, request.getTerminalInfo());
         protocalMustParams.put(AlipayConstants.NOTIFY_URL, request.getNotifyUrl());
@@ -309,11 +316,11 @@ public class DefaultAlipayClient implements AlipayClient {
         protocalOptParams.put(AlipayConstants.PROD_CODE, request.getProdCode());
         requestHolder.setProtocalOptParams(protocalOptParams);
 
-        if (!StringUtils.isEmpty(this.sign_type)) {
+        if (!StringUtils.isEmpty(this.signType)) {
 
             String signContent = AlipaySignature.getSignatureContent(requestHolder);
             protocalMustParams.put(AlipayConstants.SIGN,
-                AlipaySignature.rsaSign(signContent, privateKey, charset, this.sign_type));
+                AlipaySignature.rsaSign(signContent, privateKey, charset, this.signType));
 
         } else {
             protocalMustParams.put(AlipayConstants.SIGN, "");
@@ -458,10 +465,10 @@ public class DefaultAlipayClient implements AlipayClient {
                 AlipayUploadRequest<T> uRequest = (AlipayUploadRequest<T>) request;
                 Map<String, FileItem> fileParams = AlipayUtils.cleanupMap(uRequest.getFileParams());
                 rsp = WebUtils.doPost(url, requestHolder.getApplicationParams(), fileParams,
-                    charset, connectTimeout, readTimeout);
+                    charset, connectTimeout, readTimeout, proxyHost, proxyPort);
             } else {
                 rsp = WebUtils.doPost(url, requestHolder.getApplicationParams(), charset,
-                    connectTimeout, readTimeout);
+                    connectTimeout, readTimeout, proxyHost, proxyPort);
             }
         } catch (IOException e) {
             throw new AlipayApiException(e);
@@ -501,7 +508,7 @@ public class DefaultAlipayClient implements AlipayClient {
                 || (!responseIsSucess && !StringUtils.isEmpty(signItem.getSign()))) {
 
                 boolean rsaCheckContent = AlipaySignature.rsaCheck(signItem.getSignSourceDate(),
-                    signItem.getSign(), this.alipayPublicKey, this.charset, this.sign_type);
+                    signItem.getSign(), this.alipayPublicKey, this.charset, this.signType);
 
                 if (!rsaCheckContent) {
 
@@ -512,7 +519,7 @@ public class DefaultAlipayClient implements AlipayClient {
                         String srouceData = signItem.getSignSourceDate().replace("\\/", "/");
 
                         boolean jsonCheck = AlipaySignature.rsaCheck(srouceData, signItem.getSign(),
-                            this.alipayPublicKey, this.charset, this.sign_type);
+                            this.alipayPublicKey, this.charset, this.signType);
 
                         if (!jsonCheck) {
                             throw new AlipayApiException(
@@ -561,4 +568,126 @@ public class DefaultAlipayClient implements AlipayClient {
 
     }
 
+    void setServerUrl(String serverUrl) {
+        this.serverUrl = serverUrl;
+    }
+
+    void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    void setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+    }
+
+    void setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+    }
+
+    void setFormat(String format) {
+        this.format = format;
+    }
+
+    void setSignType(String signType) {
+        this.signType = signType;
+    }
+
+    void setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+    }
+
+    void setEncryptKey(String encryptKey) {
+        this.encryptKey = encryptKey;
+    }
+
+    void setAlipayPublicKey(String alipayPublicKey) {
+        this.alipayPublicKey = alipayPublicKey;
+    }
+
+    void setCharset(String charset) {
+        this.charset = charset;
+    }
+
+    void setConnectTimeout(int connectTimeout) {
+        this.connectTimeout = connectTimeout;
+    }
+
+    void setReadTimeout(int readTimeout) {
+        this.readTimeout = readTimeout;
+    }
+
+    void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    void setProxyPort(int proxyPort) {
+        this.proxyPort = proxyPort;
+    }
+
+    public static class Builder {
+        private DefaultAlipayClient client;
+
+        Builder(String serverUrl, String appId, String privateKey) {
+            client = new DefaultAlipayClient(serverUrl, appId, privateKey);
+        }
+
+        public DefaultAlipayClient build() {
+            return client;
+        }
+
+        public Builder prodCode(String prodCode) {
+            client.setProdCode(prodCode);
+            return this;
+        }
+
+        public Builder format(String format) {
+            client.setFormat(format);
+            return this;
+        }
+
+        public Builder signType(String signType) {
+            client.setSignType(signType);
+            return this;
+        }
+
+        public Builder encryptType(String encryptType) {
+            client.setEncryptType(encryptType);
+            return this;
+        }
+
+        public Builder encryptKey(String encryptKey) {
+            client.setEncryptKey(encryptKey);
+            return this;
+        }
+
+        public Builder alipayPublicKey(String alipayPublicKey) {
+            client.setAlipayPublicKey(alipayPublicKey);
+            return this;
+        }
+
+        public Builder charset(String charset) {
+            client.setCharset(charset);
+            return this;
+        }
+
+        public Builder connectTimeout(int connectTimeout) {
+            client.setConnectTimeout(connectTimeout);
+            return this;
+        }
+
+        public Builder readTimeout(int readTimeout) {
+            client.setReadTimeout(readTimeout);
+            return this;
+        }
+
+        public Builder proxyHost(String proxyHost) {
+            client.setProxyHost(proxyHost);
+            return this;
+        }
+
+        public Builder proxyPort(int proxyPort) {
+            client.setProxyPort(proxyPort);
+            return this;
+        }
+    }
 }

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 供应商回传码物料对应的码值记录对象
  *
  * @author auto create
- * @since 1.0, 2017-07-27 19:41:52
+ * @since 1.0, 2017-11-21 17:40:30
  */
 public class AccessReturnQrcode extends AlipayObject {
 
-	private static final long serialVersionUID = 7621345178185986929L;
+	private static final long serialVersionUID = 1512747322483464577L;
 
 	/**
 	 * 采购单ID

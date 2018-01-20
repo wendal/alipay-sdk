@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 数据维度关系模型
  *
  * @author auto create
- * @since 1.0, 2017-08-10 16:22:11
+ * @since 1.0, 2017-12-21 21:39:30
  */
 public class DataDim extends AlipayObject {
 
-	private static final long serialVersionUID = 6749772868183441318L;
+	private static final long serialVersionUID = 2468991242986987378L;
 
 	/**
 	 * 维度名称，代表维度层级含义

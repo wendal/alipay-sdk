@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 理赔报案时相关的保单信息
  *
  * @author auto create
- * @since 1.0, 2017-09-19 10:00:11
+ * @since 1.0, 2017-11-02 12:01:15
  */
 public class InsClaimPolicy extends AlipayObject {
 
-	private static final long serialVersionUID = 1215587355383842168L;
+	private static final long serialVersionUID = 1341887772199871937L;
 
 	/**
 	 * 保单号

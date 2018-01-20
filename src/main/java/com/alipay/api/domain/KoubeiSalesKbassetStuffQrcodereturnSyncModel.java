@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 回传码物料码值
  *
  * @author auto create
- * @since 1.0, 2017-07-27 19:41:52
+ * @since 1.0, 2017-11-21 17:40:30
  */
 public class KoubeiSalesKbassetStuffQrcodereturnSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3835191337295143179L;
+	private static final long serialVersionUID = 8898489786344341595L;
 
 	/**
 	 * 供应商回传码物料码值记录（最多200条）

@@ -12,11 +12,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.refund response.
  * 
  * @author auto create
- * @since 1.0, 2017-04-19 20:31:51
+ * @since 1.0, 2017-12-12 18:09:26
  */
 public class AlipayTradeRefundResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1693896255179349125L;
+	private static final long serialVersionUID = 6613973425862654212L;
 
 	/** 
 	 * 用户的登录id
@@ -53,6 +53,24 @@ public class AlipayTradeRefundResponse extends AlipayResponse {
 	 */
 	@ApiField("out_trade_no")
 	private String outTradeNo;
+
+	/** 
+	 * 本次退款金额中买家退款金额
+	 */
+	@ApiField("present_refund_buyer_amount")
+	private String presentRefundBuyerAmount;
+
+	/** 
+	 * 本次退款金额中平台优惠退款金额
+	 */
+	@ApiField("present_refund_discount_amount")
+	private String presentRefundDiscountAmount;
+
+	/** 
+	 * 本次退款金额中商家优惠退款金额
+	 */
+	@ApiField("present_refund_mdiscount_amount")
+	private String presentRefundMdiscountAmount;
 
 	/** 
 	 * 退款使用的资金渠道
@@ -126,6 +144,27 @@ public class AlipayTradeRefundResponse extends AlipayResponse {
 	}
 	public String getOutTradeNo( ) {
 		return this.outTradeNo;
+	}
+
+	public void setPresentRefundBuyerAmount(String presentRefundBuyerAmount) {
+		this.presentRefundBuyerAmount = presentRefundBuyerAmount;
+	}
+	public String getPresentRefundBuyerAmount( ) {
+		return this.presentRefundBuyerAmount;
+	}
+
+	public void setPresentRefundDiscountAmount(String presentRefundDiscountAmount) {
+		this.presentRefundDiscountAmount = presentRefundDiscountAmount;
+	}
+	public String getPresentRefundDiscountAmount( ) {
+		return this.presentRefundDiscountAmount;
+	}
+
+	public void setPresentRefundMdiscountAmount(String presentRefundMdiscountAmount) {
+		this.presentRefundMdiscountAmount = presentRefundMdiscountAmount;
+	}
+	public String getPresentRefundMdiscountAmount( ) {
+		return this.presentRefundMdiscountAmount;
 	}
 
 	public void setRefundDetailItemList(List<TradeFundBill> refundDetailItemList) {

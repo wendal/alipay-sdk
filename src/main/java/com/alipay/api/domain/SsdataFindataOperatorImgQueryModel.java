@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 获取图片验证码
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:48
+ * @since 1.0, 2017-11-02 20:44:31
  */
 public class SsdataFindataOperatorImgQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8663422795256437372L;
+	private static final long serialVersionUID = 2666779125515146971L;
 
 	/**
 	 * 系统业务流水号，在提交用户信息时获得

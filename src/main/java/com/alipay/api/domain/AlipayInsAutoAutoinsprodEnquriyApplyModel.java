@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 询价接口
  *
  * @author auto create
- * @since 1.0, 2017-10-24 17:04:59
+ * @since 1.0, 2017-12-13 11:31:24
  */
 public class AlipayInsAutoAutoinsprodEnquriyApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3133162114175446129L;
+	private static final long serialVersionUID = 8892849378943429152L;
 
 	/**
 	 * 代理人身份信息
@@ -20,7 +20,7 @@ public class AlipayInsAutoAutoinsprodEnquriyApplyModel extends AlipayObject {
 	private InsPerson agent;
 
 	/**
-	 * 保险师代理人userId
+	 * 代理人userId
 	 */
 	@ApiField("agent_user_id")
 	private String agentUserId;

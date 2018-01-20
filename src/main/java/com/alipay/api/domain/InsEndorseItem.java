@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 保险批单项
  *
  * @author auto create
- * @since 1.0, 2016-12-29 17:49:22
+ * @since 1.0, 2017-11-30 13:57:01
  */
 public class InsEndorseItem extends AlipayObject {
 
-	private static final long serialVersionUID = 4617731841251416186L;
+	private static final long serialVersionUID = 4534194784695136854L;
 
 	/**
 	 * 批单项新值

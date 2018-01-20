@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 协议授权-全网
  *
  * @author auto create
- * @since 1.0, 2017-10-09 11:25:22
+ * @since 1.0, 2017-12-15 15:40:39
  */
 public class AlipayUserAuthZhimaperInternalApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4584791786622716817L;
+	private static final long serialVersionUID = 5617872977824645561L;
 
 	/**
 	 * 证件号码
@@ -24,6 +24,12 @@ public class AlipayUserAuthZhimaperInternalApplyModel extends AlipayObject {
 	 */
 	@ApiField("cert_type")
 	private String certType;
+
+	/**
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
 
 	/**
 	 * 手机号码
@@ -49,6 +55,13 @@ public class AlipayUserAuthZhimaperInternalApplyModel extends AlipayObject {
 	}
 	public void setCertType(String certType) {
 		this.certType = certType;
+	}
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
 	}
 
 	public String getMobile() {

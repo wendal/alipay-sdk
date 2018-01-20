@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询报告
  *
  * @author auto create
- * @since 1.0, 2017-10-27 09:36:17
+ * @since 1.0, 2017-11-16 19:30:59
  */
 public class SsdataFindataReportQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4476513445813691414L;
+	private static final long serialVersionUID = 7224112593558967561L;
 
 	/**
 	 * 商户在调用产品的第一个接口时系统返回的业务流水号

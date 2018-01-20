@@ -92,7 +92,7 @@ public class AlipayUserTestRequest implements AlipayRequest<AlipayUserTestRespon
 
 	public Map<String, String> getTextParams() {		
 		AlipayHashMap txtParams = new AlipayHashMap();
-		txtParams.put("userinfo", this.userinfo);
+		txtParams.put("userinfo", new com.alipay.api.internal.util.json.JSONWriter().write(this.userinfo, true));
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);
 		}

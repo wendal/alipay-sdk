@@ -268,7 +268,7 @@ deadline（int）：文章的失效时间，单位秒
 		txtParams.put("title", this.title);
 		txtParams.put("unique_msg_id", this.uniqueMsgId);
 		txtParams.put("video_length", this.videoLength);
-		txtParams.put("video_samples", this.videoSamples);
+		txtParams.put("video_samples", new com.alipay.api.internal.util.json.JSONWriter().write(this.videoSamples, true));
 		txtParams.put("video_size", this.videoSize);
 		txtParams.put("video_source", this.videoSource);
 		txtParams.put("video_temporary_url", this.videoTemporaryUrl);

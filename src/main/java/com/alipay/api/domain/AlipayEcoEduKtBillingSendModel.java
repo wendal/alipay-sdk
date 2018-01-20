@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 教育缴费账单发送接口
  *
  * @author auto create
- * @since 1.0, 2017-08-03 10:58:34
+ * @since 1.0, 2017-12-20 11:40:22
  */
 public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6187721482528198581L;
+	private static final long serialVersionUID = 5448118935452867313L;
 
 	/**
 	 * 总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]
@@ -34,6 +34,13 @@ public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 	@ApiListField("charge_item")
 	@ApiField("charge_items")
 	private List<ChargeItems> chargeItem;
+
+	/**
+	 * 缴费项模式：空或"N"，表示缴费项不可选，
+"M"表示缴费项为可选 ，支持单选和多选。
+	 */
+	@ApiField("charge_type")
+	private String chargeType;
 
 	/**
 	 * 孩子名字
@@ -72,7 +79,7 @@ public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 	private String outTradeNo;
 
 	/**
-	 * ISV_NO, 支付宝签约后，返回给ISV编号
+	 * Isv支付宝pid, 支付宝签约后，返回给ISV编号
 	 */
 	@ApiField("partner_id")
 	private String partnerId;
@@ -102,13 +109,14 @@ public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 	private String studentCode;
 
 	/**
-	 * 学生的身份证号，如果ISV有学生身份证号，则同步身份证号作为学生唯一标识。此字段与student_code、家长user_mobile至少选一个
+	 * 学生的身份证号，如果ISV有学生身份证号，则同步身份证号作为学生唯一标识。此字段与student_code、家长user_mobile至少选一个。
+大陆身份证必须是18位 ， 其它地区或国家的身份证开头需要加"IC"开头区分并且不超过18位，但查询账单的时候不要带"IC"
 	 */
 	@ApiField("student_identify")
 	private String studentIdentify;
 
 	/**
-	 * 孩子的家长信息，最多一次输入20个家长，此字段做为识别家长的孩子用，与student_identify、student_code至少选一个
+	 * 孩子的家长信息，最多一次输入10个家长，此字段做为识别家长的孩子用，与student_identify、student_code至少选一个
 	 */
 	@ApiListField("users")
 	@ApiField("user_details")
@@ -133,6 +141,13 @@ public class AlipayEcoEduKtBillingSendModel extends AlipayObject {
 	}
 	public void setChargeItem(List<ChargeItems> chargeItem) {
 		this.chargeItem = chargeItem;
+	}
+
+	public String getChargeType() {
+		return this.chargeType;
+	}
+	public void setChargeType(String chargeType) {
+		this.chargeType = chargeType;
 	}
 
 	public String getChildName() {

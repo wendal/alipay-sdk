@@ -7,20 +7,20 @@ import com.alipay.api.internal.mapping.ApiField;
  * 间连商户地址信息
  *
  * @author auto create
- * @since 1.0, 2017-08-23 15:05:01
+ * @since 1.0, 2017-11-28 17:51:42
  */
 public class AddressInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3353653883299295157L;
+	private static final long serialVersionUID = 2235931186961327726L;
 
 	/**
-	 * 商户详细经营地址
+	 * 地址。商户详细经营地址或人员所在地点
 	 */
 	@ApiField("address")
 	private String address;
 
 	/**
-	 * 商户所在城市编码，城市编码是与国家统计局一致，请查询:
+	 * 城市编码，城市编码是与国家统计局一致，请查询:
 http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/
 国标省市区号下载：http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7629140.0.0.qRW4KQ&file=2016.xls
 	 */
@@ -28,7 +28,7 @@ http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/
 	private String cityCode;
 
 	/**
-	 * 商户所在区县编码，区县编码是与国家统计局一致，请查询: http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/ 国标省市区号下载：http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7629140.0.0.qRW4KQ&file=2016.xls
+	 * 区县编码，区县编码是与国家统计局一致，请查询: http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/ 国标省市区号下载：http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7629140.0.0.qRW4KQ&file=2016.xls
 	 */
 	@ApiField("district_code")
 	private String districtCode;
@@ -48,7 +48,7 @@ http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/
 	private String longitude;
 
 	/**
-	 * 商户所在省份编码，
+	 * 省份编码，
 省份编码是与国家统计局一致，请查询:
 http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/
 国标省市区号下载：http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7629140.0.0.qRW4KQ&file=2016.xls

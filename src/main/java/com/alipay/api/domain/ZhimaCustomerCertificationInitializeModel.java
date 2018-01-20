@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 认证初始化
  *
  * @author auto create
- * @since 1.0, 2017-10-26 17:39:09
+ * @since 1.0, 2017-12-19 19:09:31
  */
 public class ZhimaCustomerCertificationInitializeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5363657144696229235L;
+	private static final long serialVersionUID = 3271149458391872395L;
 
 	/**
 	 * 认证场景码，常用的场景码有：FACE：人脸认证。入参支持的认证场景码和商户签约的认证场景相关，详见芝麻认证快速接入文档
@@ -30,6 +30,12 @@ public class ZhimaCustomerCertificationInitializeModel extends AlipayObject {
 	 */
 	@ApiField("identity_param")
 	private String identityParam;
+
+	/**
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
 
 	/**
 	 * 商户可选的一些设置
@@ -68,6 +74,13 @@ public class ZhimaCustomerCertificationInitializeModel extends AlipayObject {
 	}
 	public void setIdentityParam(String identityParam) {
 		this.identityParam = identityParam;
+	}
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
 	}
 
 	public String getMerchantConfig() {

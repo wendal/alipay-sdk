@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.campaign.cash.trigger response.
  * 
  * @author auto create
- * @since 1.0, 2017-07-14 11:53:19
+ * @since 1.0, 2017-11-17 12:14:24
  */
 public class AlipayMarketingCampaignCashTriggerResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5398598237335618517L;
+	private static final long serialVersionUID = 3847219331298917283L;
 
 	/** 
 	 * 支付宝业务号,发奖成功时返回,调用者可提供此字符串进行问题排查与核对等
@@ -39,7 +39,7 @@ public class AlipayMarketingCampaignCashTriggerResponse extends AlipayResponse {
 	private String merchantLogo;
 
 	/** 
-	 * 外部业务号,回填请求中的out_biz_no,请求者可用于日志记录与核对等
+	 * 外部业务号,回填请求中的out_biz_no,请求参数中传了out_biz_no就会回传回去，如果不传就回传默认的"default_out_biz_no"，请求者可用于日志记录与核对等
 	 */
 	@ApiField("out_biz_no")
 	private String outBizNo;
@@ -69,7 +69,7 @@ public class AlipayMarketingCampaignCashTriggerResponse extends AlipayResponse {
 	private String repeatTriggerFlag;
 
 	/** 
-	 * 是否中奖结果状态，如果为true时返回的结果中的其他字段非空，否则返回的其他字段为空
+	 * 是否中奖结果状态，取值为true或false。如果为true表示发奖成功，这时返回的结果中的其他字段非空；如果为false表示发奖失败，这时返回的其他字段为空
 	 */
 	@ApiField("trigger_result")
 	private String triggerResult;

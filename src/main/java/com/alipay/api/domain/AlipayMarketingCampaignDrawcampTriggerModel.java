@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 营销抽奖活动触发
  *
  * @author auto create
- * @since 1.0, 2017-07-31 14:54:41
+ * @since 1.0, 2017-12-04 10:02:45
  */
 public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2386746419126939617L;
+	private static final long serialVersionUID = 7355919498628337523L;
 
 	/**
 	 * 用户参与活动的手机号（如果是用户直接输入手机号的活动形式，该项必填，作为识别用户的依据）
@@ -20,7 +20,7 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	private String bindMobile;
 
 	/**
-	 * 活动id
+	 * 活动id，获取方式：调用方通过活动创建接口alipay.marketing.campaign.drawcamp.create 生成；联系支付宝运营同学获取（适用于支付宝平台活动，由合作伙伴调用触发）
 	 */
 	@ApiField("camp_id")
 	private String campId;
@@ -32,7 +32,7 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	private Long campSource;
 
 	/**
-	 * 渠道来源参数
+	 * 渠道来源参数，记录调用方level 1~n级渠道来源信息，用于业务数据统计和分析
 	 */
 	@ApiField("channel_info")
 	private String channelInfo;
@@ -50,7 +50,13 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	private String jsonUa;
 
 	/**
-	 * 用户登录号/用户uid，非脱敏账号
+	 * 用户登录账号名：邮箱或手机号。已知支付宝账号的活动触发调用中，user_id与login_id至少有一个非空，都非空时，以user_id为准。
+	 */
+	@ApiField("login_id")
+	private String loginId;
+
+	/**
+	 * 支付宝用户uid：支付宝用户唯一标识。该参数用于已知支付宝账号的活动触发。user_id、login_id、bind_mobile三个参数至少有一个非空。
 	 */
 	@ApiField("user_id")
 	private String userId;
@@ -95,6 +101,13 @@ public class AlipayMarketingCampaignDrawcampTriggerModel extends AlipayObject {
 	}
 	public void setJsonUa(String jsonUa) {
 		this.jsonUa = jsonUa;
+	}
+
+	public String getLoginId() {
+		return this.loginId;
+	}
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
 
 	public String getUserId() {

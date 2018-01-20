@@ -10,11 +10,17 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 分散式(整租/合租)房源同步
  *
  * @author auto create
- * @since 1.0, 2017-08-04 14:14:47
+ * @since 1.0, 2017-12-22 17:39:12
  */
 public class AlipayEcoRenthouseRoomDispersionSyncModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7247848254263839555L;
+	private static final long serialVersionUID = 3858221177176832596L;
+
+	/**
+	 * 阿里短号
+	 */
+	@ApiField("ali_short_num")
+	private String aliShortNum;
 
 	/**
 	 * 户型-房
@@ -30,7 +36,14 @@ public class AlipayEcoRenthouseRoomDispersionSyncModel extends AlipayObject {
 	private String checkinTime;
 
 	/**
-	 * 小区Code,详见文档
+	 * 小区同步请求号
+	 */
+	@ApiField("comm_req_id")
+	private String commReqId;
+
+	/**
+	 * 小区Code和小区请求号必输入其一
+小区Code,详见文档
 http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/CommunityInfos.xls
 	 */
 	@ApiField("community_code")
@@ -214,6 +227,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	@ApiField("total_floor_count")
 	private String totalFloorCount;
 
+	public String getAliShortNum() {
+		return this.aliShortNum;
+	}
+	public void setAliShortNum(String aliShortNum) {
+		this.aliShortNum = aliShortNum;
+	}
+
 	public Long getBedroomCount() {
 		return this.bedroomCount;
 	}
@@ -226,6 +246,13 @@ http://ecopublic.oss-cn-hangzhou.aliyuncs.com/eco/tpmogo/CommunityInfos/Communit
 	}
 	public void setCheckinTime(String checkinTime) {
 		this.checkinTime = checkinTime;
+	}
+
+	public String getCommReqId() {
+		return this.commReqId;
+	}
+	public void setCommReqId(String commReqId) {
+		this.commReqId = commReqId;
 	}
 
 	public String getCommunityCode() {

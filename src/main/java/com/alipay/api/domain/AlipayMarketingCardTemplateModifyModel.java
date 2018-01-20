@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 会员卡模板修改
  *
  * @author auto create
- * @since 1.0, 2017-08-24 15:51:53
+ * @since 1.0, 2017-10-27 18:39:12
  */
 public class AlipayMarketingCardTemplateModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8598479533583448954L;
+	private static final long serialVersionUID = 5882351425245861672L;
 
 	/**
 	 * 业务卡号前缀，由商户指定
@@ -38,6 +38,12 @@ public class AlipayMarketingCardTemplateModifyModel extends AlipayObject {
 	@ApiListField("card_level_conf")
 	@ApiField("template_card_level_conf_d_t_o")
 	private List<TemplateCardLevelConfDTO> cardLevelConf;
+
+	/**
+	 * 卡特定标签，只供特定业务使用，通常接入无需关注
+	 */
+	@ApiField("card_spec_tag")
+	private String cardSpecTag;
 
 	/**
 	 * 栏位信息（卡包详情页面展现的栏位）
@@ -147,6 +153,13 @@ mdbarcode: 商户动态条码，扫码得商户自主传入的码值
 	}
 	public void setCardLevelConf(List<TemplateCardLevelConfDTO> cardLevelConf) {
 		this.cardLevelConf = cardLevelConf;
+	}
+
+	public String getCardSpecTag() {
+		return this.cardSpecTag;
+	}
+	public void setCardSpecTag(String cardSpecTag) {
+		this.cardSpecTag = cardSpecTag;
 	}
 
 	public List<TemplateColumnInfoDTO> getColumnInfoList() {

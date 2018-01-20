@@ -7,14 +7,14 @@ import com.alipay.api.internal.mapping.ApiField;
  * 欺诈关注清单
  *
  * @author auto create
- * @since 1.0, 2017-10-13 14:18:41
+ * @since 1.0, 2017-10-30 10:56:24
  */
 public class ZhimaCreditAntifraudRiskListModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3887163266524278656L;
+	private static final long serialVersionUID = 7573174291523493649L;
 
 	/**
-	 * 地址信息。省+市+区/县+详细地址，其中 省+市+区/县可以为空，长度不超过256，不含",","/u0001"，"|","&","^","\\"
+	 * 地址信息。省+市+区/县+详细地址，长度不超过256，不含",","/u0001"，"|","&","^","\\"
 	 */
 	@ApiField("address")
 	private String address;

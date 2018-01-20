@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * trade_voucher商品查询信息
  *
  * @author auto create
- * @since 1.0, 2017-08-04 12:34:29
+ * @since 1.0, 2018-01-03 11:23:14
  */
 public class ItemQueryResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 2869683293155816194L;
+	private static final long serialVersionUID = 7865564684423428365L;
 
 	/**
 	 * 口碑商品所属的后台类目id，后台类目数据来源：开放接口koubei.item.category.children.batchquery（查询后台类目树接口）

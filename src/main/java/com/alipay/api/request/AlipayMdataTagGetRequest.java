@@ -104,7 +104,7 @@ public class AlipayMdataTagGetRequest implements AlipayRequest<AlipayMdataTagGet
 
 	public Map<String, String> getTextParams() {		
 		AlipayHashMap txtParams = new AlipayHashMap();
-		txtParams.put("required_tags", this.requiredTags);
+		txtParams.put("required_tags", new com.alipay.api.internal.util.json.JSONWriter().write(this.requiredTags, true));
 		txtParams.put("user_id", this.userId);
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);

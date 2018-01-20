@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 风险解释
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:42
+ * @since 1.0, 2017-12-14 11:01:51
  */
 public class InfoCode extends AlipayObject {
 
-	private static final long serialVersionUID = 3249825481383118568L;
+	private static final long serialVersionUID = 1793834719866719823L;
 
 	/**
 	 * 风险描述
@@ -32,7 +32,7 @@ public class InfoCode extends AlipayObject {
 	private String riskFactorName;
 
 	/**
-	 * 风险度量
+	 * 风险度量，子特征风险分，范围 0-10，值越大表示风险越高
 	 */
 	@ApiField("risk_magnitude")
 	private String riskMagnitude;

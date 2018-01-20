@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 直连代扣协议查询接口
  *
  * @author auto create
- * @since 1.0, 2017-08-04 11:19:46
+ * @since 1.0, 2018-01-02 20:27:24
  */
 public class AlipayEbppPdeductSignQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2779521422649315834L;
+	private static final long serialVersionUID = 4171697562837727283L;
 
 	/**
 	 * 支付宝代扣协议Id。若协议id不传递，则需要保证业务类型、子业务类型、出账机构、户号必传

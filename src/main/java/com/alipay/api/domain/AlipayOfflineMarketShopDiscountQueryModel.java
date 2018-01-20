@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 基于门店id的优惠查询服务
  *
  * @author auto create
- * @since 1.0, 2017-08-07 20:34:11
+ * @since 1.0, 2017-12-19 18:45:25
  */
 public class AlipayOfflineMarketShopDiscountQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3215298738329772872L;
+	private static final long serialVersionUID = 4341121246883667546L;
 
 	/**
 	 * 查询类型 目前取值：MERCHANT(商户活动)，  如果不传递该参数或者指定参数值，出参只返回item_list，discount_list， 反之返回camp_num,camp_list

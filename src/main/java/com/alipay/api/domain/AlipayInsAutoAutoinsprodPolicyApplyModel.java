@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 下单请求接口
  *
  * @author auto create
- * @since 1.0, 2017-10-24 17:03:12
+ * @since 1.0, 2017-12-13 11:31:33
  */
 public class AlipayInsAutoAutoinsprodPolicyApplyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8765498823643683448L;
+	private static final long serialVersionUID = 5451783298275515211L;
 
 	/**
 	 * 邮寄信息
@@ -26,7 +26,7 @@ public class AlipayInsAutoAutoinsprodPolicyApplyModel extends AlipayObject {
 	private String enquiryBizId;
 
 	/**
-	 * 指定保险公司支付宝收款账户,一般为保险公司收款账号登录ID，最终以保险师给出示例为准
+	 * 指定保险公司支付宝收款账户,一般为保险公司收款账号登录ID
 	 */
 	@ApiField("income_account_no")
 	private String incomeAccountNo;

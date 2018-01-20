@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.Proxy.Type;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -89,36 +92,28 @@ public abstract class WebUtils {
     }
 
     /**
-     * 执行HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param params 请求参数
-     * @return 响应字符串
-     * @throws IOException
-     */
-    public static String doPost(String url, Map<String, String> params, int connectTimeout,
-                                int readTimeout) throws IOException {
-        return doPost(url, params, DEFAULT_CHARSET, connectTimeout, readTimeout);
-    }
-
-    /**
-     * 执行HTTP POST请求。
+     * 执行HTTP POST请求，可使用代理proxy。
      * 
      * @param url 请求地址
      * @param params 请求参数
      * @param charset 字符集，如UTF-8, GBK, GB2312
+     * @param connectTimeout 连接超时时间
+     * @param readTimeout 请求超时时间
+     * @param proxyHost 代理host，传null表示不使用代理
+     * @param proxyPort 代理端口，传0表示不使用代理
      * @return 响应字符串
      * @throws IOException
      */
     public static String doPost(String url, Map<String, String> params, String charset,
-                                int connectTimeout, int readTimeout) throws IOException {
+                                int connectTimeout, int readTimeout, String proxyHost,
+                                int proxyPort) throws IOException {
         String ctype = "application/x-www-form-urlencoded;charset=" + charset;
         String query = buildQuery(params, charset);
         byte[] content = {};
         if (query != null) {
             content = query.getBytes(charset);
         }
-        return doPost(url, ctype, content, connectTimeout, readTimeout);
+        return doPost(url, ctype, content, connectTimeout, readTimeout, proxyHost, proxyPort);
     }
 
     /**
@@ -127,17 +122,26 @@ public abstract class WebUtils {
      * @param url 请求地址
      * @param ctype 请求类型
      * @param content 请求字节数组
+     * @param connectTimeout 连接超时时间
+     * @param readTimeout 请求超时时间
+     * @param proxyHost 代理host，传null表示不使用代理
+     * @param proxyPort 代理端口，传0表示不使用代理
      * @return 响应字符串
      * @throws IOException
      */
     public static String doPost(String url, String ctype, byte[] content, int connectTimeout,
-                                int readTimeout) throws IOException {
+                                int readTimeout, String proxyHost, int proxyPort) throws IOException {
         HttpURLConnection conn = null;
         OutputStream out = null;
         String rsp = null;
         try {
             try {
-                conn = getConnection(new URL(url), METHOD_POST, ctype);
+                conn = null;
+                if (!StringUtils.isEmpty(proxyHost)) {
+                    conn = getConnection(new URL(url), METHOD_POST, ctype, proxyHost, proxyPort);
+                } else {
+                    conn = getConnection(new URL(url), METHOD_POST, ctype);
+                }
                 conn.setConnectTimeout(connectTimeout);
                 conn.setReadTimeout(readTimeout);
             } catch (IOException e) {
@@ -172,36 +176,22 @@ public abstract class WebUtils {
      * 执行带文件上传的HTTP POST请求。
      * 
      * @param url 请求地址
-     * @param textParams 文本请求参数
-     * @param fileParams 文件请求参数
-     * @return 响应字符串
-     * @throws IOException
-     */
-    public static String doPost(String url, Map<String, String> params,
-                                Map<String, FileItem> fileParams, int connectTimeout,
-                                int readTimeout) throws IOException {
-        if (fileParams == null || fileParams.isEmpty()) {
-            return doPost(url, params, DEFAULT_CHARSET, connectTimeout, readTimeout);
-        } else {
-            return doPost(url, params, fileParams, DEFAULT_CHARSET, connectTimeout, readTimeout);
-        }
-    }
-
-    /**
-     * 执行带文件上传的HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param textParams 文本请求参数
+     * @param params 文本请求参数
      * @param fileParams 文件请求参数
      * @param charset 字符集，如UTF-8, GBK, GB2312
+     * @param connectTimeout 连接超时时间
+     * @param readTimeout 请求超时时间
+     * @param proxyHost 代理host，传null表示不使用代理
+     * @param proxyPort 代理端口，传0表示不使用代理
      * @return 响应字符串
      * @throws IOException
      */
     public static String doPost(String url, Map<String, String> params,
                                 Map<String, FileItem> fileParams, String charset,
-                                int connectTimeout, int readTimeout) throws IOException {
+                                int connectTimeout, int readTimeout, String proxyHost,
+                                int proxyPort) throws IOException {
         if (fileParams == null || fileParams.isEmpty()) {
-            return doPost(url, params, charset, connectTimeout, readTimeout);
+            return doPost(url, params, charset, connectTimeout, readTimeout, proxyHost, proxyPort);
         }
 
         String boundary = System.currentTimeMillis() + ""; // 随机分隔线
@@ -211,7 +201,12 @@ public abstract class WebUtils {
         try {
             try {
                 String ctype = "multipart/form-data;boundary=" + boundary + ";charset=" + charset;
-                conn = getConnection(new URL(url), METHOD_POST, ctype);
+                conn = null;
+                if (!StringUtils.isEmpty(proxyHost)) {
+                    conn = getConnection(new URL(url), METHOD_POST, ctype, proxyHost, proxyPort);
+                } else {
+                    conn = getConnection(new URL(url), METHOD_POST, ctype);
+                }
                 conn.setConnectTimeout(connectTimeout);
                 conn.setReadTimeout(readTimeout);
             } catch (IOException e) {
@@ -344,16 +339,35 @@ public abstract class WebUtils {
         return rsp;
     }
 
-    private static HttpURLConnection getConnection(URL url, String method,
-                                                   String ctype) throws IOException {
+    private static HttpURLConnection getConnection(URL url, String method, String ctype) throws IOException {
+        return getConnection(url, method, ctype, null);
+    }
+
+    private static HttpURLConnection getConnection(URL url, String method, String ctype,
+                                                   String proxyHost, int proxyPort) throws IOException {
+        Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress(proxyHost, proxyPort));
+        return getConnection(url, method, ctype, proxy);
+    }
+
+    private static HttpURLConnection getConnection(URL url, String method, String ctype, Proxy proxy) throws IOException {
         HttpURLConnection conn = null;
         if ("https".equals(url.getProtocol())) {
-            HttpsURLConnection connHttps = (HttpsURLConnection) url.openConnection();
+            HttpsURLConnection connHttps = null;
+            if (proxy != null) {
+                connHttps = (HttpsURLConnection) url.openConnection(proxy);
+            } else {
+                connHttps = (HttpsURLConnection) url.openConnection();
+            }
             connHttps.setSSLSocketFactory(socketFactory);
             connHttps.setHostnameVerifier(verifier);
             conn = connHttps;
         } else {
-            conn = (HttpURLConnection) url.openConnection();
+            conn = null;
+            if (proxy != null) {
+                conn = (HttpURLConnection) url.openConnection(proxy);
+            } else {
+                conn = (HttpURLConnection) url.openConnection();
+            }
         }
 
         conn.setRequestMethod(method);

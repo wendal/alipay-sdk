@@ -10,17 +10,23 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: zhima.credit.antifraud.risk.list response.
  * 
  * @author auto create
- * @since 1.0, 2017-10-13 14:18:41
+ * @since 1.0, 2017-10-30 10:56:24
  */
 public class ZhimaCreditAntifraudRiskListResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6644885351699799367L;
+	private static final long serialVersionUID = 6536153824599866198L;
 
 	/** 
 	 * 芝麻信用对于每一次请求返回的业务号。后续可以通过此业务号进行对账
 	 */
 	@ApiField("biz_no")
 	private String bizNo;
+
+	/** 
+	 * 决策结果，可空，取值当前为REJECT\REVIEW\PASS，产品定制使用。根据产品定制配置，对结果进行决策返回
+	 */
+	@ApiField("decision_result")
+	private String decisionResult;
 
 	/** 
 	 * 是否命中风险编码，yes标识命中，no标识未命中
@@ -35,11 +41,24 @@ public class ZhimaCreditAntifraudRiskListResponse extends AlipayResponse {
 	@ApiField("string")
 	private List<String> riskCode;
 
+	/** 
+	 * 方案ID，可空，产品定制使用。在线可能会存在多个方案并行，方案ID标识当前请求使用的在线方案
+	 */
+	@ApiField("solution_id")
+	private String solutionId;
+
 	public void setBizNo(String bizNo) {
 		this.bizNo = bizNo;
 	}
 	public String getBizNo( ) {
 		return this.bizNo;
+	}
+
+	public void setDecisionResult(String decisionResult) {
+		this.decisionResult = decisionResult;
+	}
+	public String getDecisionResult( ) {
+		return this.decisionResult;
 	}
 
 	public void setHitRisk(String hitRisk) {
@@ -54,6 +73,13 @@ public class ZhimaCreditAntifraudRiskListResponse extends AlipayResponse {
 	}
 	public List<String> getRiskCode( ) {
 		return this.riskCode;
+	}
+
+	public void setSolutionId(String solutionId) {
+		this.solutionId = solutionId;
+	}
+	public String getSolutionId( ) {
+		return this.solutionId;
 	}
 
 }

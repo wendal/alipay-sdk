@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询图像定损结果
  *
  * @author auto create
- * @since 1.0, 2017-07-28 15:30:06
+ * @since 1.0, 2017-11-10 14:37:02
  */
 public class AlipayInsDataAutodamageEstimateQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4194398639121889516L;
+	private static final long serialVersionUID = 1781224482968247423L;
 
 	/**
 	 * 保险公司定损单号，同之前调用的“提交车险图像定损请求”接口中的定损单号。

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 行业数据发送接口
  *
  * @author auto create
- * @since 1.0, 2016-11-02 21:11:24
+ * @since 1.0, 2018-01-03 12:12:19
  */
 public class AlipayCommerceDataSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7527699231989357967L;
+	private static final long serialVersionUID = 8486641514368745888L;
 
 	/**
 	 * 场景的来源渠道，比如场景

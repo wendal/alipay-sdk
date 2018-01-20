@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 物料生产指令对象, 包括物料生产的相关信息: 订单明细ID, 申请单号, 模板ID, 物料名称, 物料图片Url, 数量,  申请日期,收货人姓名,联系人电话,收货人地址等.
  *
  * @author auto create
- * @since 1.0, 2017-09-15 11:24:41
+ * @since 1.0, 2017-11-02 20:59:35
  */
 public class AssetProduceItem extends AlipayObject {
 
-	private static final long serialVersionUID = 1254431125789686421L;
+	private static final long serialVersionUID = 3876473225391148831L;
 
 	/**
 	 * 申请日期，格式yyyy-MM-dd HH：mm:ss
@@ -43,6 +43,12 @@ public class AssetProduceItem extends AlipayObject {
 	 */
 	@ApiField("assign_item_id")
 	private String assignItemId;
+
+	/**
+	 * 业务渠道
+	 */
+	@ApiField("biz_tag")
+	private String bizTag;
 
 	/**
 	 * city
@@ -93,10 +99,22 @@ public class AssetProduceItem extends AlipayObject {
 	private String logisticsNo;
 
 	/**
+	 * 生产指令描述
+	 */
+	@ApiField("memo")
+	private String memo;
+
+	/**
 	 * 收件人地址邮编; 收钱码吊牌和贴纸类型不为空
 	 */
 	@ApiField("postcode")
 	private String postcode;
+
+	/**
+	 * 生产单号
+	 */
+	@ApiField("produce_order")
+	private String produceOrder;
 
 	/**
 	 * 省
@@ -175,6 +193,13 @@ public class AssetProduceItem extends AlipayObject {
 		this.assignItemId = assignItemId;
 	}
 
+	public String getBizTag() {
+		return this.bizTag;
+	}
+	public void setBizTag(String bizTag) {
+		this.bizTag = bizTag;
+	}
+
 	public String getCity() {
 		return this.city;
 	}
@@ -231,11 +256,25 @@ public class AssetProduceItem extends AlipayObject {
 		this.logisticsNo = logisticsNo;
 	}
 
+	public String getMemo() {
+		return this.memo;
+	}
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
+
 	public String getPostcode() {
 		return this.postcode;
 	}
 	public void setPostcode(String postcode) {
 		this.postcode = postcode;
+	}
+
+	public String getProduceOrder() {
+		return this.produceOrder;
+	}
+	public void setProduceOrder(String produceOrder) {
+		this.produceOrder = produceOrder;
 	}
 
 	public String getProvince() {

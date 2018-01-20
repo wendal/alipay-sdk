@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 身份核验服务结果确认接口
  *
  * @author auto create
- * @since 1.0, 2017-09-28 15:13:38
+ * @since 1.0, 2017-12-13 16:40:08
  */
 public class AlipaySecurityRiskVerifyidentityConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8111368424941288656L;
+	private static final long serialVersionUID = 2632843582411387367L;
 
 	/**
 	 * 接入业务方业务唯一性id

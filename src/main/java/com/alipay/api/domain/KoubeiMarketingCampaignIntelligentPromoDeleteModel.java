@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 智能营销活动下架
  *
  * @author auto create
- * @since 1.0, 2017-10-12 10:54:28
+ * @since 1.0, 2017-11-17 06:02:06
  */
 public class KoubeiMarketingCampaignIntelligentPromoDeleteModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8215893738574868484L;
+	private static final long serialVersionUID = 4811743258128831461L;
 
 	/**
 	 * 操作下架的操作人信息
