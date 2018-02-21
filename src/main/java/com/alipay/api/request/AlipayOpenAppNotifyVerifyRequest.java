@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.app.notify.verify request
  * 
  * @author auto create
- * @since 1.0, 2017-12-06 20:22:54
+ * @since 1.0, 2018-01-12 16:11:37
  */
 public class AlipayOpenAppNotifyVerifyRequest implements AlipayRequest<AlipayOpenAppNotifyVerifyResponse> {
 

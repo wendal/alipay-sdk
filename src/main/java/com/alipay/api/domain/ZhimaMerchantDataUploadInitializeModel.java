@@ -7,26 +7,33 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻数据传入初始化
  *
  * @author auto create
- * @since 1.0, 2017-05-27 22:38:45
+ * @since 1.0, 2018-01-08 16:16:18
  */
 public class ZhimaMerchantDataUploadInitializeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8666873417619653759L;
+	private static final long serialVersionUID = 2357342411666355889L;
 
 	/**
-	 * 数据应用的场景编码 ，场景码和场景名称（数字为场景码）如下：
-1:负面披露
-2:信用足迹
-3:负面+足迹
-4:信用守护
-5:负面+守护
-6:足迹+守护
-7:负面+足迹+守护
-8:数据反馈
-32:骑行
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
+
+	/**
+	 * 数据应用的场景编码，场景码和场景名称（数字或字符串为场景码）如下：
+8：数据反馈
+32：骑行
+CAR_RENTING：租车行业解决方案
 	 */
 	@ApiField("scene_code")
 	private String sceneCode;
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
+	}
 
 	public String getSceneCode() {
 		return this.sceneCode;

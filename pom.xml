@@ -4,6 +4,9 @@
     <groupId>com.alipay</groupId>
     <artifactId>alipay-sdk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+	<name>Alipay API Java Sdk</name>
+	<url>https://github.com/wendal/alipay-sdk</url>
+    <description>支付宝API Java Sdk</description>
     <dependencies>
         <dependency>
             <groupId>commons-logging</groupId>

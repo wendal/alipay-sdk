@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 定金信息
  *
  * @author auto create
- * @since 1.0, 2017-11-07 17:02:04
+ * @since 1.0, 2018-01-12 10:57:19
  */
 public class AlipayEcoRenthouseBookInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 4634316143425959298L;
+	private static final long serialVersionUID = 2138664862187493247L;
 
 	/**
 	 * 定金金额

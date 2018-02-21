@@ -11,7 +11,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.advert.batchquery request
  * 
  * @author auto create
- * @since 1.0, 2017-11-02 16:07:18
+ * @since 1.0, 2018-01-05 17:40:56
  */
 public class AlipayOpenPublicAdvertBatchqueryRequest implements AlipayRequest<AlipayOpenPublicAdvertBatchqueryResponse> {
 

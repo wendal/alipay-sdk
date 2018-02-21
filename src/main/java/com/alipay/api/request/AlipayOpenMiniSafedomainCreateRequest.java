@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.mini.safedomain.create request
  * 
  * @author auto create
- * @since 1.0, 2017-12-20 11:13:14
+ * @since 1.0, 2018-01-15 15:25:38
  */
 public class AlipayOpenMiniSafedomainCreateRequest implements AlipayRequest<AlipayOpenMiniSafedomainCreateResponse> {
 

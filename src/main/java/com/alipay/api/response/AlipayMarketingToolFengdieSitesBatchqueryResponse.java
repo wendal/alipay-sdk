@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.tool.fengdie.sites.batchquery response.
  * 
  * @author auto create
- * @since 1.0, 2017-10-16 20:21:19
+ * @since 1.0, 2018-02-02 10:58:16
  */
 public class AlipayMarketingToolFengdieSitesBatchqueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1487631939249711914L;
+	private static final long serialVersionUID = 5459367614141986525L;
 
 	/** 
 	 * 获取云凤蝶站点列表返回值模型

@@ -7,22 +7,20 @@ import com.alipay.api.internal.mapping.ApiField;
  * 小程序基于模板上传版本
  *
  * @author auto create
- * @since 1.0, 2017-12-20 11:02:08
+ * @since 1.0, 2018-01-30 16:06:41
  */
 public class AlipayOpenMiniVersionUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4842335292849977621L;
+	private static final long serialVersionUID = 4241577764991384818L;
 
 	/**
-	 * 小程序版本号
+	 * 小程序版本号，版本号必须满足 x.y.z, 且均为数字
 	 */
 	@ApiField("app_version")
 	private String appVersion;
 
 	/**
-	 * 在一份ext.json文件中，会包含同app.json相同的字段和和app.json不同的字段，同app.json不同的字段详解。extEnable 是一个 Boolean 类型的字段，用于规定当前的 ext.json 文件是否生效，开发者可以通过修改这个字段来开启和关闭 extAppid 的结合开发。
-ext 字段是开发自定义的数据字段，在小程序中可以通过 my.getExtConfigSync。
-extPages 是一个对象，对象中的每个 key 应该是该小程序模板 app.json 中定义的页面，每个 key 对应的 value 是 page.json 中所规定的各项配置。当开发者设置这个配置以后，小程序框架会对应的修改相对应的 page 的配置信息。
+	 * 模板的配置参数
 	 */
 	@ApiField("ext")
 	private String ext;
@@ -32,6 +30,12 @@ extPages 是一个对象，对象中的每个 key 应该是该小程序模板 ap
 	 */
 	@ApiField("template_id")
 	private String templateId;
+
+	/**
+	 * 模板版本号，版本号必须满足 x.y.z, 且均为数字
+	 */
+	@ApiField("template_version")
+	private String templateVersion;
 
 	public String getAppVersion() {
 		return this.appVersion;
@@ -52,6 +56,13 @@ extPages 是一个对象，对象中的每个 key 应该是该小程序模板 ap
 	}
 	public void setTemplateId(String templateId) {
 		this.templateId = templateId;
+	}
+
+	public String getTemplateVersion() {
+		return this.templateVersion;
+	}
+	public void setTemplateVersion(String templateVersion) {
+		this.templateVersion = templateVersion;
 	}
 
 }

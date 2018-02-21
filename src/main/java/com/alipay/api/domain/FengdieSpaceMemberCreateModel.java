@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 创建云凤蝶空间成员返回值模型
  *
  * @author auto create
- * @since 1.0, 2017-10-13 14:21:29
+ * @since 1.0, 2018-02-02 11:00:41
  */
 public class FengdieSpaceMemberCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2282914736144127454L;
+	private static final long serialVersionUID = 1145384629934277759L;
 
 	/**
 	 * 用户的昵称

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 服务商代商家确认完成
  *
  * @author auto create
- * @since 1.0, 2016-08-25 11:11:32
+ * @since 1.0, 2018-02-05 11:00:48
  */
 public class AlipayOpenServicemarketOrderItemConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4652754311533718125L;
+	private static final long serialVersionUID = 2332921227122511712L;
 
 	/**
 	 * 商品订单ID
@@ -20,7 +20,7 @@ public class AlipayOpenServicemarketOrderItemConfirmModel extends AlipayObject {
 	private String commodityOrderId;
 
 	/**
-	 * 商家订购服务选择的某一门店的ID
+	 * 商家订购服务选择的某一门店的ID，如果该订单为口碑服务市场发布的服务所产生的订单，则此字段必填
 	 */
 	@ApiField("shop_id")
 	private String shopId;

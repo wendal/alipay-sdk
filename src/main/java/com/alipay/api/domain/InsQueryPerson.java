@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class InsQueryPerson extends AlipayObject {
 
-	private static final long serialVersionUID = 7475928922317359336L;
+	private static final long serialVersionUID = 7255366522218474913L;
 
 	/**
 	 * 证件号码;如果渠道账号字段（channel_user_id）没填则本字段为必填

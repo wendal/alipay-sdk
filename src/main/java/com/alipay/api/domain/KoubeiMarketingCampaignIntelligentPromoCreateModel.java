@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 智能营销方案创建
  *
  * @author auto create
- * @since 1.0, 2017-11-17 06:02:21
+ * @since 1.0, 2018-01-18 14:43:41
  */
 public class KoubeiMarketingCampaignIntelligentPromoCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4731886743516834647L;
+	private static final long serialVersionUID = 5828353495739576842L;
 
 	/**
 	 * 创建营销方案的上下文信息

@@ -7,17 +7,23 @@ import com.alipay.api.internal.mapping.ApiField;
  * 营销位修改接口
  *
  * @author auto create
- * @since 1.0, 2017-12-06 11:27:06
+ * @since 1.0, 2018-01-05 14:58:15
  */
 public class AlipayOpenPublicTopicModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2396715666868423882L;
+	private static final long serialVersionUID = 3516467512946733656L;
 
 	/**
 	 * 营销位图片url, 尺寸为996*450，最大不超过5M，支持格式:.jpg、.png ，请先调用<a href="https://docs.open.alipay.com/api_3/alipay.offline.material.image.upload"> 图片上传接口</a>获得图片url。营销位需要展示头图时，必须填写该参数。
 	 */
 	@ApiField("img_url")
 	private String imgUrl;
+
+	/**
+	 * 跳转类型，网页:HTTP、小程序:APP，不传默认HTTP
+	 */
+	@ApiField("link_type")
+	private String linkType;
 
 	/**
 	 * 营销位跳转地址，点击营销位头图跳到的链接url。营销位需要展示头图时，必须填写该参数。
@@ -54,6 +60,13 @@ public class AlipayOpenPublicTopicModifyModel extends AlipayObject {
 	}
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
+	}
+
+	public String getLinkType() {
+		return this.linkType;
+	}
+	public void setLinkType(String linkType) {
+		this.linkType = linkType;
 	}
 
 	public String getLinkUrl() {

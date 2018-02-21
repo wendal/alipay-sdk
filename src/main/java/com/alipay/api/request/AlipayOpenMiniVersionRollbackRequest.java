@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.mini.version.rollback request
  * 
  * @author auto create
- * @since 1.0, 2017-12-20 11:00:56
+ * @since 1.0, 2018-01-15 15:24:19
  */
 public class AlipayOpenMiniVersionRollbackRequest implements AlipayRequest<AlipayOpenMiniVersionRollbackResponse> {
 

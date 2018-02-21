@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 区域信息，包含省市区三级
  *
  * @author auto create
- * @since 1.0, 2017-12-20 10:41:32
+ * @since 1.0, 2018-01-18 17:18:08
  */
 public class RegionInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 2878714928824235667L;
+	private static final long serialVersionUID = 4446221158875244437L;
 
 	/**
 	 * 地址所属区代码

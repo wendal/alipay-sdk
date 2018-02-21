@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑商品创建接口
  *
  * @author auto create
- * @since 1.0, 2018-01-02 17:43:39
+ * @since 1.0, 2018-01-08 13:38:31
  */
 public class KoubeiItemCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4587746414395497292L;
+	private static final long serialVersionUID = 1439322153214433546L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，默认有效期24小时；isv自身角色操作的时候，无需传该参数
@@ -121,6 +121,12 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	 */
 	@ApiField("subject")
 	private String subject;
+
+	/**
+	 * 商品1:1首图，该封面图将展示在淘抢购、聚划算等商品售卖渠道。支持bmp、png、jpeg、jpg、gif格式，建议宽高比1:1，建议宽高1500*1500px，图片大小≤5M。图片大小超过5M，接口会报错。若图片尺寸不符，口碑服务器自身不会做压缩，但在口碑客户端展现时，会自动做性能优化（等比缩放，以图片中心为基准裁剪）。
+	 */
+	@ApiField("tb_cover")
+	private String tbCover;
 
 	/**
 	 * 交易凭证类商品模板信息
@@ -251,6 +257,13 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	}
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public String getTbCover() {
+		return this.tbCover;
+	}
+	public void setTbCover(String tbCover) {
+		this.tbCover = tbCover;
 	}
 
 	public KoubeiTradeVoucherItemTemplete getTradeVoucherItemTemplate() {

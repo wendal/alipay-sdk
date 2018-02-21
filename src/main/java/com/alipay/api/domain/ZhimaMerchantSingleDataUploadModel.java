@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 单条数据传入
  *
  * @author auto create
- * @since 1.0, 2017-05-27 22:38:09
+ * @since 1.0, 2018-01-08 16:13:10
  */
 public class ZhimaMerchantSingleDataUploadModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3569177864831471892L;
+	private static final long serialVersionUID = 2167631753997621951L;
 
 	/**
 	 * 公用回传参数（非必填），这个字段由商户传入，系统透传给商户，便于商户做逻辑关联，请使用json格式。
@@ -26,22 +26,22 @@ public class ZhimaMerchantSingleDataUploadModel extends AlipayObject {
 	private String data;
 
 	/**
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
+
+	/**
 	 * 主键列使用传入字段进行组合，也可以使用传入的某个单字段（确保主键稳定，而且可以很好的区分不同的数据）。例如order_no,pay_month或者order_no,bill_month组合，对于一个order_no只会有一条数据的情况，直接使用order_no作为主键列 。
 	 */
 	@ApiField("primary_keys")
 	private String primaryKeys;
 
 	/**
-	 * 数据应用的场景编码 ，场景码和场景名称（数字为场景码）如下：
-1:负面披露
-2:信用足迹
-3:负面+足迹
-4:信用守护
-5:负面+守护
-6:足迹+守护
-7:负面+足迹+守护
-8:数据反馈
-32:骑行
+	 * 数据应用的场景编码，场景码和场景名称（数字或字符串为场景码）如下：
+8：数据反馈
+32：骑行
+CAR_RENTING：租车行业解决方案
 每个场景码对应的数据模板不一样，请使用zhima.merchant.data.upload.initialize接口获取场景码对应的数据模板。
 	 */
 	@ApiField("scene_code")
@@ -59,6 +59,13 @@ public class ZhimaMerchantSingleDataUploadModel extends AlipayObject {
 	}
 	public void setData(String data) {
 		this.data = data;
+	}
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
 	}
 
 	public String getPrimaryKeys() {

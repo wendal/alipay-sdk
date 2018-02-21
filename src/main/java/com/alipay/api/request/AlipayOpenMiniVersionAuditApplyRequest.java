@@ -15,7 +15,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.mini.version.audit.apply request
  * 
  * @author auto create
- * @since 1.0, 2017-12-20 10:42:12
+ * @since 1.0, 2018-01-25 00:27:43
  */
 public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadRequest<AlipayOpenMiniVersionAuditApplyResponse> {
 
@@ -23,7 +23,7 @@ public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadReque
 	private String apiVersion="1.0";
 
 	/** 
-	* 小程序类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目
+	* 小程序类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目，详细类目可以参考https://docs.alipay.com/isv/10325
 	 */
 	private String appCategoryIds;
 
@@ -63,7 +63,7 @@ public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadReque
 	private FileItem fifthScreenShot;
 
 	/** 
-	* 小程序第一张应用截图，不能超过4MB，图片格式只支持jpg，png
+	* 实例化的小程序可以不用传第一张应用截图，小程序第一张应用截图，不能超过4MB，图片格式只支持jpg，png
 	 */
 	private FileItem firstScreenShot;
 
@@ -83,7 +83,7 @@ public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadReque
 	private String regionType;
 
 	/** 
-	* 小程序第二张应用截图，不能超过4MB，图片格式只支持jpg，png
+	* 实例化的小程序可以不用传第二张应用截图，小程序第二张应用截图，不能超过4MB，图片格式只支持jpg，png
 	 */
 	private FileItem secondScreenShot;
 
@@ -98,7 +98,7 @@ public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadReque
 	private String servicePhone;
 
 	/** 
-	* 省市区信息，当区域类型为LOCATION时，不能为空，province_code不能为空，当填写city_code时，province_code不能为空，当填写area_code时，province_code和city_code不能为空
+	* 省市区信息，当区域类型为LOCATION时，不能为空，province_code不能为空，当填写city_code时，province_code不能为空，当填写area_code时，province_code和city_code不能为空。只填province_code时，该省全部选择；province_code和city_code都填时，该市全部选择。province_code，city_code和area_code都填时，该县全部选择。具体code可以参考https://docs.alipay.com/isv/10327
 	 */
 	private List<RegionInfo> serviceRegionInfo;
 
@@ -308,7 +308,7 @@ public class AlipayOpenMiniVersionAuditApplyRequest implements AlipayUploadReque
 		txtParams.put("region_type", this.regionType);
 		txtParams.put("service_email", this.serviceEmail);
 		txtParams.put("service_phone", this.servicePhone);
-		txtParams.put("service_region_info", new com.alipay.api.internal.util.json.JSONWriter().write(this.serviceRegionInfo, true));
+		txtParams.put("service_region_info", this.serviceRegionInfo == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.serviceRegionInfo, true));
 		txtParams.put("version_desc", this.versionDesc);
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);

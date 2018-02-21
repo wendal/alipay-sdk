@@ -4,40 +4,38 @@ import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
 
 /**
- * 发票抬头
+ * 抬头信息
  *
  * @author auto create
- * @since 1.0, 2017-03-15 15:25:34
+ * @since 1.0, 2018-01-29 20:14:32
  */
 public class InvoiceTitleModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6296254166869366231L;
+	private static final long serialVersionUID = 1266794144839491936L;
 
 	/**
-	 * 是否默认
-可选值：
-false：非默认
-true：默认抬头
+	 * 是否为用户设置默认抬头
+字段值包括两种情况：
+false（非默认）
+true（默认抬头）
 	 */
 	@ApiField("is_default")
 	private Boolean isDefault;
 
 	/**
-	 * 支付宝用户登录名（脱敏后登录名）
-该字段输出接口只限
-alipay.ebpp.invoice.title.dynamic.get
+	 * 支付宝用户登录名
 	 */
 	@ApiField("logon_id")
 	private String logonId;
 
 	/**
-	 * 开户行账号
+	 * 银行账号
 	 */
 	@ApiField("open_bank_account")
 	private String openBankAccount;
 
 	/**
-	 * 开户行
+	 * 开户银行
 	 */
 	@ApiField("open_bank_name")
 	private String openBankName;
@@ -49,16 +47,16 @@ alipay.ebpp.invoice.title.dynamic.get
 	private String taxRegisterNo;
 
 	/**
-	 * 发票抬头名称
+	 * 抬头名称
 	 */
 	@ApiField("title_name")
 	private String titleName;
 
 	/**
-	 * 发票类型
-可选值：
-PERSONAL（个人抬头）
-CORPORATION（公司抬头）
+	 * 抬头类型
+字段值有两种情况抬:
+PERSONAL（个人） 
+CORPORATION（单位）
 	 */
 	@ApiField("title_type")
 	private String titleType;
@@ -70,21 +68,19 @@ CORPORATION（公司抬头）
 	private String userAddress;
 
 	/**
-	 * 用户邮箱
+	 * 邮箱
 	 */
 	@ApiField("user_email")
 	private String userEmail;
 
 	/**
 	 * 支付宝用户id
-说明：动态码获取抬头时接口（alipay.ebpp.invoice.title.dynamic.get ）用户id返回结果为加密后密文
-其他情况用户id来源于用户授权
 	 */
 	@ApiField("user_id")
 	private String userId;
 
 	/**
-	 * 联系电话，支持手机和固话两种格式
+	 * 电话号码
 	 */
 	@ApiField("user_mobile")
 	private String userMobile;

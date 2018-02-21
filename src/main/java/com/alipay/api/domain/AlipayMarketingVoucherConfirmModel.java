@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 用户确认领券
  *
  * @author auto create
- * @since 1.0, 2017-06-19 11:28:25
+ * @since 1.0, 2018-01-30 22:42:32
  */
 public class AlipayMarketingVoucherConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8323225772331288824L;
+	private static final long serialVersionUID = 8363681922843475955L;
 
 	/**
 	 * 用于决定在用户确认领券后是否重定向。可枚举：true表示需要重定向，false表示不需要重定向，不区分大小写

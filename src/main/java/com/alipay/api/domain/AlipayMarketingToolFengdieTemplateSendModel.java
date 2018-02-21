@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 分配云凤蝶站点模板
  *
  * @author auto create
- * @since 1.0, 2017-10-16 20:21:42
+ * @since 1.0, 2018-02-02 10:57:57
  */
 public class AlipayMarketingToolFengdieTemplateSendModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3111997949354619715L;
+	private static final long serialVersionUID = 4379243281598892166L;
 
 	/**
 	 * 企业 VIP 用户的ID（以 2088 开头的ID）

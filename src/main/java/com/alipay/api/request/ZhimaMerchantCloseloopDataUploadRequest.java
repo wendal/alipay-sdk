@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: zhima.merchant.closeloop.data.upload request
  * 
  * @author auto create
- * @since 1.0, 2017-06-07 14:12:15
+ * @since 1.0, 2018-01-11 15:47:27
  */
 public class ZhimaMerchantCloseloopDataUploadRequest implements AlipayUploadRequest<ZhimaMerchantCloseloopDataUploadResponse> {
 
@@ -41,6 +41,11 @@ public class ZhimaMerchantCloseloopDataUploadRequest implements AlipayUploadRequ
 	private String fileCharset;
 
 	/** 
+	* 芝麻平台服务商模式下的二级商户标识（即二级商户PID），如果是直连商户调用该接口，不需要设置
+	 */
+	private String linkedMerchantId;
+
+	/** 
 	* 主键列使用传入字段进行组合，也可以使用传入的某个单字段（确保主键稳定，而且可以很好的区分不同的数据）。例如order_no,pay_month或者order_no,bill_month组合，对于一个order_no只会有一条数据的情况，直接使用order_no作为主键列。
 	 */
 	private String primaryKeyColumns;
@@ -51,16 +56,10 @@ public class ZhimaMerchantCloseloopDataUploadRequest implements AlipayUploadRequ
 	private String records;
 
 	/** 
-	* 数据应用的场景编码 ，场景码和场景名称（数字为场景码）如下：
-1:负面披露
-2:信用足迹
-3:负面+足迹
-4:信用守护
-5:负面+守护
-6:足迹+守护
-7:负面+足迹+守护
-8:数据反馈
-32:骑行
+	* 数据应用的场景编码，场景码和场景名称（数字或字符串为场景码）如下：
+8：数据反馈
+32：骑行
+CAR_RENTING：租车行业解决方案
 每个场景码对应的数据模板不一样，请使用zhima.merchant.data.upload.initialize接口获取场景码对应的数据模板。
 	 */
 	private String sceneCode;
@@ -91,6 +90,13 @@ public class ZhimaMerchantCloseloopDataUploadRequest implements AlipayUploadRequ
 	}
 	public String getFileCharset() {
 		return this.fileCharset;
+	}
+
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
+	}
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
 	}
 
 	public void setPrimaryKeyColumns(String primaryKeyColumns) {
@@ -177,6 +183,7 @@ public class ZhimaMerchantCloseloopDataUploadRequest implements AlipayUploadRequ
 		txtParams.put("biz_ext_params", this.bizExtParams);
 		txtParams.put("columns", this.columns);
 		txtParams.put("file_charset", this.fileCharset);
+		txtParams.put("linked_merchant_id", this.linkedMerchantId);
 		txtParams.put("primary_key_columns", this.primaryKeyColumns);
 		txtParams.put("records", this.records);
 		txtParams.put("scene_code", this.sceneCode);

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 信用借还创建订单
  *
  * @author auto create
- * @since 1.0, 2017-10-31 16:00:37
+ * @since 1.0, 2018-01-29 17:49:06
  */
 public class ZhimaMerchantOrderRentCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2668132756866793695L;
+	private static final long serialVersionUID = 1649117358878264567L;
 
 	/**
 	 * 借用用户的收货地址，可选字段。推荐商户传入此值，会将此手机号码与用户身份信息进行匹配验证，防范欺诈风险。
@@ -76,10 +76,16 @@ N:不支持
 	private String depositState;
 
 	/**
-	 * 到期时间，是指最晚归还时间，表示借用用户如果超过此时间还未完结订单（未归还物品或者未支付租金）将会进入逾期状态，芝麻会给借用用户发送催收提醒。如果此时间不传入或传空，将视为无限期借用
+	 * 到期时间，请根据实际业务合理设置该值，不允许为空，格式：YYYY-MM-DD HH:MM:SS，是指最晚归还时间，表示借用用户如果超过此时间还未完结订单（未归还物品或者未支付租金）将会进入逾期状态，芝麻会给借用用户发送催收提醒；需要晚于borrow_time。
 	 */
 	@ApiField("expiry_time")
 	private String expiryTime;
+
+	/**
+	 * 扩展信息。商户发起借用服务时的扩展信息字段，格式：json，注意，如果字符串对应的json对象包含中文字符，需要对包含中文的字段进行编码
+	 */
+	@ApiField("extend_info")
+	private String extendInfo;
 
 	/**
 	 * 物品名称,最长不能超过14个汉字
@@ -239,6 +245,13 @@ YUAN_ONCE: 元/次
 	}
 	public void setExpiryTime(String expiryTime) {
 		this.expiryTime = expiryTime;
+	}
+
+	public String getExtendInfo() {
+		return this.extendInfo;
+	}
+	public void setExtendInfo(String extendInfo) {
+		this.extendInfo = extendInfo;
 	}
 
 	public String getGoodsName() {

@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 智能营销活动模型
  *
  * @author auto create
- * @since 1.0, 2017-11-17 06:01:58
+ * @since 1.0, 2018-01-23 18:13:57
  */
 public class IntelligentPromo extends AlipayObject {
 
-	private static final long serialVersionUID = 1349713893376827425L;
+	private static final long serialVersionUID = 6143269633654684464L;
 
 	/**
 	 * 是否允许自动续期
@@ -30,13 +30,13 @@ public class IntelligentPromo extends AlipayObject {
 	private String auditStatus;
 
 	/**
-	 * 创建活动时填入的外部流水号，这个只在查询时使用，创建和修改无效
+	 * 请求幂等控制请求参数，该参数尽量比较复杂，建议使用uuid，否则触发幂等返回。
 	 */
 	@ApiField("create_request_no")
 	private String createRequestNo;
 
 	/**
-	 * 创建人信息
+	 * 当前创建人信息，如服务商替商户创建，则为服务商信息，销售小二创建，则为销售小二信息，商户小二创建，则为商户小二信息。（为了追溯创建人信息，请务必仔细填写）
 	 */
 	@ApiField("creator_info")
 	private PromoOperatorInfo creatorInfo;
@@ -48,13 +48,13 @@ public class IntelligentPromo extends AlipayObject {
 	private String desc;
 
 	/**
-	 * 活动扩展信息。活动推荐会返回扩展信息，推荐完以后，这里的信息要在活动效果预测，创建接口中也需要原样带回来；
+	 * 活动扩展信息，通过《koubei.marketing.campaign.intelligent.promo.consult智能方案咨询接口》推荐出的方案扩展信息字段，调用《koubei.marketing.campaign.intelligent.promo.create创建智能方案》接口必须要原路带回，不能删减字段。
 	 */
 	@ApiField("ext_info")
 	private String extInfo;
 
 	/**
-	 * 方案级别的效果预测
+	 * 方案级别的效果预测，《koubei.marketing.campaign.intelligent.promo.create》创建接口中不需要传递
 	 */
 	@ApiField("forecast_effect")
 	private IntelligentPromoEffect forecastEffect;
@@ -84,13 +84,20 @@ public class IntelligentPromo extends AlipayObject {
 	private Date gmtStart;
 
 	/**
+	 * 智能营销商户子活动列表
+	 */
+	@ApiListField("merchant_promos")
+	@ApiField("inteligent_merchant_promo")
+	private List<InteligentMerchantPromo> merchantPromos;
+
+	/**
 	 * 智能营销活动对应的名称
 	 */
 	@ApiField("name")
 	private String name;
 
 	/**
-	 * 智能活动对应的归属人信息
+	 * 智能活动对应的归属人信息，商户活动对应商户信息
 	 */
 	@ApiField("owner_info")
 	private PromoOperatorInfo ownerInfo;
@@ -108,13 +115,13 @@ public class IntelligentPromo extends AlipayObject {
 	private String planId;
 
 	/**
-	 * 智能营销活动的id。创建接口中这个参数不用填，仅在查询接口中返回
+	 * 智能营销方案id。《koubei.marketing.campaign.intelligent.promo.create》创建接口中这个参数不必传递，仅在查询接口中返回
 	 */
 	@ApiField("promo_id")
 	private String promoId;
 
 	/**
-	 * 营销活动详情列表
+	 * 营销活动详情列表，注意：（该参数20180125开始已不在维护，替代参数详见merchant_promos，如需接入替代参数，接之前先找开发负责人申请appid白名单）
 	 */
 	@ApiListField("promos")
 	@ApiField("intelligent_promo_detail")
@@ -228,6 +235,13 @@ REJECTED：创建被驳回；ENABLING：生效中；ONLINE_WAIT_CONFIRM：上架
 	}
 	public void setGmtStart(Date gmtStart) {
 		this.gmtStart = gmtStart;
+	}
+
+	public List<InteligentMerchantPromo> getMerchantPromos() {
+		return this.merchantPromos;
+	}
+	public void setMerchantPromos(List<InteligentMerchantPromo> merchantPromos) {
+		this.merchantPromos = merchantPromos;
 	}
 
 	public String getName() {

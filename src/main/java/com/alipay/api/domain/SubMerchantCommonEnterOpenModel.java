@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户门店公共信息模型
  *
  * @author auto create
- * @since 1.0, 2017-12-26 15:28:16
+ * @since 1.0, 2018-01-19 10:21:21
  */
 public class SubMerchantCommonEnterOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5249569568492777977L;
+	private static final long serialVersionUID = 4725857495666611296L;
 
 	/**
 	 * 商户门店入驻的产品码,QRCODE_MERCHANT_OPEN:企业自建-扫码开票，INVOICE_RETURN:企业自建-发票回传，INVOICE_EXPENSE:发票报销。

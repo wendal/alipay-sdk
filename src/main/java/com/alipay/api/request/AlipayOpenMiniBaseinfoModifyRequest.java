@@ -13,7 +13,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.mini.baseinfo.modify request
  * 
  * @author auto create
- * @since 1.0, 2017-12-20 11:04:37
+ * @since 1.0, 2018-01-25 00:19:21
  */
 public class AlipayOpenMiniBaseinfoModifyRequest implements AlipayUploadRequest<AlipayOpenMiniBaseinfoModifyResponse> {
 
@@ -21,7 +21,7 @@ public class AlipayOpenMiniBaseinfoModifyRequest implements AlipayUploadRequest<
 	private String apiVersion="1.0";
 
 	/** 
-	* 11_12;12_13。小程序类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目
+	* 11_12;12_13。小程序类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目，详细类目可以参考https://docs.alipay.com/isv/10325
 	 */
 	private String appCategoryIds;
 

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * trade_voucher商品查询信息
  *
  * @author auto create
- * @since 1.0, 2018-01-03 11:23:14
+ * @since 1.0, 2018-01-08 13:36:10
  */
 public class ItemQueryResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 7865564684423428365L;
+	private static final long serialVersionUID = 3657531129793335165L;
 
 	/**
 	 * 口碑商品所属的后台类目id，后台类目数据来源：开放接口koubei.item.category.children.batchquery（查询后台类目树接口）
@@ -114,6 +114,12 @@ public class ItemQueryResponse extends AlipayObject {
 	 */
 	@ApiField("subject")
 	private String subject;
+
+	/**
+	 * 淘宝首图
+	 */
+	@ApiField("tb_cover")
+	private String tbCover;
 
 	/**
 	 * 交易凭证类商品模板信息
@@ -237,6 +243,13 @@ public class ItemQueryResponse extends AlipayObject {
 	}
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public String getTbCover() {
+		return this.tbCover;
+	}
+	public void setTbCover(String tbCover) {
+		this.tbCover = tbCover;
 	}
 
 	public KoubeiTradeVoucherItemTemplete getTradeVoucherItemTemplate() {

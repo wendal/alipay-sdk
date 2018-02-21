@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 数据枢纽验证码服务返回结果
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:39
+ * @since 1.0, 2018-01-22 10:52:01
  */
 public class AlipayCodeRecoResult extends AlipayObject {
 
-	private static final long serialVersionUID = 3427425753243227258L;
+	private static final long serialVersionUID = 8679867589321525912L;
 
 	/**
 	 * 识别的验证码内容

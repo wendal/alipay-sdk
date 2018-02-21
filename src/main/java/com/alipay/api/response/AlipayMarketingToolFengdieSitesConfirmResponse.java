@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.tool.fengdie.sites.confirm response.
  * 
  * @author auto create
- * @since 1.0, 2017-10-16 20:13:10
+ * @since 1.0, 2018-02-02 10:59:19
  */
 public class AlipayMarketingToolFengdieSitesConfirmResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 2359669342137793828L;
+	private static final long serialVersionUID = 7869145637398916491L;
 
 	/** 
 	 * 返回执行云凤蝶站点审核操作的成功失败状态

@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.public.advert.modify request
  * 
  * @author auto create
- * @since 1.0, 2017-11-02 16:05:41
+ * @since 1.0, 2018-01-05 17:40:24
  */
 public class AlipayOpenPublicAdvertModifyRequest implements AlipayRequest<AlipayOpenPublicAdvertModifyResponse> {
 

@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 智能营销活动下属子活动
  *
  * @author auto create
- * @since 1.0, 2017-11-17 06:01:54
+ * @since 1.0, 2018-01-22 16:17:56
  */
 public class IntelligentPromoDetail extends AlipayObject {
 
-	private static final long serialVersionUID = 8792192163495757485L;
+	private static final long serialVersionUID = 5623739615885179613L;
 
 	/**
 	 * 活动预算

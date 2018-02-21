@@ -7,68 +7,68 @@ import com.alipay.api.internal.mapping.ApiField;
  * 车生活停车平台录入停车场信息
  *
  * @author auto create
- * @since 1.0, 2017-09-27 10:29:28
+ * @since 1.0, 2018-01-25 08:38:17
  */
 public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2347672468791179355L;
+	private static final long serialVersionUID = 4189834276855447289L;
 
 	/**
-	 * 城市编号（国家统一标准编码），请务必填写正确，详见 <a href="http://park-cityid.oss-cn-hangzhou.aliyuncs.com/%E5%9F%8E%E5%B8%82%E7%BC%96%E7%A0%81%28%E5%9B%BD%E6%A0%87%E7%A0%81%29.xls">点此下载</a>
+	 * 该参数废弃
 	 */
 	@ApiField("city_id")
 	private String cityId;
 
 	/**
-	 * 停车场联系人支付宝账户，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_alipay")
 	private String contactAlipay;
 
 	/**
-	 * 停车场联系人邮箱，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_emali")
 	private String contactEmali;
 
 	/**
-	 * 停车场联系人手机，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_mobile")
 	private String contactMobile;
 
 	/**
-	 * 停车场联系人，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_name")
 	private String contactName;
 
 	/**
-	 * 停车场联系人座机，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_tel")
 	private String contactTel;
 
 	/**
-	 * 停车场联系人微信，如果有则填入
+	 * 该参数废弃
 	 */
 	@ApiField("contact_weixin")
 	private String contactWeixin;
 
 	/**
-	 * 设备商名称
+	 * 该参数废弃
 	 */
 	@ApiField("equipment_name")
 	private String equipmentName;
 
 	/**
-	 * 纬度，最长15位字符(包括小数点)，注：高德坐标系。经纬度是门店搜索和活动推荐的重要参数，录入时请确保经纬度参数的准确。高德经纬度询：http://lbs.amap.com/console/show/picker
+	 * 该参数废弃
 	 */
 	@ApiField("latitude")
 	private String latitude;
 
 	/**
-	 * 经度，最长15位字符(包括小数点)，注：高德坐标系。经纬度是门店搜索和活动推荐的重要参数，录入时请确保经纬度参数的准确。高德经纬度询：http://lbs.amap.com/console/show/picker
+	 * 该参数废弃
 	 */
 	@ApiField("longitude")
 	private String longitude;
@@ -86,7 +86,7 @@ public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject
 	private String parkingAddress;
 
 	/**
-	 * 停车场结束营业时间，格式 "HH:mm:ss"
+	 * 该参数废弃
 	 */
 	@ApiField("parking_end_time")
 	private String parkingEndTime;
@@ -104,25 +104,37 @@ public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject
 	private String parkingLotType;
 
 	/**
+	 * 停车场客服电话
+	 */
+	@ApiField("parking_mobile")
+	private String parkingMobile;
+
+	/**
 	 * 停车场名称
 	 */
 	@ApiField("parking_name")
 	private String parkingName;
 
 	/**
-	 * 停车位数目
+	 * 该参数废弃
 	 */
 	@ApiField("parking_number")
 	private String parkingNumber;
 
 	/**
-	 * 停车场开始营业时间，格式 "HH:mm:ss"
+	 * 高德地图唯一标识
+	 */
+	@ApiField("parking_poiid")
+	private String parkingPoiid;
+
+	/**
+	 * 该参数废弃
 	 */
 	@ApiField("parking_start_time")
 	private String parkingStartTime;
 
 	/**
-	 * 停车场类型(1为地面，2为地下，3为路边)（多个类型，中间用,隔开
+	 * 该参数废弃
 	 */
 	@ApiField("parking_type")
 	private String parkingType;
@@ -134,7 +146,7 @@ public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject
 	private String payType;
 
 	/**
-	 * 缴费模式（1为停车卡缴费，2为物料缴费，3为中央缴费机）
+	 * 该参数废弃
 	 */
 	@ApiField("payment_mode")
 	private String paymentMode;
@@ -256,6 +268,13 @@ public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject
 		this.parkingLotType = parkingLotType;
 	}
 
+	public String getParkingMobile() {
+		return this.parkingMobile;
+	}
+	public void setParkingMobile(String parkingMobile) {
+		this.parkingMobile = parkingMobile;
+	}
+
 	public String getParkingName() {
 		return this.parkingName;
 	}
@@ -268,6 +287,13 @@ public class AlipayEcoMycarParkingParkinglotinfoCreateModel extends AlipayObject
 	}
 	public void setParkingNumber(String parkingNumber) {
 		this.parkingNumber = parkingNumber;
+	}
+
+	public String getParkingPoiid() {
+		return this.parkingPoiid;
+	}
+	public void setParkingPoiid(String parkingPoiid) {
+		this.parkingPoiid = parkingPoiid;
 	}
 
 	public String getParkingStartTime() {

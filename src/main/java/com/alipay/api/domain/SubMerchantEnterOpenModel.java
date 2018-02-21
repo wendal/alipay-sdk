@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户门店信息模型
  *
  * @author auto create
- * @since 1.0, 2017-12-26 15:28:16
+ * @since 1.0, 2018-01-19 10:21:21
  */
 public class SubMerchantEnterOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3791282463738715562L;
+	private static final long serialVersionUID = 3815645921655662485L;
 
 	/**
 	 * 商户门店税号。

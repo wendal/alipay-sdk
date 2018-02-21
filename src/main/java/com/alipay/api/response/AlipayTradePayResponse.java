@@ -13,11 +13,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.pay response.
  * 
  * @author auto create
- * @since 1.0, 2018-01-03 18:35:24
+ * @since 1.0, 2018-02-07 14:00:10
  */
 public class AlipayTradePayResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6167181141768282922L;
+	private static final long serialVersionUID = 6825734989532997678L;
 
 	/** 
 	 * 异步支付模式，先享后付业务会返回该参数，目前有三种值：
@@ -27,6 +27,12 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	 */
 	@ApiField("async_payment_mode")
 	private String asyncPaymentMode;
+
+	/** 
+	 * 预授权支付模式，该参数仅在信用预授权支付场景下返回。信用预授权支付：CREDIT_PREAUTH_PAY
+	 */
+	@ApiField("auth_trade_pay_mode")
+	private String authTradePayMode;
 
 	/** 
 	 * 商户传入业务信息，具体值要和支付宝约定
@@ -116,6 +122,18 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	private String outTradeNo;
 
 	/** 
+	 * 支付币种订单金额
+	 */
+	@ApiField("pay_amount")
+	private String payAmount;
+
+	/** 
+	 * 支付币种
+	 */
+	@ApiField("pay_currency")
+	private String payCurrency;
+
+	/** 
 	 * 使用集分宝付款的金额
 	 */
 	@ApiField("point_amount")
@@ -126,6 +144,24 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	 */
 	@ApiField("receipt_amount")
 	private String receiptAmount;
+
+	/** 
+	 * 结算币种订单金额
+	 */
+	@ApiField("settle_amount")
+	private String settleAmount;
+
+	/** 
+	 * 商户指定的结算币种，目前支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR、人民币：CNY
+	 */
+	@ApiField("settle_currency")
+	private String settleCurrency;
+
+	/** 
+	 * 结算币种兑换标价币种汇率
+	 */
+	@ApiField("settle_trans_rate")
+	private String settleTransRate;
 
 	/** 
 	 * 发生支付交易的商户门店名称
@@ -146,6 +182,18 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	private String tradeNo;
 
 	/** 
+	 * 标价币种, total_amount对应的币种单位。目前支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR、人民币：CNY
+	 */
+	@ApiField("trans_currency")
+	private String transCurrency;
+
+	/** 
+	 * 标价币种兑换支付币种汇率
+	 */
+	@ApiField("trans_pay_rate")
+	private String transPayRate;
+
+	/** 
 	 * 本交易支付时使用的所有优惠券信息
 	 */
 	@ApiListField("voucher_detail_list")
@@ -157,6 +205,13 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	}
 	public String getAsyncPaymentMode( ) {
 		return this.asyncPaymentMode;
+	}
+
+	public void setAuthTradePayMode(String authTradePayMode) {
+		this.authTradePayMode = authTradePayMode;
+	}
+	public String getAuthTradePayMode( ) {
+		return this.authTradePayMode;
 	}
 
 	public void setBusinessParams(String businessParams) {
@@ -257,6 +312,20 @@ SYNC_DIRECT_PAY(同步直接扣款);
 		return this.outTradeNo;
 	}
 
+	public void setPayAmount(String payAmount) {
+		this.payAmount = payAmount;
+	}
+	public String getPayAmount( ) {
+		return this.payAmount;
+	}
+
+	public void setPayCurrency(String payCurrency) {
+		this.payCurrency = payCurrency;
+	}
+	public String getPayCurrency( ) {
+		return this.payCurrency;
+	}
+
 	public void setPointAmount(String pointAmount) {
 		this.pointAmount = pointAmount;
 	}
@@ -269,6 +338,27 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	}
 	public String getReceiptAmount( ) {
 		return this.receiptAmount;
+	}
+
+	public void setSettleAmount(String settleAmount) {
+		this.settleAmount = settleAmount;
+	}
+	public String getSettleAmount( ) {
+		return this.settleAmount;
+	}
+
+	public void setSettleCurrency(String settleCurrency) {
+		this.settleCurrency = settleCurrency;
+	}
+	public String getSettleCurrency( ) {
+		return this.settleCurrency;
+	}
+
+	public void setSettleTransRate(String settleTransRate) {
+		this.settleTransRate = settleTransRate;
+	}
+	public String getSettleTransRate( ) {
+		return this.settleTransRate;
 	}
 
 	public void setStoreName(String storeName) {
@@ -290,6 +380,20 @@ SYNC_DIRECT_PAY(同步直接扣款);
 	}
 	public String getTradeNo( ) {
 		return this.tradeNo;
+	}
+
+	public void setTransCurrency(String transCurrency) {
+		this.transCurrency = transCurrency;
+	}
+	public String getTransCurrency( ) {
+		return this.transCurrency;
+	}
+
+	public void setTransPayRate(String transPayRate) {
+		this.transPayRate = transPayRate;
+	}
+	public String getTransPayRate( ) {
+		return this.transPayRate;
 	}
 
 	public void setVoucherDetailList(List<VoucherDetail> voucherDetailList) {

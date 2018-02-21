@@ -12,7 +12,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class AlipayOpenPublicLifeAgentcreateQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 7654362155712426444L;
+	private static final long serialVersionUID = 5268174247651962182L;
 
 	/** 
 	 * 只有审核通过，且商户在支付宝发送的授权邮件中确认授权，此时生活号才会正式创建，查询才会返回该值

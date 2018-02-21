@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 商户品牌配置模型
  *
  * @author auto create
- * @since 1.0, 2017-12-26 15:28:16
+ * @since 1.0, 2018-01-19 10:21:21
  */
 public class MerchantBaseEnterOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5635193831931695196L;
+	private static final long serialVersionUID = 7779468772621527468L;
 
 	/**
 	 * 商户logo文件流信息，该字段为文件流经base64编码后得到的字符串。

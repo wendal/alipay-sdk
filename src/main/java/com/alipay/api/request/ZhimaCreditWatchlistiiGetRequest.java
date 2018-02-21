@@ -12,7 +12,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: zhima.credit.watchlistii.get request
  * 
  * @author auto create
- * @since 1.0, 2017-12-07 16:07:49
+ * @since 1.0, 2018-02-05 20:32:44
  */
 public class ZhimaCreditWatchlistiiGetRequest implements AlipayRequest<ZhimaCreditWatchlistiiGetResponse> {
 

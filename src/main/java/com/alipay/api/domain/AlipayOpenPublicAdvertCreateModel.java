@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 生活号广告位添加接口
  *
  * @author auto create
- * @since 1.0, 2017-11-02 16:05:56
+ * @since 1.0, 2018-01-05 17:38:22
  */
 public class AlipayOpenPublicAdvertCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1473266625599451529L;
+	private static final long serialVersionUID = 8273688178159414176L;
 
 	/**
 	 * 广告位轮播内容列表，数量限制：大于1个，小于3个，广告位轮播内容顺序，根据接口传入的顺序排列

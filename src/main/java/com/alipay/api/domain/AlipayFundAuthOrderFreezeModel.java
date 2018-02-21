@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 资金预授权冻结接口
  *
  * @author auto create
- * @since 1.0, 2017-09-19 10:28:07
+ * @since 1.0, 2018-01-12 13:27:30
  */
 public class AlipayFundAuthOrderFreezeModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5818143472818464142L;
+	private static final long serialVersionUID = 4714277782589533822L;
 
 	/**
 	 * 需要冻结的金额，单位为：元（人民币），精确到小数点后两位
@@ -34,7 +34,11 @@ public class AlipayFundAuthOrderFreezeModel extends AlipayObject {
 	private String authCodeType;
 
 	/**
-	 * 业务扩展参数，用于商户的特定业务信息的传递，json格式
+	 * 业务扩展参数，用于商户的特定业务信息的传递，json格式。 
+1.间联模式必须传入二级商户ID，key为secondaryMerchantId;
+2. 当面资金授权业务对应的类目，key为category，value由支付宝分配，酒店业务传 "HOTEL"；
+3. 外部商户的门店编号，key为outStoreCode，可选；
+4. 外部商户的门店简称，key为outStoreAlias，可选。
 	 */
 	@ApiField("extra_param")
 	private String extraParam;

@@ -8,17 +8,23 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.open.mini.version.upload response.
  * 
  * @author auto create
- * @since 1.0, 2017-12-20 11:02:48
+ * @since 1.0, 2018-01-30 16:06:41
  */
 public class AlipayOpenMiniVersionUploadResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1649241266657356314L;
+	private static final long serialVersionUID = 5224756277865447292L;
 
 	/** 
 	 * 构建的状态，0-构建排队中；1-正在构建；2-构建成功；3-构建失败；5-构建超时
 	 */
 	@ApiField("build_status")
 	private String buildStatus;
+
+	/** 
+	 * 创建版本的状态，0-构建排队中；1-正在构建；2-构建成功；3-构建失败；5-构建超时；6-版本创建成功
+	 */
+	@ApiField("create_status")
+	private String createStatus;
 
 	/** 
 	 * 是否需要轮询
@@ -37,6 +43,13 @@ public class AlipayOpenMiniVersionUploadResponse extends AlipayResponse {
 	}
 	public String getBuildStatus( ) {
 		return this.buildStatus;
+	}
+
+	public void setCreateStatus(String createStatus) {
+		this.createStatus = createStatus;
+	}
+	public String getCreateStatus( ) {
+		return this.createStatus;
 	}
 
 	public void setNeedRotation(String needRotation) {

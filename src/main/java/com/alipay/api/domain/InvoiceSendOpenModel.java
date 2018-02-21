@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 发票同步场景下的发票入参模型
  *
  * @author auto create
- * @since 1.0, 2017-12-26 18:40:44
+ * @since 1.0, 2018-01-19 10:20:23
  */
 public class InvoiceSendOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6754212169815564455L;
+	private static final long serialVersionUID = 3565195397472877993L;
 
 	/**
 	 * 票面上的校验码信息。

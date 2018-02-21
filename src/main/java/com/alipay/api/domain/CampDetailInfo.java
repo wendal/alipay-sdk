@@ -1,17 +1,20 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 营销活动详情信息
  *
  * @author auto create
- * @since 1.0, 2017-12-20 11:44:43
+ * @since 1.0, 2018-01-05 10:43:59
  */
 public class CampDetailInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3278453721525967293L;
+	private static final long serialVersionUID = 2414644255945119563L;
 
 	/**
 	 * 活动开始时间
@@ -44,6 +47,12 @@ public class CampDetailInfo extends AlipayObject {
 	private String campGuide;
 
 	/**
+	 * 活动id
+	 */
+	@ApiField("camp_id")
+	private String campId;
+
+	/**
 	 * 活动结束时间
 	 */
 	@ApiField("end_time")
@@ -54,6 +63,14 @@ public class CampDetailInfo extends AlipayObject {
 	 */
 	@ApiField("ext_info")
 	private String extInfo;
+
+	/**
+	 * 活动规则标识列表，列表中存在的标识，代表该活动包含对应的规则。目前只有人群规则一种。标识说明：
+CROWD：人群规则
+	 */
+	@ApiListField("rule_flag_list")
+	@ApiField("string")
+	private List<String> ruleFlagList;
 
 	/**
 	 * 每人每日参与次数 -1为不限制
@@ -102,6 +119,13 @@ public class CampDetailInfo extends AlipayObject {
 		this.campGuide = campGuide;
 	}
 
+	public String getCampId() {
+		return this.campId;
+	}
+	public void setCampId(String campId) {
+		this.campId = campId;
+	}
+
 	public String getEndTime() {
 		return this.endTime;
 	}
@@ -114,6 +138,13 @@ public class CampDetailInfo extends AlipayObject {
 	}
 	public void setExtInfo(String extInfo) {
 		this.extInfo = extInfo;
+	}
+
+	public List<String> getRuleFlagList() {
+		return this.ruleFlagList;
+	}
+	public void setRuleFlagList(List<String> ruleFlagList) {
+		this.ruleFlagList = ruleFlagList;
 	}
 
 	public String getWinLimitDaily() {

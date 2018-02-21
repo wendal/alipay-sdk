@@ -7,11 +7,17 @@ import com.alipay.api.internal.mapping.ApiField;
  * 业务扩展参数
  *
  * @author auto create
- * @since 1.0, 2017-12-25 14:19:23
+ * @since 1.0, 2018-02-07 12:58:26
  */
 public class ExtendParams extends AlipayObject {
 
-	private static final long serialVersionUID = 6783787248718674494L;
+	private static final long serialVersionUID = 8723829154278618865L;
+
+	/**
+	 * 卡类型
+	 */
+	@ApiField("card_type")
+	private String cardType;
 
 	/**
 	 * 使用花呗分期要进行的分期数
@@ -26,11 +32,24 @@ public class ExtendParams extends AlipayObject {
 	private String hbFqSellerPercent;
 
 	/**
+	 * 行业数据回流信息, 详见：地铁支付接口参数补充说明
+	 */
+	@ApiField("industry_reflux_info")
+	private String industryRefluxInfo;
+
+	/**
 	 * 系统商编号
 该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID
 	 */
 	@ApiField("sys_service_provider_id")
 	private String sysServiceProviderId;
+
+	public String getCardType() {
+		return this.cardType;
+	}
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
 
 	public String getHbFqNum() {
 		return this.hbFqNum;
@@ -44,6 +63,13 @@ public class ExtendParams extends AlipayObject {
 	}
 	public void setHbFqSellerPercent(String hbFqSellerPercent) {
 		this.hbFqSellerPercent = hbFqSellerPercent;
+	}
+
+	public String getIndustryRefluxInfo() {
+		return this.industryRefluxInfo;
+	}
+	public void setIndustryRefluxInfo(String industryRefluxInfo) {
+		this.industryRefluxInfo = industryRefluxInfo;
 	}
 
 	public String getSysServiceProviderId() {

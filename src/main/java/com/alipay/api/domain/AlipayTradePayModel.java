@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2018-01-03 18:35:24
+ * @since 1.0, 2018-02-07 14:00:10
  */
 public class AlipayTradePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8263219779489141275L;
+	private static final long serialVersionUID = 1197782728388415487L;
 
 	/**
 	 * 代扣业务需要传入协议相关信息
@@ -34,6 +34,13 @@ public class AlipayTradePayModel extends AlipayObject {
 	 */
 	@ApiField("auth_code")
 	private String authCode;
+
+	/**
+	 * 预授权确认模式，授权转交易请求中传入，适用于预授权转交易业务使用，目前只支持PRE_AUTH(预授权产品码)
+COMPLETE：转交易支付完成结束预授权，解冻剩余金额; NOT_COMPLETE：转交易支付完成不结束预授权，不解冻剩余金额
+	 */
+	@ApiField("auth_confirm_mode")
+	private String authConfirmMode;
 
 	/**
 	 * 预授权号，预授权转交易请求中传入，适用于预授权转交易业务使用，目前只支持FUND_TRADE_FAST_PAY（资金订单即时到帐交易）、境外预授权产品（OVERSEAS_AUTH_PAY）两个产品。
@@ -136,6 +143,12 @@ public class AlipayTradePayModel extends AlipayObject {
 	private String sellerId;
 
 	/**
+	 * 商户指定的结算币种，支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR、人民币：CNY
+	 */
+	@ApiField("settle_currency")
+	private String settleCurrency;
+
+	/**
 	 * 商户门店编号
 	 */
 	@ApiField("store_id")
@@ -174,6 +187,12 @@ public class AlipayTradePayModel extends AlipayObject {
 	private String totalAmount;
 
 	/**
+	 * 标价币种,  total_amount 对应的币种单位。支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR、人民币：CNY
+	 */
+	@ApiField("trans_currency")
+	private String transCurrency;
+
+	/**
 	 * 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]。如果该值未传入，但传入了【订单总金额】和【可打折金额】，则该值默认为【订单总金额】-【可打折金额】
 	 */
 	@ApiField("undiscountable_amount")
@@ -198,6 +217,13 @@ public class AlipayTradePayModel extends AlipayObject {
 	}
 	public void setAuthCode(String authCode) {
 		this.authCode = authCode;
+	}
+
+	public String getAuthConfirmMode() {
+		return this.authConfirmMode;
+	}
+	public void setAuthConfirmMode(String authConfirmMode) {
+		this.authConfirmMode = authConfirmMode;
 	}
 
 	public String getAuthNo() {
@@ -312,6 +338,13 @@ public class AlipayTradePayModel extends AlipayObject {
 		this.sellerId = sellerId;
 	}
 
+	public String getSettleCurrency() {
+		return this.settleCurrency;
+	}
+	public void setSettleCurrency(String settleCurrency) {
+		this.settleCurrency = settleCurrency;
+	}
+
 	public String getStoreId() {
 		return this.storeId;
 	}
@@ -352,6 +385,13 @@ public class AlipayTradePayModel extends AlipayObject {
 	}
 	public void setTotalAmount(String totalAmount) {
 		this.totalAmount = totalAmount;
+	}
+
+	public String getTransCurrency() {
+		return this.transCurrency;
+	}
+	public void setTransCurrency(String transCurrency) {
+		this.transCurrency = transCurrency;
 	}
 
 	public String getUndiscountableAmount() {

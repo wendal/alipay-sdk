@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayEcoEduKtBillingModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 6248519695677976335L;
+	private static final long serialVersionUID = 8842729827115788384L;
 
 	/**
 	 * 退款时，支付宝返回的用户的登录id

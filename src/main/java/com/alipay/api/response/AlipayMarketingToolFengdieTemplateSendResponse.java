@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.marketing.tool.fengdie.template.send response.
  * 
  * @author auto create
- * @since 1.0, 2017-10-16 20:21:42
+ * @since 1.0, 2018-02-02 10:57:57
  */
 public class AlipayMarketingToolFengdieTemplateSendResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 5275246338739726453L;
+	private static final long serialVersionUID = 2219743642795469172L;
 
 	/** 
 	 * 分配模板的操作是否成功

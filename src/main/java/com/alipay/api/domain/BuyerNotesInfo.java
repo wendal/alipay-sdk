@@ -14,7 +14,7 @@ import com.alipay.api.internal.mapping.ApiListField;
  */
 public class BuyerNotesInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 6489441933311698651L;
+	private static final long serialVersionUID = 7759774612562674164L;
 
 	/**
 	 * 标题下的描述列表，列表类型，每项不得为空,最多10项，总长度不能超过2600个中文字符

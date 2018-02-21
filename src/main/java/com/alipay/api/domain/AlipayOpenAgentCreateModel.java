@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 开启带商户签约、创建应用事务
  *
  * @author auto create
- * @since 1.0, 2017-12-28 15:38:03
+ * @since 1.0, 2018-01-25 00:34:26
  */
 public class AlipayOpenAgentCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1374746474759843899L;
+	private static final long serialVersionUID = 5549369779631468482L;
 
 	/**
 	 * isv代操作的商户账号，可以是支付宝账号，也可以是pid（2088开头）
@@ -25,6 +25,12 @@ public class AlipayOpenAgentCreateModel extends AlipayObject {
 	@ApiField("contact_info")
 	private ContactModel contactInfo;
 
+	/**
+	 * 订单授权凭证，填写都则对应事务提交进入预授权模式
+	 */
+	@ApiField("order_ticket")
+	private String orderTicket;
+
 	public String getAccount() {
 		return this.account;
 	}
@@ -37,6 +43,13 @@ public class AlipayOpenAgentCreateModel extends AlipayObject {
 	}
 	public void setContactInfo(ContactModel contactInfo) {
 		this.contactInfo = contactInfo;
+	}
+
+	public String getOrderTicket() {
+		return this.orderTicket;
+	}
+	public void setOrderTicket(String orderTicket) {
+		this.orderTicket = orderTicket;
 	}
 
 }

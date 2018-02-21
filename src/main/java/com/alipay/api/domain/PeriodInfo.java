@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 周期模型
  *
  * @author auto create
- * @since 1.0, 2016-10-26 17:43:39
+ * @since 1.0, 2018-01-12 10:55:02
  */
 public class PeriodInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 7893694799259853368L;
+	private static final long serialVersionUID = 6167992138616786429L;
 
 	/**
 	 * 单位

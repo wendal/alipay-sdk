@@ -13,17 +13,23 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-12-12 18:06:58
+ * @since 1.0, 2018-02-03 20:52:19
  */
 public class AlipayTradeQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 1626167996393263214L;
+	private static final long serialVersionUID = 4482217581577889779L;
 
 	/** 
 	 * 支付宝店铺编号
 	 */
 	@ApiField("alipay_store_id")
 	private String alipayStoreId;
+
+	/** 
+	 * 预授权支付模式，该参数仅在信用预授权支付场景下返回。信用预授权支付：CREDIT_PREAUTH_PAY
+	 */
+	@ApiField("auth_trade_pay_mode")
+	private String authTradePayMode;
 
 	/** 
 	 * 买家支付宝账号
@@ -99,6 +105,18 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	private String outTradeNo;
 
 	/** 
+	 * 支付币种订单金额
+	 */
+	@ApiField("pay_amount")
+	private String payAmount;
+
+	/** 
+	 * 订单支付币种
+	 */
+	@ApiField("pay_currency")
+	private String payCurrency;
+
+	/** 
 	 * 积分支付的金额，单位为元，两位小数。该金额代表该笔交易中用户使用积分支付的金额，比如集分宝或者支付宝实时优惠等
 	 */
 	@ApiField("point_amount")
@@ -115,6 +133,24 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	 */
 	@ApiField("send_pay_date")
 	private Date sendPayDate;
+
+	/** 
+	 * 结算币种订单金额
+	 */
+	@ApiField("settle_amount")
+	private String settleAmount;
+
+	/** 
+	 * 订单结算币种，对应支付接口传入的settle_currency，支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR
+	 */
+	@ApiField("settle_currency")
+	private String settleCurrency;
+
+	/** 
+	 * 结算币种兑换标价币种汇率
+	 */
+	@ApiField("settle_trans_rate")
+	private String settleTransRate;
 
 	/** 
 	 * 商户门店编号
@@ -153,6 +189,18 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	private String tradeStatus;
 
 	/** 
+	 * 标价币种，该参数的值为支付时传入的trans_currency，支持英镑：GBP、港币：HKD、美元：USD、新加坡元：SGD、日元：JPY、加拿大元：CAD、澳元：AUD、欧元：EUR、新西兰元：NZD、韩元：KRW、泰铢：THB、瑞士法郎：CHF、瑞典克朗：SEK、丹麦克朗：DKK、挪威克朗：NOK、马来西亚林吉特：MYR、印尼卢比：IDR、菲律宾比索：PHP、毛里求斯卢比：MUR、以色列新谢克尔：ILS、斯里兰卡卢比：LKR、俄罗斯卢布：RUB、阿联酋迪拉姆：AED、捷克克朗：CZK、南非兰特：ZAR、人民币：CNY、新台币：TWD。当trans_currency 和 settle_currency 不一致时，trans_currency支持人民币：CNY、新台币：TWD
+	 */
+	@ApiField("trans_currency")
+	private String transCurrency;
+
+	/** 
+	 * 标价币种兑换支付币种汇率
+	 */
+	@ApiField("trans_pay_rate")
+	private String transPayRate;
+
+	/** 
 	 * 本交易支付时使用的所有优惠券信息
 	 */
 	@ApiListField("voucher_detail_list")
@@ -164,6 +212,13 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	}
 	public String getAlipayStoreId( ) {
 		return this.alipayStoreId;
+	}
+
+	public void setAuthTradePayMode(String authTradePayMode) {
+		this.authTradePayMode = authTradePayMode;
+	}
+	public String getAuthTradePayMode( ) {
+		return this.authTradePayMode;
 	}
 
 	public void setBuyerLogonId(String buyerLogonId) {
@@ -250,6 +305,20 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 		return this.outTradeNo;
 	}
 
+	public void setPayAmount(String payAmount) {
+		this.payAmount = payAmount;
+	}
+	public String getPayAmount( ) {
+		return this.payAmount;
+	}
+
+	public void setPayCurrency(String payCurrency) {
+		this.payCurrency = payCurrency;
+	}
+	public String getPayCurrency( ) {
+		return this.payCurrency;
+	}
+
 	public void setPointAmount(String pointAmount) {
 		this.pointAmount = pointAmount;
 	}
@@ -269,6 +338,27 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	}
 	public Date getSendPayDate( ) {
 		return this.sendPayDate;
+	}
+
+	public void setSettleAmount(String settleAmount) {
+		this.settleAmount = settleAmount;
+	}
+	public String getSettleAmount( ) {
+		return this.settleAmount;
+	}
+
+	public void setSettleCurrency(String settleCurrency) {
+		this.settleCurrency = settleCurrency;
+	}
+	public String getSettleCurrency( ) {
+		return this.settleCurrency;
+	}
+
+	public void setSettleTransRate(String settleTransRate) {
+		this.settleTransRate = settleTransRate;
+	}
+	public String getSettleTransRate( ) {
+		return this.settleTransRate;
 	}
 
 	public void setStoreId(String storeId) {
@@ -311,6 +401,20 @@ public class AlipayTradeQueryResponse extends AlipayResponse {
 	}
 	public String getTradeStatus( ) {
 		return this.tradeStatus;
+	}
+
+	public void setTransCurrency(String transCurrency) {
+		this.transCurrency = transCurrency;
+	}
+	public String getTransCurrency( ) {
+		return this.transCurrency;
+	}
+
+	public void setTransPayRate(String transPayRate) {
+		this.transPayRate = transPayRate;
+	}
+	public String getTransPayRate( ) {
+		return this.transPayRate;
 	}
 
 	public void setVoucherDetailList(List<VoucherDetail> voucherDetailList) {

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 芝麻信用评分普惠版
  *
  * @author auto create
- * @since 1.0, 2017-08-09 12:51:37
+ * @since 1.0, 2018-01-22 20:43:19
  */
 public class ZhimaCreditScoreBriefGetModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1823832946678139198L;
+	private static final long serialVersionUID = 3255896587462122455L;
 
 	/**
 	 * 350～950之间 业务判断的准入标准 建议业务确定一个稳定的判断标准 频繁的变更该标准可能导致接口被停用
@@ -30,6 +30,12 @@ public class ZhimaCreditScoreBriefGetModel extends AlipayObject {
 	 */
 	@ApiField("cert_type")
 	private String certType;
+
+	/**
+	 * 芝麻平台服务商模式下的二级商户标识，如果是直连商户调用该接口，不需要设置
+	 */
+	@ApiField("linked_merchant_id")
+	private String linkedMerchantId;
 
 	/**
 	 * 用户姓名 当证件类型为ALIPAY_USER_ID时不需要传入
@@ -68,6 +74,13 @@ public class ZhimaCreditScoreBriefGetModel extends AlipayObject {
 	}
 	public void setCertType(String certType) {
 		this.certType = certType;
+	}
+
+	public String getLinkedMerchantId() {
+		return this.linkedMerchantId;
+	}
+	public void setLinkedMerchantId(String linkedMerchantId) {
+		this.linkedMerchantId = linkedMerchantId;
 	}
 
 	public String getName() {

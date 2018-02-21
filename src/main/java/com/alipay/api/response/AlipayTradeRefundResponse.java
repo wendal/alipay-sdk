@@ -12,11 +12,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.trade.refund response.
  * 
  * @author auto create
- * @since 1.0, 2017-12-12 18:09:26
+ * @since 1.0, 2018-02-02 23:00:03
  */
 public class AlipayTradeRefundResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6613973425862654212L;
+	private static final long serialVersionUID = 3117137756621293188L;
 
 	/** 
 	 * 用户的登录id
@@ -71,6 +71,12 @@ public class AlipayTradeRefundResponse extends AlipayResponse {
 	 */
 	@ApiField("present_refund_mdiscount_amount")
 	private String presentRefundMdiscountAmount;
+
+	/** 
+	 * 退款币种信息
+	 */
+	@ApiField("refund_currency")
+	private String refundCurrency;
 
 	/** 
 	 * 退款使用的资金渠道
@@ -165,6 +171,13 @@ public class AlipayTradeRefundResponse extends AlipayResponse {
 	}
 	public String getPresentRefundMdiscountAmount( ) {
 		return this.presentRefundMdiscountAmount;
+	}
+
+	public void setRefundCurrency(String refundCurrency) {
+		this.refundCurrency = refundCurrency;
+	}
+	public String getRefundCurrency( ) {
+		return this.refundCurrency;
 	}
 
 	public void setRefundDetailItemList(List<TradeFundBill> refundDetailItemList) {

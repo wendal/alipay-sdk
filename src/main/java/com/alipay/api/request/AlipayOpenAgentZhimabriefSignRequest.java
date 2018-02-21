@@ -15,7 +15,7 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.open.agent.zhimabrief.sign request
  * 
  * @author auto create
- * @since 1.0, 2017-12-21 16:29:46
+ * @since 1.0, 2018-01-31 21:21:06
  */
 public class AlipayOpenAgentZhimabriefSignRequest implements AlipayUploadRequest<AlipayOpenAgentZhimabriefSignResponse> {
 
@@ -332,14 +332,14 @@ public class AlipayOpenAgentZhimabriefSignRequest implements AlipayUploadRequest
 		txtParams.put("business_license_no", this.businessLicenseNo);
 		txtParams.put("custom_usage_scene", this.customUsageScene);
 		txtParams.put("date_limitation", this.dateLimitation);
-		txtParams.put("dr_contact", new com.alipay.api.internal.util.json.JSONWriter().write(this.drContact, true));
+		txtParams.put("dr_contact", this.drContact == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.drContact, true));
 		txtParams.put("enterprise_alias", this.enterpriseAlias);
 		txtParams.put("long_term", this.longTerm);
 		txtParams.put("mcc_code", this.mccCode);
-		txtParams.put("oh_contact", new com.alipay.api.internal.util.json.JSONWriter().write(this.ohContact, true));
-		txtParams.put("pr_contact", new com.alipay.api.internal.util.json.JSONWriter().write(this.prContact, true));
-		txtParams.put("usage_scene", new com.alipay.api.internal.util.json.JSONWriter().write(this.usageScene, true));
-		txtParams.put("web_sites", new com.alipay.api.internal.util.json.JSONWriter().write(this.webSites, true));
+		txtParams.put("oh_contact", this.ohContact == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.ohContact, true));
+		txtParams.put("pr_contact", this.prContact == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.prContact, true));
+		txtParams.put("usage_scene", this.usageScene == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.usageScene, true));
+		txtParams.put("web_sites", this.webSites == null? null : new com.alipay.api.internal.util.json.JSONWriter().write(this.webSites, true));
 		txtParams.put("wechat_official_account_name", this.wechatOfficialAccountName);
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);

@@ -1,5 +1,6 @@
 package com.alipay.api.request;
 
+import com.alipay.api.domain.AlipayCommerceAirXfgDsgModifyModel;
 import java.util.Map;
 
 import com.alipay.api.AlipayRequest;
@@ -11,12 +12,24 @@ import com.alipay.api.AlipayObject;
  * ALIPAY API: alipay.commerce.air.xfg.dsg.modify request
  * 
  * @author auto create
- * @since 1.0, 2017-11-17 10:58:08
+ * @since 1.0, 2018-01-18 15:28:48
  */
 public class AlipayCommerceAirXfgDsgModifyRequest implements AlipayRequest<AlipayCommerceAirXfgDsgModifyResponse> {
 
 	private AlipayHashMap udfParams; // add user-defined text parameters
 	private String apiVersion="1.0";
+
+	/** 
+	* 吃饭更好
+	 */
+	private String bizContent;
+
+	public void setBizContent(String bizContent) {
+		this.bizContent = bizContent;
+	}
+	public String getBizContent() {
+		return this.bizContent;
+	}
 	private String terminalType;
 	private String terminalInfo;	
 	private String prodCode;
@@ -79,6 +92,7 @@ public class AlipayCommerceAirXfgDsgModifyRequest implements AlipayRequest<Alipa
 
 	public Map<String, String> getTextParams() {		
 		AlipayHashMap txtParams = new AlipayHashMap();
+		txtParams.put("biz_content", this.bizContent);
 		if(udfParams != null) {
 			txtParams.putAll(this.udfParams);
 		}

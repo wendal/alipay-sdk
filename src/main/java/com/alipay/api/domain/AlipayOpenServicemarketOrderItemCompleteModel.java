@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 服务商完成订单内单个明细实施操作
  *
  * @author auto create
- * @since 1.0, 2016-08-25 11:11:25
+ * @since 1.0, 2018-01-24 23:29:21
  */
 public class AlipayOpenServicemarketOrderItemCompleteModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5688889147921224688L;
+	private static final long serialVersionUID = 5656253589143273541L;
 
 	/**
 	 * 订购服务插件订单号
@@ -20,7 +20,7 @@ public class AlipayOpenServicemarketOrderItemCompleteModel extends AlipayObject 
 	private String commodityOrderId;
 
 	/**
-	 * 订购插件选择的某一店铺ID
+	 * 商家订购服务选择的某一门店的ID，如果该订单为口碑服务市场发布的服务所产生的订单，则此字段必填
 	 */
 	@ApiField("shop_id")
 	private String shopId;

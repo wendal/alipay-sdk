@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * isv 会员CRM数据回流
  *
  * @author auto create
- * @since 1.0, 2017-12-22 16:04:33
+ * @since 1.0, 2018-02-05 16:36:58
  */
 public class KoubeiMemberDataIsvCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7139112112719374413L;
+	private static final long serialVersionUID = 3114112131873928364L;
 
 	/**
 	 * 会员卡最近一次激活时间，格式：yyyy-MM-dd HH:MM:ss

@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 查询使用ISV模板的托管小程序列表
  *
  * @author auto create
- * @since 1.0, 2017-12-21 22:06:00
+ * @since 1.0, 2018-01-24 23:51:50
  */
 public class AlipayOpenMiniTemplateUsageQueryModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7167357649153774489L;
+	private static final long serialVersionUID = 2397475848493976742L;
 
 	/**
 	 * 查询的页数，默认第一页
@@ -30,6 +30,12 @@ public class AlipayOpenMiniTemplateUsageQueryModel extends AlipayObject {
 	 */
 	@ApiField("template_id")
 	private String templateId;
+
+	/**
+	 * 模板小程序的版本号
+	 */
+	@ApiField("template_version")
+	private String templateVersion;
 
 	public Long getPageNum() {
 		return this.pageNum;
@@ -50,6 +56,13 @@ public class AlipayOpenMiniTemplateUsageQueryModel extends AlipayObject {
 	}
 	public void setTemplateId(String templateId) {
 		this.templateId = templateId;
+	}
+
+	public String getTemplateVersion() {
+		return this.templateVersion;
+	}
+	public void setTemplateVersion(String templateVersion) {
+		this.templateVersion = templateVersion;
 	}
 
 }
