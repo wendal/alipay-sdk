@@ -19,7 +19,7 @@ AlipayOfflineMaterialImageUploadResponse（响应类）
 
 ##### 普通调用示例
 
-```java
+```
 //实例化客户端
 AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
 //实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.open.public.template.message.industry.modify 
@@ -41,7 +41,7 @@ if(response.isSuccess()){
 
 ##### 图片上传接口调用示例
 
-```java
+```
 AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
 // 实例化具体API对应的request类,类名称和接口名称对应，当前调用接口名称：alipay.offline.material.image.upload 
 AlipayOfflineMaterialImageUploadRequest request = new AlipayOfflineMaterialImageUploadRequest();
@@ -62,7 +62,7 @@ if(response.isSuccess()){
 
 ##### 用户授权接口调用示例
 
-```java
+```
 AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
 //实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.user.userinfo.share
 AlipayUserUserinfoShareRequest request = new AlipayUserUserinfoShareRequest();
@@ -74,7 +74,7 @@ AlipayUserUserinfoShareResponse response= alipayClient.execute(request,"accessTo
 
 ##### 应用授权接口调用示例（ISV代理商户调用）
 
-```java
+```
 AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
 //实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.open.public.template.message.industry.modify 
 AlipayOpenPublicTemplateMessageIndustryModifyRequest request = new AlipayOpenPublicTemplateMessageIndustryModifyRequest();
@@ -185,4 +185,13 @@ public static boolean rsaCheckContent(String content, String sign, String public
 			</releases>
 		</repository>
 	</repositories>
+```
+
+
+```xml
+		<dependency>
+			<groupId>com.alipay</groupId>
+			<artifactId>alipay-sdk</artifactId>
+			<version>1.0.0_20180208193504</version>
+		</dependency>
 ```
