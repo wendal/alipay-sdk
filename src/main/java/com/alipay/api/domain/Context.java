@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 消息模板上下文，即模板中定义的参数及参数值
  *
  * @author auto create
- * @since 1.0, 2016-10-28 16:11:08
+ * @since 1.0, 2018-03-07 10:30:34
  */
 public class Context extends AlipayObject {
 
-	private static final long serialVersionUID = 4561918635697827627L;
+	private static final long serialVersionUID = 8364935743481412561L;
 
 	/**
 	 * 底部链接描述文字，如“查看详情”

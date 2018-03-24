@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 模板中占位符的值及文字颜色，value和color都为必填项，color为当前文字颜色
  *
  * @author auto create
- * @since 1.0, 2016-10-28 10:45:28
+ * @since 1.0, 2018-03-13 14:03:00
  */
 public class Keyword extends AlipayObject {
 
-	private static final long serialVersionUID = 4525747533751527329L;
+	private static final long serialVersionUID = 5147628559398726264L;
 
 	/**
 	 * 当前文字颜色

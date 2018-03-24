@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 商品修改
  *
  * @author auto create
- * @since 1.0, 2018-01-08 13:37:52
+ * @since 1.0, 2018-02-09 14:43:29
  */
 public class KoubeiItemModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 2382271899892633975L;
+	private static final long serialVersionUID = 6437938351346437237L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，有效期24小时；
@@ -43,7 +43,14 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	private List<KoubeiItemDescription> descriptions;
 
 	/**
-	 * 商品生效时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
+	 * 售卖结束时间。当到达该时间时，商品暂停售卖，将不在客户端中继续展示，用户无法继续购买。
+注意：该时间不能晚于核销绝对有效期的结束时间。
+	 */
+	@ApiField("gmt_end")
+	private String gmtEnd;
+
+	/**
+	 * 商品售卖开始时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
 说明： 商品的生效时间不能早于创建当天的0点
 	 */
 	@ApiField("gmt_start")
@@ -159,6 +166,13 @@ public class KoubeiItemModifyModel extends AlipayObject {
 	}
 	public void setDescriptions(List<KoubeiItemDescription> descriptions) {
 		this.descriptions = descriptions;
+	}
+
+	public String getGmtEnd() {
+		return this.gmtEnd;
+	}
+	public void setGmtEnd(String gmtEnd) {
+		this.gmtEnd = gmtEnd;
 	}
 
 	public Date getGmtStart() {

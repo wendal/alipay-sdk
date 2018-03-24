@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: zhima.credit.score.get response.
  * 
  * @author auto create
- * @since 1.0, 2017-12-07 16:07:06
+ * @since 1.0, 2018-03-14 21:31:44
  */
 public class ZhimaCreditScoreGetResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 8868556266132132576L;
+	private static final long serialVersionUID = 7696267184378331359L;
 
 	/** 
 	 * 芝麻信用对于每一次请求返回的业务号。后续可以通过此业务号进行对账
@@ -21,7 +21,7 @@ public class ZhimaCreditScoreGetResponse extends AlipayResponse {
 	private String bizNo;
 
 	/** 
-	 * 用户的芝麻信用评分。分值范围[350,950]。如果用户数据不足，无法评分时，返回字符串"N/A"。
+	 * 用户的芝麻分。分值范围[350,950]。如果用户数据不足，无法评分时，返回字符串"N/A"。
 	 */
 	@ApiField("zm_score")
 	private String zmScore;

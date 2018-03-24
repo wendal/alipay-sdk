@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 口碑订单商品凭证模型
  *
  * @author auto create
- * @since 1.0, 2017-09-27 10:57:48
+ * @since 1.0, 2018-03-08 11:39:18
  */
 public class KbOrderVoucherModel extends AlipayObject {
 
-	private static final long serialVersionUID = 8665641218831289545L;
+	private static final long serialVersionUID = 4388811143571838182L;
 
 	/**
 	 * 商品凭证过期时间
@@ -62,6 +62,24 @@ public class KbOrderVoucherModel extends AlipayObject {
 	 */
 	@ApiField("store_id")
 	private String storeId;
+
+	/**
+	 * 凭证剩余可核销次数(次卡场景)
+	 */
+	@ApiField("ticket_effect_count")
+	private String ticketEffectCount;
+
+	/**
+	 * 凭证已退款次数(次卡场景)
+	 */
+	@ApiField("ticket_refunded_count")
+	private String ticketRefundedCount;
+
+	/**
+	 * 凭证已使用次数(次卡场景)
+	 */
+	@ApiField("ticket_used_count")
+	private String ticketUsedCount;
 
 	/**
 	 * 商品凭证ID
@@ -123,6 +141,27 @@ public class KbOrderVoucherModel extends AlipayObject {
 	}
 	public void setStoreId(String storeId) {
 		this.storeId = storeId;
+	}
+
+	public String getTicketEffectCount() {
+		return this.ticketEffectCount;
+	}
+	public void setTicketEffectCount(String ticketEffectCount) {
+		this.ticketEffectCount = ticketEffectCount;
+	}
+
+	public String getTicketRefundedCount() {
+		return this.ticketRefundedCount;
+	}
+	public void setTicketRefundedCount(String ticketRefundedCount) {
+		this.ticketRefundedCount = ticketRefundedCount;
+	}
+
+	public String getTicketUsedCount() {
+		return this.ticketUsedCount;
+	}
+	public void setTicketUsedCount(String ticketUsedCount) {
+		this.ticketUsedCount = ticketUsedCount;
 	}
 
 	public String getVoucherId() {

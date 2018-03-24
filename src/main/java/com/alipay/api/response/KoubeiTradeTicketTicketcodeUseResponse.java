@@ -12,7 +12,7 @@ import com.alipay.api.AlipayResponse;
  */
 public class KoubeiTradeTicketTicketcodeUseResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3611246164239498787L;
+	private static final long serialVersionUID = 5678833259941268591L;
 
 	/** 
 	 * 用户购买券的时候实际支付的金额，单位为元，精确到小数点后两位

@@ -12,11 +12,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.user.info.share response.
  * 
  * @author auto create
- * @since 1.0, 2017-09-06 14:48:15
+ * @since 1.0, 2018-02-12 10:47:30
  */
 public class AlipayUserInfoShareResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3359361219266929584L;
+	private static final long serialVersionUID = 2246154933497878534L;
 
 	/** 
 	 * 详细地址。
@@ -43,13 +43,15 @@ public class AlipayUserInfoShareResponse extends AlipayResponse {
 	private String businessScope;
 
 	/** 
-	 * 证件号码，结合证件类型使用.
+	 * 【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+证件号码，结合证件类型使用.
 	 */
 	@ApiField("cert_no")
 	private String certNo;
 
 	/** 
-	 * 0:身份证
+	 * 【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+0:身份证
 1:护照
 2:军官证
 3:士兵证
@@ -73,10 +75,22 @@ public class AlipayUserInfoShareResponse extends AlipayResponse {
 	private String city;
 
 	/** 
+	 * 学信网返回的学校名称，有可能为空。
+	 */
+	@ApiField("college_name")
+	private String collegeName;
+
+	/** 
 	 * 国家码
 	 */
 	@ApiField("country_code")
 	private String countryCode;
+
+	/** 
+	 * 学信网返回的学历/学位信息，数据质量一般，请谨慎使用，取值包括：博士研究生、硕士研究生、高升本、专科、博士、硕士、本科、夜大电大函大普通班、专科(高职)、第二学士学位。
+	 */
+	@ApiField("degree")
+	private String degree;
 
 	/** 
 	 * 收货地址列表
@@ -90,6 +104,12 @@ public class AlipayUserInfoShareResponse extends AlipayResponse {
 	 */
 	@ApiField("email")
 	private String email;
+
+	/** 
+	 * 入学时间，yyyy-mm-dd格式
+	 */
+	@ApiField("enrollment_time")
+	private String enrollmentTime;
 
 	/** 
 	 * 企业代理人证件有效期（用户类型是公司类型时才有此字段）。
@@ -165,10 +185,17 @@ STATEORGAN(党政国家机关)
 	private String firmType;
 
 	/** 
-	 * 性别（F：女性；M：男性）。
+	 * 【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+性别（F：女性；M：男性）。
 	 */
 	@ApiField("gender")
 	private String gender;
+
+	/** 
+	 * 预期毕业时间，不保证准确性，yyyy-mm-dd格式。
+	 */
+	@ApiField("graduation_time")
+	private String graduationTime;
 
 	/** 
 	 * 余额账户是否被冻结。
@@ -275,7 +302,8 @@ T--被冻结；F--未冻结
 	private String userId;
 
 	/** 
-	 * 若用户是个人用户，则是用户的真实姓名；若是企业用户，则是企业名称。
+	 * 【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+若用户是个人用户，则是用户的真实姓名；若是企业用户，则是企业名称。
 	 */
 	@ApiField("user_name")
 	private String userName;
@@ -352,11 +380,25 @@ W代表已注册，未激活的账户
 		return this.city;
 	}
 
+	public void setCollegeName(String collegeName) {
+		this.collegeName = collegeName;
+	}
+	public String getCollegeName( ) {
+		return this.collegeName;
+	}
+
 	public void setCountryCode(String countryCode) {
 		this.countryCode = countryCode;
 	}
 	public String getCountryCode( ) {
 		return this.countryCode;
+	}
+
+	public void setDegree(String degree) {
+		this.degree = degree;
+	}
+	public String getDegree( ) {
+		return this.degree;
 	}
 
 	public void setDeliverAddresses(List<AlipayUserDeliverAddress> deliverAddresses) {
@@ -371,6 +413,13 @@ W代表已注册，未激活的账户
 	}
 	public String getEmail( ) {
 		return this.email;
+	}
+
+	public void setEnrollmentTime(String enrollmentTime) {
+		this.enrollmentTime = enrollmentTime;
+	}
+	public String getEnrollmentTime( ) {
+		return this.enrollmentTime;
 	}
 
 	public void setFirmAgentPersonCertExpiryDate(String firmAgentPersonCertExpiryDate) {
@@ -455,6 +504,13 @@ W代表已注册，未激活的账户
 	}
 	public String getGender( ) {
 		return this.gender;
+	}
+
+	public void setGraduationTime(String graduationTime) {
+		this.graduationTime = graduationTime;
+	}
+	public String getGraduationTime( ) {
+		return this.graduationTime;
 	}
 
 	public void setIsBalanceFrozen(String isBalanceFrozen) {

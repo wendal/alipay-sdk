@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 间连商户地址信息
  *
  * @author auto create
- * @since 1.0, 2017-11-28 17:51:42
+ * @since 1.0, 2018-02-26 15:27:53
  */
 public class AddressInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3517463125625659572L;
+	private static final long serialVersionUID = 1215878191126667528L;
 
 	/**
 	 * 地址。商户详细经营地址或人员所在地点

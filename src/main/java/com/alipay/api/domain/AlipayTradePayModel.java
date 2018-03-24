@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
 修改路由策略到R
  *
  * @author auto create
- * @since 1.0, 2018-02-07 14:00:10
+ * @since 1.0, 2018-03-12 16:00:51
  */
 public class AlipayTradePayModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1197782728388415487L;
+	private static final long serialVersionUID = 5298339595167336784L;
 
 	/**
 	 * 代扣业务需要传入协议相关信息
@@ -171,6 +171,12 @@ COMPLETE：转交易支付完成结束预授权，解冻剩余金额; NOT_COMPLE
 	 */
 	@ApiField("terminal_id")
 	private String terminalId;
+
+	/**
+	 * 商户传入终端设备相关信息，具体值要和支付宝约定
+	 */
+	@ApiField("terminal_params")
+	private String terminalParams;
 
 	/**
 	 * 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m
@@ -371,6 +377,13 @@ COMPLETE：转交易支付完成结束预授权，解冻剩余金额; NOT_COMPLE
 	}
 	public void setTerminalId(String terminalId) {
 		this.terminalId = terminalId;
+	}
+
+	public String getTerminalParams() {
+		return this.terminalParams;
+	}
+	public void setTerminalParams(String terminalParams) {
+		this.terminalParams = terminalParams;
 	}
 
 	public String getTimeoutExpress() {

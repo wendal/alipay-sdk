@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class SubMerchantEnterOpenModel extends AlipayObject {
 
-	private static final long serialVersionUID = 3815645921655662485L;
+	private static final long serialVersionUID = 6488645347843393529L;
 
 	/**
 	 * 商户门店税号。

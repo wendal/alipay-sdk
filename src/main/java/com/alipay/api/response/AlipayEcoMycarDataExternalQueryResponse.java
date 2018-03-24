@@ -8,11 +8,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.eco.mycar.data.external.query response.
  * 
  * @author auto create
- * @since 1.0, 2016-09-20 16:38:11
+ * @since 1.0, 2018-03-06 20:18:29
  */
 public class AlipayEcoMycarDataExternalQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 3558884731775575752L;
+	private static final long serialVersionUID = 3745584589631783832L;
 
 	/** 
 	 * 30

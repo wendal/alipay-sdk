@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 模板栏位信息
  *
  * @author auto create
- * @since 1.0, 2017-08-24 12:03:41
+ * @since 1.0, 2018-03-14 11:07:27
  */
 public class TemplateColumnInfoDTO extends AlipayObject {
 
-	private static final long serialVersionUID = 1518549714898913915L;
+	private static final long serialVersionUID = 4446166834585765227L;
 
 	/**
 	 * 标准栏位：行为由支付宝统一定，同时已经分配标准Code

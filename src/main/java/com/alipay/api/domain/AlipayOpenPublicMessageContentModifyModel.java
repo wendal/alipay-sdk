@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 修改图文消息素材接口
  *
  * @author auto create
- * @since 1.0, 2018-01-19 17:28:10
+ * @since 1.0, 2018-02-09 15:53:43
  */
 public class AlipayOpenPublicMessageContentModifyModel extends AlipayObject {
 
-	private static final long serialVersionUID = 7444529314333314715L;
+	private static final long serialVersionUID = 6216533689965695838L;
 
 	/**
 	 * 活动利益点，图文类型ctype为activity类型时才需要传，最多10个字符

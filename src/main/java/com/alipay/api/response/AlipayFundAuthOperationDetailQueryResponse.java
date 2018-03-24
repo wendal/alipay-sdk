@@ -9,11 +9,11 @@ import com.alipay.api.AlipayResponse;
  * ALIPAY API: alipay.fund.auth.operation.detail.query response.
  * 
  * @author auto create
- * @since 1.0, 2017-09-21 19:40:27
+ * @since 1.0, 2018-03-13 11:00:50
  */
 public class AlipayFundAuthOperationDetailQueryResponse extends AlipayResponse {
 
-	private static final long serialVersionUID = 6339467565274498636L;
+	private static final long serialVersionUID = 4422272975377413344L;
 
 	/** 
 	 * 该笔资金操作流水opertion_id对应的操作金额，单位为：元（人民币）
@@ -92,6 +92,13 @@ PAY：支付
 	 */
 	@ApiField("payer_user_id")
 	private String payerUserId;
+
+	/** 
+	 * 预授权类型，目前支持 CREDIT_AUTH(信用预授权);
+商户可根据该标识来判断该笔预授权的类型，当返回值为"CREDIT_AUTH"表明该笔预授权为信用预授权，没有真实冻结资金；当返回值为空或者不为"CREDIT_AUTH"则表明该笔预授权为普通资金预授权，会冻结用户资金。
+	 */
+	@ApiField("pre_auth_type")
+	private String preAuthType;
 
 	/** 
 	 * 商户对本次操作的附言描述，长度不超过100个字母或50个汉字
@@ -209,6 +216,13 @@ CLOSED：关闭
 	}
 	public String getPayerUserId( ) {
 		return this.payerUserId;
+	}
+
+	public void setPreAuthType(String preAuthType) {
+		this.preAuthType = preAuthType;
+	}
+	public String getPreAuthType( ) {
+		return this.preAuthType;
 	}
 
 	public void setRemark(String remark) {

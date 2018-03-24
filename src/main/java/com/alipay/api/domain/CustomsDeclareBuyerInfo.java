@@ -7,11 +7,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 报关订购人信息，即用户留在商户处的身份信息。可用于与支付单的身份信息作比对。
  *
  * @author auto create
- * @since 1.0, 2016-11-09 19:11:51
+ * @since 1.0, 2018-03-02 14:37:05
  */
 public class CustomsDeclareBuyerInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 8185458555383342527L;
+	private static final long serialVersionUID = 1413736141866637576L;
 
 	/**
 	 * 订购人身份证号。即订购人留在商户处的身份证信息

@@ -1,17 +1,20 @@
 package com.alipay.api.domain;
 
+import java.util.List;
+
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
+import com.alipay.api.internal.mapping.ApiListField;
 
 /**
  * 创建云凤蝶站点内容模型
  *
  * @author auto create
- * @since 1.0, 2018-02-02 10:58:25
+ * @since 1.0, 2018-03-07 09:45:27
  */
 public class FengdieSitesCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5319445729587863819L;
+	private static final long serialVersionUID = 4724139215282675399L;
 
 	/**
 	 * 站点域名，默认为空间中第一个可用域名
@@ -32,10 +35,17 @@ public class FengdieSitesCreateModel extends AlipayObject {
 	private String offlineTime;
 
 	/**
-	 * 站点页面在编辑器中默认展示的数据
+	 * 站点页面在编辑器中默认展示的数据(废弃，请使用pages)
 	 */
 	@ApiField("page")
 	private FengdieActivityCreatePageData page;
+
+	/**
+	 * 站点页面在编辑器中默认展示的数据
+	 */
+	@ApiListField("pages")
+	@ApiField("fengdie_activity_create_pages_data")
+	private List<FengdieActivityCreatePagesData> pages;
 
 	/**
 	 * 站点标题
@@ -69,6 +79,13 @@ public class FengdieSitesCreateModel extends AlipayObject {
 	}
 	public void setPage(FengdieActivityCreatePageData page) {
 		this.page = page;
+	}
+
+	public List<FengdieActivityCreatePagesData> getPages() {
+		return this.pages;
+	}
+	public void setPages(List<FengdieActivityCreatePagesData> pages) {
+		this.pages = pages;
 	}
 
 	public String getTitle() {

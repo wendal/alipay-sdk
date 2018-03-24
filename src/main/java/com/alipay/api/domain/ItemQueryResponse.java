@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * trade_voucher商品查询信息
  *
  * @author auto create
- * @since 1.0, 2018-01-08 13:36:10
+ * @since 1.0, 2018-02-09 14:39:43
  */
 public class ItemQueryResponse extends AlipayObject {
 
-	private static final long serialVersionUID = 3657531129793335165L;
+	private static final long serialVersionUID = 3413899978318859349L;
 
 	/**
 	 * 口碑商品所属的后台类目id，后台类目数据来源：开放接口koubei.item.category.children.batchquery（查询后台类目树接口）
@@ -36,7 +36,14 @@ public class ItemQueryResponse extends AlipayObject {
 	private List<KoubeiItemDescription> descriptions;
 
 	/**
-	 * 商品生效时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
+	 * 售卖结束时间。当到达该时间时，商品暂停售卖，将不在客户端中继续展示，用户无法继续购买。
+注意：该时间不能晚于核销绝对有效期的结束时间。
+	 */
+	@ApiField("gmt_end")
+	private String gmtEnd;
+
+	/**
+	 * 商品售卖开始时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
 说明： 商品的生效时间不能早于创建当天的0点
 	 */
 	@ApiField("gmt_start")
@@ -152,6 +159,13 @@ public class ItemQueryResponse extends AlipayObject {
 	}
 	public void setDescriptions(List<KoubeiItemDescription> descriptions) {
 		this.descriptions = descriptions;
+	}
+
+	public String getGmtEnd() {
+		return this.gmtEnd;
+	}
+	public void setGmtEnd(String gmtEnd) {
+		this.gmtEnd = gmtEnd;
 	}
 
 	public String getGmtStart() {

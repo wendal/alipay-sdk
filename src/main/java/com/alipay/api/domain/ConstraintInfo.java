@@ -10,11 +10,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 活动限制信息
  *
  * @author auto create
- * @since 1.0, 2017-09-28 10:51:01
+ * @since 1.0, 2018-02-08 21:53:19
  */
 public class ConstraintInfo extends AlipayObject {
 
-	private static final long serialVersionUID = 3174552322927721915L;
+	private static final long serialVersionUID = 3481868678211573197L;
 
 	/**
 	 * 资金池ID
@@ -35,6 +35,12 @@ public class ConstraintInfo extends AlipayObject {
 	 */
 	@ApiField("crowd_restriction")
 	private String crowdRestriction;
+
+	/**
+	 * 根据crowd_restriction的值不同，设置相应的值，如果crowd_restriction是“MEMBER_CARD”，crowd_restriction_value就是关联会员卡模版ID集合，用逗号拼接
+	 */
+	@ApiField("crowd_restriction_value")
+	private String crowdRestrictionValue;
 
 	/**
 	 * 单品码列表
@@ -103,6 +109,13 @@ public class ConstraintInfo extends AlipayObject {
 	}
 	public void setCrowdRestriction(String crowdRestriction) {
 		this.crowdRestriction = crowdRestriction;
+	}
+
+	public String getCrowdRestrictionValue() {
+		return this.crowdRestrictionValue;
+	}
+	public void setCrowdRestrictionValue(String crowdRestrictionValue) {
+		this.crowdRestrictionValue = crowdRestrictionValue;
 	}
 
 	public List<String> getItemIds() {

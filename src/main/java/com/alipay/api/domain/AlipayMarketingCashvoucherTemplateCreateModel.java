@@ -9,11 +9,11 @@ import com.alipay.api.internal.mapping.ApiField;
  * 创建资金券模板
  *
  * @author auto create
- * @since 1.0, 2017-09-21 17:04:08
+ * @since 1.0, 2018-03-05 14:38:00
  */
 public class AlipayMarketingCashvoucherTemplateCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 4525719642422926789L;
+	private static final long serialVersionUID = 4248621854157913627L;
 
 	/**
 	 * 面额。每张代金券可以抵扣的金额。币种为人民币，单位为元。该数值不能小于0.1，小数点以后最多保留两位。

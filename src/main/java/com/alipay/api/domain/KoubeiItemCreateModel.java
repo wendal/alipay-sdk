@@ -11,11 +11,11 @@ import com.alipay.api.internal.mapping.ApiListField;
  * 口碑商品创建接口
  *
  * @author auto create
- * @since 1.0, 2018-01-08 13:38:31
+ * @since 1.0, 2018-03-09 00:24:47
  */
 public class KoubeiItemCreateModel extends AlipayObject {
 
-	private static final long serialVersionUID = 1439322153214433546L;
+	private static final long serialVersionUID = 4769498735813951148L;
 
 	/**
 	 * 服务商、服务商员工、商户、商户员工等口碑角色操作时必填，对应为《koubei.member.data.oauth.query》中的auth_code，默认有效期24小时；isv自身角色操作的时候，无需传该参数
@@ -43,7 +43,14 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	private List<KoubeiItemDescription> descriptions;
 
 	/**
-	 * 商品生效时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
+	 * 售卖结束时间。当到达该时间时，商品暂停售卖，将不在客户端中继续展示，用户无法继续购买。
+注意：该时间不能晚于核销绝对有效期的结束时间。
+	 */
+	@ApiField("gmt_end")
+	private String gmtEnd;
+
+	/**
+	 * 商品售卖开始时间，商品状态有效并且到达生效时间后才可在客户端（消费者端）展示出来，如果商品生效时间小于当前时间，则立即生效。
 说明：商品的生效时间不能早于创建当天的0点
 	 */
 	@ApiField("gmt_start")
@@ -111,6 +118,12 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	private String requestId;
 
 	/**
+	 * 行业场景 例如泛行业SERV_INDUSTRY，综合体MALL
+	 */
+	@ApiField("scene")
+	private String scene;
+
+	/**
 	 * 上架门店id列表，即传入一个或多个shop_id。多个ID则以英文分隔
 	 */
 	@ApiField("shop_ids")
@@ -166,6 +179,13 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	}
 	public void setDescriptions(List<KoubeiItemDescription> descriptions) {
 		this.descriptions = descriptions;
+	}
+
+	public String getGmtEnd() {
+		return this.gmtEnd;
+	}
+	public void setGmtEnd(String gmtEnd) {
+		this.gmtEnd = gmtEnd;
 	}
 
 	public Date getGmtStart() {
@@ -243,6 +263,13 @@ public class KoubeiItemCreateModel extends AlipayObject {
 	}
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
+	}
+
+	public String getScene() {
+		return this.scene;
+	}
+	public void setScene(String scene) {
+		this.scene = scene;
 	}
 
 	public String getShopIds() {

@@ -11,7 +11,7 @@ import com.alipay.api.internal.mapping.ApiField;
  */
 public class AlipayOpenAgentConfirmModel extends AlipayObject {
 
-	private static final long serialVersionUID = 5393928783298438258L;
+	private static final long serialVersionUID = 2375815479922577633L;
 
 	/**
 	 * ISV 代商户操作事务编号，通过事务开启接口alipay.open.agent.create调用返回。
