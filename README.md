@@ -162,36 +162,9 @@ public static boolean rsaCheckContent(String content, String sign, String public
 ## maven配置
 
 ```xml
-		<dependency>
-			<groupId>com.alipay</groupId>
-			<artifactId>alipay-sdk</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-```
-
-快照库地址
-
-```xml
-	<repositories>
-		<repository>
-			<id>nutz-snapshots</id>
-			<url>https://jfrog.nutz.cn/artifactory/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
-```
-
-
-```xml
-		<dependency>
-			<groupId>com.alipay</groupId>
-			<artifactId>alipay-sdk</artifactId>
-			<version>1.0.0_20180208193504</version>
-		</dependency>
+<dependency>
+    <groupId>com.alipay.sdk</groupId>
+    <artifactId>alipay-sdk-java</artifactId>
+    <version>3.0.0</version>
+</dependency>
 ```
