@@ -1,6 +1,11 @@
 # alipay-sdk
 把支付宝的SDK导入成maven库
 
+本代码库已经过时了, 有官方库了, 所以不再维护
+pls use that repo:
+
+https://github.com/alipay/alipay-sdk-java-all
+
 来源地址https://doc.open.alipay.com/docs/doc.htm?treeId=54&articleId=103419&docType=1
 
 ### SDK集成
